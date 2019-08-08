@@ -9,6 +9,9 @@
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{references.bib}
+
 \numberwithin{equation}{section} % number within sections
 % \usepackage[parfill]{parskip} % new line without indent
 
@@ -83,10 +86,48 @@ To simplify the rigorous analysis and optimization processes often associated wi
 %\item Flow is fully developed (minimal boundary-layer effects).
 
 \end{enumerate}
+\subsection{The Reynolds Transport Theorem}
+We can begin by introducing the concept of control-volume analysis \textemdash{} a powerful approach to solving fundamental fluid mechanics problems \textemdash{} in which a mathematical abstraction is employed to generate mathematical models of physical systems. That is, in an inertial frame of reference, the \textit{control volume} is a volume fixed in space or moving with constant velocity with the fluid flow. The surface enclosing the control volume is referred to as the \textit{control surface}. To convert a system analysis to a control-volume analysis, we must shift our perspective such that our mathematics apply to a specific region rather than to individual bodies. This process is called the \textit{Reynolds Transport Theorem}, and allows us to study certain properties (e.g. angular momentum $L$, enthalpy $h$, etc.) crossing the boundaries of the region. Essentially, we need to relate the time derivative of a system property of that property within a certain region.
+\begin{figure}[h] \label{fig:control-types}
+\centering
+\includegraphics[scale=0.5]{control_types}
+\caption{Fixed, moving, and deformable control volumes: (a) fixed control volume for nozzle stress analysis; (b) control volume moving at ship speed for drag force analysis; (c) control volume deforming within cylinder for transient pressure variation analysis.}
+\end{figure}
 
+The desired conversion formula differs slightly according to whether the control volume is fixed, moving, or deformable, but for the purposes of our application, we'll be focusing on a fixed control volume. The fixed control volume in Figure \ref{fig:control-types}$a$ encloses a stationary region of interest to a nozzle designer. The control surface is an abstract concept that does not hinder the flow in any way. It slices through the jet leaving the nozzle, circles around through the surrounding (ambient) atmosphere, and slices through the flange bolts and the fluid within the nozzle \cite{fluid-mechanics}.
 
-\subsection{Iterative Diameter Calculation}
+This particular control volume exposes the stresses in the flange bolts, which contribute to applied forces in the momentum analysis. In this sense, the control volume resembles the \textit{free-body} concept, which is often applied in solid-mechanics analysis \cite{fluid-mechanics}.
+\begin{figure}[h] \label{fig:control-volume}
+\centering
+\includegraphics[scale=0.5]{control_volume}
+\caption{An arbitrary fixed control volume with an arbitrary flow pattern.}
+\end{figure}
 
+Figure \ref{fig:control-volume} shows a generalized fixed control volume with an arbitrary flow pattern passing through. In general, each differential $dA$ of surface will have a different velocity vector $\vec{V}$ making a different angle $\theta$ with the local normal to $dA$. This gives us the general Reynolds transport theorem equation for an arbitrary fixed control volume:
+\begin{equation} \label{eq:long-rtt}
+\frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CS} \beta \rho\, cos\theta\, dA_{out} - \int_{CS} \beta \rho\, cos\theta\, dA_{in}
+\end{equation}
+Asserting the property $B$ to be either mass, momentum, angular momentum, or energy, all basic laws can be rewritten in control-volume form. Note that all three control volume integrals are a function of the intensive propery $\beta$, and since the control volume is fixed in space, the elemental volumes $d\vartheta$ do not vary with time, and thus the time derivative of the volume integral disappears unless $\beta$ or $\rho$ varies with time (unsteady flow) \cite{fluid-mechanics}.
+
+However, realizing that if $\vec{n}$ is defined as the \textit{outward} normal unit vector everywhere on the control surface, then $\vec{V} \cdot \vec{n} = V_{n}$ for outflow and $\vec{V} \cdot \vec{n} = -V_{n}$ for inflow. Therefore, the flux terms can be combined and Equation \ref{eq:long-rtt} can be rewritten as
+\begin{equation} \label{eq:short-rtt}
+\frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CV} \beta \rho(\vec{V} \cdot \vec{n})\, dA
+\end{equation}
+We are now able to apply the principles of conservation of mass to the Reynolds transport theorem by setting the arbitrary variable $B$ equal to mass, and $\beta = dm/dm =1$. Equation \ref{short-rtt} becomes
+\begin{equation}
+\left( \frac{dm}{dt} \right)_{syst} = 0 = \frac{d}{dt} \left( \int_{CV} \rho\, d\vartheta \right) + \int_{CS} \rho(\vec{V_{r}} \cdot \vec{n})\, dA
+\end{equation}
+This is the integral mass-conservation law for a deformable control volume. Adapting this for a fixed control volume and simplying gives
+\begin{equation} \label{eq:mass-conservation-law}
+\int_{CV} \frac{\partial \rho}{\partial t}\, d\vartheta + \int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
+\end{equation}
+Finally, knowing that we are dealing with steady, incompressible flow through the control volume ($\partial \rho/ \partial t = 0$), Equation \ref{eq:mass-conservation-law} reduces to
+\begin{equation}
+\int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
+\end{equation}
+This equation explicitly states that in steady flow, the mass flows entering and exitting the control volume are exactly equal, while neglecting sources or sinks of mass which might be embedded in the control volume.
+
+\subsection{Flow in a Circular Pipe}
 
 Given the simplifying assumptions mentioned in Section \ref{sec:assumptions}, we can begin with the classic case of Bernoulli's Equation:
 \begin{equation} \label{eq:bernoulli}
@@ -98,13 +139,10 @@ The addition of a \textit{head loss} term, denoted as $h_{f}$, is the first step
 \begin{equation} \label{eq:conservation-of-mass}
 \int_{CS} \rho(\vec{V} \cdot \vec{n}) dA = 0
 \end{equation}
+%%% CHANGE THIS
 Equation \ref{eq:conservation-of-mass} above refers to the following figure (see References):
-\begin{figure}[h] \label{fig:control-volume}
-\centering
-\includegraphics[scale=0.5]{control_volume}
-\caption{An arbitrary fixed control volume with an arbitrary flow pattern.}
-\end{figure}
-This states that in steady flow, the mass flows entering and exitting the control volume are exactly equal, while neglecting sources or sinks of mass which might be embedded in the control volume. Due to Assumption \ref{itm:constant-area}, Equation \ref{eq:conservation-of-mass} reduces to 
+%%%
+Due to Assumption \ref{itm:constant-area}, Equation \ref{eq:conservation-of-mass} reduces to 
 \begin{equation}
 Q_{1} = Q_{2} = constant
 \end{equation}
@@ -126,18 +164,9 @@ Using Equation \ref{eq:darcy-friction} and the wall shear stress equation (see R
 h_{f} = f{\frac{L}{d}}{\frac{V^{2}}{2{g}}}
 \end{equation}
 where $h_{f}$ represents the head loss factor as a function of the dimensionless Darcy friction factor $f$, $L$ is the length of the pipe, and $g$ is equal to one standard Earth gravity.
-\subsection{The Reynolds Transport Theorem}
-We can begin by introducing the concept of control-volume analysis \textemdash a powerful approach to solving fundamental fluid mechanics probelms \textemdash in which a mathematical abstraction is employed to generate mathematical models of physical systems. That is, in an inertial frame of reference, the \textit{control volume} is a volume fixed in space or moving with constant velocity with the fluid flows. The surface enclosing the control volume is referred to as the \textit{control surface}. To convert a system analysis to a control-volume analysis, we must shift our perspective such that our mathematics apply to a specific region rather than to individual bodies. This process is called the \textit{Reynolds Transport Theorem}, and allows us to study certain properties (e.g. angular momentum $L$, enthalpy $h$, etc.) crossing the boundaries of the region. Essentially, we need to relate the time derivative of a system property of that property within a certain region.
-\begin{figure}[h] \label{fig:control-types}
-\centering
-\includegraphics[scale=0.5]{control_types}
-\caption{Fixed, moving, and deformable control volumes: (a) fixed control volume for nozzle stress analysis; (b) control volume moving at ship speed for drag force analysis; (c) control volume deforming within cylinder for transient pressure variation analysis.}
-\end{figure}
 
-[Quoting directly from References] The desired conversion formula differs slightly according to whether the control volume is fixed, moving, or deformable, but for the purposes of our application, we'll be focusing on a fixed control volume. The fixed control volume in Figure \ref{fig:control-types} $a$ encloses a stationary region of interest to a nozzle designer. The control surface is an abstract concept that does not hinder the flow in any way. It slices through the jet leaving the nozzle, circles around through the surrounding (ambient) atmosphere, and slices through the flange bolts and the fluid within the nozzle.
 
-This particular control volume exposes the stresses in the flange bolts, which contribute to applied forces in the momentum analysis. In this sense, the control volume resembles the \textit{free-body} concept, which is applied to systems in solid-mechanics analysis.
-\subsection{Flow in a Circular Pipe}
+\subsection{Iterative Diameter Calculation}
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
 
@@ -153,4 +182,6 @@ All units are implied with accordance to the Metric system (seconds, kilograms, 
 \item $R$ = radius, $m$
 
 \end{itemize}
+As \textcite{fluid-mechanics} says, make sure to check your \textcite{pipe-roughness}!
+\printbibliography
 \end{document}

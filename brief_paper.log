@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.6)  7 AUG 2019 16:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.6)  8 AUG 2019 11:03
 entering extended mode
 **./brief_paper.tex
 (brief_paper.tex
@@ -124,14 +124,281 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geom
-etry.sty"
-Package: geometry 2018/04/16 v5.8 Page Geometry
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.sty"
+Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pd
+ftexcmds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\in
+fwarerr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+luatex.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\lt
+xcmds.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
 pdf.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoo
+lbox.sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count100
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvop
+tions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
+setkeys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\et
+excmds.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq
+.sty"
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count101
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq
+.def"
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.s
+ty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count102
+\c@listtotal=\count103
+\c@listcount=\count104
+\c@liststart=\count105
+\c@liststop=\count106
+\c@citecount=\count107
+\c@citetotal=\count108
+\c@multicitecount=\count109
+\c@multicitetotal=\count110
+\c@instcount=\count111
+\c@maxnames=\count112
+\c@minnames=\count113
+\c@maxitems=\count114
+\c@minitems=\count115
+\c@citecounter=\count116
+\c@maxcitecounter=\count117
+\c@savedcitecounter=\count118
+\c@uniquelist=\count119
+\c@uniquename=\count120
+\c@refsection=\count121
+\c@refsegment=\count122
+\c@maxextratitle=\count123
+\c@maxextratitleyear=\count124
+\c@maxextraname=\count125
+\c@maxextradate=\count126
+\c@maxextraalpha=\count127
+\c@abbrvpenalty=\count128
+\c@highnamepenalty=\count129
+\c@lownamepenalty=\count130
+\c@maxparens=\count131
+\c@parenlevel=\count132
+\blx@tempcnta=\count133
+\blx@tempcntb=\count134
+\blx@tempcntc=\count135
+\blx@maxsection=\count136
+\blx@maxsegment@0=\count137
+\blx@notetype=\count138
+\blx@parenlevel@text=\count139
+\blx@parenlevel@foot=\count140
+\blx@sectionciteorder@0=\count141
+\blx@entrysetcounter=\count142
+\labelnumberwidth=\skip46
+\labelalphawidth=\skip47
+\biblabelsep=\skip48
+\bibitemsep=\skip49
+\bibnamesep=\skip50
+\bibinitsep=\skip51
+\bibparsep=\skip52
+\bibhang=\skip53
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\c@mincomprange=\count143
+\c@maxcomprange=\count144
+\c@mincompwidth=\count145
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-
+dm.def"
+File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count146
+\c@savedafterword=\count147
+\c@annotator=\count148
+\c@savedannotator=\count149
+\c@author=\count150
+\c@savedauthor=\count151
+\c@bookauthor=\count152
+\c@savedbookauthor=\count153
+\c@commentator=\count154
+\c@savedcommentator=\count155
+\c@editor=\count156
+\c@savededitor=\count157
+\c@editora=\count158
+\c@savededitora=\count159
+\c@editorb=\count160
+\c@savededitorb=\count161
+\c@editorc=\count162
+\c@savededitorc=\count163
+\c@foreword=\count164
+\c@savedforeword=\count165
+\c@holder=\count166
+\c@savedholder=\count167
+\c@introduction=\count168
+\c@savedintroduction=\count169
+\c@namea=\count170
+\c@savednamea=\count171
+\c@nameb=\count172
+\c@savednameb=\count173
+\c@namec=\count174
+\c@savednamec=\count175
+\c@translator=\count176
+\c@savedtranslator=\count177
+\c@shortauthor=\count178
+\c@savedshortauthor=\count179
+\c@shorteditor=\count180
+\c@savedshorteditor=\count181
+\c@labelname=\count182
+\c@savedlabelname=\count183
+\c@institution=\count184
+\c@savedinstitution=\count185
+\c@lista=\count186
+\c@savedlista=\count187
+\c@listb=\count188
+\c@savedlistb=\count189
+\c@listc=\count190
+\c@savedlistc=\count191
+\c@listd=\count192
+\c@savedlistd=\count193
+\c@liste=\count194
+\c@savedliste=\count195
+\c@listf=\count196
+\c@savedlistf=\count197
+\c@location=\count198
+\c@savedlocation=\count199
+\c@organization=\count266
+\c@savedorganization=\count267
+\c@origlocation=\count268
+\c@savedoriglocation=\count269
+\c@origpublisher=\count270
+\c@savedorigpublisher=\count271
+\c@publisher=\count272
+\c@savedpublisher=\count273
+\c@language=\count274
+\c@savedlanguage=\count275
+\c@origlanguage=\count276
+\c@savedoriglanguage=\count277
+\c@pageref=\count278
+\c@savedpageref=\count279
+\shorthandwidth=\skip54
+\shortjournalwidth=\skip55
+\shortserieswidth=\skip56
+\shorttitlewidth=\skip57
+\shortauthorwidth=\skip58
+\shorteditorwidth=\skip59
+\locallabelnumberwidth=\skip60
+\locallabelalphawidth=\skip61
+\localshorthandwidth=\skip62
+\localshortjournalwidth=\skip63
+\localshortserieswidth=\skip64
+\localshorttitlewidth=\skip65
+\localshortauthorwidth=\skip66
+\localshorteditorwidth=\skip67
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-
+compat.def"
+File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.def"
+File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+\c@textcitecount=\count280
+\c@textcitetotal=\count281
+\c@textcitemaxnames=\count282
+\c@biburlnumpenalty=\count283
+\c@biburlucpenalty=\count284
+\c@biburllcpenalty=\count285
+\c@smartand=\count286
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\
+numeric.bbx"
+File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\
+standard.bbx"
+File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count287
+\c@bbx:relatedtotal=\count288
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\
+numeric.cbx"
+File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.cfg"
+File: biblatex.cfg 
+))
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geom
+etry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
 vtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
@@ -141,9 +408,9 @@ Package ifvtex Info: VTeX not detected.
 etex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count100
-\Gm@cntv=\count101
-\c@Gm@tempcnt=\count102
+\Gm@cnth=\count289
+\Gm@cntv=\count290
+\c@Gm@tempcnt=\count291
 \Gm@bindingoffset=\dimen114
 \Gm@wd@mp=\dimen115
 \Gm@odd@mp=\dimen116
@@ -169,12 +436,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen129
 \cmidrulekern=\dimen130
 \defaultaddspace=\dimen131
-\@cmidla=\count103
-\@cmidlb=\count104
+\@cmidla=\count292
+\@cmidlb=\count293
 \@aboverulesep=\dimen132
 \@belowrulesep=\dimen133
-\@thisruleclass=\count105
-\@lastruleclass=\count106
+\@thisruleclass=\count294
+\@lastruleclass=\count295
 \@thisrulewidth=\dimen134
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.s
@@ -184,17 +451,17 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \ar@mcellbox=\box29
 \extrarowheight=\dimen136
 \NC@list=\toks23
-\extratabsurround=\skip46
-\backup@length=\skip47
+\extratabsurround=\skip68
+\backup@length=\skip69
 \ar@cellbox=\box30
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\para
 list.sty"
 Package: paralist 2017/01/22 v2.7 Extended list environments
-\pltopsep=\skip48
-\plpartopsep=\skip49
-\plitemsep=\skip50
-\plparsep=\skip51
+\pltopsep=\skip70
+\plpartopsep=\skip71
+\plitemsep=\skip72
+\plparsep=\skip73
 \pl@lab=\toks24
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbati
@@ -202,7 +469,7 @@ m.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks25
 \verbatim@line=\toks26
-\verbatim@in@stream=\read1
+\verbatim@in@stream=\read2
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig
 .sty"
@@ -224,36 +491,36 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen142
 \caption@hangindent=\dimen143
 )
-\c@caption@flags=\count107
-\c@ContinuedFloat=\count108
+\c@caption@flags=\count296
+\c@ContinuedFloat=\count297
 )
-\c@KVtest=\count109
-\sf@farskip=\skip52
+\c@KVtest=\count298
+\sf@farskip=\skip74
 \sf@captopadj=\dimen144
-\sf@capskip=\skip53
-\sf@nearskip=\skip54
-\c@subfigure=\count110
-\c@subfigure@save=\count111
-\c@lofdepth=\count112
-\c@subtable=\count113
-\c@subtable@save=\count114
-\c@lotdepth=\count115
-\sf@top=\skip55
-\sf@bottom=\skip56
+\sf@capskip=\skip75
+\sf@nearskip=\skip76
+\c@subfigure=\count299
+\c@subfigure@save=\count300
+\c@lofdepth=\count301
+\c@subtable=\count302
+\c@subtable@save=\count303
+\c@lotdepth=\count304
+\sf@top=\skip77
+\sf@bottom=\skip78
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fanc
 yhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
-\f@nch@headwidth=\skip57
-\f@nch@O@elh=\skip58
-\f@nch@O@erh=\skip59
-\f@nch@O@olh=\skip60
-\f@nch@O@orh=\skip61
-\f@nch@O@elf=\skip62
-\f@nch@O@erf=\skip63
-\f@nch@O@olf=\skip64
-\f@nch@O@orf=\skip65
+\f@nch@headwidth=\skip79
+\f@nch@O@elh=\skip80
+\f@nch@O@erh=\skip81
+\f@nch@O@olh=\skip82
+\f@nch@O@orh=\skip83
+\f@nch@O@elf=\skip84
+\f@nch@O@erf=\skip85
+\f@nch@O@olf=\skip86
+\f@nch@O@orf=\skip87
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sects
 ty.sty"
@@ -273,82 +540,88 @@ Package tocbibind Note: Using section or other style headings.
 ft.sty"
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
-\cftparskip=\skip66
-\cftbeforetoctitleskip=\skip67
-\cftaftertoctitleskip=\skip68
-\cftbeforepartskip=\skip69
-\cftpartnumwidth=\skip70
-\cftpartindent=\skip71
-\cftbeforesecskip=\skip72
-\cftsecindent=\skip73
-\cftsecnumwidth=\skip74
-\cftbeforesubsecskip=\skip75
-\cftsubsecindent=\skip76
-\cftsubsecnumwidth=\skip77
-\cftbeforesubsubsecskip=\skip78
-\cftsubsubsecindent=\skip79
-\cftsubsubsecnumwidth=\skip80
-\cftbeforeparaskip=\skip81
-\cftparaindent=\skip82
-\cftparanumwidth=\skip83
-\cftbeforesubparaskip=\skip84
-\cftsubparaindent=\skip85
-\cftsubparanumwidth=\skip86
-\cftbeforeloftitleskip=\skip87
-\cftafterloftitleskip=\skip88
-\cftbeforefigskip=\skip89
-\cftfigindent=\skip90
-\cftfignumwidth=\skip91
-\cftbeforelottitleskip=\skip92
-\cftafterlottitleskip=\skip93
-\cftbeforetabskip=\skip94
-\cfttabindent=\skip95
-\cfttabnumwidth=\skip96
-\cftbeforesubfigskip=\skip97
-\cftsubfigindent=\skip98
-\cftsubfignumwidth=\skip99
-\cftbeforesubtabskip=\skip100
-\cftsubtabindent=\skip101
-\cftsubtabnumwidth=\skip102
-) (brief_paper.aux)
+\cftparskip=\skip88
+\cftbeforetoctitleskip=\skip89
+\cftaftertoctitleskip=\skip90
+\cftbeforepartskip=\skip91
+\cftpartnumwidth=\skip92
+\cftpartindent=\skip93
+\cftbeforesecskip=\skip94
+\cftsecindent=\skip95
+\cftsecnumwidth=\skip96
+\cftbeforesubsecskip=\skip97
+\cftsubsecindent=\skip98
+\cftsubsecnumwidth=\skip99
+\cftbeforesubsubsecskip=\skip100
+\cftsubsubsecindent=\skip101
+\cftsubsubsecnumwidth=\skip102
+\cftbeforeparaskip=\skip103
+\cftparaindent=\skip104
+\cftparanumwidth=\skip105
+\cftbeforesubparaskip=\skip106
+\cftsubparaindent=\skip107
+\cftsubparanumwidth=\skip108
+\cftbeforeloftitleskip=\skip109
+\cftafterloftitleskip=\skip110
+\cftbeforefigskip=\skip111
+\cftfigindent=\skip112
+\cftfignumwidth=\skip113
+\cftbeforelottitleskip=\skip114
+\cftafterlottitleskip=\skip115
+\cftbeforetabskip=\skip116
+\cfttabindent=\skip117
+\cfttabnumwidth=\skip118
+\cftbeforesubfigskip=\skip119
+\cftsubfigindent=\skip120
+\cftsubfignumwidth=\skip121
+\cftbeforesubtabskip=\skip122
+\cftsubtabindent=\skip123
+\cftsubtabnumwidth=\skip124
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\
+english.lbx"
+File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+\@quotelevel=\count305
+\@quotereset=\count306
+ (brief_paper.aux)
 \openout1 = `brief_paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 67.
-LaTeX Font Info:    ... okay on input line 67.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
+LaTeX Font Info:    ... okay on input line 70.
 
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\s
 upp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count116
+\scratchcounter=\count307
 \scratchdimen=\dimen145
 \scratchbox=\box31
-\nofMPsegments=\count117
-\nofMParguments=\count118
+\nofMPsegments=\count308
+\nofMParguments=\count309
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count119
+\MPscratchCnt=\count310
 \MPscratchDim=\dimen146
-\MPnumerator=\count120
-\makeMPintoPDFobject=\count121
+\MPnumerator=\count311
+\makeMPintoPDFobject=\count312
 \everyMPtoPDFconversion=\toks28
 )
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epst
 opdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\in
-fwarerr.sty"
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfe
 xt.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
@@ -356,37 +629,7 @@ Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
 definekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\lt
-xcmds.sty"
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)))
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvop
-tions.sty"
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
-
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
-setkeys.sty"
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\et
-excmds.sty"
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
-
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
-luatex.sty"
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-))))
-("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pd
-ftexcmds.sty"
-Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
-)
-Package pdftexcmds Info: LuaTeX not detected.
-Package pdftexcmds Info: \pdf@primitive is available.
-Package pdftexcmds Info: \pdf@ifprimitive is available.
-Package pdftexcmds Info: \pdfdraftmode found.
-)
+))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 38.
 Package grfext Info: Graphics extension search list:
@@ -394,6 +637,17 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `brief_paper.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'brief_paper.bbl' found.
+ (brief_paper.bbl)
+Package biblatex Info: Reference section=0 on input line 70.
+Package biblatex Info: Reference segment=0 on input line 70.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -431,35 +685,44 @@ G,.JBIG2,.JB2,.eps]
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
+<control_types.png, id=1, 678.28406pt x 259.7203pt>
+File: control_types.png Graphic file (type png)
+<use control_types.png>
+Package pdftex.def Info: control_types.png  used on input line 93.
+(pdftex.def)             Requested size: 339.14119pt x 129.85983pt.
 [1
 
 {C:/Users/jason.chen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<control_volume.png, id=11, 648.17157pt x 488.57532pt>
+
+Package caption Warning: \label without proper reference on input line 91.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `fig:control-types' on page 2 undefined on input line 
+97.
+
+<control_volume.png, id=12, 648.17157pt x 488.57532pt>
 File: control_volume.png Graphic file (type png)
 <use control_volume.png>
-Package pdftex.def Info: control_volume.png  used on input line 104.
+Package pdftex.def Info: control_volume.png  used on input line 102.
 (pdftex.def)             Requested size: 324.08499pt x 244.28706pt.
-
-[2 <./control_volume.png>]
-<control_types.png, id=21, 678.28406pt x 259.7203pt>
-File: control_types.png Graphic file (type png)
-<use control_types.png>
-Package pdftex.def Info: control_types.png  used on input line 133.
-(pdftex.def)             Requested size: 339.14119pt x 129.85983pt.
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Package caption Warning: \label without proper reference on input line 131.
+Package caption Warning: \label without proper reference on input line 100.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `fig:control-types' on page 3 undefined on input line 
-137.
+LaTeX Warning: Reference `fig:control-volume' on page 2 undefined on input line
+ 106.
 
-[3]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 147.
+[2 <./control_types.png>]
+
+LaTeX Warning: Reference `short-rtt' on page 3 undefined on input line 116.
+
+[3 <./control_volume.png>] [4]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 176.
 
 
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.f
@@ -467,20 +730,23 @@ d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 147.
- [4 <./control_types.png>] (brief_paper.aux)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
+ [5] (brief_paper.aux)
 
 LaTeX Warning: There were undefined references.
 
+Package logreq Info: Writing requests to 'brief_paper.run.xml'.
+\openout1 = `brief_paper.run.xml'.
+
  ) 
 Here is how much of TeX's memory you used:
- 4664 strings out of 492895
- 72121 string characters out of 3121401
- 153055 words of memory out of 3000000
- 8510 multiletter control sequences out of 15000+200000
+ 11296 strings out of 492895
+ 197714 string characters out of 3121401
+ 630260 words of memory out of 3000000
+ 15087 multiletter control sequences out of 15000+200000
  11856 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,43p,1024b,278s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,52p,1027b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
 fonts/cm/cmbx10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/font
 s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jason.chen/AppData/Local/Progra
@@ -497,9 +763,9 @@ nts/cm/cmss12.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/
 type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jason.chen/AppData/Local/Programs
 /MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jason.chen/AppDa
 ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on brief_paper.pdf (4 pages, 309767 bytes).
+Output written on brief_paper.pdf (5 pages, 320805 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

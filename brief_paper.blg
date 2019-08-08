@@ -1,0 +1,18 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'brief_paper.blg'
+[22] biber-MSWIN64:315> INFO - === 
+[45] Biber.pm:371> INFO - Reading 'brief_paper.bcf'
+[117] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
+[127] Biber.pm:4093> INFO - Processing section 0
+[138] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[143] bibtex.pm:1523> INFO - LaTeX decoding ...
+[152] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[156] Utils.pm:193> WARN - month field 'December' in entry 'fluid-mechanics' is not an integer - this will probably not sort properly.
+[159] Utils.pm:193> WARN - month field 'September' in entry 'pipe-roughness' is not an integer - this will probably not sort properly.
+[170] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[170] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[170] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[170] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[172] bbl.pm:636> INFO - Writing 'brief_paper.bbl' with encoding 'UTF-8'
+[173] bbl.pm:739> INFO - Output to brief_paper.bbl
+[173] Biber.pm:110> INFO - WARNINGS: 2
