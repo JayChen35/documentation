@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.6)  8 AUG 2019 11:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.6)  8 AUG 2019 16:18
 entering extended mode
 **./brief_paper.tex
 (brief_paper.tex
@@ -693,36 +693,40 @@ Package pdftex.def Info: control_types.png  used on input line 93.
 [1
 
 {C:/Users/jason.chen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-
-Package caption Warning: \label without proper reference on input line 91.
-See the caption package documentation for explanation.
-
-
-LaTeX Warning: Reference `fig:control-types' on page 2 undefined on input line 
-97.
-
 <control_volume.png, id=12, 648.17157pt x 488.57532pt>
 File: control_volume.png Graphic file (type png)
 <use control_volume.png>
-Package pdftex.def Info: control_volume.png  used on input line 102.
+Package pdftex.def Info: control_volume.png  used on input line 103.
 (pdftex.def)             Requested size: 324.08499pt x 244.28706pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[2 <./control_types.png>] [3 <./control_volume.png>]
+<inclined_pipe.png, id=25, 647.41875pt x 621.82312pt>
+File: inclined_pipe.png Graphic file (type png)
+<use inclined_pipe.png>
+Package pdftex.def Info: inclined_pipe.png  used on input line 155.
+(pdftex.def)             Requested size: 291.33574pt x 279.81781pt.
 
-Package caption Warning: \label without proper reference on input line 100.
-See the caption package documentation for explanation.
 
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-LaTeX Warning: Reference `fig:control-volume' on page 2 undefined on input line
- 106.
-
-[2 <./control_types.png>]
-
-LaTeX Warning: Reference `short-rtt' on page 3 undefined on input line 116.
-
-[3 <./control_volume.png>] [4]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 176.
+[4] [5 <./inclined_pipe.png>]
+<developing_velocity_profile.png, id=34, 724.95844pt x 625.58719pt>
+File: developing_velocity_profile.png Graphic file (type png)
+<use developing_velocity_profile.png>
+Package pdftex.def Info: developing_velocity_profile.png  used on input line 19
+1.
+(pdftex.def)             Requested size: 362.47833pt x 312.79283pt.
+<comparing_velocity_profiles.png, id=35, 682.80093pt x 573.64313pt>
+File: comparing_velocity_profiles.png Graphic file (type png)
+<use comparing_velocity_profiles.png>
+Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 20
+3.
+(pdftex.def)             Requested size: 238.9839pt x 200.77809pt.
+ [6]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 220.
 
 
 ("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.f
@@ -730,42 +734,39 @@ d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 176.
- [5] (brief_paper.aux)
-
-LaTeX Warning: There were undefined references.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 220.
+ [7 <./developing_velocity_profile.png>] [8 <./comparing_velocity_profiles.png>
+] (brief_paper.aux)
 Package logreq Info: Writing requests to 'brief_paper.run.xml'.
 \openout1 = `brief_paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11296 strings out of 492895
- 197714 string characters out of 3121401
- 630260 words of memory out of 3000000
- 15087 multiletter control sequences out of 15000+200000
+ 11318 strings out of 492895
+ 198330 string characters out of 3121401
+ 630245 words of memory out of 3000000
+ 15106 multiletter control sequences out of 15000+200000
  11856 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,52p,1027b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,11n,45p,1027b,1164s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
-fonts/cm/cmbx10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/jason.chen/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jason.chen/Ap
-pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Us
-ers/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
-/cmr10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/jason.chen/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jason.ch
-en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb>
+fonts/cm/cmex10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jason.chen/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jason.chen/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
+rs/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jason.chen/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jason.ch
+en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
 <C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmss12.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jason.chen/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jason.chen/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on brief_paper.pdf (5 pages, 320805 bytes).
+nts/cm/cmsy10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jason.chen/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on brief_paper.pdf (8 pages, 525406 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
+ 88 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

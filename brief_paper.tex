@@ -82,25 +82,27 @@ To simplify the rigorous analysis and optimization processes often associated wi
 \item Pipe is circular and is of constant cross-sectional area. \label{itm:constant-area}
 \item No swirl, circumferential variation, or entrance effects.
 \item No shaft-work or heat-transfer effects. \label{itm:heat-effects}
-\item A simplified steady-flow energy equation due to Assumption \ref{itm:heat-effects}.
-%\item Flow is fully developed (minimal boundary-layer effects).
+%\item A simplified steady-flow energy equation due to Assumption \ref{itm:heat-effects}.
+\item Flow is fully developed (minimal boundary-layer effects).
 
 \end{enumerate}
 \subsection{The Reynolds Transport Theorem}
 We can begin by introducing the concept of control-volume analysis \textemdash{} a powerful approach to solving fundamental fluid mechanics problems \textemdash{} in which a mathematical abstraction is employed to generate mathematical models of physical systems. That is, in an inertial frame of reference, the \textit{control volume} is a volume fixed in space or moving with constant velocity with the fluid flow. The surface enclosing the control volume is referred to as the \textit{control surface}. To convert a system analysis to a control-volume analysis, we must shift our perspective such that our mathematics apply to a specific region rather than to individual bodies. This process is called the \textit{Reynolds Transport Theorem}, and allows us to study certain properties (e.g. angular momentum $L$, enthalpy $h$, etc.) crossing the boundaries of the region. Essentially, we need to relate the time derivative of a system property of that property within a certain region.
-\begin{figure}[h] \label{fig:control-types}
+\begin{figure}[h] 
 \centering
 \includegraphics[scale=0.5]{control_types}
 \caption{Fixed, moving, and deformable control volumes: (a) fixed control volume for nozzle stress analysis; (b) control volume moving at ship speed for drag force analysis; (c) control volume deforming within cylinder for transient pressure variation analysis.}
+\label{fig:control-types} % Always put labels after captions: https://tex.stackexchange.com/questions/32325/why-does-an-environments-label-have-to-appear-after-the-caption/32326#32326
 \end{figure}
 
 The desired conversion formula differs slightly according to whether the control volume is fixed, moving, or deformable, but for the purposes of our application, we'll be focusing on a fixed control volume. The fixed control volume in Figure \ref{fig:control-types}$a$ encloses a stationary region of interest to a nozzle designer. The control surface is an abstract concept that does not hinder the flow in any way. It slices through the jet leaving the nozzle, circles around through the surrounding (ambient) atmosphere, and slices through the flange bolts and the fluid within the nozzle \cite{fluid-mechanics}.
 
 This particular control volume exposes the stresses in the flange bolts, which contribute to applied forces in the momentum analysis. In this sense, the control volume resembles the \textit{free-body} concept, which is often applied in solid-mechanics analysis \cite{fluid-mechanics}.
-\begin{figure}[h] \label{fig:control-volume}
+\begin{figure}[h] 
 \centering
 \includegraphics[scale=0.5]{control_volume}
 \caption{An arbitrary fixed control volume with an arbitrary flow pattern.}
+\label{fig:control-volume}
 \end{figure}
 
 Figure \ref{fig:control-volume} shows a generalized fixed control volume with an arbitrary flow pattern passing through. In general, each differential $dA$ of surface will have a different velocity vector $\vec{V}$ making a different angle $\theta$ with the local normal to $dA$. This gives us the general Reynolds transport theorem equation for an arbitrary fixed control volume:
@@ -113,7 +115,7 @@ However, realizing that if $\vec{n}$ is defined as the \textit{outward} normal u
 \begin{equation} \label{eq:short-rtt}
 \frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CV} \beta \rho(\vec{V} \cdot \vec{n})\, dA
 \end{equation}
-We are now able to apply the principles of conservation of mass to the Reynolds transport theorem by setting the arbitrary variable $B$ equal to mass, and $\beta = dm/dm =1$. Equation \ref{short-rtt} becomes
+We are now able to apply the principles of conservation of mass to the Reynolds transport theorem by setting the arbitrary variable $B$ equal to mass, and $\beta = dm/dm =1$. Equation \ref{eq:short-rtt} becomes
 \begin{equation}
 \left( \frac{dm}{dt} \right)_{syst} = 0 = \frac{d}{dt} \left( \int_{CV} \rho\, d\vartheta \right) + \int_{CS} \rho(\vec{V_{r}} \cdot \vec{n})\, dA
 \end{equation}
@@ -122,49 +124,91 @@ This is the integral mass-conservation law for a deformable control volume. Adap
 \int_{CV} \frac{\partial \rho}{\partial t}\, d\vartheta + \int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
 \end{equation}
 Finally, knowing that we are dealing with steady, incompressible flow through the control volume ($\partial \rho/ \partial t = 0$), Equation \ref{eq:mass-conservation-law} reduces to
-\begin{equation}
+\begin{equation} \label{eq:continuity-relation}
 \int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
 \end{equation}
 This equation explicitly states that in steady flow, the mass flows entering and exitting the control volume are exactly equal, while neglecting sources or sinks of mass which might be embedded in the control volume.
 
-\subsection{Flow in a Circular Pipe}
+\subsection{Viscous Flow in a Circular Pipe}
 
-Given the simplifying assumptions mentioned in Section \ref{sec:assumptions}, we can begin with the classic case of Bernoulli's Equation:
+Now that a theoretical background has been established, we can begin to discuss the specific case of solving for flow rates, pressure drops, head losses, and diameter sizings via incompressible, viscous flows in circular pipes. Given the simplifying assumptions mentioned in Section \ref{sec:assumptions}, we can start simply with the classic case of Bernoulli's Equation:
 \begin{equation} \label{eq:bernoulli}
 p + \frac{1}{2} \rho V^{2} + \rho g z = constant
 \end{equation}
 where $p$ is the pressure, $\rho$ is density, $V$ is the total velocity, $z$ is elevation, and $g$ represents gravitational acceleration. It gives insight into the balance between pressure, velocity, and elevation by assuming that the two points in question lie on a streamline, the fluid is incompressible, the flow is steady and inviscid, and there is no friction. Although useful for some applications, it is not adequate for designing robust piping systems which will in actuality encounter such effects.
 
-The addition of a \textit{head loss} term, denoted as $h_{f}$, is the first step in introducing a viscous term into an otherwise inviscid equation. Head loss can simply be thought of as an additional pressure loss in the system due to viscous effects, a sudden expansion/contraction, and/or obstructions to its path such as pipe elbows, bends, valves, etc. This can be done by first realizing that the continuity (conservation of mass) equation, when an arbitrary fixed control volume has only a number of one-dimensional inlets and outlets and when the flow within the control volume is steady ($dp/dt = 0$), can be written simply as
-\begin{equation} \label{eq:conservation-of-mass}
-\int_{CS} \rho(\vec{V} \cdot \vec{n}) dA = 0
-\end{equation}
-%%% CHANGE THIS
-Equation \ref{eq:conservation-of-mass} above refers to the following figure (see References):
-%%%
-Due to Assumption \ref{itm:constant-area}, Equation \ref{eq:conservation-of-mass} reduces to 
-\begin{equation}
+The addition of a \textit{head loss} term, denoted as $h_{f}$, is the first step in introducing a viscous term into an otherwise inviscid equation. Head loss can simply be thought of as an additional pressure loss in the system due to viscous effects, a sudden expansion/contraction, and/or obstructions to its path such as pipe elbows, bends, valves, etc. This can be done by first recalling the continuity (conservation of mass) relation (Equation \ref{eq:continuity-relation}). Realizing that the pipe is of constant area and assuming only a number of one-dimensional inlets and outlets, Equation \ref{eq:continuity-relation} reduces to
+\begin{equation} \label{eq:equal-q}
 Q_{1} = Q_{2} = constant
 \end{equation}
-\begin{equation}
+or
+\begin{equation} \label{eq:equal-v}
 V_{1} = \frac{Q_{1}}{A_{1}} = V_{2} = \frac{Q_{2}}{A_{2}}
 \end{equation}
-Bernoulli's Equation (Equation \ref{eq:bernoulli}, in combination with the steady-flow energy equation) can thus be reduced and rearranged into
+Bernoulli's Equation (Equation \ref{eq:bernoulli}, in combination with the steady-flow energy equation from \cite{fluid-mechanics}) can thus be reduced and rearranged into
+\begin{equation} \label{eq:steady-flow-energy}
+\frac{p_{1}}{\rho} + \frac{1}{2} \alpha_{1} V^{2}_{1} + gz_{1} = \frac{p_{2}}{\rho} + \frac{1}{2} \alpha_{2} V^{2}_{2} + gz_{2} + gh_{f}
+\end{equation}
+due to Assumption \ref{itm:heat-effects}, where $\alpha$ denotes the kinetic-energy correlation factor (energy coefficient). $\alpha$ is 1 when the flow is fully developed and is less than 1 if the flow is underdeveloped. Note that this equation is also very similar to the result of dividing Equation \ref{eq:bernoulli} by the specific weight of the fluid, $\rho \cdot g$.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{inclined_pipe}
+\caption{Control volume of a steady, fully-developed flow between two sections of an inclined pipe.}
+\label{fig:inclined-pipe}
+\end{figure}
+For fully-developed flow, the velocity profile shape is the same at sections 1 and 2, as seen in Figure \ref{fig:inclined-pipe}. Thus the kinetic-energy correlation factor $\alpha_{1} = \alpha_{2}$, and since $V_{1} = V_{2}$ from Equation \ref{eq:equal-v}, Equation \ref{eq:steady-flow-energy} reduces to a simple expression for the friction-head loss $h_{f}$ \cite{fluid-mechanics}
 \begin{equation}
-E =mc^{2}
+h_{f} = (z_{1} - z_{2}) + \left( \frac{p_{1}}{\rho g} - \frac{p_{2}}{\rho g} \right) = \Delta z + \frac{\Delta p}{\rho g}
 \end{equation}
-We can begin by introducing the dimensionless Darcy friction factor $f$ as a baseline relationship between roughness and pipe resistance:
-\begin{equation} \label{eq:darcy-friction}
-\frac{8 \tau_{w}}{\rho V^{2}} = f = F(Re_{d}, \frac{\epsilon}{d})
+Applying the one-dimensional momentum relation
+\begin{equation}
+\sum \vec{F} = \frac{d}{dt} \left( \int_{CV} \vec{V} \rho\, d\vartheta \right) + \sum (\dot{m_{i}} \vec{V}_{i})_{out} - \sum (\dot{m_{i}} \vec{V}_{i})_{in}
 \end{equation}
-where $\tau_{w}$ depicts the wall shear stress, $\rho$ is density, $V$ is the mean velocity, and $F$ represents a later-defined function between the Reynold's Number $Re_{d}$ and the average pipe roughness to diameter ratio $\frac{\epsilon}{d}$ (also known as relative roughness).
+to the control volume in Figure \ref{fig:inclined-pipe} while accounting for applied $x$-directed forces due to pressure, gravity, and shear:
+\begin{equation}
+\sum F_{x} = \Delta p (\pi R^{2}) + \rho g (\pi R^{2}) L\, sin \phi - \tau_{w}(2 \pi R)L = \dot{m} (V_{2} - V_{1}) = 0
+\end{equation}
+Rearranging shows that head loss $h_{f}$ is also related to wall shear stress
+\begin{equation} \label{eq:wall-shear-stress}
+\Delta z + \frac{\Delta p}{\rho g} = h_{f} = \frac{2 \tau_{w}}{\rho g} \frac{L}{R} = \frac{4 \tau{w}}{\rho g} \frac{L}{d}
+\end{equation}
+where we have substituted $\Delta z = \Delta L\, sin \phi$ from Figure \ref{fig:inclined-pipe}. Note that regardless the value of $\phi$ (whether the pipe is horizontal or tilted), the head loss is proportional to the wall shear stress.
 
-Using Equation \ref{eq:darcy-friction} and the wall shear stress equation (see References), we obtain the desired expression for finding pipe-head loss, also known as the Darcy-Weisbach equation. It is valid for duct flows of any cross section and any Reynold's Number
+Finally, to correlate the head loss term into a useful form for solving pipe flow problems, we have the famous \textit{Darcy-Weisbach equation}, which is a proposed correlation valid for duct flow of any cross section and any Reynolds Number:
 \begin{equation} \label{eq:darcy-weisbach}
 h_{f} = f{\frac{L}{d}}{\frac{V^{2}}{2{g}}}
 \end{equation}
-where $h_{f}$ represents the head loss factor as a function of the dimensionless Darcy friction factor $f$, $L$ is the length of the pipe, and $g$ is equal to one standard Earth gravity.
+The dimensionless parameter $f$ is the \textit{Darcy friction factor}, which establishes a relationship between roughness and pipe resistance. $\epsilon$ is the wall roughness height, which is significant only in turbulent pipe flow. It has been shown that $\epsilon$ has \textit{little to no effect on laminar pipe flow}. By equating Equations \ref{eq:wall-shear-stress} and \ref{eq:darcy-weisbach} we find an alternative form of the friction factor:
+\begin{equation} \label{eq:darcy-friction}
+\frac{8 \tau_{w}}{\rho V^{2}} = f = F(Re_{d}, \frac{\epsilon}{d})
+\end{equation}
+where $F$ represents some relationship between the Reynolds Number $Re_{d}$ and the average pipe roughness to diameter ratio $\epsilon / d$ (also known as relative roughness).
 
+\subsection{Laminar Fully Developed Pipe Flow}
+The following section briefly outlines the derivations and methods necessary to solve specifically a laminar flow problem. We will not be addressing the problem of turbulent flow for several reasons, most of which will later become apparent. The relative unpredictability, larger pressure drops, and overall undesirable characteristics are not fitting for any propulsion feed system, let alone one developed and tested by high school students. We will assume laminar flow throughout our piping system for preliminary calculations and make our best effort to preserve such flow during the manufacturing and assembly processes.
+\begin{figure}[!htb] %[!htb] puts more than one figure on the same page
+\centering
+\includegraphics[scale=0.5]{developing_velocity_profile}
+\caption{Developing velocity profiles and pressure changes in the entrance of a duct flow.}
+\label{fig:developing-velocity-profile}
+\end{figure}
+
+Evaluating off the assumption of the no-slip condition at the wall (i.e. $u=0$ and $r=R$ in Figure \ref{fig:inclined-pipe}), we can obtain the solution for laminar fully-developed pipe flow
+\begin{equation} \label{eq:laminar-pipe-flow}
+u = \frac{1}{4 u} \big[ -\frac{d}{dx} (p + \rho g z) \big] (R^{2} - r^{2})
+\end{equation}
+The detailed derivations of Equation \ref{eq:laminar-pipe-flow} are not shown here, but it is notable that Equation \ref{eq:laminar-pipe-flow} is based off the \textit{hydraulic grade line} (HGL) equations while knowing that for laminar flow $\tau = \mu du/dr$ \cite{fluid-mechanics}.
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.35]{comparing_velocity_profiles}
+\caption{Comparison of laminar and turbulent pipe flow velocity profiles for the same volume flow: $(a)$ laminar flow; $(b)$ turbulent flow.}
+\label{fig:comparing-velocity-profiles}
+\end{figure}
+Therefore, the laminar flow profile is a paraboloid falling to zero at the wall and reaching a maximum at the axis
+\begin{equation}
+u_{max} = \frac{R^{2}}{4 \mu} \big[  -\frac{d}{dx} (p + \rho g z) \big]
+\end{equation}
+This resembles $u(r)$, representing the laminar distribution given in Figure \ref{fig:comparing-velocity-profiles}), also known as \textit{Hagen-Poiseuille flow}. The paraboloid profile has an average velocity $V$ which is one-half of the maximum velocity. The quantity $\Delta p$ is the pressure \textit{drop} in a pipe of length $L$. These formulas are valid whenever the pipe Reynolds number, $Re_{d} = \rho V d/\mu$, is less than about 2300 (this is the widely accepted threshold between laminar and turbulent flow). Note that $\tau_{w}$ is proportional to $V$ (see Figure \ref{fig:developing-velocity-profile}) and is independent of density because the fluid acceleration is zero. Neither of these is true in turbulent flow \cite{fluid-mechanics}.
 
 \subsection{Iterative Diameter Calculation}
 \subsection{Example Calculation}
@@ -180,8 +224,8 @@ All units are implied with accordance to the Metric system (seconds, kilograms, 
 \item $\mu$ = dynamic viscosity, $\frac{kg}{m \cdot s}$ or $Pa \cdot s$
 \item $\nu$ = kinematic viscosity, $m^{2}/s$
 \item $R$ = radius, $m$
+\item $Re_{d}$ = Reynolds Number, dimensionless%. Laminar flow: $Re_{d} < 2300$ Turbulent flow: $2300 < Re_{d}$
 
 \end{itemize}
-As \textcite{fluid-mechanics} says, make sure to check your \textcite{pipe-roughness}!
 \printbibliography
 \end{document}
