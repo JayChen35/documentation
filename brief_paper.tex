@@ -210,6 +210,11 @@ u_{max} = \frac{R^{2}}{4 \mu} \big[  -\frac{d}{dx} (p + \rho g z) \big]
 \end{equation}
 This resembles $u(r)$, representing the laminar distribution given in Figure \ref{fig:comparing-velocity-profiles}), also known as \textit{Hagen-Poiseuille flow}. The paraboloid profile has an average velocity $V$ which is one-half of the maximum velocity. The quantity $\Delta p$ is the pressure \textit{drop} in a pipe of length $L$. These formulas are valid whenever the pipe Reynolds number, $Re_{d} = \rho V d/\mu$, is less than about 2300 (this is the widely accepted threshold between laminar and turbulent flow). Note that $\tau_{w}$ is proportional to $V$ (see Figure \ref{fig:developing-velocity-profile}) and is independent of density because the fluid acceleration is zero. Neither of these is true in turbulent flow \cite{fluid-mechanics}.
 
+If we know the wall shear stress, the Poiseuille flow friction factor is
+\begin{equation} \label{eq:friction-factor}
+f_{lam} = \frac{8 \tau_{w, lam}}{\rho V^{2}} = \frac{8(8 \mu V/d)}{\rho V^{2}} = \frac{64}{\rho V d/\mu} = \frac{64}{Re_{d}}
+\end{equation}	
+A clear relation between two terms in Equation \ref{eq:friction-factor} arises \textemdash{} the pipe friction factor decreases inversely with Reynolds Number.
 \subsection{Iterative Diameter Calculation}
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
