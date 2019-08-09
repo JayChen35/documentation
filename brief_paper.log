@@ -1,11 +1,15 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  8 AUG 2019 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.6)  9 AUG 2019 16:08
 entering extended mode
 **./brief_paper.tex
 (brief_paper.tex
 LaTeX2e <2018-12-01>
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.
+cls"
 Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.clo"
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size11.c
+lo"
 File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 )
 \c@part=\count80
@@ -19,36 +23,37 @@ File: size11.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
-) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
-y"
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc
+.sty"
 Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks14
 \inpenc@posthook=\toks15
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsma
+th.sty"
 Package: amsmath 2018/12/01 v2.17b AMS math features
 \@mathmargin=\skip43
 
 For additional information on amsmath, use the `?' option.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amste
+xt.sty"
 Package: amstext 2000/06/29 v2.01 AMS text
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
-"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsge
+n.sty"
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks16
 \ex@=\dimen103
 ))
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
-"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbs
+y.sty"
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen104
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
-"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsop
+n.sty"
 Package: amsopn 2016/03/08 v2.02 operator names
 )
 \inf@bad=\count88
@@ -89,59 +94,60 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\grap
+hicx.sty"
 Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyv
+al.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks21
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\grap
+hics.sty"
 Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig
+.sty"
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
-ics.cfg"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\
+graphics.cfg"
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
-x.def"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\
+pdftex.def"
 File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.sty"
 Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
-mds.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pd
+ftexcmds.sty"
 Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
-rr.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\in
+fwarerr.sty"
 Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
-x.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+luatex.sty"
 Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
-.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\lt
+xcmds.sty"
 Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
-ty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+pdf.sty"
 Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
 )
 Package pdftexcmds Info: LuaTeX not detected.
@@ -149,32 +155,37 @@ Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoo
+lbox.sty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count100
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
-.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvop
+tions.sty"
 Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
-ys.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
+setkeys.sty"
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
-s.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\et
+excmds.sty"
 Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 )))
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq
+.sty"
 Package: logreq 2010/08/04 v1.0 xml request logger
 \lrq@indent=\count101
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
+
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq
+.def"
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
-)) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
-"
+))
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.s
+ty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+)
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
@@ -235,8 +246,8 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.de
-f"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-
+dm.def"
 File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 Package biblatex Info: Trying to load biblatex custom data model...
@@ -326,15 +337,15 @@ Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
 Package biblatex Info: Trying to load compatibility code...
 Package biblatex Info: ... file 'blx-compat.def' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-compa
-t.def"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-
+compat.def"
 File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 )
 Package biblatex Info: Trying to load generic definitions...
 Package biblatex Info: ... file 'biblatex.def' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-def"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.def"
 File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 \c@textcitecount=\count280
 \c@textcitetotal=\count281
@@ -347,14 +358,14 @@ File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\numer
-ic.bbx"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\
+numeric.bbx"
 File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load bibliography style 'standard'...
 Package biblatex Info: ... file 'standard.bbx' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
-ard.bbx"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\
+standard.bbx"
 File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 \c@bbx:relatedcount=\count287
 \c@bbx:relatedtotal=\count288
@@ -362,8 +373,8 @@ File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
-ic.cbx"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\
+numeric.cbx"
 File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
 Package biblatex Info: Redefining '\cite'.
 Package biblatex Info: Redefining '\parencite'.
@@ -380,21 +391,21 @@ Package biblatex Info: Redefining '\smartcites'.
 Package biblatex Info: Trying to load configuration file...
 Package biblatex Info: ... file 'biblatex.cfg' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
-cfg"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\bibl
+atex.cfg"
 File: biblatex.cfg 
 ))
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geom
+etry.sty"
 Package: geometry 2018/04/16 v5.8 Page Geometry
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\if
+vtex.sty"
 Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifx
+etex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
 \Gm@cnth=\count289
@@ -410,10 +421,10 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutvoffset=\dimen121
 \Gm@dimlist=\toks22
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
-cfg"))
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geom
+etry.cfg"))
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\book
+tabs.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen122
 \lightrulewidth=\dimen123
@@ -433,7 +444,8 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \@lastruleclass=\count295
 \@thisrulewidth=\dimen134
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.s
+ty"
 Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen135
 \ar@mcellbox=\box29
@@ -443,8 +455,8 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \backup@length=\skip69
 \ar@cellbox=\box30
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\paralist.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\para
+list.sty"
 Package: paralist 2017/01/22 v2.7 Extended list environments
 \pltopsep=\skip70
 \plpartopsep=\skip71
@@ -452,22 +464,23 @@ Package: paralist 2017/01/22 v2.7 Extended list environments
 \plparsep=\skip73
 \pl@lab=\toks24
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty
-"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbati
+m.sty"
 Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks25
 \verbatim@line=\toks26
 \verbatim@in@stream=\read2
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig
+.sty"
 Package: subfig 2005/06/28 ver: 1.3 subfig package
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\capti
+on.sty"
 Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
-ty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\capti
+on3.sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
 \captionmargin=\dimen137
@@ -495,8 +508,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \sf@top=\skip77
 \sf@bottom=\skip78
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.
-sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fanc
+yhdr.sty"
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
 s
 \f@nch@headwidth=\skip79
@@ -509,13 +522,13 @@ s
 \f@nch@O@olf=\skip86
 \f@nch@O@orf=\skip87
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sectsty.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sects
+ty.sty"
 Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
 les
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\tocbibin
-d.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\toc
+bibind.sty"
 Package: tocbibind 2010/10/13 v1.5k extra ToC listings
 Package tocbibind Info: The document has section divisions on input line 50.
 
@@ -523,8 +536,8 @@ Package tocbibind Info: The document has section divisions on input line 50.
 Package tocbibind Note: Using section or other style headings.
 
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\toclo
+ft.sty"
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has section divisions on input line 51.
 \cftparskip=\skip88
@@ -568,8 +581,8 @@ Package tocloft Info: The document has section divisions on input line 51.
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\engli
-sh.lbx"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\
+english.lbx"
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
 \@quotelevel=\count305
@@ -590,8 +603,8 @@ LaTeX Font Info:    ... okay on input line 70.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 70.
 LaTeX Font Info:    ... okay on input line 70.
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
-df.mkii"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\s
+upp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count307
 \scratchdimen=\dimen145
@@ -605,16 +618,16 @@ df.mkii"
 \makeMPintoPDFobject=\count312
 \everyMPtoPDFconversion=\toks28
 )
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
-base.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epst
+opdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
-y"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfe
+xt.sty"
 Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
-ekeys.sty"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kv
+definekeys.sty"
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
 ))
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -679,7 +692,7 @@ Package pdftex.def Info: control_types.png  used on input line 93.
 (pdftex.def)             Requested size: 339.14119pt x 129.85983pt.
 [1
 
-{C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+{C:/Users/jason.chen/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 <control_volume.png, id=12, 648.17157pt x 488.57532pt>
 File: control_volume.png Graphic file (type png)
 <use control_volume.png>
@@ -703,59 +716,61 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <developing_velocity_profile.png, id=34, 724.95844pt x 625.58719pt>
 File: developing_velocity_profile.png Graphic file (type png)
 <use developing_velocity_profile.png>
-Package pdftex.def Info: developing_velocity_profile.png  used on input line 19
-1.
-(pdftex.def)             Requested size: 362.47833pt x 312.79283pt.
+Package pdftex.def Info: developing_velocity_profile.png  used on input line 22
+8.
+(pdftex.def)             Requested size: 333.48492pt x 287.77359pt.
 <comparing_velocity_profiles.png, id=35, 682.80093pt x 573.64313pt>
 File: comparing_velocity_profiles.png Graphic file (type png)
 <use comparing_velocity_profiles.png>
-Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 20
-3.
+Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 23
+4.
 (pdftex.def)             Requested size: 238.9839pt x 200.77809pt.
  [6]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 225.
+
+LaTeX Warning: Text page 7 contains only floats.
+
+[7 <./developing_velocity_profile.png> <./comparing_velocity_profiles.png>]
+[8]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 280.
 
 
-("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+("C:\Users\jason.chen\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.f
+d"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 225.
-
-[7 <./developing_velocity_profile.png>] [8 <./comparing_velocity_profiles.png>]
-(brief_paper.aux)
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 280.
+ [9] (brief_paper.aux)
 Package logreq Info: Writing requests to 'brief_paper.run.xml'.
 \openout1 = `brief_paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11319 strings out of 492895
- 197680 string characters out of 3123736
- 631256 words of memory out of 3000000
- 15107 multiletter control sequences out of 15000+200000
+ 11323 strings out of 492895
+ 198420 string characters out of 3121401
+ 634318 words of memory out of 3000000
+ 15111 multiletter control sequences out of 15000+200000
  11856 words of font info for 42 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,11n,45p,1027b,1164s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jaych/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jaych/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/jaych
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr8.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmss10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmss12.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jaych/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jaych/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on brief_paper.pdf (8 pages, 526078 bytes).
+ 44i,12n,45p,1027b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmex10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/font
+s/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jason.chen/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jason.chen/App
+Data/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
+rs/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmr17.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/jason.chen/AppData/Local/P
+rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jason.ch
+en/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb>
+<C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmsy10.pfb><C:/Users/jason.chen/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/jason.chen/AppData/Local/Programs/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on brief_paper.pdf (9 pages, 531279 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
+ 91 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

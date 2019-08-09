@@ -135,7 +135,7 @@ Now that a theoretical background has been established, we can begin to discuss 
 \begin{equation} \label{eq:bernoulli}
 p + \frac{1}{2} \rho V^{2} + \rho g z = constant
 \end{equation}
-where $p$ is the pressure, $\rho$ is density, $V$ is the total velocity, $z$ is elevation, and $g$ represents gravitational acceleration. It gives insight into the balance between pressure, velocity, and elevation by assuming that the two points in question lie on a streamline, the fluid is incompressible, the flow is steady and inviscid, and there is no friction. Although useful for some applications, it is not adequate for designing robust piping systems which will in actuality encounter such effects.
+where $p$ is the pressure, $\rho$ is density, $V$ is velocity, $z$ is elevation, and $g$ represents gravitational acceleration. It gives insight into the balance between pressure, velocity, and elevation by assuming that the two points in question lie on a streamline, the fluid is incompressible, the flow is steady and inviscid, and there is no friction. Although useful for some applications, it is not adequate for designing robust piping systems which will in actuality encounter such effects.
 
 The addition of a \textit{head loss} term, denoted as $h_{f}$, is the first step in introducing a viscous term into an otherwise inviscid equation. Head loss can simply be thought of as an additional pressure loss in the system due to viscous effects, a sudden expansion/contraction, and/or obstructions to its path such as pipe elbows, bends, valves, etc. This can be done by first recalling the continuity (conservation of mass) relation (Equation \ref{eq:continuity-relation}). Realizing that the pipe is of constant area and assuming only a number of one-dimensional inlets and outlets, Equation \ref{eq:continuity-relation} reduces to
 \begin{equation} \label{eq:equal-q}
@@ -178,44 +178,99 @@ Finally, to correlate the head loss term into a useful form for solving pipe flo
 \begin{equation} \label{eq:darcy-weisbach}
 h_{f} = f{\frac{L}{d}}{\frac{V^{2}}{2{g}}}
 \end{equation}
-The dimensionless parameter $f$ is the \textit{Darcy friction factor}, which establishes a relationship between roughness and pipe resistance. $\epsilon$ is the wall roughness height, which is significant only in turbulent pipe flow. It has been shown that $\epsilon$ has \textit{little to no effect on laminar pipe flow}. By equating Equations \ref{eq:wall-shear-stress} and \ref{eq:darcy-weisbach} we find an alternative form of the friction factor:
+The dimensionless parameter $f$ is the \textit{Darcy friction factor}, which establishes a relationship between roughness and pipe resistance. $\epsilon$ is the wall roughness height, which is significant only in turbulent pipe flow. It has been shown that $\epsilon$ has orders of magnitude \textit{less of an effect} on laminar pipe flow. By equating Equations \ref{eq:wall-shear-stress} and \ref{eq:darcy-weisbach} we find an alternative form of the friction factor:
 \begin{equation} \label{eq:darcy-friction}
 \frac{8 \tau_{w}}{\rho V^{2}} = f = F(Re_{d}, \frac{\epsilon}{d})
 \end{equation}
 where $F$ represents some relationship between the Reynolds Number $Re_{d}$ and the average pipe roughness to diameter ratio $\epsilon / d$ (also known as relative roughness).
 
 \subsection{Laminar Fully Developed Pipe Flow}
-The following section briefly outlines the derivations and methods necessary to solve specifically a laminar flow problem. We will not be addressing the problem of turbulent flow for several reasons, most of which will later become apparent. The relative unpredictability, larger pressure drops, and overall undesirable characteristics are not fitting for any propulsion feed system, let alone one developed and tested by high school students. We will assume laminar flow throughout our piping system for preliminary calculations and make our best effort to preserve such flow during the manufacturing and assembly processes.
+The following section briefly outlines the derivations and methods necessary to solve specifically a laminar flow problem. 
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{4cm}||p{4cm}|p{2cm}|p{2cm}|  }
+\hline
+\multicolumn{4}{|c|}{Design Parameters} \\
+\hline
+Name & Value & Unit & Uncertainty \\
+\hline
+Propellant  &  Isopropyl alcohol ($95\%$)   &  N/A  &  N/A \\
+$\mu$, Dynamic viscosity  &  0.00196  &  $kg/m \cdot s$  &  $\pm 0.1 \%$ \\
+$\rho$, Density  &  786  &  $kg/m^{3}$  &  $\pm 1 \%$ \\
+$L$, Pipe length  &  8.0  &  $m$  &  $\pm 0.1 \%$  \\
+$d$, Pipe diameter  &  12.7  &  $mm$  &   $\pm 0.1 \%$ \\
+$\dot{m}$, Mass flow rate  &  0.9133  &  $kg/s$  &   $\pm 0.1 \%$ \\
+Pipe material  &  Hard nylon  &  N/A  &  N/A \\
+$\epsilon$, Roughness  &  1.5 to 40.0  &  $\mu m$  &  $\pm 50 \%$ \\
+\hline
+\end{tabular}
+\caption{Design parameters and fluid properties required for pipe calculations.}
+\label{table:parameters}
+\end{table}
+However, by just doing a few simple calculations using values from Table \ref{table:parameters}, we quickly realize our flow is most likely turbulent:
+\begin{equation}
+Q = \frac{\dot{m}}{\rho} = \frac{0.9133\, kg/s}{786\, kg/m^{3}} = 1.162 \times 10^{-3}\, m^{3}/s
+\end{equation}
+\begin{equation}
+V = \frac{Q}{\pi R^{2}} = \frac{(1.162 \times 10^{-3}\, m^{3}/s)}{\pi (0.0127 / 2\, m)^{2}} = 9.173\, m/s
+\end{equation}
+\begin{equation}
+\nu = \frac{\mu}{\rho} = \frac{0.00196\, kg/m \cdot s}{786\, kg/m^{3}} = 2.494 \times 10^{-6}\, m^{2}/s
+\end{equation}
+\begin{equation}
+Re_{d} = \frac{V d}{\nu} = \frac{(9.173\, m/s)(0.0127\, m)}{2.494 \times 10^{-6}\, m^{2}/s} = 46711
+\end{equation}
+since $Re_{d} >> 2300$. The purpose of this section, therefore, is to introduce and highlight key differences when dealing with laminar versus turbulent flow when designing a pipe system. The benefits and drawbacks of either flow type will become apparent, and this will hopefully provide the reader with stronger intuition on the design and manufacturing tradeoffs associated with each flow type. If the reader is only interested in equations relevant to our specific calculations, the next section covers the solutions to turbulent fully developed pipe flow.
+
 \begin{figure}[!htb] %[!htb] puts more than one figure on the same page
 \centering
-\includegraphics[scale=0.5]{developing_velocity_profile}
-\caption{Developing velocity profiles and pressure changes in the entrance of a duct flow.}
+\includegraphics[scale=0.46]{developing_velocity_profile}
+\caption{Developing velocity profiles and pressure changes in the entrance of a duct.}
 \label{fig:developing-velocity-profile}
 \end{figure}
-
-Evaluating off the assumption of the no-slip condition at the wall (i.e. $u=0$ and $r=R$ in Figure \ref{fig:inclined-pipe}), we can obtain the solution for laminar fully-developed pipe flow
-\begin{equation} \label{eq:laminar-pipe-flow}
-u = \frac{1}{4 u} \big[ -\frac{d}{dx} (p + \rho g z) \big] (R^{2} - r^{2})
-\end{equation}
-The detailed derivations of Equation \ref{eq:laminar-pipe-flow} are not shown here, but it is notable that Equation \ref{eq:laminar-pipe-flow} is based off the \textit{hydraulic grade line} (HGL) equations while knowing that for laminar flow $\tau = \mu du/dr$ \cite{fluid-mechanics}.
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.35]{comparing_velocity_profiles}
 \caption{Comparison of laminar and turbulent pipe flow velocity profiles for the same volume flow: $(a)$ laminar flow; $(b)$ turbulent flow.}
 \label{fig:comparing-velocity-profiles}
 \end{figure}
+
+Considering a fully-developed \textit{Hagen-Poiseuille flow} (which represents the laminar distribution given in Figure \ref{fig:comparing-velocity-profiles}) in a round pipe of diameter $d$ and radius $R$, complete analytical solutions can be easily derived from formulas given in \textcite{fluid-mechanics}'s Section 4.10. A compilation of those formulas is given below:
+\begin{equation} \label{eq:poiseuille-v}
+V = \frac{Q}{A} = \frac{u_{max}}{2} = \left( \frac{\Delta p + \rho g \Delta z}{L} \right) \frac{R^{2}}{8 \mu}
+\end{equation}
+\begin{equation}
+Q = \int u\, dA = \pi R^{2} V = \left( \frac{\Delta p + \rho g \Delta z}{L} \right) \frac{\pi R^{4}}{8 \mu}
+\end{equation}
+\begin{equation} \label{eq:poiseuille-tw}
+\tau_{w} = \frac{4 \mu V}{R} = \frac{8 \mu V}{d} = \frac{R}{2} \left( \frac{\Delta p + \rho g \Delta z}{L} \right)
+\end{equation}
+\begin{equation}
+h_{f} = \frac{32 \mu L V}{\rho g d^{2}} = \frac{128 \mu L Q}{\pi \rho g d^{4}}
+\end{equation}
+
+
+To briefly explain the laminar distribution shown in Figure \ref{fig:comparing-velocity-profiles}, we start by evaluating off the assumption of the no-slip condition at the wall (i.e. $u=0$ and $r=R$ in Figure \ref{fig:inclined-pipe}) to obtain the velocity solution for laminar fully-developed pipe flow
+\begin{equation} \label{eq:laminar-pipe-flow}
+u = \frac{1}{4 u} \big[ -\frac{d}{dx} (p + \rho g z) \big] (R^{2} - r^{2})
+\end{equation}
+The detailed derivations of Equation \ref{eq:laminar-pipe-flow} are not shown here, but it is notable that Equation \ref{eq:laminar-pipe-flow} is based off the \textit{hydraulic grade line} (HGL) equations while knowing that for laminar flow $\tau = \mu du/dr$ \cite{fluid-mechanics}.
+
 Therefore, the laminar flow profile is a paraboloid falling to zero at the wall and reaching a maximum at the axis
 \begin{equation}
 u_{max} = \frac{R^{2}}{4 \mu} \big[  -\frac{d}{dx} (p + \rho g z) \big]
 \end{equation}
-This resembles $u(r)$, representing the laminar distribution given in Figure \ref{fig:comparing-velocity-profiles}), also known as \textit{Hagen-Poiseuille flow}. The paraboloid profile has an average velocity $V$ which is one-half of the maximum velocity. The quantity $\Delta p$ is the pressure \textit{drop} in a pipe of length $L$. These formulas are valid whenever the pipe Reynolds number, $Re_{d} = \rho V d/\mu$, is less than about 2300 (this is the widely accepted threshold between laminar and turbulent flow). Note that $\tau_{w}$ is proportional to $V$ (see Figure \ref{fig:developing-velocity-profile}) and is independent of density because the fluid acceleration is zero. Neither of these is true in turbulent flow \cite{fluid-mechanics}.
+The paraboloid profile, characteristic of Poiseuille flow, has an average velocity $V$ which is one-half of the maximum velocity (also shown in Equation \ref{eq:poiseuille-v}). The quantity $\Delta p$ is the pressure \textit{drop} in a pipe of length $L$. These formulas are valid whenever the pipe Reynolds number, $Re_{d} = \rho V d/\mu$, is less than about 2300 (this is the widely accepted threshold between laminar and turbulent flow). Note that $\tau_{w}$ is proportional to $V$ (see Figure \ref{fig:developing-velocity-profile}, Equation \ref{eq:poiseuille-tw}) and is independent of density because the fluid acceleration is zero. Neither of these is true in turbulent flow \cite{fluid-mechanics}.
 
 If we know the wall shear stress, the Poiseuille flow friction factor is
 \begin{equation} \label{eq:friction-factor}
 f_{lam} = \frac{8 \tau_{w, lam}}{\rho V^{2}} = \frac{8(8 \mu V/d)}{\rho V^{2}} = \frac{64}{\rho V d/\mu} = \frac{64}{Re_{d}}
 \end{equation}	
 A clear relation between two terms in Equation \ref{eq:friction-factor} arises \textemdash{} the pipe friction factor decreases inversely with Reynolds Number.
-\subsection{Iterative Diameter Calculation}
+\subsection{Turbulent Pipe Flow}
+
+
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
 
