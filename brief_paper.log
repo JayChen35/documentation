@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  10 AUG 2019 16:23
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  10 AUG 2019 18:59
 entering extended mode
 **./brief_paper.tex
 (brief_paper.tex
@@ -717,57 +717,60 @@ Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 23
 LaTeX Warning: Text page 7 contains only floats.
 
 [7 <./developing_velocity_profile.png> <./comparing_velocity_profiles.png>]
-[8]
-<moody_chart.png, id=49, 790.75426pt x 545.6385pt>
+[8] [9]
+<moody_chart.png, id=53, 790.75426pt x 545.6385pt>
 File: moody_chart.png Graphic file (type png)
 <use moody_chart.png>
-Package pdftex.def Info: moody_chart.png  used on input line 301.
+Package pdftex.def Info: moody_chart.png  used on input line 318.
 (pdftex.def)             Requested size: 434.91618pt x 300.1021pt.
 
-Overfull \hbox (16.6625pt too wide) in paragraph at lines 301--302
+Overfull \hbox (16.6625pt too wide) in paragraph at lines 318--319
  [][] 
  []
 
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 316.
+[10 <./moody_chart.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 340.
+
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\omscmr.fd"
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 316.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 340.
 
-[9] [10 <./moody_chart.png>] [11] (brief_paper.aux)
+[11] (brief_paper.aux)
 Package logreq Info: Writing requests to 'brief_paper.run.xml'.
 \openout1 = `brief_paper.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11333 strings out of 492895
- 197933 string characters out of 3123736
- 634419 words of memory out of 3000000
- 15120 multiletter control sequences out of 15000+200000
- 11856 words of font info for 42 fonts, out of 3000000 for 9000
+ 11341 strings out of 492895
+ 198031 string characters out of 3123736
+ 634530 words of memory out of 3000000
+ 15126 multiletter control sequences out of 15000+200000
+ 12557 words of font info for 44 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  44i,12n,45p,1027b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jaych/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jaych/AppData/Loc
-al/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/jaych
-/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:
-/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mr17.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmr8.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/amsfonts/cm/cmss10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/jaych/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/jaych/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/User
-s/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10
-.pfb>
-Output written on brief_paper.pdf (11 pages, 699881 bytes).
+/cm/cmbx10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/jaych/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Users/jaych/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/jayc
+h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C
+:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr12.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr17.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/amsfonts/cm/cmr8.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmss10.pfb><C:/Users/jaych/AppData/Local/Pro
+grams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss12.pfb><C:/Users/jaych/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
+rs/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8
+.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/cm/cmti10.pfb>
+Output written on brief_paper.pdf (11 pages, 716636 bytes).
 PDF statistics:
- 103 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -109,7 +109,7 @@ Figure \ref{fig:control-volume} shows a generalized fixed control volume with an
 \begin{equation} \label{eq:long-rtt}
 \frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CS} \beta \rho\, cos\theta\, dA_{out} - \int_{CS} \beta \rho\, cos\theta\, dA_{in}
 \end{equation}
-Asserting the property $B$ to be either mass, momentum, angular momentum, or energy, all basic laws can be rewritten in control-volume form. Note that all three control volume integrals are a function of the intensive propery $\beta$, and since the control volume is fixed in space, the elemental volumes $d\vartheta$ do not vary with time, and thus the time derivative of the volume integral disappears unless $\beta$ or $\rho$ varies with time (unsteady flow) \cite{fluid-mechanics}.
+Asserting the property $B$ to be either mass, momentum, angular momentum, or energy, all basic laws can be rewritten in control-volume form. Note that all three control volume integrals are a function of the intensive property $\beta$, and since the control volume is fixed in space, the elemental volumes $d\vartheta$ do not vary with time, and thus the time derivative of the volume integral disappears unless $\beta$ or $\rho$ varies with time (unsteady flow) \cite{fluid-mechanics}.
 
 However, realizing that if $\vec{n}$ is defined as the \textit{outward} normal unit vector everywhere on the control surface, then $\vec{V} \cdot \vec{n} = V_{n}$ for outflow and $\vec{V} \cdot \vec{n} = -V_{n}$ for inflow. Therefore, the flux terms can be combined and Equation \ref{eq:long-rtt} can be rewritten as
 \begin{equation} \label{eq:short-rtt}
@@ -240,7 +240,7 @@ Considering a fully-developed \textit{Hagen-Poiseuille flow} (which represents t
 \begin{equation} \label{eq:poiseuille-v}
 V = \frac{Q}{A} = \frac{u_{max}}{2} = \left( \frac{\Delta p + \rho g \Delta z}{L} \right) \frac{R^{2}}{8 \mu}
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:poiseuille-q}
 Q = \int u\, dA = \pi R^{2} V = \left( \frac{\Delta p + \rho g \Delta z}{L} \right) \frac{\pi R^{4}}{8 \mu}
 \end{equation}
 \begin{equation} \label{eq:poiseuille-tw}
@@ -292,20 +292,44 @@ or
 \Delta p \approx 0.158 L \rho^{3/4} \mu^{1/4} d^{-5/4} V^{7/4}
 \end{equation}
 Note that $\Delta p$ varies only slightly with viscosity, which is a characteristic of turbulent flow \cite{fluid-mechanics}. Substituting $Q = \frac{1}{4} \pi d^{2} V$ into Equation \ref{eq:blasius-3} gives
-\begin{equation}
+\begin{equation} \label{eq:blasius-4}
 \Delta p \approx 0.241 L \rho^{3/4} \mu^{1/4} d^{-4.75} Q^{1.75}
 \end{equation}
+Analysing Equation \ref{eq:blasius-4} tells us that for a fixed flow rate $Q$, the turbulent pressure drop decreases with diameter even more sharply than in laminar flow (compare with Equation \ref{eq:poiseuille-q}). Thus, the easiest way to reduce required pumping pressure is to increase the pipe diameter, although, of course, the larger the pipe the more expensive it is \cite{fluid-mechanics}.
 
+The formula relating mean velocity to maximum velocity is
+\begin{equation}
+\frac{V}{u_{max}} \approx (1+1.3 \sqrt{f})^{-1}
+\end{equation}
+and by plugging in some numerical values, we can see clearly that the ratio $V/u_{max}$ varies with much greater sensitivity to Reynolds Number than the value of $0.5$ predicted for all laminar pipe flow. Thus the turbulent velocity profile, as shown in Figure \ref{fig:comparing-velocity-profiles}, is flat in the center and drops off sharply to zero at the wall \cite{fluid-mechanics}.
+
+When assessing turbulent pipe flow, it is worth noting that, due to its sensitivity to pipe roughness, there are generally three ranges of roughness when describing the effect of roughness and Reynolds Number on flow. In general for turbulent friction, after an \textit{onset} point, increases monotonically with the roughness ratio $\epsilon/d$. For \textit{any} given $\epsilon/d$ at high Reynolds Numbers, however, the friction factor becomes constant (known as \textit{fully rough flow}). These points of change are certain values of $\epsilon^{+} = \epsilon u^{*}/\nu$ \cite{fluid-mechanics}:
+\begin{align*}
+\frac{\epsilon u^{*}}{\nu} < 5 &= \text{ \textit{hydraulically smooth} walls, no effect of roughness on friction} \\
+5 \leq \frac{\epsilon u^{*}}{\nu} \leq 70 &= \text{ \textit{transitional} roughness, moderate Reynolds Number effect} \\
+\frac{\epsilon u^{*}}{\nu} > 70 &= \text{ \textit{fully rough} flow, sublayer broken up and friction independent of } Re
+\end{align*}
+For fully rough flows (independent of Reynolds Number):
+\begin{equation} \label{eq:rough-friction}
+\frac{1}{f^{1/2}} = -2.0\, log \frac{\epsilon/d}{3.7} \text{fully rough flow}
+\end{equation}
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.55]{moody_chart}
 \caption{The Moody Chart.}
 \label{fig:moody-chart}
 \end{figure}
-
-\begin{equation}
-\frac{1}{f_{1/2}} \approx -1.8\, log \big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \big]
+To cover the transitionally rough range, in 1939 Colebrook combined the smooth wall (Equation \ref{eq:prandtl-friction-reynolds}) and fully rough (Equation \ref{eq:rough-friction}) relations to a general interpolation formula \cite{fluid-mechanics}:
+\begin{equation} \label{eq:moody}
+\frac{1}{f^{1/2}} = -2.0\, log \left( \frac{\epsilon/d}{3.7} + \frac{2.51}{Re_{d}\, f^{1/2}} \right)
 \end{equation}
+\textbf{This is the accepted design formula for turbulent friction}. It was first plotted by Moody in 1944 and is called the \textit{Moody chart} for pipe friction (see Figure \ref{fig:moody-chart}).
+
+However, Equation \ref{eq:moody} is sometimes cumbersome to evaluate for $f$ if $Re_{d}$ is known. So, an alternate explicit formula was given by Haaland as
+\begin{equation}
+\frac{1}{f^{1/2}} \approx -1.8\, log \big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \big]
+\end{equation}
+and varies less than 2 percent from Equation \ref{eq:moody} \cite{fluid-mechanics}.
 
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
