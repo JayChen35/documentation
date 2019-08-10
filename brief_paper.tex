@@ -270,6 +270,42 @@ f_{lam} = \frac{8 \tau_{w, lam}}{\rho V^{2}} = \frac{8(8 \mu V/d)}{\rho V^{2}} =
 A clear relation between two terms in Equation \ref{eq:friction-factor} arises \textemdash{} the pipe friction factor decreases inversely with Reynolds Number.
 \subsection{Turbulent Pipe Flow}
 
+As discussed previously, there is a significant effect of pipe roughness on the head loss and pressure drop in turbulent flows. In fact, there are different sets of formulas applied when solving for turbulent flows, depending on the relative roughness of the pipe it is travelling through. For a smooth-walled pipe, a relation between friction factor and Reynolds Number for turbulent pipe flow (derived by Prandtl in 1935) is \cite{fluid-mechanics}
+\begin{equation} \label{eq:prandtl-friction-reynolds}
+\frac{1}{f^{1/2}} = 2.0\, log({Re_{d}\, f^{1/2}}) - 1.8
+\end{equation}
+Experimenting with a few values of $f$ shows that $f$ only drops by a factor of 5 over a 10,000 fold increase in Reynolds Number \cite{fluid-mechanics}. If $Re_{d}$ is already known and $f$ is wanted, an alternate form of equation \ref{eq:prandtl-friction-reynolds} can be used to explicitly solve for $f$ from $Re_{d}$:
+\begin{equation} \label{eq:blasius-1}
+f = 
+\begin{cases}
+0.316 Re_{d}^{-1/4}\\%, & 4000 < Re_{d} < 10^{5}\\% & H. Blasius (1911) \\
+\left( 1.8\, log \frac{Re_{d}}{6.9} \right)^{-2}%, & h %& h \\
+\end{cases}
+\text{when } 4000 < Re_{d} < 10^{5}
+\end{equation}
+Blasius, a student of Prandtl, devised the first ever formula correlating pipe friction to Reynolds Number. Albeit for a limited range (low turbulent Reynolds Numbers) and for a horizontal pipe, from Equation \ref{eq:blasius-1}:
+\begin{equation} \label{eq:blasius-2}
+h_{f} = \frac{\Delta p}{\rho g} = f \frac{L}{d} \frac{V^{2}}{2g} \approx 0.316 \left( \frac{\mu}{\rho V d} \right)^{1/4} \frac{L}{d} \frac{V^{2}}{2g}
+\end{equation}
+or
+\begin{equation} \label{eq:blasius-3}
+\Delta p \approx 0.158 L \rho^{3/4} \mu^{1/4} d^{-5/4} V^{7/4}
+\end{equation}
+Note that $\Delta p$ varies only slightly with viscosity, which is a characteristic of turbulent flow \cite{fluid-mechanics}. Substituting $Q = \frac{1}{4} \pi d^{2} V$ into Equation \ref{eq:blasius-3} gives
+\begin{equation}
+\Delta p \approx 0.241 L \rho^{3/4} \mu^{1/4} d^{-4.75} Q^{1.75}
+\end{equation}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.55]{moody_chart}
+\caption{The Moody Chart.}
+\label{fig:moody-chart}
+\end{figure}
+
+\begin{equation}
+\frac{1}{f_{1/2}} \approx -1.8\, log \big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \big]
+\end{equation}
 
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
