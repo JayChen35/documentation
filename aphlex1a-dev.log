@@ -1,0 +1,1038 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  16 AUG 2019 00:24
+entering extended mode
+**./aphlex1a-dev.tex
+(aphlex1a-dev.tex
+LaTeX2e <2018-12-01>
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\article.cls"
+Document Class: article 2018/09/03 v1.4i Standard LaTeX document class
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\size10.clo"
+File: size10.clo 2018/09/03 v1.4i Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\inputenc.st
+y"
+Package: inputenc 2018/08/11 v1.3c Input encoding file
+\inpenc@prehook=\toks14
+\inpenc@posthook=\toks15
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsmath.st
+y"
+Package: amsmath 2018/12/01 v2.17b AMS math features
+\@mathmargin=\skip43
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amstext.st
+y"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsgen.sty
+"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen103
+))
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsbsy.sty
+"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen104
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/amsmath\amsopn.sty
+"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count88
+LaTeX Info: Redefining \frac on input line 223.
+\uproot@=\count89
+\leftroot@=\count90
+LaTeX Info: Redefining \overline on input line 385.
+\classnum@=\count91
+\DOTSCASE@=\count92
+LaTeX Info: Redefining \ldots on input line 482.
+LaTeX Info: Redefining \dots on input line 485.
+LaTeX Info: Redefining \cdots on input line 606.
+\Mathstrutbox@=\box27
+\strutbox@=\box28
+\big@size=\dimen105
+LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
+\macc@depth=\count93
+\c@MaxMatrixCols=\count94
+\dotsspace@=\muskip10
+\c@parentequation=\count95
+\dspbrk@lvl=\count96
+\tag@help=\toks17
+\row@=\count97
+\column@=\count98
+\maxfields@=\count99
+\andhelp@=\toks18
+\eqnshift@=\dimen106
+\alignsep@=\dimen107
+\tagshift@=\dimen108
+\tagwidth@=\dimen109
+\totwidth@=\dimen110
+\lineht@=\dimen111
+\@envbody=\toks19
+\multlinegap=\skip44
+\multlinetaggap=\skip45
+\mathdisplay@stack=\toks20
+LaTeX Info: Redefining \[ on input line 2844.
+LaTeX Info: Redefining \] on input line 2845.
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphicx.
+sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\keyval.st
+y"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks21
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\graphics.
+sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-cfg\graph
+ics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/graphics-def\pdfte
+x.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\multicol.sty
+"
+Package: multicol 2018/12/27 v1.8v multicolumn formatting (FMi)
+\c@tracingmulticols=\count100
+\mult@box=\box29
+\multicol@leftmargin=\dimen114
+\c@unbalance=\count101
+\c@collectmore=\count102
+\doublecol@number=\count103
+\multicoltolerance=\count104
+\multicolpretolerance=\count105
+\full@width=\dimen115
+\page@free=\dimen116
+\premulticols=\dimen117
+\postmulticols=\dimen118
+\multicolsep=\skip46
+\multicolbaselineskip=\skip47
+\partial@page=\box30
+\last@line=\box31
+\maxbalancingoverflow=\dimen119
+\mult@rightbox=\box32
+\mult@grightbox=\box33
+\mult@gfirstbox=\box34
+\mult@firstbox=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\@tempa=\box50
+\@tempa=\box51
+\@tempa=\box52
+\c@columnbadness=\count106
+\c@finalcolumnbadness=\count107
+\last@try=\dimen120
+\multicolovershoot=\dimen121
+\multicolundershoot=\dimen122
+\mult@nat@firstbox=\box53
+\colbreak@box=\box54
+\mc@col@check@num=\count108
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+sty"
+Package: biblatex 2018/11/02 v3.12 programmable bibliographies (PK/MW)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\pdftexc
+mds.sty"
+Package: pdftexcmds 2019/07/25 v0.30 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\infware
+rr.sty"
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifluate
+x.sty"
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ltxcmds
+.sty"
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifpdf.s
+ty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/etoolbox\etoolbox.
+sty"
+Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count109
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\kvoptions
+.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvsetke
+ys.sty"
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\etexcmd
+s.sty"
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+)))
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.sty"
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count110
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/logreq\logreq.def"
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+)) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\ifthen.sty
+"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/url\url.sty"
+\Urlmuskip=\muskip11
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count111
+\c@listtotal=\count112
+\c@listcount=\count113
+\c@liststart=\count114
+\c@liststop=\count115
+\c@citecount=\count116
+\c@citetotal=\count117
+\c@multicitecount=\count118
+\c@multicitetotal=\count119
+\c@instcount=\count120
+\c@maxnames=\count121
+\c@minnames=\count122
+\c@maxitems=\count123
+\c@minitems=\count124
+\c@citecounter=\count125
+\c@maxcitecounter=\count126
+\c@savedcitecounter=\count127
+\c@uniquelist=\count128
+\c@uniquename=\count129
+\c@refsection=\count130
+\c@refsegment=\count131
+\c@maxextratitle=\count132
+\c@maxextratitleyear=\count133
+\c@maxextraname=\count134
+\c@maxextradate=\count135
+\c@maxextraalpha=\count136
+\c@abbrvpenalty=\count137
+\c@highnamepenalty=\count138
+\c@lownamepenalty=\count139
+\c@maxparens=\count140
+\c@parenlevel=\count141
+\blx@tempcnta=\count142
+\blx@tempcntb=\count143
+\blx@tempcntc=\count144
+\blx@maxsection=\count145
+\blx@maxsegment@0=\count146
+\blx@notetype=\count147
+\blx@parenlevel@text=\count148
+\blx@parenlevel@foot=\count149
+\blx@sectionciteorder@0=\count150
+\blx@entrysetcounter=\count151
+\labelnumberwidth=\skip48
+\labelalphawidth=\skip49
+\biblabelsep=\skip50
+\bibitemsep=\skip51
+\bibnamesep=\skip52
+\bibinitsep=\skip53
+\bibparsep=\skip54
+\bibhang=\skip55
+\blx@bcfin=\read1
+\blx@bcfout=\write3
+\c@mincomprange=\count152
+\c@maxcomprange=\count153
+\c@mincompwidth=\count154
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-dm.de
+f"
+File: blx-dm.def 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count155
+\c@savedafterword=\count156
+\c@annotator=\count157
+\c@savedannotator=\count158
+\c@author=\count159
+\c@savedauthor=\count160
+\c@bookauthor=\count161
+\c@savedbookauthor=\count162
+\c@commentator=\count163
+\c@savedcommentator=\count164
+\c@editor=\count165
+\c@savededitor=\count166
+\c@editora=\count167
+\c@savededitora=\count168
+\c@editorb=\count169
+\c@savededitorb=\count170
+\c@editorc=\count171
+\c@savededitorc=\count172
+\c@foreword=\count173
+\c@savedforeword=\count174
+\c@holder=\count175
+\c@savedholder=\count176
+\c@introduction=\count177
+\c@savedintroduction=\count178
+\c@namea=\count179
+\c@savednamea=\count180
+\c@nameb=\count181
+\c@savednameb=\count182
+\c@namec=\count183
+\c@savednamec=\count184
+\c@translator=\count185
+\c@savedtranslator=\count186
+\c@shortauthor=\count187
+\c@savedshortauthor=\count188
+\c@shorteditor=\count189
+\c@savedshorteditor=\count190
+\c@labelname=\count191
+\c@savedlabelname=\count192
+\c@institution=\count193
+\c@savedinstitution=\count194
+\c@lista=\count195
+\c@savedlista=\count196
+\c@listb=\count197
+\c@savedlistb=\count198
+\c@listc=\count199
+\c@savedlistc=\count266
+\c@listd=\count267
+\c@savedlistd=\count268
+\c@liste=\count269
+\c@savedliste=\count270
+\c@listf=\count271
+\c@savedlistf=\count272
+\c@location=\count273
+\c@savedlocation=\count274
+\c@organization=\count275
+\c@savedorganization=\count276
+\c@origlocation=\count277
+\c@savedoriglocation=\count278
+\c@origpublisher=\count279
+\c@savedorigpublisher=\count280
+\c@publisher=\count281
+\c@savedpublisher=\count282
+\c@language=\count283
+\c@savedlanguage=\count284
+\c@origlanguage=\count285
+\c@savedoriglanguage=\count286
+\c@pageref=\count287
+\c@savedpageref=\count288
+\shorthandwidth=\skip56
+\shortjournalwidth=\skip57
+\shortserieswidth=\skip58
+\shorttitlewidth=\skip59
+\shortauthorwidth=\skip60
+\shorteditorwidth=\skip61
+\locallabelnumberwidth=\skip62
+\locallabelalphawidth=\skip63
+\localshorthandwidth=\skip64
+\localshortjournalwidth=\skip65
+\localshortserieswidth=\skip66
+\localshorttitlewidth=\skip67
+\localshortauthorwidth=\skip68
+\localshorteditorwidth=\skip69
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\blx-compa
+t.def"
+File: blx-compat.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+def"
+File: biblatex.def 2018/11/02 v3.12 biblatex compatibility (PK/MW)
+\c@textcitecount=\count289
+\c@textcitetotal=\count290
+\c@textcitemaxnames=\count291
+\c@biburlnumpenalty=\count292
+\c@biburlucpenalty=\count293
+\c@biburllcpenalty=\count294
+\c@smartand=\count295
+)
+Package biblatex Info: Trying to load bibliography style 'numeric'...
+Package biblatex Info: ... file 'numeric.bbx' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\numer
+ic.bbx"
+File: numeric.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/bbx\stand
+ard.bbx"
+File: standard.bbx 2018/11/02 v3.12 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count296
+\c@bbx:relatedtotal=\count297
+))
+Package biblatex Info: Trying to load citation style 'numeric'...
+Package biblatex Info: ... file 'numeric.cbx' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/cbx\numer
+ic.cbx"
+File: numeric.cbx 2018/11/02 v3.12 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\supercite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+Package biblatex Info: Redefining '\cites'.
+Package biblatex Info: Redefining '\parencites'.
+Package biblatex Info: Redefining '\smartcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex\biblatex.
+cfg"
+File: biblatex.cfg 
+))
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\ifvtex.
+sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/ifxetex\ifxetex.
+sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count298
+\Gm@cntv=\count299
+\c@Gm@tempcnt=\count300
+\Gm@bindingoffset=\dimen123
+\Gm@wd@mp=\dimen124
+\Gm@odd@mp=\dimen125
+\Gm@even@mp=\dimen126
+\Gm@layoutwidth=\dimen127
+\Gm@layoutheight=\dimen128
+\Gm@layouthoffset=\dimen129
+\Gm@layoutvoffset=\dimen130
+\Gm@dimlist=\toks22
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
+cfg"))
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
+sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen131
+\lightrulewidth=\dimen132
+\cmidrulewidth=\dimen133
+\belowrulesep=\dimen134
+\belowbottomsep=\dimen135
+\aboverulesep=\dimen136
+\abovetopsep=\dimen137
+\cmidrulesep=\dimen138
+\cmidrulekern=\dimen139
+\defaultaddspace=\dimen140
+\@cmidla=\count301
+\@cmidlb=\count302
+\@aboverulesep=\dimen141
+\@belowrulesep=\dimen142
+\@thisruleclass=\count303
+\@lastruleclass=\count304
+\@thisrulewidth=\dimen143
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
+Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
+\col@sep=\dimen144
+\ar@mcellbox=\box55
+\extrarowheight=\dimen145
+\NC@list=\toks23
+\extratabsurround=\skip70
+\backup@length=\skip71
+\ar@cellbox=\box56
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/paralist\paralist.
+sty"
+Package: paralist 2017/01/22 v2.7 Extended list environments
+\pltopsep=\skip72
+\plpartopsep=\skip73
+\plitemsep=\skip74
+\plparsep=\skip75
+\pl@lab=\toks24
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\verbatim.sty
+"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks25
+\verbatim@line=\toks26
+\verbatim@in@stream=\read2
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/subfig\subfig.sty"
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption.st
+y"
+Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/caption\caption3.s
+ty"
+Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 64.
+\captionmargin=\dimen146
+\captionmargin@=\dimen147
+\captionwidth=\dimen148
+\caption@tempdima=\dimen149
+\caption@indent=\dimen150
+\caption@parindent=\dimen151
+\caption@hangindent=\dimen152
+)
+\c@caption@flags=\count305
+\c@ContinuedFloat=\count306
+)
+\c@KVtest=\count307
+\sf@farskip=\skip76
+\sf@captopadj=\dimen153
+\sf@capskip=\skip77
+\sf@nearskip=\skip78
+\c@subfigure=\count308
+\c@subfigure@save=\count309
+\c@lofdepth=\count310
+\c@subtable=\count311
+\c@subtable@save=\count312
+\c@lotdepth=\count313
+\sf@top=\skip79
+\sf@bottom=\skip80
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/fancyhdr\fancyhdr.
+sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip81
+\f@nch@O@elh=\skip82
+\f@nch@O@erh=\skip83
+\f@nch@O@olh=\skip84
+\f@nch@O@orh=\skip85
+\f@nch@O@elf=\skip86
+\f@nch@O@erf=\skip87
+\f@nch@O@olf=\skip88
+\f@nch@O@orf=\skip89
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/sectsty\sectsty.st
+y"
+Package: sectsty 2002/02/25 v2.0.2 Commands to change all sectional heading sty
+les
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocbibind\tocbibin
+d.sty"
+Package: tocbibind 2010/10/13 v1.5k extra ToC listings
+Package tocbibind Info: The document has section divisions on input line 50.
+
+
+Package tocbibind Note: Using section or other style headings.
+
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tocloft\tocloft.st
+y"
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has section divisions on input line 51.
+\cftparskip=\skip90
+\cftbeforetoctitleskip=\skip91
+\cftaftertoctitleskip=\skip92
+\cftbeforepartskip=\skip93
+\cftpartnumwidth=\skip94
+\cftpartindent=\skip95
+\cftbeforesecskip=\skip96
+\cftsecindent=\skip97
+\cftsecnumwidth=\skip98
+\cftbeforesubsecskip=\skip99
+\cftsubsecindent=\skip100
+\cftsubsecnumwidth=\skip101
+\cftbeforesubsubsecskip=\skip102
+\cftsubsubsecindent=\skip103
+\cftsubsubsecnumwidth=\skip104
+\cftbeforeparaskip=\skip105
+\cftparaindent=\skip106
+\cftparanumwidth=\skip107
+\cftbeforesubparaskip=\skip108
+\cftsubparaindent=\skip109
+\cftsubparanumwidth=\skip110
+\cftbeforeloftitleskip=\skip111
+\cftafterloftitleskip=\skip112
+\cftbeforefigskip=\skip113
+\cftfigindent=\skip114
+\cftfignumwidth=\skip115
+\cftbeforelottitleskip=\skip116
+\cftafterlottitleskip=\skip117
+\cftbeforetabskip=\skip118
+\cfttabindent=\skip119
+\cfttabnumwidth=\skip120
+\cftbeforesubfigskip=\skip121
+\cftsubfigindent=\skip122
+\cftsubfignumwidth=\skip123
+\cftbeforesubtabskip=\skip124
+\cftsubtabindent=\skip125
+\cftsubtabnumwidth=\skip126
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/preprint\authblk.s
+ty"
+Package: authblk 2001/02/27 1.3 (PWD)
+\affilsep=\skip127
+\@affilsep=\skip128
+\c@Maxaffil=\count314
+\c@authors=\count315
+\c@affil=\count316
+) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
+Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+)
+Package biblatex Info: Trying to load language 'english'...
+Package biblatex Info: ... file 'english.lbx' found.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/biblatex/lbx\engli
+sh.lbx"
+File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
+)
+\@quotelevel=\count317
+\@quotereset=\count318
+ (aphlex1a-dev.aux)
+\openout1 = `aphlex1a-dev.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
+LaTeX Font Info:    ... okay on input line 78.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 78.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
+df.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count319
+\scratchdimen=\dimen154
+\scratchbox=\box57
+\nofMPsegments=\count320
+\nofMParguments=\count321
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count322
+\MPscratchDim=\dimen155
+\MPnumerator=\count323
+\makeMPintoPDFobject=\count324
+\everyMPtoPDFconversion=\toks28
+)
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
+base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\grfext.st
+y"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/generic/oberdiek\kvdefin
+ekeys.sty"
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `aphlex1a-dev.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'aphlex1a-dev.bbl' found.
+ (aphlex1a-dev.bbl)
+Package biblatex Info: Reference section=0 on input line 78.
+Package biblatex Info: Reference segment=0 on input line 78.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(72.26999pt, 452.9679pt, 72.26999pt)
+* v-part:(T,H,B)=(72.26999pt, 700.50687pt, 72.26999pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=452.9679pt
+* \textheight=700.50687pt
+* \oddsidemargin=0.0pt
+* \evensidemargin=0.0pt
+* \topmargin=-37.0pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=14.22636pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 79.
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 79.
+
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 79.
+
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 79.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 79.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 79.
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
+File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 79.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 79.
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 87.
+
+
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
+File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 109.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 109.
+
+
+LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
+line 114.
+
+
+LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
+line 114.
+
+<inclined_pipe.png, id=1, 647.41875pt x 621.82312pt>
+File: inclined_pipe.png Graphic file (type png)
+<use inclined_pipe.png>
+Package pdftex.def Info: inclined_pipe.png  used on input line 129.
+(pdftex.def)             Requested size: 291.33574pt x 279.81781pt.
+
+Overfull \hbox (71.96498pt too wide) in paragraph at lines 129--130
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 1 undefined on input line 
+133.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 1 might be wrong on input line 134.
+
+
+[1
+
+{C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+Overfull \hbox (14.91591pt too wide) detected at line 140
+[] [] \OT1/lmr/m/n/10 = [] [] + []([][])[] \OMS/lmsy/m/n/10   []\OT1/lmr/m/n/10
+ ([][])[]
+ []
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
+141.
+
+
+Overfull \hbox (62.10875pt too wide) detected at line 144
+[] \OML/lmm/m/it/10 F[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\
+OML/lmm/m/it/10 R[]\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 g\OT1/lmr/m/n/10 (\OM
+L/lmm/m/it/10 R[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 L sin \OMS/lmsy/m/n/10   \
+OML/lmm/m/it/10 []\OT1/lmr/m/n/10 (2\OML/lmm/m/it/10 R\OT1/lmr/m/n/10 )\OML/l
+mm/m/it/10 L \OT1/lmr/m/n/10 = [](\OML/lmm/m/it/10 V[] \OMS/lmsy/m/n/10   \OML/
+lmm/m/it/10 V[]\OT1/lmr/m/n/10 ) = 0
+ []
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
+149.
+
+
+Overfull \hbox (174.46225pt too wide) in paragraph at lines 166--182
+ [][] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `table:parameters' on page 2 undefined on input line 1
+85.
+
+<developing_velocity_profile.png, id=21, 724.95844pt x 625.58719pt>
+File: developing_velocity_profile.png Graphic file (type png)
+<use developing_velocity_profile.png>
+Package pdftex.def Info: developing_velocity_profile.png  used on input line 20
+2.
+(pdftex.def)             Requested size: 333.48492pt x 287.77359pt.
+
+Overfull \hbox (114.11417pt too wide) in paragraph at lines 202--203
+ [][] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+<comparing_velocity_profiles.png, id=22, 682.80093pt x 573.64313pt>
+File: comparing_velocity_profiles.png Graphic file (type png)
+<use comparing_velocity_profiles.png>
+Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 20
+8.
+(pdftex.def)             Requested size: 238.9839pt x 200.77809pt.
+
+Overfull \hbox (19.61314pt too wide) in paragraph at lines 208--209
+ [][] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 2 undefined 
+on input line 213.
+
+
+LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 2 undefined 
+on input line 228.
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
+228.
+
+
+Package multicol Warning: I moved some lines to the next page.
+(multicol)                Footnotes on page 2 might be wrong on input line 234.
+
+
+[2]
+
+LaTeX Warning: Reference `fig:developing-velocity-profile' on page 3 undefined 
+on input line 238.
+
+
+LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 3 undefined 
+on input line 278.
+
+
+Overfull \hbox (150.92038pt too wide) detected at line 285
+[]
+ []
+
+<moody_chart.png, id=29, 790.75426pt x 545.6385pt>
+File: moody_chart.png Graphic file (type png)
+<use moody_chart.png>
+Package pdftex.def Info: moody_chart.png  used on input line 292.
+(pdftex.def)             Requested size: 434.91618pt x 300.1021pt.
+
+Overfull \hbox (215.54543pt too wide) in paragraph at lines 292--293
+ [][] 
+ []
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+[3]
+
+LaTeX Warning: Reference `fig:moody-chart' on page 4 undefined on input line 30
+0.
+
+LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 314.
+[4] (aphlex1a-dev.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please rerun LaTeX.
+
+Package logreq Info: Writing requests to 'aphlex1a-dev.run.xml'.
+\openout1 = `aphlex1a-dev.run.xml'.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 11637 strings out of 492895
+ 203272 string characters out of 3123736
+ 650161 words of memory out of 3000000
+ 15386 multiletter control sequences out of 15000+200000
+ 81237 words of font info for 52 fonts, out of 3000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 44i,12n,45p,838b,1503s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
+c}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athsy.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-mathex.enc}<C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
+lic/lm/lmbx10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/lm/lmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/t
+ype1/public/lm/lmmi10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fon
+ts/type1/public/lm/lmmi5.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/lm/lmmi7.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/jaych/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/jaych/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/jaych/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/jaych/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/jaych/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/jaych/AppData/Loca
+l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Users/jaych/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/jaych/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/jaych/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jay
+ch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/
+jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Use
+rs/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on aphlex1a-dev.pdf (4 pages, 314498 bytes).
+PDF statistics:
+ 100 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+

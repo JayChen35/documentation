@@ -4,12 +4,15 @@
 % This is a simple template for a LaTeX document using the "article" class.
 % See "book", "report", "letter" for other types of document.
 
-\documentclass[11pt]{article} % use larger type; default would be 10pt
+\documentclass[10pt]{article} % use larger type; default would be 10pt
 
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{multicol}
+\setlength{\columnsep}{0.5cm}
 \usepackage[backend=biber]{biblatex}
+\usepackage[margin=1.0in]{geometry}
 \addbibresource{references.bib}
 
 \numberwithin{equation}{section} % number within sections
@@ -56,20 +59,31 @@
 \renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
 \renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
 
+%%% TITLE APPEARANCE (custom)
+\usepackage[affil-it]{authblk} 
+\usepackage{etoolbox}
+\usepackage{lmodern}
+%\usepackage{titling}
+\makeatletter
+\patchcmd{\@maketitle}{\LARGE \@title}{\fontsize{17}{20.2}\selectfont\@title}{}{}
+\makeatother
+\renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
+\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
 %%% END Article customizations
-
 %%% The "real" document content comes below...
-
 \title{Development of a Cost-Effective 1kN Liquid-Fueled Rocket Propulsion System}
-\author{%
-	Jason Chen, Project Caelus 501(c)(3)  \\
-	\large contact@projectcaelus.org}
-%\date{} % Activate to display a given date or no date (if empty),
-         % otherwise the current date is printed 
-
+\author[1]{Jason Y. Chen \footnote{contact@projectcaelus.org,  jay.chen135@gmail.com}}
+\affil[1]{Founder, Project Caelus 501(c)(3)}
+\date{} % Activate to display a given date or no date (if empty), otherwise the current date is printed
 \begin{document}
 \maketitle
-
+\vspace{-1cm}
+\begin{center}
+(Initial revision 06 August, 2019; received 17 August, 2019)
+\end{center}
+This is an example of the abstract. Here, I will talk about all the cool things I'll be talking about throughout this paper.
+%%% END Article customizations
+\begin{multicols}{2}
 \section{Pipe Dimension Calculation}
 
 The following section describes the theoretical process used to dimensionalize the prelimiary plumbing framework in preparation for the first static cold flow test. By definition, these calculations are purely speculatory and are only used for the initial design process. The purpose of the cold flow test is to verify these parameters, and consequently adjust these parameters to better fit the system requirements.
@@ -86,48 +100,8 @@ To simplify the rigorous analysis and optimization processes often associated wi
 \item Flow is fully developed (minimal boundary-layer effects).
 
 \end{enumerate}
-\subsection{The Reynolds Transport Theorem}
-We can begin by introducing the concept of control-volume analysis \textemdash{} a powerful approach to solving fundamental fluid mechanics problems \textemdash{} in which a mathematical abstraction is employed to generate mathematical models of physical systems. That is, in an inertial frame of reference, the \textit{control volume} is a volume fixed in space or moving with constant velocity with the fluid flow. The surface enclosing the control volume is referred to as the \textit{control surface}. To convert a system analysis to a control-volume analysis, we must shift our perspective such that our mathematics apply to a specific region rather than to individual bodies. This process is called the \textit{Reynolds Transport Theorem}, and allows us to study certain properties (e.g. angular momentum $L$, enthalpy $h$, etc.) crossing the boundaries of the region. Essentially, we need to relate the time derivative of a system property of that property within a certain region.
-\begin{figure}[h] 
-\centering
-\includegraphics[scale=0.5]{control_types}
-\caption{Fixed, moving, and deformable control volumes: (a) fixed control volume for nozzle stress analysis; (b) control volume moving at ship speed for drag force analysis; (c) control volume deforming within cylinder for transient pressure variation analysis.}
-\label{fig:control-types} % Always put labels after captions: https://tex.stackexchange.com/questions/32325/why-does-an-environments-label-have-to-appear-after-the-caption/32326#32326
-\end{figure}
 
-The desired conversion formula differs slightly according to whether the control volume is fixed, moving, or deformable, but for the purposes of our application, we'll be focusing on a fixed control volume. The fixed control volume in Figure \ref{fig:control-types}$a$ encloses a stationary region of interest to a nozzle designer. The control surface is an abstract concept that does not hinder the flow in any way. It slices through the jet leaving the nozzle, circles around through the surrounding (ambient) atmosphere, and slices through the flange bolts and the fluid within the nozzle \cite{fluid-mechanics}.
-
-This particular control volume exposes the stresses in the flange bolts, which contribute to applied forces in the momentum analysis. In this sense, the control volume resembles the \textit{free-body} concept, which is often applied in solid-mechanics analysis \cite{fluid-mechanics}.
-\begin{figure}[h] 
-\centering
-\includegraphics[scale=0.5]{control_volume}
-\caption{An arbitrary fixed control volume with an arbitrary flow pattern.}
-\label{fig:control-volume}
-\end{figure}
-
-Figure \ref{fig:control-volume} shows a generalized fixed control volume with an arbitrary flow pattern passing through. In general, each differential $dA$ of surface will have a different velocity vector $\vec{V}$ making a different angle $\theta$ with the local normal to $dA$. This gives us the general Reynolds transport theorem equation for an arbitrary fixed control volume:
-\begin{equation} \label{eq:long-rtt}
-\frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CS} \beta \rho\, cos\theta\, dA_{out} - \int_{CS} \beta \rho\, cos\theta\, dA_{in}
-\end{equation}
-Asserting the property $B$ to be either mass, momentum, angular momentum, or energy, all basic laws can be rewritten in control-volume form. Note that all three control volume integrals are a function of the intensive property $\beta$, and since the control volume is fixed in space, the elemental volumes $d\vartheta$ do not vary with time, and thus the time derivative of the volume integral disappears unless $\beta$ or $\rho$ varies with time (unsteady flow) \cite{fluid-mechanics}.
-
-However, realizing that if $\vec{n}$ is defined as the \textit{outward} normal unit vector everywhere on the control surface, then $\vec{V} \cdot \vec{n} = V_{n}$ for outflow and $\vec{V} \cdot \vec{n} = -V_{n}$ for inflow. Therefore, the flux terms can be combined and Equation \ref{eq:long-rtt} can be rewritten as
-\begin{equation} \label{eq:short-rtt}
-\frac{d}{dt}(B_{syst}) = \frac{d}{dt} \left( \int_{CV} \beta \rho\, d\vartheta \right) + \int_{CV} \beta \rho(\vec{V} \cdot \vec{n})\, dA
-\end{equation}
-We are now able to apply the principles of conservation of mass to the Reynolds transport theorem by setting the arbitrary variable $B$ equal to mass, and $\beta = dm/dm =1$. Equation \ref{eq:short-rtt} becomes
-\begin{equation}
-\left( \frac{dm}{dt} \right)_{syst} = 0 = \frac{d}{dt} \left( \int_{CV} \rho\, d\vartheta \right) + \int_{CS} \rho(\vec{V_{r}} \cdot \vec{n})\, dA
-\end{equation}
-This is the integral mass-conservation law for a deformable control volume. Adapting this for a fixed control volume and simplying gives
-\begin{equation} \label{eq:mass-conservation-law}
-\int_{CV} \frac{\partial \rho}{\partial t}\, d\vartheta + \int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
-\end{equation}
-Finally, knowing that we are dealing with steady, incompressible flow through the control volume ($\partial \rho/ \partial t = 0$), Equation \ref{eq:mass-conservation-law} reduces to
-\begin{equation} \label{eq:continuity-relation}
-\int_{CS} \rho(\vec{V} \cdot \vec{n})\, dA = 0
-\end{equation}
-This equation explicitly states that in steady flow, the mass flows entering and exitting the control volume are exactly equal, while neglecting sources or sinks of mass which might be embedded in the control volume.
+%%% REYNOLDS TRANSPORT THEOREM DELETED HERE
 
 \subsection{Viscous Flow in a Circular Pipe}
 
@@ -347,5 +321,6 @@ All units are implied with accordance to the Metric system (seconds, kilograms, 
 \item $Re_{d}$ = Reynolds Number, dimensionless%. Laminar flow: $Re_{d} < 2300$ Turbulent flow: $2300 < Re_{d}$
 
 \end{itemize}
+\end{multicols}
 \printbibliography
 \end{document}

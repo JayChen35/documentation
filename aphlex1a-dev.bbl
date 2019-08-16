@@ -19,36 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
-    \entry{pipe-roughness}{article}{}
-      \name{author}{2}{}{%
-        {{hash=fbd57f8afc46e04e32a5a41a615e5fe0}{%
-           family={Farshad},
-           familyi={F\bibinitperiod},
-           given={F.\bibnamedelimi F.},
-           giveni={F\bibinitperiod\bibinitdelim F\bibinitperiod}}}%
-        {{hash=d65389ed165e308979d9355bf7001730}{%
-           family={Rieke},
-           familyi={R\bibinitperiod},
-           given={H.\bibnamedelimi H.},
-           giveni={H\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
-      }
-      \strng{namehash}{7d38603b4d777b4cfda3a16568d50a90}
-      \strng{fullhash}{7d38603b4d777b4cfda3a16568d50a90}
-      \strng{bibnamehash}{7d38603b4d777b4cfda3a16568d50a90}
-      \strng{authorbibnamehash}{7d38603b4d777b4cfda3a16568d50a90}
-      \strng{authornamehash}{7d38603b4d777b4cfda3a16568d50a90}
-      \strng{authorfullhash}{7d38603b4d777b4cfda3a16568d50a90}
-      \field{sortinit}{F}
-      \field{sortinithash}{669c706c6f1fbf3b5a83d26f1d9e9e72}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{SPE Drilling and Completion, University of Louisiana at Lafayette}
-      \field{month}{9}
-      \field{title}{Surface-Roughness Design Values for Modern Pipes}
-      \field{year}{2006}
-      \field{pages}{212\bibrangedash 215}
-      \range{pages}{4}
-    \endentry
     \entry{fluid-mechanics}{book}{}
       \name{author}{1}{}{%
         {{hash=1e681d94d9c783f7ceb9dd9e89c5c572}{%

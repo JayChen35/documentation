@@ -1,0 +1,17 @@
+[0] Config.pm:304> INFO - This is Biber 2.12
+[0] Config.pm:307> INFO - Logfile is 'aphlex1a-dev.blg'
+[29] biber-MSWIN64:315> INFO - === 
+[56] Biber.pm:371> INFO - Reading 'aphlex1a-dev.bcf'
+[155] Biber.pm:889> INFO - Found 1 citekeys in bib section 0
+[168] Biber.pm:4093> INFO - Processing section 0
+[180] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[183] bibtex.pm:1523> INFO - LaTeX decoding ...
+[193] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[197] Utils.pm:193> WARN - month field 'December' in entry 'fluid-mechanics' is not an integer - this will probably not sort properly.
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[221] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[222] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[222] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[226] bbl.pm:636> INFO - Writing 'aphlex1a-dev.bbl' with encoding 'UTF-8'
+[229] bbl.pm:739> INFO - Output to aphlex1a-dev.bbl
+[231] Biber.pm:110> INFO - WARNINGS: 1
