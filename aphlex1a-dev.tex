@@ -4,7 +4,7 @@
 % This is a simple template for a LaTeX document using the "article" class.
 % See "book", "report", "letter" for other types of document.
 
-\documentclass[10pt]{article} % use larger type; default would be 10pt
+\documentclass[9pt]{article} % use larger type; default would be 10pt
 
 \usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
 \usepackage{amsmath}
@@ -23,6 +23,7 @@
 % See the LaTeX Companion or other references for full information.
 
 %%% PAGE DIMENSIONS
+\usepackage{changepage} % to adjust margins for a single paragraph
 \usepackage{geometry} % to change the page dimensions
 \geometry{a4paper} % or letterpaper (US) or a5paper or....
 % \geometry{margin=2in} % for example, change the margins to 2 inches all round
@@ -68,8 +69,9 @@
 \patchcmd{\@maketitle}{\LARGE \@title}{\fontsize{17}{20.2}\selectfont\@title}{}{}
 \makeatother
 \renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
-\renewcommand\Affilfont{\fontsize{9}{10.8}\itshape}
+\renewcommand\Affilfont{\fontsize{10}{12.8}\itshape}
 %%% END Article customizations
+
 %%% The "real" document content comes below...
 \title{Development of a Cost-Effective 1kN Liquid-Fueled Rocket Propulsion System}
 \author[1]{Jason Y. Chen \footnote{contact@projectcaelus.org,  jay.chen135@gmail.com}}
@@ -81,8 +83,13 @@
 \begin{center}
 (Initial revision 06 August, 2019; received 17 August, 2019)
 \end{center}
-This is an example of the abstract. Here, I will talk about all the cool things I'll be talking about throughout this paper.
-%%% END Article customizations
+
+%%% ABSTRACT
+\begin{adjustwidth}{40pt}{40pt}
+\hspace{\parindent} This is an example of the abstract. Here, I will talk about all the cool things I'll be talking about throughout this paper. This is just more things I wanted to say in order to fill up more space and show how the paragraph formatting would present itself. Bedeckten gepfiffen la ertastete se zierliche geblendet. Mancherlei befangenen besonderes zu um geschwatzt. Am dach nest kaum mi lich voll gebe. Fiel lass gar teil gelt wort das grob. Wu gespielt es reinlich nirgends da vollends im gepflegt. Viel fand dann he so hand am fruh. Eia haben habet bei der hosen dahin ist zweig wurde. Vergnugter leuchtturm das schuttelte gib kartoffeln ehe nachtessen. Streckte ja so madchens abraumen jenseits blattern. Beugte so willst madele schlug spater fu so gerade. Ten eck ehe bliebe tur solche suchte neckte. Te gefunden ku lampchen schonste vollends schmales. 
+
+\end{adjustwidth}
+\vspace{0.5cm}
 \begin{multicols}{2}
 \section{Pipe Dimension Calculation}
 

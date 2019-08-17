@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  16 AUG 2019 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  16 AUG 2019 22:55
 entering extended mode
 **./aphlex1a-dev.tex
 (aphlex1a-dev.tex
@@ -462,6 +462,12 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/geometry\geometry.
 cfg"))
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/changepage\changep
+age.sty"
+Package: changepage 2009/10/20 v1.0c check page and change page layout
+\c@cp@cntr=\count301
+\cp@tempcnt=\count302
+)
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/booktabs\booktabs.
 sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
@@ -475,12 +481,12 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen138
 \cmidrulekern=\dimen139
 \defaultaddspace=\dimen140
-\@cmidla=\count301
-\@cmidlb=\count302
+\@cmidla=\count303
+\@cmidlb=\count304
 \@aboverulesep=\dimen141
 \@belowrulesep=\dimen142
-\@thisruleclass=\count303
-\@lastruleclass=\count304
+\@thisruleclass=\count305
+\@lastruleclass=\count306
 \@thisrulewidth=\dimen143
 )
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/tools\array.sty"
@@ -528,20 +534,20 @@ Package caption3 Info: TeX engine: e-TeX on input line 64.
 \caption@parindent=\dimen151
 \caption@hangindent=\dimen152
 )
-\c@caption@flags=\count305
-\c@ContinuedFloat=\count306
+\c@caption@flags=\count307
+\c@ContinuedFloat=\count308
 )
-\c@KVtest=\count307
+\c@KVtest=\count309
 \sf@farskip=\skip76
 \sf@captopadj=\dimen153
 \sf@capskip=\skip77
 \sf@nearskip=\skip78
-\c@subfigure=\count308
-\c@subfigure@save=\count309
-\c@lofdepth=\count310
-\c@subtable=\count311
-\c@subtable@save=\count312
-\c@lotdepth=\count313
+\c@subfigure=\count310
+\c@subfigure@save=\count311
+\c@lofdepth=\count312
+\c@subtable=\count313
+\c@subtable@save=\count314
+\c@lotdepth=\count315
 \sf@top=\skip79
 \sf@bottom=\skip80
 )
@@ -620,9 +626,9 @@ ty"
 Package: authblk 2001/02/27 1.3 (PWD)
 \affilsep=\skip127
 \@affilsep=\skip128
-\c@Maxaffil=\count314
-\c@authors=\count315
-\c@affil=\count316
+\c@Maxaffil=\count316
+\c@authors=\count317
+\c@affil=\count318
 ) ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\lmodern.sty"
 Package: lmodern 2009/10/30 v1.6 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -665,24 +671,29 @@ Package biblatex Info: ... file 'english.lbx' found.
 sh.lbx"
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-\@quotelevel=\count317
-\@quotereset=\count318
- (aphlex1a-dev.aux)
+\@quotelevel=\count319
+\@quotereset=\count320
+
+
+LaTeX Warning: Unused global option(s):
+    [9pt].
+
+(aphlex1a-dev.aux)
 \openout1 = `aphlex1a-dev.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
+LaTeX Font Info:    ... okay on input line 80.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 80.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -690,16 +701,16 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count319
+\scratchcounter=\count321
 \scratchdimen=\dimen154
 \scratchbox=\box57
-\nofMPsegments=\count320
-\nofMParguments=\count321
+\nofMPsegments=\count322
+\nofMParguments=\count323
 \everyMPshowfont=\toks27
-\MPscratchCnt=\count322
+\MPscratchCnt=\count324
 \MPscratchDim=\dimen155
-\MPnumerator=\count323
-\makeMPintoPDFobject=\count324
+\MPnumerator=\count325
+\makeMPintoPDFobject=\count326
 \everyMPtoPDFconversion=\toks28
 )
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
@@ -729,8 +740,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'aphlex1a-dev.bbl' found.
  (aphlex1a-dev.bbl)
-Package biblatex Info: Reference section=0 on input line 78.
-Package biblatex Info: Reference segment=0 on input line 78.
+Package biblatex Info: Reference section=0 on input line 80.
+Package biblatex Info: Reference segment=0 on input line 80.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -769,101 +780,99 @@ Package biblatex Info: Reference segment=0 on input line 78.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 79.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 81.
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 79.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 81.
 
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 79.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 81.
 
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 79.
+(Font)              <12> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 79.
+(Font)              <8> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 79.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 79.
+(Font)              <6> on input line 81.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 81.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 79.
+(Font)              <10> on input line 81.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 79.
+(Font)              <7> on input line 81.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 81.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 79.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 87.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 81.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 94.
 
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 109.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 109.
+
+LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
+line 121.
 
 
 LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
-line 114.
-
-
-LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
-line 114.
-
-<inclined_pipe.png, id=1, 647.41875pt x 621.82312pt>
-File: inclined_pipe.png Graphic file (type png)
-<use inclined_pipe.png>
-Package pdftex.def Info: inclined_pipe.png  used on input line 129.
-(pdftex.def)             Requested size: 291.33574pt x 279.81781pt.
-
-Overfull \hbox (71.96498pt too wide) in paragraph at lines 129--130
- [][] 
- []
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 1 undefined on input line 
-133.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
+line 121.
 
 
 Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 134.
+(multicol)                Footnotes on page 1 might be wrong on input line 122.
 
 
 [1
 
 {C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-Overfull \hbox (14.91591pt too wide) detected at line 140
+<inclined_pipe.png, id=16, 647.41875pt x 621.82312pt>
+File: inclined_pipe.png Graphic file (type png)
+<use inclined_pipe.png>
+Package pdftex.def Info: inclined_pipe.png  used on input line 136.
+(pdftex.def)             Requested size: 291.33574pt x 279.81781pt.
+
+Overfull \hbox (71.96498pt too wide) in paragraph at lines 136--137
+ [][] 
+ []
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
+140.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
+environment!.
+
+
+Overfull \hbox (14.91591pt too wide) detected at line 147
 [] [] \OT1/lmr/m/n/10 = [] [] + []([][])[] \OMS/lmsy/m/n/10   []\OT1/lmr/m/n/10
  ([][])[]
  []
 
 
 LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-141.
+148.
 
 
-Overfull \hbox (62.10875pt too wide) detected at line 144
+Overfull \hbox (62.10875pt too wide) detected at line 151
 [] \OML/lmm/m/it/10 F[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\
 OML/lmm/m/it/10 R[]\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 g\OT1/lmr/m/n/10 (\OM
 L/lmm/m/it/10 R[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 L sin \OMS/lmsy/m/n/10   \
@@ -874,10 +883,10 @@ lmm/m/it/10 V[]\OT1/lmr/m/n/10 ) = 0
 
 
 LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-149.
+156.
 
 
-Overfull \hbox (174.46225pt too wide) in paragraph at lines 166--182
+Overfull \hbox (174.46225pt too wide) in paragraph at lines 173--189
  [][] 
  []
 
@@ -891,16 +900,16 @@ environment!.
 
 
 LaTeX Warning: Reference `table:parameters' on page 2 undefined on input line 1
-85.
+92.
 
-<developing_velocity_profile.png, id=21, 724.95844pt x 625.58719pt>
+<developing_velocity_profile.png, id=18, 724.95844pt x 625.58719pt>
 File: developing_velocity_profile.png Graphic file (type png)
 <use developing_velocity_profile.png>
 Package pdftex.def Info: developing_velocity_profile.png  used on input line 20
-2.
+9.
 (pdftex.def)             Requested size: 333.48492pt x 287.77359pt.
 
-Overfull \hbox (114.11417pt too wide) in paragraph at lines 202--203
+Overfull \hbox (114.11417pt too wide) in paragraph at lines 209--210
  [][] 
  []
 
@@ -912,14 +921,14 @@ environment!.
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
 environment!.
 
-<comparing_velocity_profiles.png, id=22, 682.80093pt x 573.64313pt>
+<comparing_velocity_profiles.png, id=19, 682.80093pt x 573.64313pt>
 File: comparing_velocity_profiles.png Graphic file (type png)
 <use comparing_velocity_profiles.png>
-Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 20
-8.
+Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 21
+5.
 (pdftex.def)             Requested size: 238.9839pt x 200.77809pt.
 
-Overfull \hbox (19.61314pt too wide) in paragraph at lines 208--209
+Overfull \hbox (19.61314pt too wide) in paragraph at lines 215--216
  [][] 
  []
 
@@ -933,42 +942,37 @@ environment!.
 
 
 LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 2 undefined 
-on input line 213.
-
-
-LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 2 undefined 
-on input line 228.
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-228.
-
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 2 might be wrong on input line 234.
-
+on input line 220.
 
 [2]
 
+LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 3 undefined 
+on input line 235.
+
+
+LaTeX Warning: Reference `fig:inclined-pipe' on page 3 undefined on input line 
+235.
+
+
 LaTeX Warning: Reference `fig:developing-velocity-profile' on page 3 undefined 
-on input line 238.
+on input line 245.
 
 
 LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 3 undefined 
-on input line 278.
+on input line 285.
 
-
-Overfull \hbox (150.92038pt too wide) detected at line 285
+[3]
+Overfull \hbox (150.92038pt too wide) detected at line 292
 []
  []
 
-<moody_chart.png, id=29, 790.75426pt x 545.6385pt>
+<moody_chart.png, id=31, 790.75426pt x 545.6385pt>
 File: moody_chart.png Graphic file (type png)
 <use moody_chart.png>
-Package pdftex.def Info: moody_chart.png  used on input line 292.
+Package pdftex.def Info: moody_chart.png  used on input line 299.
 (pdftex.def)             Requested size: 434.91618pt x 300.1021pt.
 
-Overfull \hbox (215.54543pt too wide) in paragraph at lines 292--293
+Overfull \hbox (215.54543pt too wide) in paragraph at lines 299--300
  [][] 
  []
 
@@ -980,32 +984,28 @@ environment!.
 Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
 environment!.
 
-[3]
 
 LaTeX Warning: Reference `fig:moody-chart' on page 4 undefined on input line 30
-0.
+7.
 
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 314.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 321.
 [4] (aphlex1a-dev.aux)
 
 LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please rerun LaTeX.
 
 Package logreq Info: Writing requests to 'aphlex1a-dev.run.xml'.
 \openout1 = `aphlex1a-dev.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11637 strings out of 492895
- 203272 string characters out of 3123736
- 650161 words of memory out of 3000000
- 15386 multiletter control sequences out of 15000+200000
- 81237 words of font info for 52 fonts, out of 3000000 for 9000
+ 11670 strings out of 492895
+ 203898 string characters out of 3123736
+ 657969 words of memory out of 3000000
+ 15419 multiletter control sequences out of 15000+200000
+ 69191 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,45p,838b,1503s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,45p,898b,1507s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
 c}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
 t.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
@@ -1019,20 +1019,18 @@ fonts/type1/public/lm/lmmi7.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2
 .9/fonts/type1/public/lm/lmr10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTe
 X 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/jaych/AppData/Local/Programs/Mi
 KTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/jaych/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/jaych/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/jaych/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/jaych/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/jaych/AppData/Loca
-l/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri9.pfb><C:/Users/jaych/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/jaych/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/jaych/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jay
-ch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/
-jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Use
-rs/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on aphlex1a-dev.pdf (4 pages, 314498 bytes).
+/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/jaych/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/jaych/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/jaych/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/jaych/AppData/Lo
+cal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/jaych/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jaych/Ap
+pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/jaych
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/ja
+ych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on aphlex1a-dev.pdf (4 pages, 285645 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 92 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
