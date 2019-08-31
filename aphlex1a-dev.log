@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  16 AUG 2019 22:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  31 AUG 2019 17:56
 entering extended mode
 **./aphlex1a-dev.tex
 (aphlex1a-dev.tex
@@ -823,174 +823,47 @@ LaTeX Font Info:    Try loading font information for OT1+lmss on input line 94.
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-
-LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
-line 121.
-
-
-LaTeX Warning: Reference `eq:continuity-relation' on page 1 undefined on input 
-line 121.
-
-
-Package multicol Warning: I moved some lines to the next page.
-(multicol)                Footnotes on page 1 might be wrong on input line 122.
-
-
 [1
 
 {C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<inclined_pipe.png, id=16, 647.41875pt x 621.82312pt>
+
+LaTeX Warning: Reference `eq:continuity-relation' on page 2 undefined on input 
+line 121.
+
+
+LaTeX Warning: Reference `eq:continuity-relation' on page 2 undefined on input 
+line 121.
+
+<inclined_pipe.png, id=15, 647.41875pt x 621.82312pt>
 File: inclined_pipe.png Graphic file (type png)
 <use inclined_pipe.png>
 Package pdftex.def Info: inclined_pipe.png  used on input line 136.
 (pdftex.def)             Requested size: 291.33574pt x 279.81781pt.
-
-Overfull \hbox (71.96498pt too wide) in paragraph at lines 136--137
- [][] 
- []
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-140.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Overfull \hbox (14.91591pt too wide) detected at line 147
-[] [] \OT1/lmr/m/n/10 = [] [] + []([][])[] \OMS/lmsy/m/n/10   []\OT1/lmr/m/n/10
- ([][])[]
- []
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-148.
-
-
-Overfull \hbox (62.10875pt too wide) detected at line 151
-[] \OML/lmm/m/it/10 F[] \OT1/lmr/m/n/10 = \OML/lmm/m/it/10 p\OT1/lmr/m/n/10 (\
-OML/lmm/m/it/10 R[]\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 g\OT1/lmr/m/n/10 (\OM
-L/lmm/m/it/10 R[]\OT1/lmr/m/n/10 )\OML/lmm/m/it/10 L sin \OMS/lmsy/m/n/10   \
-OML/lmm/m/it/10 []\OT1/lmr/m/n/10 (2\OML/lmm/m/it/10 R\OT1/lmr/m/n/10 )\OML/l
-mm/m/it/10 L \OT1/lmr/m/n/10 = [](\OML/lmm/m/it/10 V[] \OMS/lmsy/m/n/10   \OML/
-lmm/m/it/10 V[]\OT1/lmr/m/n/10 ) = 0
- []
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 2 undefined on input line 
-156.
-
-
-Overfull \hbox (174.46225pt too wide) in paragraph at lines 173--189
- [][] 
- []
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-LaTeX Warning: Reference `table:parameters' on page 2 undefined on input line 1
-92.
-
-<developing_velocity_profile.png, id=18, 724.95844pt x 625.58719pt>
+[2 <./inclined_pipe.png>] [3]
+<developing_velocity_profile.png, id=29, 724.95844pt x 625.58719pt>
 File: developing_velocity_profile.png Graphic file (type png)
 <use developing_velocity_profile.png>
 Package pdftex.def Info: developing_velocity_profile.png  used on input line 20
 9.
 (pdftex.def)             Requested size: 333.48492pt x 287.77359pt.
-
-Overfull \hbox (114.11417pt too wide) in paragraph at lines 209--210
- [][] 
- []
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-<comparing_velocity_profiles.png, id=19, 682.80093pt x 573.64313pt>
+<comparing_velocity_profiles.png, id=30, 682.80093pt x 573.64313pt>
 File: comparing_velocity_profiles.png Graphic file (type png)
 <use comparing_velocity_profiles.png>
 Package pdftex.def Info: comparing_velocity_profiles.png  used on input line 21
 5.
 (pdftex.def)             Requested size: 238.9839pt x 200.77809pt.
-
-Overfull \hbox (19.61314pt too wide) in paragraph at lines 215--216
- [][] 
- []
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 2 undefined 
-on input line 220.
-
-[2]
-
-LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 3 undefined 
-on input line 235.
-
-
-LaTeX Warning: Reference `fig:inclined-pipe' on page 3 undefined on input line 
-235.
-
-
-LaTeX Warning: Reference `fig:developing-velocity-profile' on page 3 undefined 
-on input line 245.
-
-
-LaTeX Warning: Reference `fig:comparing-velocity-profiles' on page 3 undefined 
-on input line 285.
-
-[3]
-Overfull \hbox (150.92038pt too wide) detected at line 292
-[]
- []
-
-<moody_chart.png, id=31, 790.75426pt x 545.6385pt>
+ [4 <./developing_velocity_profile.png> <./comparing_velocity_profiles.png>] [5
+]
+<moody_chart.png, id=40, 790.75426pt x 545.6385pt>
 File: moody_chart.png Graphic file (type png)
 <use moody_chart.png>
 Package pdftex.def Info: moody_chart.png  used on input line 299.
 (pdftex.def)             Requested size: 434.91618pt x 300.1021pt.
-
-Overfull \hbox (215.54543pt too wide) in paragraph at lines 299--300
- [][] 
- []
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-Package multicol Warning: Floats and marginpars not allowed inside `multicols' 
-environment!.
-
-
-LaTeX Warning: Reference `fig:moody-chart' on page 4 undefined on input line 30
-7.
-
+ [6]
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 321.
-[4] (aphlex1a-dev.aux)
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 338.
+ [7 <./moody_chart.png>] [8]
+(aphlex1a-dev.aux)
 
 LaTeX Warning: There were undefined references.
 
@@ -999,13 +872,13 @@ Package logreq Info: Writing requests to 'aphlex1a-dev.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 11670 strings out of 492895
- 203898 string characters out of 3123736
- 657969 words of memory out of 3000000
- 15419 multiletter control sequences out of 15000+200000
+ 11671 strings out of 492895
+ 203917 string characters out of 3123736
+ 642020 words of memory out of 3000000
+ 15420 multiletter control sequences out of 15000+200000
  69191 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,45p,898b,1507s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,45p,898b,1390s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
 c}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
 t.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
@@ -1028,9 +901,9 @@ a/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jaych/Ap
 pData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/jaych
 /AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/ja
 ych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on aphlex1a-dev.pdf (4 pages, 285645 bytes).
+Output written on aphlex1a-dev.pdf (8 pages, 649684 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
+ 110 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

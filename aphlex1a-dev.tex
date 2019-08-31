@@ -90,7 +90,7 @@
 
 \end{adjustwidth}
 \vspace{0.5cm}
-\begin{multicols}{2}
+%\begin{multicols}{2}
 \section{Pipe Dimension Calculation}
 
 The following section describes the theoretical process used to dimensionalize the prelimiary plumbing framework in preparation for the first static cold flow test. By definition, these calculations are purely speculatory and are only used for the initial design process. The purpose of the cold flow test is to verify these parameters, and consequently adjust these parameters to better fit the system requirements.
@@ -112,7 +112,7 @@ To simplify the rigorous analysis and optimization processes often associated wi
 
 \subsection{Viscous Flow in a Circular Pipe}
 
-Now that a theoretical background has been established, we can begin to discuss the specific case of solving for flow rates, pressure drops, head losses, and diameter sizings via incompressible, viscous flows in circular pipes. Given the simplifying assumptions mentioned in Section \ref{sec:assumptions}, we can start simply with the classic case of Bernoulli's Equation:
+We can begin by discussing the specific case of solving for flow rates, pressure drops, head losses, and diameter sizings via incompressible, viscous flows in circular pipes. Given the simplifying assumptions mentioned in Section \ref{sec:assumptions}, we can start simply with the classic case of Bernoulli's Equation:
 \begin{equation} \label{eq:bernoulli}
 p + \frac{1}{2} \rho V^{2} + \rho g z = constant
 \end{equation}
@@ -307,13 +307,30 @@ To cover the transitionally rough range, in 1939 Colebrook combined the smooth w
 \textbf{This is the accepted design formula for turbulent friction}. It was first plotted by Moody in 1944 and is called the \textit{Moody chart} for pipe friction (see Figure \ref{fig:moody-chart}).
 
 However, Equation \ref{eq:moody} is sometimes cumbersome to evaluate for $f$ if $Re_{d}$ is known. So, an alternate explicit formula was given by Haaland as
-\begin{equation}
-\frac{1}{f^{1/2}} \approx -1.8\, log \big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \big]
+\begin{equation} \label{eq:moody-explicit}
+\frac{1}{f^{1/2}} \approx -1.8\, log \Big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \Big]
 \end{equation}
 and varies less than 2 percent from Equation \ref{eq:moody} \cite{fluid-mechanics}.
 
 \subsection{Example Calculation}
 \subsubsection{Determining Head Loss and Pressure Drop Using the Moody Chart}
+
+We can now proceed with an example calculation of head loss and pressure drop using the Moody Chart (Figure \ref{fig:moody-chart}) and/or Equation \ref{eq:moody-explicit}. Once again recalling parameters given in Table \ref{table:parameters} and the short velocity and Reynolds number calculations given below Table \ref{table:parameters}, we can plug these values directly into Equation \ref{eq:moody-explicit} to find the friction factor $f$:
+
+\begin{align*}
+\frac{1}{f^{1/2}} \approx -1.8\, log \Big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \Big]
+\end{align*}
+\begin{equation}
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{46711} + \left( \frac{4\mathrm{e}{-05}\, m/ 1.27\mathrm{e}{-02}\, m}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 2.103\mathrm{e}{-02}
+\end{equation}
+
+Now using Equation \ref{eq:blasius-2} we can find the head loss $h_{f}$:
+\begin{align*}
+h_{f} = \frac{\Delta p}{\rho g} = f \frac{L}{d} \frac{V^{2}}{2g}
+\end{align*}
+\begin{equation}
+h_{f} = (2.103\mathrm{e}{-02}) \frac{8.0\, m}{1.27\mathrm{e}{-02}\, m} \frac{(9.173\, m/s)^{2}}{2 (9.81\, m/s)} = 56.813\, m
+\end{equation}
 
 \subsection{Units and Symbols} \label{sec:units}
 All units are implied with accordance to the Metric system (seconds, kilograms, Pascals, etc.), but are defined explicity along with common Greek symbols below for ease-of-use:
@@ -328,6 +345,6 @@ All units are implied with accordance to the Metric system (seconds, kilograms, 
 \item $Re_{d}$ = Reynolds Number, dimensionless%. Laminar flow: $Re_{d} < 2300$ Turbulent flow: $2300 < Re_{d}$
 
 \end{itemize}
-\end{multicols}
+%\end{multicols}
 \printbibliography
 \end{document}
