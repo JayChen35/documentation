@@ -1995,19 +1995,6 @@
     <bcf:datasource type="file" datatype="bibtex">references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="2">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="3">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="5">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="6">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="7">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="8">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="9">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="10">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="11">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="12">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="13">fluid-mechanics</bcf:citekey>
-    <bcf:citekey order="14">fluid-mechanics</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
@@ -2039,13 +2026,4 @@
     </bcf:sort>
   </bcf:sortingtemplate>
   <!-- DATALISTS -->
-  <bcf:datalist section="0"
-                name="nty/global//global/global"
-                type="entry"
-                sortingtemplatename="nty"
-                sortingnamekeytemplatename="global"
-                labelprefix=""
-                uniquenametemplatename="global"
-                labelalphanametemplatename="global">
-  </bcf:datalist>
 </bcf:controlfile>

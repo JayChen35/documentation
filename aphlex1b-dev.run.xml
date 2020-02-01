@@ -41,13 +41,13 @@
   >
 ]>
 <requests version="1.0">
-  <internal package="biblatex" priority="9" active="1">
+  <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>aphlex1a-dev.bcf</file>
+      <file>aphlex1b-dev.bcf</file>
     </provides>
     <requires type="dynamic">
-      <file>aphlex1a-dev.bbl</file>
+      <file>aphlex1b-dev.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
@@ -60,23 +60,23 @@
       <file>english.lbx</file>
     </requires>
   </internal>
-  <external package="biblatex" priority="5" active="1">
+  <external package="biblatex" priority="5" active="0">
     <generic>biber</generic>
     <cmdline>
       <binary>biber</binary>
-      <infile>aphlex1a-dev</infile>
+      <infile>aphlex1b-dev</infile>
     </cmdline>
     <input>
-      <file>aphlex1a-dev.bcf</file>
+      <file>aphlex1b-dev.bcf</file>
     </input>
     <output>
-      <file>aphlex1a-dev.bbl</file>
+      <file>aphlex1b-dev.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>aphlex1a-dev.bbl</file>
+      <file>aphlex1b-dev.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>aphlex1a-dev.bcf</file>
+      <file>aphlex1b-dev.bcf</file>
     </requires>
     <requires type="editable">
       <file>references.bib</file>
