@@ -11,6 +11,11 @@
 \usepackage[margin=1.0in]{geometry}
 \addbibresource{references.bib}
 
+% For two figures side-by-side
+\usepackage{mwe}
+\usepackage[font=small]{caption}
+
+
 \numberwithin{equation}{section} % number within sections
 % \usepackage[parfill]{parskip} % new line without indent
 
@@ -90,38 +95,124 @@
 \vspace{0.1cm}
 %\begin{center}
 \begin{tabular}{lll}
-\textbf{Symbols} \\ \\
+\textbf{Symbols} \\ 
+$\epsilon$ & = \quad Expansion ratio & $$ \\
+$\gamma$ & = \quad Ratio of specific heats & $$ \\
+$\rho$ & = \quad Density & $g/cm^{3}$ \\
+$C^{*}$ & = \quad Characteristic velocity & $m/s$ \\
+$C_{d}$ & = \quad Discharge coefficient & $$ \\
 $C_{v}$ & = \quad Valve flow coefficient & $$ \\
 $f_{d}$ & = \quad Friction factor & $$ \\
+$F_{t}$ & = \quad Thrust & $N$ \\
+$g_{0}$ & = \quad Acceleration due to gravity & $m/s^{2}$ \\
 $I_{sp} $ & = \quad Specific impulse & $s$ \\
+$O/F$ & = \quad Oxidizer-to-fuel ratio & $$ \\
 $Q $ & = \quad Volumetric flow rate & $L/s$ \\
 \end{tabular} 
 \begin{tabular}{ll}
-\textbf{Acronyms} \\ \\
-$CEA $ & = \quad Chemical equilibrium w/ applications \\
+\textbf{Acronyms} \\ 
+$CEA $ & = \quad Chemical equilibrium \\ 
+$ $ & \qquad \enskip with applications \\
 $COTS $ & = \quad Commercial off-the-shelf \\
+$DAQ $ & = \quad Data acquisition \& control \\
+$FOD $ & = \quad Foreign object debris \\
 $GLOW $ & = \quad Gross lift-off weight \\
-$SF $ & = \quad Safety factor
+$P\&ID $ & = \quad Plumbing and \\
+$ $ & \qquad \enskip instrumentation diagram\\
+$PT $ & = \quad Pressure transducer \\
+$TC $ & = \quad Thermocouple \\
+$SF $ & = \quad Safety factor \\
+$VDC $ & = \quad Direct current voltage \\
 \end{tabular} \newline
 %\end{center}
 
 %\begin{multicols}{2}
 \section{Initial System Characterization}
-The following section outlines the characterization process used given certain mission constraints and objectives.
+\hspace{\parindent} The following section outlines the characterization and design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1. Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully commited to cost-effectiveness, simplicity, and reliability, given certain mission constraints and objectives as discussed below. 
 \subsection{Objectives}
 The Callisto 1 system is set to the following objectives:
 \begin{enumerate}
-\item Reach an altitude of $1500 m$ ($\approx 5000 ft$).
-\item A $GLOW$ of no more than $30 kg$ ($\approx 70 lbsm$).
-\item A nominal main engine thrust of $1.5 kN$ ($\approx 350 lbsf$).
-\item A chamber pressure in the range of around $1.5 MPa \text{to} 2.0 MPa$ ($\approx 218 psi \text{to} 300 psi$)
+\item Reach an altitude of 1500 m ($\approx$ 5000 ft).
+\item A $GLOW$ of no more than 30 kg ($\approx$ 70 lbsm).
+\item A nominal main engine thrust of 1.5 kN ($\approx$ 350 lbsf).
+\item A chamber pressure in the range of around 15 Bar to 20 Bar ($\approx$ 218 psi to 300 psi)
 \item Consume a budget of no more than \$10,000 USD.
 \item Utililize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
 \end{enumerate}
 \subsection{Aphlex 1B}
-The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature while not sacrificing too much $I_{sp}$. Industrial nitrous oxide was chosen for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
-Using $CEA$, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data relating propellant combustion characteristics could be obtained. The MATLAB plots below show the results for out analysis:
 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.475\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{cp_cstar_mix_labeled} % first figure itself
+        \caption{Theoretical C* efficiency vs chamber pressure and numerous mixture ratios.}
+        \label{fig:cp_cstar}
+    \end{minipage}\hfill
+    \begin{minipage}{0.475\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{cp_temp_mix_labeled} % second figure itself
+        \caption{Combustion temperature vs chamber pressure and numerous mixture ratios.}
+        \label{fig:cp_temp}
+    \end{minipage}
+\end{figure} 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.475\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{cp_molar_mix_labeled} % first figure itself
+        \caption{Gas molecular mass vs chamber pressure and numerous mixture ratios.}
+        \label{fig:cp_molar}
+    \end{minipage}\hfill
+    \begin{minipage}{0.475\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{cp_gamma_mix_labeled} % second figure itself
+        \caption{Ratio of specific heats vs chamber pressure and numerous mixture ratios.}
+        \label{fig:cp_gamma}
+    \end{minipage}
+\end{figure}
+
+\subsubsection{Chamber Pressure and Mixture Ratio Selection}
+\hspace{\parindent} The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature. This tradeoff sacrifices some $I_{sp}$ but reduces engineering complexity as regenerative and film cooling circuits may not be required. Industrial nitrous oxide was chosen as the main oxidizer for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
+Using CEA, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data describing propellant combustion characteristics could be obtained. Numerical Python scripts were written to iterate through various combustion chamber pressures and mixture ratios and interface with CEA, and MATLAB scripts were used to parse and graph the CEA outputs as shown in Figures \ref{fig:cp_cstar}, \ref{fig:cp_temp}, \ref{fig:cp_molar}, and \ref{fig:cp_gamma}. Mixture ratios of 4.0 and 4.2 are labeled at certain chamber pressures. All dependent-variable properties (characteristic velocty $C^{*}$, combustion temperature $T_{c}$, exhaust molar mass $M$, and exhaust specific heat ratio $\gamma$) were permutated assuming shifting equilibrium flow and at an operational altitude of 500 m. 
+
+A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temerature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen to minimize upstream fluid pressures and thus tank weight requirements, while also considering two additional design constraints that were not mentioned above but are nevertheless valid guiding parameters: a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories] and a pressure drop across the injector of around 25\% of the designated chamber pressure [Michigan Aeronautical Science Association]. These guidelines further encourage a lower chamber pressure, and thus a conservative value of 15 Bar was chosen.
+
+\subsubsection{Nozzle Design}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{5cm}||p{4cm}|p{1cm}|p{2cm}|  }
+\hline
+\multicolumn{4}{|c|}{Design Parameters} \\
+\hline
+Name & Value & Unit & Uncertainty \\
+\hline
+Propellant (Fuel)  &  Ethanol ($C_{2}H_{5}OH$, $95\%$)   &  N/A  &  N/A \\
+Propellant (Oxidizer)  &  Nitrous oxide ($N_{2}O$) & N/A  &  N/A \\
+$O/F$, Oxidizer/fuel ratio &  4.0  &  $N/A$  &   $\pm 1 \%$ \\
+$F_{t}$, Nominal thrust &  1.50 &  $kN$  &  $\pm 0.1 \%$ \\
+$P_{c}$, Chamber static pressure &  $1.5 \times 10^{6}$  &  $Pa$  &  $\pm 0.1 \%$ \\
+$P_{e}$, Ambient pressure &  $9.5540 \times 10^{4}$  &  $Pa$  &  $\pm 0.1 \%$ \\
+$T_{c}$, Chamber static temperature &  3025.98  &  $K$  &  $\pm 0.01 \%$  \\
+$M$, Exhaust molecular mass &  24.861  &  $kg/mol$  &   $\pm 0.01 \%$ \\
+$\gamma$, Specific heat ratio  &  1.1537  &  $N/A$  &   $\pm 0.001 \%$ \\
+\hline
+\end{tabular}
+\caption{Summary of exhaust gas properties and fluid parameters.}
+\label{table:gas_parameters}
+\end{table}
+
+\begin{equation} \label{eq:ambient_temperature}
+T_{3} = 15.04 - 0.00649 h 
+\end{equation}
+\begin{equation} \label{eq:ambient_pressure}
+P_{3} = \left[101.29 \times \left( \frac{T + 273.1}{288.08} \right) ^ {5.256} \right] \times 1000
+\end{equation}
+
+The nozzle design process followed standard procedures outlined in Rocket Propulsion Elements [CITATION] and open-source NASA documents. The thermodynamic properties of the exhaust gas and other important parameters are summarized and compiled in Table \ref{table:gas_parameters}. The ambient pressure was calculated using NASA Glenn Research Center's Earth Atmosphere Model for an altitude within the troposphere (less than 11000 meters), as shown in Equations \ref{eq:ambient_temperature} and \ref{eq:ambient_pressure}, where $T_{3}$ represents the ambient temperature in Kelvin, $h$ is the altitude in meters, $P_{3}$ is the ambient pressure in Pascals.
+
+Assuming isentropic flow in the supersonic nozzle with choked flow conditions at the throat, an ideal converging-diverging (de Laval) nozzle can be characterized.
 \subsection{Callisto 1}
 
 \subsection{Plumbing System}
@@ -137,6 +228,29 @@ To simplify the rigorous analysis and optimization processes often associated wi
 %\item A simplified steady-flow energy equation due to Assumption \ref{itm:heat-effects}.
 \item Flow is fully developed (minimal boundary-layer effects).
 \end{enumerate}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{4cm}||p{4cm}|p{2cm}|p{2cm}|  }
+\hline
+\multicolumn{4}{|c|}{Design Parameters} \\
+\hline
+Name & Value & Unit & Uncertainty \\
+\hline
+$\mu$, Dynamic viscosity  &  0.00196  &  $kg/m \cdot s$  &  $\pm 0.1 \%$ \\
+$\rho$, Density  &  786  &  $kg/m^{3}$  &  $\pm 1 \%$ \\
+$L$, Pipe length  &  8.0  &  $m$  &  $\pm 0.1 \%$  \\
+$d$, Pipe diameter  &  12.7  &  $mm$  &   $\pm 0.1 \%$ \\
+$\dot{m}$, Mass flow rate  &  0.9133  &  $kg/s$  &   $\pm 0.1 \%$ \\
+Pipe material  &  Hard nylon  &  N/A  &  N/A \\
+$\epsilon$, Roughness  &  1.5 to 40.0  &  $\mu m$  &  $\pm 50 \%$ \\
+\hline
+\end{tabular}
+\caption{Summary of exhaust gas properties and fluid parameters.}
+\label{table:pipe_parameters}
+\end{table}
+
+
 %\end{multicols}
 
 \end{document}
