@@ -9,6 +9,7 @@
 \setlength{\columnsep}{0.5cm}
 \usepackage[backend=biber]{biblatex}
 \usepackage[margin=1.0in]{geometry}
+\usepackage{siunitx}
 \addbibresource{references.bib}
 
 % For two figures side-by-side
@@ -106,6 +107,7 @@ $f_{d}$ & = \quad Friction factor & $$ \\
 $F_{t}$ & = \quad Thrust & $N$ \\
 $g_{0}$ & = \quad Acceleration due to gravity & $m/s^{2}$ \\
 $I_{sp} $ & = \quad Specific impulse & $s$ \\
+$\dot{m}$ & = \quad Mass flow rate & $kg/s$ \\
 $O/F$ & = \quad Oxidizer-to-fuel ratio & $$ \\
 $Q $ & = \quad Volumetric flow rate & $L/s$ \\
 \end{tabular} 
@@ -117,6 +119,7 @@ $COTS $ & = \quad Commercial off-the-shelf \\
 $DAQ $ & = \quad Data acquisition \& control \\
 $FOD $ & = \quad Foreign object debris \\
 $GLOW $ & = \quad Gross lift-off weight \\
+$MECO$ & = \quad Main engine cut-off \\
 $P\&ID $ & = \quad Plumbing and \\
 $ $ & \qquad \enskip instrumentation diagram\\
 $PT $ & = \quad Pressure transducer \\
@@ -218,7 +221,7 @@ Assuming fully isentropic flow (by definition both adiabatic and reversible) in 
 \begin{equation} \label{eq:area_ratio}
 \frac{A_{t}}{A_{2}} = \left( \frac{\gamma + 1}{2} \right) ^{1/(\gamma - 1)} \left( \frac{p_{2}}{p_{1}} \right) ^{1/\gamma} \sqrt{ \frac{\gamma + 1}{\gamma - 1} \left[ 1 - \left( \frac{p_{2}}{p_{1}} \right) ^{(\gamma - 1)/\gamma} \right] }
 \end{equation}
-where $A_{t}$ is the cross-sectional area of the throat, $A_{t}$ is the cross-sectional area at nozzle exit, and $p_{1}$ and $p_{2}$ are the chamber pressure and exit pressure respectively. Equation \ref{eq:area_ratio} is also often referred to as the inverse of the expansion ratio $\epsilon$, since $\epsilon = A_{2}/A_{t}$. Evaluating Equation \ref{eq:area_ratio} gives
+where $A_{t}$ is the cross-sectional area of the throat, $A_{2}$ is the cross-sectional area at nozzle exit, and $p_{1}$ and $p_{2}$ are the chamber pressure and exit pressure respectively. Equation \ref{eq:area_ratio} is also often referred to as the inverse of the expansion ratio $\epsilon$, since $\epsilon = A_{2}/A_{t}$. Evaluating Equation \ref{eq:area_ratio} gives
 \begin{equation*} 
 \frac{A_{t}}{A_{2}} = \left( \frac{2.15}{2} \right) ^{1/0.15} \left( \frac{9.6 \times 10^{4}}{1.5 \times 10^{6}} \right) ^{1/1.15} \sqrt{ \frac{2.15}{0.15} \left[ 1 - \left( \frac{9.6 \times 10^{4}}{1.5 \times 10^{6}} \right) ^{0.15/1.15} \right] } = 0.307
 \end{equation*}
@@ -256,6 +259,9 @@ where $g_{0}$ is the acceleration due to gravity at Earth's surface. $C_{F}$ is
 (C_{F})_{opt} = \frac{F_{t}}{p_{1}A_{t}} = \frac{1500}{1.5 \times 10^{6} * 7.29 \times 10 ^{4}} = 1.372
 \end{equation}
 Note that under a more rigorous derivation, $C_{F}$ can be seen to be a key parameter for analysis and varies depending on $\gamma$, the nozzle expansion ratio $\epsilon$, and the pressure ratio $p_{1}/p_{2}$. Normally, $C_{F}$ is experimentally determined by measuring chamber pressure, throat diameter, and thrust. The optimal $C_{F}$ and therefore $F_{t}$ occur when $p_{2} = p_{3}$.
+
+Finally, the physical dimensions of the nozzle can be determined using simple trigonometry and using a convergence half-angle $\alpha$ of $\ang{45}$ and a divergence half-angle $\beta$ of $\ang{15}$. First, the contraction ratio $A_{1}/A_{t}$, the ratio of chamber area to throat area, was set to a value of 8.0 for an acceptable engine form factor and since any value above 4.0 is satisfactory \ref{rpe}. The characteristic chamber length $L^{*}$, a parameter used for characterizing the necessary chamber volume for adequate mixing and combustion of the propellants, must be more carefully considered. Ideally, $L^{*}$ is purely a function of the chemistry of the propellant combination and is normall chosen [from other people] \ref{rpe}. However, due to [talk about need to account for decomposition after vaporization through the injector] is chosen due to the following equation \ref{nitrous-paper}
+
 [Add section on finding $I_{sp}$ and $F_{t}$ at launch and MECO, along with a table of physical nozzle design parameters and their calculated dimensions.]
 
 \subsection{Callisto 1}
