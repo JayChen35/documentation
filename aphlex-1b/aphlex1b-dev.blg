@@ -1,17 +1,18 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'aphlex1b-dev.blg'
-[44] biber-MSWIN64:315> INFO - === 
-[96] Biber.pm:371> INFO - Reading 'aphlex1b-dev.bcf'
-[193] Biber.pm:889> INFO - Found 1 citekeys in bib section 0
-[207] Biber.pm:4093> INFO - Processing section 0
-[221] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
-[224] bibtex.pm:1523> INFO - LaTeX decoding ...
-[239] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
-[250] Utils.pm:193> WARN - month field 'December' in entry 'rpe' is not an integer - this will probably not sort properly.
-[274] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[275] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[275] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[275] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[278] bbl.pm:636> INFO - Writing 'aphlex1b-dev.bbl' with encoding 'UTF-8'
-[279] bbl.pm:739> INFO - Output to aphlex1b-dev.bbl
-[281] Biber.pm:110> INFO - WARNINGS: 1
+[23] biber-MSWIN64:315> INFO - === 
+[48] Biber.pm:371> INFO - Reading 'aphlex1b-dev.bcf'
+[120] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
+[131] Biber.pm:4093> INFO - Processing section 0
+[143] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[149] bibtex.pm:1523> INFO - LaTeX decoding ...
+[165] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[170] Utils.pm:193> WARN - month field 'December' in entry 'rpe' is not an integer - this will probably not sort properly.
+[172] Utils.pm:193> WARN - month field 'July' in entry 'nitrous-paper' is not an integer - this will probably not sort properly.
+[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[185] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[185] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[185] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[187] bbl.pm:636> INFO - Writing 'aphlex1b-dev.bbl' with encoding 'UTF-8'
+[188] bbl.pm:739> INFO - Output to aphlex1b-dev.bbl
+[189] Biber.pm:110> INFO - WARNINGS: 2

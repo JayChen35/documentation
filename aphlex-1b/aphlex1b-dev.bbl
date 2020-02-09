@@ -19,6 +19,29 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global}
+    \entry{nitrous-paper}{article}{}
+      \name{author}{1}{}{%
+        {{hash=aed0950f578b9df997e8e36871402f77}{%
+           family={Palacz},
+           familyi={P\bibinitperiod},
+           given={Tomasz},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{aed0950f578b9df997e8e36871402f77}
+      \strng{fullhash}{aed0950f578b9df997e8e36871402f77}
+      \strng{bibnamehash}{aed0950f578b9df997e8e36871402f77}
+      \strng{authorbibnamehash}{aed0950f578b9df997e8e36871402f77}
+      \strng{authornamehash}{aed0950f578b9df997e8e36871402f77}
+      \strng{authorfullhash}{aed0950f578b9df997e8e36871402f77}
+      \field{sortinit}{P}
+      \field{sortinithash}{8d51b3d5b78d75b54308d706b9bbe285}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{7th European Conference for Aeronautics and Space Sciences}
+      \field{month}{7}
+      \field{title}{Nitrous Oxide Application for Low-Thrust and Low-Cost Liquid Rocket Engine}
+      \field{year}{2017}
+    \endentry
     \entry{rpe}{book}{}
       \name{author}{2}{}{%
         {{hash=f4c379ca1f257bc761a855fbe5466fc1}{%

@@ -225,7 +225,11 @@ where $A_{t}$ is the cross-sectional area of the throat, $A_{2}$ is the cross-se
 \begin{equation*} 
 \frac{A_{t}}{A_{2}} = \left( \frac{2.15}{2} \right) ^{1/0.15} \left( \frac{9.6 \times 10^{4}}{1.5 \times 10^{6}} \right) ^{1/1.15} \sqrt{ \frac{2.15}{0.15} \left[ 1 - \left( \frac{9.6 \times 10^{4}}{1.5 \times 10^{6}} \right) ^{0.15/1.15} \right] } = 0.307
 \end{equation*}
-Notice the substitution of $p_{2}$ for $P_{e}$ as specified in Table \ref{table:gas_parameters}, since in an ideal nozzle, the exhaust gas should expand to ambient pressure. Next, we can find the ideal exit velocity $v_{2}$, sometimes denoted as $c$:
+Notice the substitution of $p_{2}$ for $P_{e}$ as specified in Table \ref{table:gas_parameters}, since in an ideal nozzle, the exhaust gas should expand to ambient pressure. The expansion ratio $\epsilon$ is simply
+\begin{equation*}
+\epsilon = A_{2}/A_{t} = 1/AR = 1/0.307 = 3.26
+\end{equation*}
+Next, we can find the ideal exit velocity $v_{2}$, sometimes denoted as $c$:
 \begin{equation} \label{eq:exit_velocity}
 v_{2} = \sqrt{ \frac{2\gamma}{\gamma - 1} \left( \frac{R_{u}T_{1}}{M} \right) \left[ 1- \left( \frac{p_{2}}{p_{1}} \right) ^{(\gamma - 1)/\gamma} \right] }
 \end{equation}
@@ -250,6 +254,10 @@ Evaluating Equation \ref{eq:throat_area} gives
 \begin{equation*} 
 A_{t} = \frac{0.694}{1.5 \times 10^{6}} \sqrt{ \frac{(8314.3/24.86) * 3026}{1.15 [2/(2.15)]^{(2.15)/(0.15)}} } = 7.29 \times 10^{-4} \; m^{2} = 7.29 \; cm^{2}
 \end{equation*}
+Using this calculated throat area and the expansion ratio, the exit area is simply
+\begin{equation} \label{eq:exit_area}
+A_{2} = \epsilon * A_{t} = 3.26 * 7.29 \times 10 ^{-4} = 2.38 \times 10^{-3} \; m^{2} = 23.8 \; cm^{2}
+\end{equation}
 From the parameters calculated thus far, we can calculate some useful performance metrics such as $I_{sp}$ and thrust coefficient $C_{F}$:
 \begin{equation} \label{eq:specific_impulse}
 (I_{sp})_{opt} = F_{t}/(\dot{m} * g_{0}) = c/g_{0} = 2162.3/9.81 = 220.42 \; sec
@@ -260,7 +268,32 @@ where $g_{0}$ is the acceleration due to gravity at Earth's surface. $C_{F}$ is
 \end{equation}
 Note that under a more rigorous derivation, $C_{F}$ can be seen to be a key parameter for analysis and varies depending on $\gamma$, the nozzle expansion ratio $\epsilon$, and the pressure ratio $p_{1}/p_{2}$. Normally, $C_{F}$ is experimentally determined by measuring chamber pressure, throat diameter, and thrust. The optimal $C_{F}$ and therefore $F_{t}$ occur when $p_{2} = p_{3}$.
 
-Finally, the physical dimensions of the nozzle can be determined using simple trigonometry and using a convergence half-angle $\alpha$ of $\ang{45}$ and a divergence half-angle $\beta$ of $\ang{15}$. First, the contraction ratio $A_{1}/A_{t}$, the ratio of chamber area to throat area, was set to a value of 8.0 for an acceptable engine form factor and since any value above 4.0 is satisfactory \ref{rpe}. The characteristic chamber length $L^{*}$, a parameter used for characterizing the necessary chamber volume for adequate mixing and combustion of the propellants, must be more carefully considered. Ideally, $L^{*}$ is purely a function of the chemistry of the propellant combination and is normall chosen [from other people] \ref{rpe}. However, due to [talk about need to account for decomposition after vaporization through the injector] is chosen due to the following equation \ref{nitrous-paper}
+Finally, the physical dimensions of the nozzle can be determined using simple trigonometry and using a convergence half-angle $\alpha$ of $\ang{45}$ and a divergence half-angle $\beta$ of $\ang{15}$. First, the contraction ratio $A_{1}/A_{t}$, the ratio of chamber area to throat area, was set to a value of 8.0 for an acceptable engine form factor and since any value above 4.0 is satisfactory \cite{rpe}. The characteristic chamber length $L^{*}$, a parameter used for characterizing the necessary chamber volume for adequate mixing and combustion of the propellants, must be more carefully considered. Ideally, $L^{*}$ is purely a function of the chemistry of the propellant combination and is often based upon previous successful engine designs \cite{rpe}. However, due to some nontrivial behaviors of nitrous oxide, such as exothermic decomposition after vaporization in the injector and a high density sensitivity to temperature, a more sophisticated model is needed to calculate $L^{*}$. Palacz proposes an explicit equation for finding the ideal $L^{*}$ for a nitrous oxide system, and empirically determined an ideal range for an $NO_{x}$/ethanol system of $L^{*}$ values from 125.6 cm to 167.8 cm \cite{nitrous-paper}. A low-range $L_{*}$ value of 1.25 m was chosen as a smaller form factor is desired over perfect combustion efficiency. 
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{5cm}||p{2cm}|p{2cm}| }
+\hline
+\multicolumn{3}{|c|}{Calculated Parameters Dimensions } \\
+\hline
+Name & Value & Unit \\ 
+\hline
+$\alpha$, Convergence half-angle &  45  &  $deg$ \\
+$\beta$, Divergence half-angle &  15  &  $deg$  \\
+$\epsilon$, Expansion ratio  &  3.26  &  $N/A$  \\
+$\dot{m}$, Total mass flow rate  &  0.694  &  $kg/s$  \\
+$\dot{m}_{f}$, Fuel mass flow rate &  0.555  &  $kg/s$  \\
+$\dot{m}_{o}$, Oxidizer mass flow rate &  0.139  &  $kg/s$  \\
+$A_{t}$, Throat area  & 7.29 & $cm^{2}$ \\
+$A_{2}$, Exit area & 23.8 & $cm^{2}$ \\
+$CR$, Contraction ratio  &  8  &  $N/A$  \\
+\hline
+\end{tabular}
+\caption{Summary of physical nozzle dimensions.}
+\label{table:calculated_dimensions}
+\end{table}
+
+Table [something]
 
 [Add section on finding $I_{sp}$ and $F_{t}$ at launch and MECO, along with a table of physical nozzle design parameters and their calculated dimensions.]
 

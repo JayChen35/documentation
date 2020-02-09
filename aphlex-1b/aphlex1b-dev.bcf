@@ -1996,6 +1996,10 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1">rpe</bcf:citekey>
+    <bcf:citekey order="2">rpe</bcf:citekey>
+    <bcf:citekey order="3">rpe</bcf:citekey>
+    <bcf:citekey order="4">rpe</bcf:citekey>
+    <bcf:citekey order="5">nitrous-paper</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
