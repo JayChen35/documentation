@@ -42,6 +42,31 @@
       \field{title}{Nitrous Oxide Application for Low-Thrust and Low-Cost Liquid Rocket Engine}
       \field{year}{2017}
     \endentry
+    \entry{rao}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2d0b4f38a62efb652f5c8d05cbd201c8}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={GVR},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \strng{fullhash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \strng{bibnamehash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \strng{authorbibnamehash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \strng{authornamehash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \strng{authorfullhash}{2d0b4f38a62efb652f5c8d05cbd201c8}
+      \field{sortinit}{R}
+      \field{sortinithash}{da6b42bd3ab22fee61abed031ee405f7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Jet Propulsion Archive}
+      \field{month}{6}
+      \field{number}{6}
+      \field{title}{Exhaust Nozzle Contour for Optimum Thrust}
+      \field{volume}{28}
+      \field{year}{1958}
+    \endentry
     \entry{rpe}{book}{}
       \name{author}{2}{}{%
         {{hash=f4c379ca1f257bc761a855fbe5466fc1}{%

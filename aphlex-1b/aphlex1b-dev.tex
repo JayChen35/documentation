@@ -322,13 +322,22 @@ $CR$, Contraction ratio  &  6.9  &  $N/A$  \\
 \label{table:calculated_dimensions}
 \end{table}
 
-Table \ref{table:calculated_parameters} shows the engine parameters calculated so far in this section, while Table \ref{table:calculated_dimensions} shows the physical nozzle dimensions calculated so far in this section. Using the data from Table \ref{table:calculated_dimensions}, a basic conical nozzle can be realized.
+Table \ref{table:calculated_parameters} shows the calculated engine parameters and Table \ref{table:calculated_dimensions} shows the calculated physical nozzle dimensions. Using the data from Table \ref{table:calculated_dimensions}, a basic conical nozzle can be realized.
 
 \begin{figure}
 \centering
 \includegraphics[scale=0.5, width=0.9\textwidth, trim={6.5cm 12.5cm 5.5cm 9cm}, clip]{aphlex1b-drawing} % Trim order is left, bottom, right, top
 \caption{Aphlex 1B drawing with a conical nozzle and given dimensions.}
 \label{fig:conical_nozzle_drawing}
+\end{figure}
+
+Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphlex 1B created using the given dimensions. Although a conical nozzle may exhibit an advantage in its ease of manufacturing, it is suboptimal for performance since 1) the exhaust is not exitting the nozzle completely parallel to the nozzle axis, which results in lateral losses of energy, 2) the sharp convex corner at the throat generates shocks which are not adequately dissipated by a conical nozzle, and 3) the small divergence half-angle ensures a long diverging section, which increases engine mass. To address these issues, most modern nozzles are so-called bell nozzles, whose diverging section includes a straightening section to address the first issue and inherently addresses the third issue by having a more rapidly expanding cross-section as compared to conical nozzles. To neutralize the Prandtl-Meyer expansion fans generated at the sharp corner of the throat, a numerical technique called the Method of Characteristics (MOC) is used to generate the nozzle contour. In brief, MOC propogates characteristic lines eminating from the throat, and by using equations to model characteristic interactions and reflections, it is able to generate a nozzle contour to precisely neutralize (reflect in a manner parallel to the nozzle axis) these expansion fans. A MATLAB script was written to execute and create the MOC nozzle, which can be found on our Project Caelus propulsion Github repository at \url{https://github.com/ProjectCaelus/propulsion}. The Cartesian points representing the generated wall contour were exported as a CSV file, which was then imported into our computer-aided design (CAD) program, Fusion 360, where a best-fit nth-order spline was used to finalize the diverging contour. Although the shape of the diverging section can be optimized significantly, the precise shape of the nozzle converging section has not been found to heavily impact engine performance and is therefore smoothened under the guidlines of Dr. GVR Rao's parabolic approximation method \cite{rpe}\cite{rao}. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, width=0.9\textwidth, trim={7.25cm 12.5cm 5.5cm 9cm}, clip]{aphlex1b-drawing-2} % Trim order is left, bottom, right, top
+\caption{Aphlex 1B drawing with a MOC nozzle and given dimensions.}
+\label{fig:moc_nozzle_drawing}
 \end{figure}
 
 [Add section on finding $I_{sp}$ and $F_{t}$ at launch and MECO, along with a table of physical nozzle design parameters and their calculated dimensions.]
@@ -419,6 +428,7 @@ $\epsilon$, Roughness  &  1.5 to 40.0  &  $\mu m$  &  $\pm 50 \%$ \\
 \end{table}
 
 \printbibliography
+% To compile bibliography, run pdfLaTeX ONLY, then Biber, then pdfLaTeX ONLY
 %\end{multicols}
 
 \end{document}
