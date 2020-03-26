@@ -133,9 +133,9 @@ Note: Subscripts follow the convention outlined in \cite{rpe}. Unless otherwise 
 
 %\begin{multicols}{2}
 \section{Initial System Characterization}
-\hspace{\parindent} The following section outlines the characterization and design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1. Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully commited to cost-effectiveness, simplicity, and reliability, given certain mission constraints and objectives as discussed below. 
+\hspace{\parindent}  Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully commited to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the afforementioned ideals.
 \subsection{Objectives}
-The Callisto 1 system is set to the following objectives:
+The Callisto 1 system is set to the following constraints and objectives:
 \begin{enumerate}
 \item Reach an altitude of 1500 m ($\approx$ 5000 ft).
 \item A $GLOW$ of no more than 30 kg ($\approx$ 70 lbsm).
@@ -144,7 +144,6 @@ The Callisto 1 system is set to the following objectives:
 \item Consume a budget of no more than \$10,000 USD.
 \item Utililize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
 \end{enumerate}
-\subsection{Aphlex 1B}
 
 \begin{figure}
     \centering
@@ -177,13 +176,16 @@ The Callisto 1 system is set to the following objectives:
     \end{minipage}
 \end{figure}
 
-\subsubsection{Chamber Pressure and Mixture Ratio Selection}
+\subsection{Chamber Pressure and Mixture Ratio Selection}
 \hspace{\parindent} The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature. This tradeoff sacrifices some $I_{sp}$ but reduces engineering complexity as regenerative and film cooling circuits may not be required. Industrial nitrous oxide was chosen as the main oxidizer for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
 Using CEA, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data describing propellant combustion characteristics could be obtained. Numerical Python scripts were written to iterate through various combustion chamber pressures and mixture ratios and interface with CEA, and MATLAB scripts were used to parse and graph the CEA outputs as shown in Figures \ref{fig:cp_cstar}, \ref{fig:cp_temp}, \ref{fig:cp_molar}, and \ref{fig:cp_gamma}. Mixture ratios of 4.0 and 4.2 are labeled at certain chamber pressures. All dependent-variable properties (characteristic velocty $C^{*}$, combustion temperature $T_{c}$, exhaust molar mass $M$, and exhaust specific heat ratio $\gamma$) were permutated assuming shifting equilibrium flow and at an operational altitude of 500 m. 
 
 A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temerature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen to minimize upstream fluid pressures and thus tank weight requirements, while also considering two additional design constraints that were not mentioned above but are nevertheless valid guiding parameters: a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories] and a pressure drop across the injector of around 25\% of the designated chamber pressure [Michigan Aeronautical Science Association]. The former of these additional guidlines is to avoid feed-coupled combustion instabilities that may be observed when the $\delta p$ across the injector is not adequately high. These guidelines further encourage a lower chamber pressure, and thus a conservative value of 15 Bar was chosen.
 
-\subsubsection{Nozzle Design}
+\section{Propulsion System Design}
+\hspace{\parindent} The following section outlines the design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1, given the objectives and data obtained in the previous section.
+
+\subsection{Nozzle Design}
 
 \begin{table}[!htb]
 \centering
@@ -268,7 +270,7 @@ where $g_{0}$ is the acceleration due to gravity at Earth's surface. $C_{F}$ is
 \end{equation}
 Note that under a more rigorous derivation, $C_{F}$ can be seen to be a key parameter for analysis and varies depending on $\gamma$, the nozzle expansion ratio $\epsilon$, and the pressure ratio $p_{1}/p_{2}$. Normally, $C_{F}$ is experimentally determined by measuring chamber pressure, throat diameter, and thrust. The optimal $C_{F}$ and therefore $F_{t}$ occur when $p_{2} = p_{3}$.
 
-Finally, the physical dimensions of the nozzle can be determined using simple trigonometry via a standard convergence half-angle $\alpha$ of $\ang{45}$ and a standard divergence half-angle $\beta$ of $\ang{15}$. The characteristic chamber length $L^{*}$, a parameter used for characterizing the necessary chamber volume for adequate mixing and combustion of the propellants, must be more carefully considered. Ideally, $L^{*}$ is purely a function of the chemistry of the propellant combination and is often based upon previous successful engine designs \cite{rpe}. However, due to the dynamical and complex nature of nitrous oxide, such as exothermic decomposition after vaporization in the injector and a high density sensitivity to temperature, a more sophisticated model is needed to calculate $L^{*}$. Palacz proposes an explicit equation for finding the ideal $L^{*}$ for a nitrous oxide system, and empirically determined an ideal range for an $NO_{x}$/ethanol system of $L^{*}$ values from 125.6 cm to 167.8 cm \cite{nitrous-paper}. This range is confirmed by Sutton and Biblarz, as $L^{*}$ values of between 1.0 m and 1.5 m are expected with ethanol systems. A low-range $L^{*}$ value of 1.25 m was chosen as a smaller form factor is desired over perfect combustion efficiency. $L^{*}$ is mathematically defined as simply
+Finally, the physical dimensions of the nozzle can be determined using simple trigonometry via a standard convergence half-angle $\alpha$ of $\ang{45}$ and a standard divergence half-angle $\beta$ of $\ang{15}$. The characteristic chamber length $L^{*}$, a parameter used for characterizing the necessary chamber volume for adequate mixing and combustion of the propellants, must be more carefully considered. Ideally, $L^{*}$ is purely a function of the chemistry of the propellant combination and is often based upon previous successful engine designs \cite{rpe}. However, due to the dynamical and complex nature of nitrous oxide, such as exothermic decomposition after vaporization in the injector and a high density sensitivity to temperature, a more sophisticated model is needed to calculate $L^{*}$. Palacz proposes an explicit equation for finding the ideal $L^{*}$ for a nitrous oxide system, and empirically determined an ideal range for an $NO_{x}$/ethanol system of $L^{*}$ values from 125.6 cm to 167.8 cm \cite{nitrous-paper}. This range is confirmed by Sutton and Biblarz, as $L^{*}$ values of between 1.0 m and 1.5 m are expected with ethanol systems. A low-range $L^{*}$ value of 1.25 m was chosen as a smaller form factor is desired over perfect combustion efficiency. $L^{*}$ is mathematically defined as
 \begin{equation} \label{eq:l_star}
 L^{*} = \frac{V_{c}}{A_{t}} = \frac{\pi r_{c}^{2} L{c}}{A_{t}} \; \Longrightarrow \; L_{c} = \frac{A_{t} L^{*}}{\pi r_{c}^{2}}
 \end{equation}
@@ -331,7 +333,7 @@ Table \ref{table:calculated_parameters} shows the calculated engine parameters a
 \label{fig:conical_nozzle_drawing}
 \end{figure}
 
-Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphlex 1B created using the given dimensions. Although a conical nozzle may exhibit an advantage in its ease of manufacturing, it is suboptimal for performance since 1) the exhaust is not exitting the nozzle completely parallel to the nozzle axis, which results in lateral losses of energy, 2) the sharp convex corner at the throat generates shocks which are not adequately dissipated by a conical nozzle, and 3) the small divergence half-angle ensures a long diverging section, which increases engine mass. To address these issues, most modern nozzles are so-called bell nozzles, whose diverging section includes a straightening section to address the first issue and inherently addresses the third issue by having a more rapidly expanding cross-section as compared to conical nozzles. To neutralize the Prandtl-Meyer expansion fans generated at the sharp corner of the throat, a numerical technique called the Method of Characteristics (MOC) is used to generate the nozzle contour. In brief, MOC propogates characteristic lines eminating from the throat, and by using equations to model characteristic interactions and reflections, it is able to generate a nozzle contour to precisely neutralize (reflect in a manner parallel to the nozzle axis) these expansion fans. A MATLAB script was written to execute and create the MOC nozzle, which can be found on our Project Caelus propulsion Github repository at \url{https://github.com/ProjectCaelus/propulsion}. The Cartesian points representing the generated wall contour were exported as a CSV file, which was then imported into our computer-aided design (CAD) program, Fusion 360, where a best-fit nth-order spline was used to finalize the diverging contour. Although the shape of the diverging section can be optimized significantly, the precise shape of the nozzle converging section has not been found to heavily impact engine performance and is therefore smoothened under the guidlines of Dr. GVR Rao's parabolic approximation method \cite{rpe}\cite{rao}. 
+Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphlex 1B created using the given dimensions. Although a conical nozzle may exhibit an advantage in its ease of manufacturing, it is suboptimal for performance since 1) the exhaust is not exitting the nozzle completely parallel to the nozzle axis, which results in lateral losses of energy, 2) the sharp convex corner at the throat generates shocks which are not adequately dissipated by a conical nozzle, and 3) the small divergence half-angle ensures a long diverging section, which increases engine mass. To address these issues, most modern nozzles are so-called ``bell'' nozzles, whose diverging section includes a straightening section to address the first issue and inherently addresses the third issue by having a more rapidly expanding cross-section as compared to conical nozzles. To neutralize the Prandtl-Meyer expansion fans generated at the sharp corner of the throat, a numerical technique called the Method of Characteristics (MOC) is used to generate the nozzle contour. In brief, MOC propogates characteristic lines eminating from the throat, and by using equations to model characteristic interactions and reflections, it is able to generate a nozzle contour to precisely neutralize (reflect in a manner parallel to the nozzle axis) these expansion fans. A MATLAB script was written to execute and create the MOC nozzle, which can be found on our Project Caelus propulsion Github repository at \url{https://github.com/ProjectCaelus/propulsion}. The Cartesian points representing the generated wall contour were exported as a CSV file, which was then imported into our computer-aided design (CAD) program, Fusion 360, where a best-fit nth-order spline was used to finalize the diverging contour. Although the shape of the diverging section can be optimized significantly, the precise shape of the nozzle converging section has not been found to heavily impact engine performance and is therefore smoothened under the guidlines of Dr. GVR Rao's parabolic approximation method \cite{rpe}\cite{rao}. 
 
 \begin{figure}
 \centering
@@ -340,13 +342,11 @@ Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphle
 \label{fig:moc_nozzle_drawing}
 \end{figure}
 
-[Add section on finding $I_{sp}$ and $F_{t}$ at launch and MECO, along with a table of physical nozzle design parameters and their calculated dimensions.]
-
-\subsection{Callisto 1}
-
 \subsection{Injector Design}
 
-\hspace{\parindent} The injector types considered were the triplet (fuel-centered) unlike impinging injector and the like-on-like doublet impinging injector, due to 1) our limited manufacturing capabilities 2) a fairly unbalanced O/F ratio 3) both types exhibiting good mixing and atomization properties and 4) the abundance of historical experience and data with both injector types. NASA's SP-8089 conference document on liquid engine injector design suggests that the best way to characterize both the individual orifice geometries and the overall injector geometry for unlike impinging injectors is through diameter ratios. Vigorous cold flow and other empirically testing methods at the time were used and have found correlations between the driving orifice diameter ratio with the optimum mixing efficiency. The correlation found was
+\hspace{\parindent} The injector serves two main purposes in a liquid rocket engine: the adequate mixing (atomization) of the incoming propellant streams to ensure maximum combustion efficiency and the prevention or minimization of combustion instabilities. Some injectors additionally implement film cooling to aid in reducing the thermal load of the chamber and nozzle walls, however, our system relies solely on the heat capacity of the chamber walls and a thin ablative layer to maintain wall integrity. This is done since it would save propellant mass that would otherwise be wasted for film cooling and due to the relatively short burn time of our system. 
+
+There are many types of injector elements, each with unique advantages and disadvantages. The injector types considered were the triplet (fuel-centered) unlike impinging injector and the like-on-like doublet impinging injector, due to 1) our limited manufacturing capabilities 2) a fairly unbalanced O/F ratio 3) both types exhibiting good mixing and atomization properties and 4) the abundance of historical experience and data with both injector types. Both the coaxial swirl and pintle types were deemed either too complex to manufacture or too difficult to characterize due to a limited amount of available documentation. NASA's SP-8089 conference document on liquid engine injector design suggests that the best way to characterize both the individual orifice geometries and the overall injector geometry for unlike impinging injectors is through diameter ratios. Vigorous cold flow and other empirically testing methods at the time were used and have found correlations between the driving orifice diameter ratio with the optimum mixing efficiency. The correlation found was
 \begin{equation} \label{eq: diameter_ratio}
     \left( \frac{d_{c}}{d_{ou}} \right)^{2} = M \left[ \frac{\rho_{ou}}{\rho_{c}} \left( \frac{\dot{m}_{c}}{\dot{m}_{ou}} \right)^{2} \right]^{0.7}
 \end{equation}
@@ -363,7 +363,7 @@ where $C_{d}$ is a dimensionless discharge coefficient that is experimentally de
 \begin{equation} \label{eq: flow_velocity}
     v = Q/A = C_{d} \sqrt{2 \Delta p /\rho}
 \end{equation}
-Since $C_{d}$ is a measured parameter, initial design calculations must assume a value. RPE suggests a $C_{d}$ value of around 0.88 for a 1 mm diameter orifice in a short tube with a rounded entrance (L/D $>$ 3.0), and 0.9 for a similar configuration with a 1.57 mm diameter. Accordingly, a $C_{d}$ value of 0.9 was chosen for the oxidizer and a $C_{d}$ value of 0.88 was chosen for the fuel. For the orifice sizing, NASA SP-8089 found that smaller orifice sizes attributed to better mixing in all scenarios, although only to a certain extent (orifice diameters $<$0.03 inches saw insignificant improvements in mixing). Due to limited manufacturing capabilities, a minimum hole size of 1 mm was chosen. Using this information, a design parameter of an overall injector pressure drop that is 25$\%$ of chamber pressure, and Equation \ref{eq: discharge}, the mass flow rate across a single oxidizer and fuel orifice are
+Since $C_{d}$ is a measured parameter, initial design calculations must assume a value. RPE suggests a $C_{d}$ value of around 0.88 for a 1 mm diameter orifice in a short tube with a rounded entrance (assuming an orifice length to diameter ratio of L/D $>$ 3.0), and 0.9 for a similar configuration with a 1.57 mm diameter. Accordingly, a $C_{d}$ value of 0.9 was chosen for the oxidizer and a $C_{d}$ value of 0.88 was chosen for the fuel. For the orifice sizing, NASA SP-8089 found that smaller orifice sizes attributed to better mixing in all scenarios, although only to a certain extent (orifice diameters $<$0.03 inches saw insignificant improvements in mixing). Due to limited manufacturing capabilities, a minimum hole size of 1 mm was chosen. Using this information, a design parameter of an overall injector pressure drop that is 25$\%$ of chamber pressure, and Equation \ref{eq: discharge}, the mass flow rate across a single oxidizer and fuel orifice are
 \begin{equation*}
     \dot{m}_{o} = 0.9*(\pi*((1.58 \; mm/2)\times 10^{-3})^{2}) \sqrt{2(772.25 kg/m^{3})(1.5 \times 10^{6} \; Pa * 0.25)} = 0.0425 \; kg/s
 \end{equation*}
@@ -377,20 +377,64 @@ The same pressure drops can be used for each orifice due to Bernoulli's principl
 \begin{equation*}
     v_{f} = 0.88 \sqrt{(2(1.5\times 10^{6} \; Pa)(0.25))/(789 \; kg/m^{3})} = 27.132 \; m/s
 \end{equation*}
-Dividing the mass flow rate by the individual orifice mass flow rates gives the total orifice count for each propellant:
+Dividing the mass flow rate by the individual orifice mass flow rates gives the total orifice count for each propellant, denoted as $n_{o}$ and $n_{f}$:
 \begin{equation*}
-    Number \; of \; oxidizer \; orifices = \dot{m}_{o}/\dot{m}_{oi} = (0.4865 \; kg/s)/(0.0425 \; kg/s) = 11.447
+    n_{o} = \dot{m}_{o}/\dot{m}_{oi} = (0.4865 \; kg/s)/(0.0425 \; kg/s) = 11.447
 \end{equation*}
 \begin{equation*}
-    Number \; of \; fuel \; orifices = \dot{m}_{f}/\dot{m}_{fi} = (0.139 \; kg/s)/(0.0168 \; kg/s) = 8.27
+    n_{f} = \dot{m}_{f}/\dot{m}_{fi} = (0.139 \; kg/s)/(0.0168 \; kg/s) = 8.27
 \end{equation*}
-Since an integer and even amount of holes are required for a like-on-like impinging injector, Equation \ref{eq: discharge} is rearranged to compute the necessary diameter given the desired number of orifices, given a reasonable range of orifice count provided by the previous calculation:
+Since both an integer and even amount of holes are obviously required for a like-on-like impinging injector, Equation \ref{eq: discharge} is rearranged to compute the necessary diameter given the desired number of orifices, given a reasonable range of orifice count provided by the previous calculation:
+\begin{equation} \label{eq: orifice_diameter}
+d = 2 \sqrt{\frac{\dot{m}}{C_{d} n \pi \sqrt{2 \rho \Delta p}}}
+\end{equation}
+Solving Equation \ref{eq: orifice_diameter} for both oxidizer and fuel streams yields
+\begin{equation*}
+d_{o} = 2 \sqrt{\frac{0.555 \; kg/s}{(0.9)(16) \pi \sqrt{2 (772.25 \; kg/m^{3})(1.5 \times 10^{6} \; Pa)(0.25)}}} = 0.001428 \; m = 1.43 \; mm
+\end{equation*}
+\begin{equation*}
+d_{f} = 2 \sqrt{\frac{0.139 \; kg/s}{(0.88)(8) \pi \sqrt{2 (789 \; kg/m^{3})(1.5 \times 10^{6} \; Pa)(0.25)}}} = 0.001017 \; m = 1.02 \; mm
+\end{equation*}
+Thus, to achieve 16 oxidizer orifices and 8 fuel orifices, an oxidizer orifice diameter of 1.53 mm and fuel orifice diameter of 1.02 mm are needed.
 
-Thus, to achieve [x] oxidizer orifices and [y] fuel orifices
+The remaining injector parameters were chosen due to a literature review, rather than explicit calculations. The angle of impingement, also known as the cant angle $\lambda$, is defined as the angle between two propellant jets. It was chosen to be 60 degrees since it is the most common impingement angle, prevents significant backsplash of propellants onto the injector face (which would produce high heat fluxes with unlike elements), and produces the best atomization characteristics despite requiring a larger $L^{*}$.
 
-an oxidizer orifice diameter of [x] mm and fuel orifice diameter of [y] mm are needed.
-Remaining impingement injector parameters were chosen due to a literature review, rather than explicit calculations. The angle of impingement, $\lambda$, is chosen to be 60 degrees (relative to the injector axis) and a point of impingement of around 3 cm downstream of the injector face is chosen for maximum ethanol/nitrous oxide combustion efficiency. The final injector parameters are summarized in the table below.
-[Still need to figure out angle of impingement, distance from injector face, though this is expected to be 60 degrees and around 3 cm respectively. Need to note that L/D is greater than 3 (or more), and that higher is better.]
+NASA SP-8089 further suggests that the free-stream jet length (impingement length), defined as the distance from an element face to the point of impingment, should be somewhere in the range of five to seven times the orifice diameter. In other words, 5 $<$ L/D ratio $<$ 7. An L/D ratio of 6 was chosen, and the free-stream get length is therefore $(L_{jet})_{o} = 6 * 1.43 \; mm = 8.57 \; mm$ and $(L_{jet})_{f} = 6 * 1.02 \; mm = 6.10 \; mm$. The point of impingement (distance of impingment orthogonally measured from the injector face) is therefore $(L_{POI})_{o} = 8.57 \; cos(30) = 7.42 \; mm$ and $(L_{POI})_{f} = 6.10 \; cos(30) = 5.28 \; mm$ since the $\lambda$ half-angle is 30 degrees. 
+
+The thickness of the injector plate is driven by the L/D ratio of the largest orifice (not the jet), which was suggested to be around 10 to ensure smooth and developed flow, assuming the $C_{d}$ that was used in previous calculations. Simply, $L_{inj} = 10(d_{max}) \; cos(\lambda /2)$, since the cosine of the cant half-angle is the coaxial component (thickness). Evaluating gives $L_{inj} = (10)(1.42 \; mm) \; cos(30) = 12.38 \; mm$. Finally, finding the distance between each orifice within an element pair involves two seperate calculations: one for the distance on the side of the injector face (denoted as ``combustor-side'') and one for the distance on its reverse side (denoted as ``manifold-side''). First, the combustor-side distance is $d_{com} = (2)(L_{jet}) \; sin(30)$, and therefore, $(d_{com})_{o} = (2)(8.57 \; mm) \; sin(30) = 8.57 \; mm$ and $(d_{com})_{f} = (2)(6.10 \; mm) \; sin(30) = 6.10 \; mm$. The manifold-side distance is a case of similar triangles with corresponding combustor-side distances: $(d_{man})_{o} = [(d_{com})_{o}/(L_{POI})_{o}](L_{inj} + (L_{POI})_{o}) = [8.57 \; mm/7.42 \; mm](12.38 \; mm + 7.42 \; mm) = 22.87  \; mm$, and though the complete calculation is not shown here (extreme similarity), $(d_{man})_{f} = 20.40 \; mm$. The final injector parameters are summarized in the table below.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{6.75cm}||p{2.75cm}|p{2.75cm}| }
+\hline
+\multicolumn{3}{|c|}{Injector Parameters} \\
+\hline
+Name & Oxidizer $(N_{2}O)$ & Fuel $(C_{2}H_{5}OH)$ \\ 
+\hline
+Injector element type & \multicolumn{2}{|c|}{Doublet like-on-like impingement}  \\
+\hline
+$\rho$, Density at 298 K  &  $772.25 \; kg/m^{3}$ &  $789 \; kg/m^{3}$  \\
+$\dot{m}$, Mass flow rate & $0.5552 \; kg/s$ &  $0.1388 \; kg/s$ \\
+$C_{d}$, Discharge coefficient & 0.90 & 0.88 \\
+$n$, Number of orifices & 16 & 8 \\
+$d$, Orifice diameter & $1.43 \; mm$ & $1.02 \; mm$ \\
+$A$, Individual orifice area & $1.61 \times 10^{-6} \; m$ & $3.27 \times 10^{-6} \; m$ \\
+Mass flow rate per orifice & $0.0347 \; kg/s$ & $0.01735 \; kg/s$ \\
+$\lambda$, Angle of impingement & $\ang{60}$ & $\ang{60}$ \\
+$L_{jet}$, Free-stream jet length & $8.57 \; mm$ & $6.10 \; mm$ \\
+$L_{POI}$, Point of impingement & $7.42 \; mm$ & $5.28 \; mm$ \\
+Length of orifice & $14.28 \; mm$ & $10.16 \; mm$ \\
+$d_{com}$, Distance between orifices (combustor) & $8.57 \; mm$ & $6.10 \; mm$ \\
+$d_{man}$, Distance between orifices (manifold) & $22.87 \; mm$ & $20.40 \; mm$ \\
+\hline
+$L_{inj}$, Injector plate thickness & \multicolumn{2}{|c|}{$12.38 \; mm$}  \\
+\hline
+\end{tabular}
+\caption{Summary of injector parameters.}
+\label{table:injector_parameters}
+\end{table}
+
+[Do a sanity check that the $\Delta p$ across injector is between 5 \% and 25 \%, according to MASA and 8089 pp. 35 (44 on PDF)].
 
 \subsection{Plumbing System}
 The following section describes the theoretical process used to dimensionalize the prelimiary plumbing framework in preparation for the first static cold flow test. By definition, these calculations are purely speculatory and are only used for the initial design process. The purpose of the cold flow test is to verify these parameters, and consequently adjust these parameters to better fit the system requirements.
@@ -426,6 +470,12 @@ $\epsilon$, Roughness  &  1.5 to 40.0  &  $\mu m$  &  $\pm 50 \%$ \\
 \caption{Summary of exhaust gas properties and fluid parameters.}
 \label{table:pipe_parameters}
 \end{table}
+
+\section{Launch Vehicle Design}
+\subsection{Objectives}
+\subsection{Callisto 1}
+\section{Part Selection}
+\section{Cold Flow Test Setup}
 
 \printbibliography
 % To compile bibliography, run pdfLaTeX ONLY, then Biber, then pdfLaTeX ONLY
