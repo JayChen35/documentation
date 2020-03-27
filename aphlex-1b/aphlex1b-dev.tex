@@ -72,18 +72,35 @@
 \makeatother
 \renewcommand\Authfont{\fontsize{12}{14.4}\selectfont}
 \renewcommand\Affilfont{\fontsize{10}{12.8}\itshape}
+\makeatletter
+\renewcommand\AB@affilsepx{, \protect\Affilfont}
+\makeatother
+
 %%% END Article customizations
 
 %%% The "real" document content comes below...
 \title{Development of a Cost-Effective 1.5kN Liquid-Fueled Rocket Propulsion System}
-\author[1]{Jason Y. Chen \footnote{contact@projectcaelus.org,  jay.chen135@gmail.com}}
-\affil[1]{Founder, Project Caelus 501(c)(3)}
+\author[1]{Jason Chen \footnote{jay.chen135@gmail.com, contact@projectcaelus.org}}
+\affil[1]{Project Lead and Chief Engineer}
+\author[2]{Srikar Gouru \footnote{srikarg89@gmail.com}}
+\affil[2]{Flight and Ground Software Lead}
+\author[3]{Sophia Troshynski \footnote{stroshynski@gmail.com}}
+\affil[3]{Manufacturing and Structures Lead}
+\author[4]{Ron Nachum \footnote{ronnachum13@gmail.com}}
+\affil[4]{Propulsion Lead}
+\author[5]{Ankit Khandelwal \footnote{amtron521@gmail.com}}
+\affil[5]{Avionics Lead}
 \date{} % Activate to display a given date or no date (if empty), otherwise the current date is printed
 \begin{document}
 \maketitle
 \vspace{-1cm}
 \begin{center}
-(Initial revision 06 August, 2019; received 02 February, 2020)
+\centering
+\includegraphics[scale=0.5, width=0.175\textwidth]{caelus_logo}
+
+Project Caelus, 501(c)(3)
+
+(Initial revision 06 August, 2019; received 26 March, 2020)
 \end{center}
 
 %%% ABSTRACT
@@ -133,7 +150,7 @@ Note: Subscripts follow the convention outlined in \cite{rpe}. Unless otherwise 
 
 %\begin{multicols}{2}
 \section{Initial System Characterization}
-\hspace{\parindent}  Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully commited to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the afforementioned ideals.
+\hspace{\parindent}  Project Caelus' unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully committed to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the aforementioned ideals.
 \subsection{Objectives}
 The Callisto 1 system is set to the following constraints and objectives:
 \begin{enumerate}
@@ -142,7 +159,7 @@ The Callisto 1 system is set to the following constraints and objectives:
 \item A nominal main engine thrust of 1.5 kN ($\approx$ 350 lbsf).
 \item A chamber pressure in the range of around 15 Bar to 20 Bar ($\approx$ 218 psi to 300 psi)
 \item Consume a budget of no more than \$10,000 USD.
-\item Utililize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
+\item Utilize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
 \end{enumerate}
 
 \begin{figure}
@@ -177,10 +194,10 @@ The Callisto 1 system is set to the following constraints and objectives:
 \end{figure}
 
 \subsection{Chamber Pressure and Mixture Ratio Selection}
-\hspace{\parindent} The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature. This tradeoff sacrifices some $I_{sp}$ but reduces engineering complexity as regenerative and film cooling circuits may not be required. Industrial nitrous oxide was chosen as the main oxidizer for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
-Using CEA, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data describing propellant combustion characteristics could be obtained. Numerical Python scripts were written to iterate through various combustion chamber pressures and mixture ratios and interface with CEA, and MATLAB scripts were used to parse and graph the CEA outputs as shown in Figures \ref{fig:cp_cstar}, \ref{fig:cp_temp}, \ref{fig:cp_molar}, and \ref{fig:cp_gamma}. Mixture ratios of 4.0 and 4.2 are labeled at certain chamber pressures. All dependent-variable properties (characteristic velocty $C^{*}$, combustion temperature $T_{c}$, exhaust molar mass $M$, and exhaust specific heat ratio $\gamma$) were permutated assuming shifting equilibrium flow and at an operational altitude of 500 m. 
+\hspace{\parindent} The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature. This trade-off sacrifices some $I_{sp}$ but reduces engineering complexity as regenerative and film cooling circuits may not be required. Industrial nitrous oxide was chosen as the main oxidizer for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
+Using CEA, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data describing propellant combustion characteristics could be obtained. Numerical Python scripts were written to iterate through various combustion chamber pressures and mixture ratios and interface with CEA, and MATLAB scripts were used to parse and graph the CEA outputs as shown in Figures \ref{fig:cp_cstar}, \ref{fig:cp_temp}, \ref{fig:cp_molar}, and \ref{fig:cp_gamma}. Mixture ratios of 4.0 and 4.2 are labeled at certain chamber pressures. All dependent-variable properties (characteristic velocity $C^{*}$, combustion temperature $T_{c}$, exhaust molar mass $M$, and exhaust specific heat ratio $\gamma$) were permuted assuming shifting equilibrium flow and at an operational altitude of 500 m. 
 
-A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temerature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen to minimize upstream fluid pressures and thus tank weight requirements, while also considering two additional design constraints that were not mentioned above but are nevertheless valid guiding parameters: a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories] and a pressure drop across the injector of around 25\% of the designated chamber pressure [Michigan Aeronautical Science Association]. The former of these additional guidlines is to avoid feed-coupled combustion instabilities that may be observed when the $\delta p$ across the injector is not adequately high. These guidelines further encourage a lower chamber pressure, and thus a conservative value of 15 Bar was chosen.
+A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temperature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen to minimize upstream fluid pressures and thus tank weight requirements, while also considering two additional design constraints that were not mentioned above but are nevertheless valid guiding parameters: a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories] and a pressure drop across the injector of around 25\% of the designated chamber pressure [Michigan Aeronautical Science Association]. The former of these additional guidelines is to avoid feed-coupled combustion instabilities that may be observed when the $\delta p$ across the injector is not adequately high. These guidelines further encourage a lower chamber pressure, and thus a conservative value of 15 Bar was chosen.
 
 \section{Propulsion System Design}
 \hspace{\parindent} The following section outlines the design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1, given the objectives and data obtained in the previous section.
@@ -274,7 +291,7 @@ Finally, the physical dimensions of the nozzle can be determined using simple tr
 \begin{equation} \label{eq:l_star}
 L^{*} = \frac{V_{c}}{A_{t}} = \frac{\pi r_{c}^{2} L{c}}{A_{t}} \; \Longrightarrow \; L_{c} = \frac{A_{t} L^{*}}{\pi r_{c}^{2}}
 \end{equation}
-where $L_{c}$ is the length of the chamber and $r_{c}$ is the radius of the chamber. It is apparent that the a desired form factor can be obtained by adjusting either the radius or the length of the chamber. Through iteration, a chamber radius $r_{c}$ of 4.0 cm was chosen. The only constraint on the chamber radius is the contraction ratio, defined as $A_{1}/A_{t}$ (the ratio of chamber area to throat area), which must achieve a value of 4.0 or more \cite{rpe}. A trivial area calculation can be performed to confirm that this constaint is satisfied: $CR =  \pi r_{c}^{2}/A_{t} = 5.03 \times 10^{-4} \; m^{2} / 7.29 \times 10^{-4} \; m^{2} = 6.90 > 4.0$. The chamber length is therefore
+where $L_{c}$ is the length of the chamber and $r_{c}$ is the radius of the chamber. It is apparent that the a desired form factor can be obtained by adjusting either the radius or the length of the chamber. Through iteration, a chamber radius $r_{c}$ of 4.0 cm was chosen. The only constraint on the chamber radius is the contraction ratio, defined as $A_{1}/A_{t}$ (the ratio of chamber area to throat area), which must achieve a value of 4.0 or more \cite{rpe}. A trivial area calculation can be performed to confirm that this constraint is satisfied: $CR =  \pi r_{c}^{2}/A_{t} = 5.03 \times 10^{-4} \; m^{2} / 7.29 \times 10^{-4} \; m^{2} = 6.90 > 4.0$. The chamber length is therefore
 \begin{equation*}
 L_{c} = \frac{A_{t} L^{*}}{\pi r_{c}^{2}} = \frac{(7.29 \times 10^{-4} \; m^{2})(1.25 \; m)}{5.03 \times 10^{-4} \; m^{2}} = 0.1813 \; m = 18.13 \; cm
 \end{equation*}
@@ -291,11 +308,11 @@ $\dot{m}$, Total mass flow rate  &  0.694  &  $kg/s$  \\
 $\dot{m}_{f}$, Fuel mass flow rate &  0.555  &  $kg/s$  \\
 $\dot{m}_{o}$, Oxidizer mass flow rate &  0.139  &  $kg/s$  \\
 $v_{2}$, Exhaust velocity & 2162.3 & $m/s$ \\
-$(I_{sp})_{opt}$, Specific impusle (optimal) & 220.42 & $s$ \\
+$(I_{sp})_{opt}$, Specific impulse (optimal) & 220.42 & $s$ \\
 $(C_{F})_{opt}$, Thrust coefficient (optimal) & 1.372 & $N/A$ \\
 \hline
 \end{tabular}
-\caption{Summary of engine performace parameters.}
+\caption{Summary of engine performance parameters.}
 \label{table:calculated_parameters}
 \end{table}
 
@@ -324,8 +341,6 @@ $CR$, Contraction ratio  &  6.9  &  $N/A$  \\
 \label{table:calculated_dimensions}
 \end{table}
 
-Table \ref{table:calculated_parameters} shows the calculated engine parameters and Table \ref{table:calculated_dimensions} shows the calculated physical nozzle dimensions. Using the data from Table \ref{table:calculated_dimensions}, a basic conical nozzle can be realized.
-
 \begin{figure}
 \centering
 \includegraphics[scale=0.5, width=0.9\textwidth, trim={6.5cm 12.5cm 5.5cm 9cm}, clip]{aphlex1b-drawing} % Trim order is left, bottom, right, top
@@ -333,7 +348,18 @@ Table \ref{table:calculated_parameters} shows the calculated engine parameters a
 \label{fig:conical_nozzle_drawing}
 \end{figure}
 
-Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphlex 1B created using the given dimensions. Although a conical nozzle may exhibit an advantage in its ease of manufacturing, it is suboptimal for performance since 1) the exhaust is not exitting the nozzle completely parallel to the nozzle axis, which results in lateral losses of energy, 2) the sharp convex corner at the throat generates shocks which are not adequately dissipated by a conical nozzle, and 3) the small divergence half-angle ensures a long diverging section, which increases engine mass. To address these issues, most modern nozzles are so-called ``bell'' nozzles, whose diverging section includes a straightening section to address the first issue and inherently addresses the third issue by having a more rapidly expanding cross-section as compared to conical nozzles. To neutralize the Prandtl-Meyer expansion fans generated at the sharp corner of the throat, a numerical technique called the Method of Characteristics (MOC) is used to generate the nozzle contour. In brief, MOC propogates characteristic lines eminating from the throat, and by using equations to model characteristic interactions and reflections, it is able to generate a nozzle contour to precisely neutralize (reflect in a manner parallel to the nozzle axis) these expansion fans. A MATLAB script was written to execute and create the MOC nozzle, which can be found on our Project Caelus propulsion Github repository at \url{https://github.com/ProjectCaelus/propulsion}. The Cartesian points representing the generated wall contour were exported as a CSV file, which was then imported into our computer-aided design (CAD) program, Fusion 360, where a best-fit nth-order spline was used to finalize the diverging contour. Although the shape of the diverging section can be optimized significantly, the precise shape of the nozzle converging section has not been found to heavily impact engine performance and is therefore smoothened under the guidlines of Dr. GVR Rao's parabolic approximation method \cite{rpe}\cite{rao}. 
+Table \ref{table:calculated_parameters} shows the calculated engine parameters and Table \ref{table:calculated_dimensions} shows the calculated physical nozzle dimensions. Using the data from Table \ref{table:calculated_dimensions}, a basic conical nozzle can be realized.
+
+Figure \ref{fig:conical_nozzle_drawing} shows the basic conical nozzle for Aphlex 1B created using the given dimensions. Although a conical nozzle may exhibit an advantage in its ease of manufacturing, it is sub-optimal for performance since 1) the exhaust is not exiting the nozzle completely parallel to the nozzle axis, which results in lateral losses of energy, 2) the sharp convex corner at the throat generates shocks which are not adequately dissipated by a conical nozzle, and 3) the small divergence half-angle ensures a long diverging section, which increases engine mass. To address these issues, most modern nozzles are so-called ``bell'' nozzles, whose diverging section includes a straightening section to address the first issue and inherently addresses the third issue by having a more rapidly expanding cross-section as compared to conical nozzles. To neutralize the Prandtl-Meyer expansion fans generated at the sharp corner of the throat, a numerical technique called the Method of Characteristics (MOC) is used to generate the nozzle contour. 
+
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, width=0.9\textwidth, trim={0.5cm 2.5cm 0.5cm 3.25cm}, clip]{moc} % Trim order is left, bottom, right, top
+\caption{MATLAB visualization for MOC. Shown are the characteristic lines and the generated nozzle contour.}
+\label{fig:moc}
+\end{figure}
+
+In brief, MOC propagates characteristic lines emanating from the throat, and by using equations to model characteristic interactions and reflections, it is able to generate a nozzle contour to precisely neutralize (reflect in a manner parallel to the nozzle axis) these expansion fans. A MATLAB script was written to execute and create the MOC nozzle, which can be found on our Project Caelus propulsion GitHub repository at \url{https://github.com/ProjectCaelus/propulsion}. Its output is shown in Figure \ref{fig:moc}. The Cartesian points representing the generated wall contour were exported as a CSV file, which was then imported into our computer-aided design (CAD) program, Fusion 360, where a best-fit nth-order spline was used to finalize the diverging contour. Although the shape of the diverging section can be optimized significantly, the precise shape of the nozzle converging section has not been found to heavily impact engine performance and is therefore smoothened under the guidlines of Dr. GVR Rao's parabolic approximation method \cite{rpe}\cite{rao}. 
 
 \begin{figure}
 \centering
@@ -399,9 +425,9 @@ Thus, to achieve 16 oxidizer orifices and 8 fuel orifices, an oxidizer orifice d
 
 The remaining injector parameters were chosen due to a literature review, rather than explicit calculations. The angle of impingement, also known as the cant angle $\lambda$, is defined as the angle between two propellant jets. It was chosen to be 60 degrees since it is the most common impingement angle, prevents significant backsplash of propellants onto the injector face (which would produce high heat fluxes with unlike elements), and produces the best atomization characteristics despite requiring a larger $L^{*}$.
 
-NASA SP-8089 further suggests that the free-stream jet length (impingement length), defined as the distance from an element face to the point of impingment, should be somewhere in the range of five to seven times the orifice diameter. In other words, 5 $<$ L/D ratio $<$ 7. An L/D ratio of 6 was chosen, and the free-stream get length is therefore $(L_{jet})_{o} = 6 * 1.43 \; mm = 8.57 \; mm$ and $(L_{jet})_{f} = 6 * 1.02 \; mm = 6.10 \; mm$. The point of impingement (distance of impingment orthogonally measured from the injector face) is therefore $(L_{POI})_{o} = 8.57 \; cos(30) = 7.42 \; mm$ and $(L_{POI})_{f} = 6.10 \; cos(30) = 5.28 \; mm$ since the $\lambda$ half-angle is 30 degrees. 
+NASA SP-8089 further suggests that the free-stream jet length (impingement length), defined as the distance from an element face to the point of impingement, should be somewhere in the range of five to seven times the orifice diameter. In other words, 5 $<$ L/D ratio $<$ 7. An L/D ratio of 6 was chosen, and the free-stream get length is therefore $(L_{jet})_{o} = 6 * 1.43 \; mm = 8.57 \; mm$ and $(L_{jet})_{f} = 6 * 1.02 \; mm = 6.10 \; mm$. The point of impingement (distance of impingement orthogonally measured from the injector face) is therefore $(L_{POI})_{o} = 8.57 \; cos(30) = 7.42 \; mm$ and $(L_{POI})_{f} = 6.10 \; cos(30) = 5.28 \; mm$ since the $\lambda$ half-angle is 30 degrees. 
 
-The thickness of the injector plate is driven by the L/D ratio of the largest orifice (not the jet), which was suggested to be around 10 to ensure smooth and developed flow, assuming the $C_{d}$ that was used in previous calculations. Simply, $L_{inj} = 10(d_{max}) \; cos(\lambda /2)$, since the cosine of the cant half-angle is the coaxial component (thickness). Evaluating gives $L_{inj} = (10)(1.42 \; mm) \; cos(30) = 12.38 \; mm$. Finally, finding the distance between each orifice within an element pair involves two seperate calculations: one for the distance on the side of the injector face (denoted as ``combustor-side'') and one for the distance on its reverse side (denoted as ``manifold-side''). First, the combustor-side distance is $d_{com} = (2)(L_{jet}) \; sin(30)$, and therefore, $(d_{com})_{o} = (2)(8.57 \; mm) \; sin(30) = 8.57 \; mm$ and $(d_{com})_{f} = (2)(6.10 \; mm) \; sin(30) = 6.10 \; mm$. The manifold-side distance is a case of similar triangles with corresponding combustor-side distances: $(d_{man})_{o} = [(d_{com})_{o}/(L_{POI})_{o}](L_{inj} + (L_{POI})_{o}) = [8.57 \; mm/7.42 \; mm](12.38 \; mm + 7.42 \; mm) = 22.87  \; mm$, and though the complete calculation is not shown here (extreme similarity), $(d_{man})_{f} = 20.40 \; mm$. The final injector parameters are summarized in the table below.
+The thickness of the injector plate is driven by the L/D ratio of the largest orifice (not the jet), which was suggested to be around 10 to ensure smooth and developed flow, assuming the $C_{d}$ that was used in previous calculations. Simply, $L_{inj} = 10(d_{max}) \; cos(\lambda /2)$, since the cosine of the cant half-angle is the coaxial component (thickness). Evaluating gives $L_{inj} = (10)(1.42 \; mm) \; cos(30) = 12.38 \; mm$. Finally, finding the distance between each orifice within an element pair involves two separate calculations: one for the distance on the side of the injector face (denoted as ``combustor-side'') and one for the distance on its reverse side (denoted as ``manifold-side''). First, the combustor-side distance is $d_{com} = (2)(L_{jet}) \; sin(30)$, and therefore, $(d_{com})_{o} = (2)(8.57 \; mm) \; sin(30) = 8.57 \; mm$ and $(d_{com})_{f} = (2)(6.10 \; mm) \; sin(30) = 6.10 \; mm$. The manifold-side distance is a case of similar triangles with corresponding combustor-side distances: $(d_{man})_{o} = [(d_{com})_{o}/(L_{POI})_{o}](L_{inj} + (L_{POI})_{o}) = [8.57 \; mm/7.42 \; mm](12.38 \; mm + 7.42 \; mm) = 22.87  \; mm$, and though the complete calculation is not shown here (extreme similarity), $(d_{man})_{f} = 20.40 \; mm$. The final injector parameters are summarized in the table below.
 
 \begin{table}[!htb]
 \centering
@@ -434,48 +460,35 @@ $L_{inj}$, Injector plate thickness & \multicolumn{2}{|c|}{$12.38 \; mm$}  \\
 \label{table:injector_parameters}
 \end{table}
 
+The physical configuration of the injector and the element pattern were chosen qualitatively. A standard two-ring pattern was implemented, with the outer ring consisting of No baffles or other dampening devices were utilized since the chamber is small enough to neglect large-scale instabilities.
+
 [Do a sanity check that the $\Delta p$ across injector is between 5 \% and 25 \%, according to MASA and 8089 pp. 35 (44 on PDF)].
 
-\subsection{Plumbing System}
-The following section describes the theoretical process used to dimensionalize the prelimiary plumbing framework in preparation for the first static cold flow test. By definition, these calculations are purely speculatory and are only used for the initial design process. The purpose of the cold flow test is to verify these parameters, and consequently adjust these parameters to better fit the system requirements.
-\subsubsection{Assumptions} \label{sec:assumptions}
+\subsection{Plumbing System Design}
+The plumbing system was designed with key considerations in mind which would make the system as versatile and safe as possible in the event of errors or hardware problems. The first of these was that all pressurization and post-pressurization actions must be done remotely. Furthermore, the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure 7 displays the full piping and instrumentation diagram for the Aphlex 1B cold flow test. The following subsections will go into detail on the different parts of the plumbing system.
 
-To simplify the rigorous analysis and optimization processes often associated with viscous pipe flow, a couple of assumptions are applied in the following section to both shorten the development timeline and to avoid unecessarily complex or expensive methods outside of the scope of a high school amateur rocketry program. They are as follows:
-\begin{enumerate}
-\item Flow is driven by both pressure and gravity.
-\item Pipe is circular and is of constant cross-sectional area. \label{itm:constant-area}
-\item No swirl, circumferential variation, or entrance effects.
-\item No shaft-work or heat-transfer effects. \label{itm:heat-effects}
-%\item A simplified steady-flow energy equation due to Assumption \ref{itm:heat-effects}.
-\item Flow is fully developed (minimal boundary-layer effects).
-\end{enumerate}
+\begin{figure}[!htb]
+    \centering
+    \includegraphics[scale=0.5, width=0.9\textwidth]{pid}
+    \caption{Full System Piping and Instrumentation Diagram}
+    \label{fig:full_pid}
+\end{figure}
 
-\begin{table}[!htb]
-\centering
-\begin{tabular}{ |p{4cm}||p{4cm}|p{2cm}|p{2cm}|  }
-\hline
-\multicolumn{4}{|c|}{Design Parameters} \\
-\hline
-Name & Value & Unit & Uncertainty \\
-\hline
-$\mu$, Dynamic viscosity  &  0.00196  &  $kg/m \cdot s$  &  $\pm 0.1 \%$ \\
-$\rho$, Density  &  786  &  $kg/m^{3}$  &  $\pm 1 \%$ \\
-$L$, Pipe length  &  8.0  &  $m$  &  $\pm 0.1 \%$  \\
-$d$, Pipe diameter  &  12.7  &  $mm$  &   $\pm 0.1 \%$ \\
-$\dot{m}$, Mass flow rate  &  0.9133  &  $kg/s$  &   $\pm 0.1 \%$ \\
-Pipe material  &  Hard nylon  &  N/A  &  N/A \\
-$\epsilon$, Roughness  &  1.5 to 40.0  &  $\mu m$  &  $\pm 50 \%$ \\
-\hline
-\end{tabular}
-\caption{Summary of exhaust gas properties and fluid parameters.}
-\label{table:pipe_parameters}
-\end{table}
+\subsubsection{Ethanol Fill and Pressurization System}
+The ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware. Ethanol will be poured manually into the tank since it is safe and not toxic, cryogenic, or at a high pressure where it might pose danger to someone manually handling it. During this time both MBV-1 and NCSV-1 will be open Once this is complete, the Nitrogen K-bottle will be connected to the rest of the piping system,
 
+\begin{figure}[!htb] 
+    \centering
+    \includegraphics[scale=0.5, width=0.9\textwidth, clip]{fill} %L, B, R, T
+    \caption{Fill System}
+    \label{fig:fill_system}
+\end{figure}
+
+\section{Ethanol Cold Flow Test Stand Design}
 \section{Launch Vehicle Design}
 \subsection{Objectives}
 \subsection{Callisto 1}
-\section{Part Selection}
-\section{Cold Flow Test Setup}
+
 
 \printbibliography
 % To compile bibliography, run pdfLaTeX ONLY, then Biber, then pdfLaTeX ONLY
