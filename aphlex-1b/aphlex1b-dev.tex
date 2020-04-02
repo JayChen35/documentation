@@ -17,7 +17,7 @@
 \usepackage[font=small]{caption}
 
 
-\numberwithin{equation}{section} % number within sections
+\numberwithin{equation}{section} % number within sehttps://www.overleaf.com/project/5e5ae21b0299110001137594ctions
 % \usepackage[parfill]{parskip} % new line without indent
 
 %%% Examples of Article customizations
@@ -33,7 +33,6 @@
 %   read geometry.pdf for detailed page layout information
 
 \usepackage{graphicx} % support the \includegraphics command and options
-
 \graphicspath{ {./sim_files/}{./cad_files/} }
 
 % \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
@@ -158,7 +157,7 @@ Note: Subscripts follow the convention outlined in \cite{rpe}. Unless otherwise 
 
 %\begin{multicols}{2}
 \section{Initial System Characterization}
-\hspace{\parindent}  Project Caelus' unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully committed to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the aforementioned ideals.
+\hspace{\parindent}  Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully committed to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the aforementioned ideals.
 \subsection{Objectives}
 The Callisto 1 system is set to the following constraints and objectives:
 \begin{enumerate}
@@ -166,6 +165,7 @@ The Callisto 1 system is set to the following constraints and objectives:
 \item A $GLOW$ of no more than 30 kg ($\approx$ 70 lbsm).
 \item A nominal main engine thrust of 1.5 kN ($\approx$ 350 lbsf).
 \item A chamber pressure in the range of around 15 Bar to 20 Bar ($\approx$ 218 psi to 300 psi)
+\item A nominal burn time of around 5 seconds.
 \item Consume a budget of no more than \$10,000 USD.
 \item Utilize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
 \end{enumerate}
@@ -205,7 +205,7 @@ The Callisto 1 system is set to the following constraints and objectives:
 \hspace{\parindent} The first step is to realize the theoretical maximum performance to be expected from our propellant combination.  95\% ethyl alcohol (ethanol) was chosen for its availability, low pricing, and a modest specific impulse. A 95\% dilution (by mass) with water was chosen as to lower the expected combustion chamber temperature. This trade-off sacrifices some $I_{sp}$ but reduces engineering complexity as regenerative and film cooling circuits may not be required. Industrial nitrous oxide was chosen as the main oxidizer for its self-pressurizing characteristics, non-cryogenic nature as opposed to liquid oxygen, relative ease to obtain, and a modest $I_{sp}$ with ethanol.
 Using CEA, an open-source thermodynamics library provided by NASA's Glenn Research Center, critical data describing propellant combustion characteristics could be obtained. Numerical Python scripts were written to iterate through various combustion chamber pressures and mixture ratios and interface with CEA, and MATLAB scripts were used to parse and graph the CEA outputs as shown in Figures \ref{fig:cp_cstar}, \ref{fig:cp_temp}, \ref{fig:cp_molar}, and \ref{fig:cp_gamma}. Mixture ratios of 4.0 and 4.2 are labeled at certain chamber pressures. All dependent-variable properties (characteristic velocity $C^{*}$, combustion temperature $T_{c}$, exhaust molar mass $M$, and exhaust specific heat ratio $\gamma$) were permuted assuming shifting equilibrium flow and at an operational altitude of 500 m. 
 
-A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temperature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen to minimize upstream fluid pressures and thus tank weight requirements, while also considering two additional design constraints that were not mentioned above but are nevertheless valid guiding parameters: a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories] and a pressure drop across the injector of around 25\% of the designated chamber pressure [Michigan Aeronautical Science Association]. The former of these additional guidelines is to avoid feed-coupled combustion instabilities that may be observed when the $\delta p$ across the injector is not adequately high. These guidelines further encourage a lower chamber pressure, and thus a conservative value of 15 Bar was chosen.
+A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temperature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen primarily in the interest of saving costs. A lower chamber pressure minimizes upstream fluid pressures and thus tank weight requirements, as well as requiring less expensive equipment that may otherwise be required. Although engine efficiency is sacrificed, this was not of primary concern. Preliminary literature reviews additionally showed that 15 bar ($\approx$218 psi) was around the minimal operable chamber pressure, since a further decrease in chamber pressure would not allow critical pressure, a requirement for choked flow at the nozzle throat, to occur.
 
 \section{Propulsion System Design}
 \hspace{\parindent} The following section outlines the design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1, given the objectives and data obtained in the previous section.
@@ -214,24 +214,26 @@ A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a cons
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{ |p{5cm}||p{4cm}|p{1cm}|p{2cm}|  }
+\begin{tabular}{ |p{6cm}||p{4cm}|p{2cm}|  }
 \hline
-\multicolumn{4}{|c|}{Design Parameters} \\
+\multicolumn{3}{|c|}{Design Parameters and Fluid Characteristics} \\
 \hline
-Name & Value & Unit & Uncertainty \\
+Name & Value & Unit \\
 \hline
-Propellant (Fuel)  &  Ethanol ($C_{2}H_{5}OH$, $95\%$)   &  N/A  &  N/A \\
-Propellant (Oxidizer)  &  Nitrous oxide ($N_{2}O$) & N/A  &  N/A \\
-$O/F$, Oxidizer/fuel ratio &  4.0  &  $N/A$  &   $\pm 1 \%$ \\
-$F_{t}$, Nominal thrust &  1.50 &  $kN$  &  $\pm 0.1 \%$ \\
-$P_{c}$, Chamber static pressure &  $1.5 \times 10^{6}$  &  $Pa$  &  $\pm 0.1 \%$ \\
-$P_{e}$, Ambient pressure &  $9.5540 \times 10^{4}$  &  $Pa$  &  $\pm 0.1 \%$ \\
-$T_{c}$, Chamber static temperature &  3025.98  &  $K$  &  $\pm 0.01 \%$  \\
-$M$, Exhaust molecular mass &  24.861  &  $kg/mol$  &   $\pm 0.01 \%$ \\
-$\gamma$, Specific heat ratio  &  1.1537  &  $N/A$  &   $\pm 0.001 \%$ \\
+Propellant (Fuel)  &  Ethanol ($C_{2}H_{5}OH$, $95\%$)   &  N/A  \\
+Propellant (Oxidizer)  &  Nitrous oxide ($N_{2}O$) & N/A  \\
+$O/F$, Oxidizer/fuel ratio &  4.0  &  $N/A$ \\
+$F_{t}$, Nominal thrust &  1.50 &  $kN$ \\
+$t_{b}$, Burn time  &  5.0 & $sec$ \\
+$I_{total}$, Total impulse & 7500 & $N * s$\\
+$P_{c}$, Chamber static pressure &  $1.5 \times 10^{6}$  &  $Pa$  \\
+$P_{e}$, Ambient pressure &  $9.5540 \times 10^{4}$  &  $Pa$ \\
+$T_{c}$, Chamber static temperature &  3025.98  &  $K$ \\
+$M$, Exhaust molecular mass &  24.861  &  $kg/mol$  \\
+$\gamma$, Specific heat ratio  &  1.1537  &  $N/A$ \\
 \hline
 \end{tabular}
-\caption{Summary of exhaust gas properties and fluid parameters.}
+\caption{Summary of design parameters and fluid characteristics.}
 \label{table:gas_parameters}
 \end{table}
 
@@ -478,47 +480,345 @@ $L_{inj}$, Injector plate thickness & \multicolumn{2}{|c|}{$8.608 \; mm$}  \\
 
 \hspace{\parindent} The physical configuration of the injector (element pattern) was chosen largely off common practices and previous injector designs. A standard two-ring pattern was implemented, with the outer ring consisting of the four fuel elements and the inner ring consisting of the eight oxidizer elements. The fuel elements were chosen to reside in the outer ring as to reduce the thermal load on the chamber walls, since it would create a fuel-rich region within the combustion volume. No baffles or other dampening devices were utilized since the chamber is of a small enough volume and the burn time is of short enough duration to neglect most instabilities. 
 
-For the injector assembly, two designs were considered: Design A and Design B. Design A features two external common bolts that fastens all injector components together (including the chamber wall), making the assembly modular and contain smaller parts. Design B is requires more material and has a larger vertical profile than Design A, but is also more streamlined, less complex, contains fewer parts, and requires less machining.
+For the injector assembly, two designs were considered: Design A and Design B. Design A features two external common bolts that fasten all injector components together (including the chamber wall), making the assembly modular and consisting of smaller parts. Design B requires more material and has a larger vertical profile than Design A, but is also more streamlined, less complex, contains fewer parts, and requires less machining. Design B was heavily inspired from Michigan Aeronautical Science Association (MASA)'s previous injector designs and is therefore also more proven.
 
-[Show Design A and Design B]
+\begin{figure}
+    \centering
+    \begin{minipage}{0.495\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.95\textwidth, trim={4cm 1cm 4cm 1cm}, clip]{cad_files/Daniel Injector CAD.png} % left, bottom, right, top
+        \caption{Isometric view of Design A.}
+        \label{fig:design_a}
+    \end{minipage}\hfill
+    \begin{minipage}{0.495\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.95\textwidth, trim={4cm 1cm 4cm 1cm}, clip]{cad_files/Final Injector Assembly ISO1.png} % second figure itself
+        \caption{Isometric view of Design B.}
+        \label{fig:design_b}
+    \end{minipage}
+\end{figure} 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.495\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.95\textwidth, trim={4cm 1cm 4cm 0cm}, clip]{cad_files/Final Injector Assembly EXPLODE1.png} % left, bottom, right, top
+        \caption{Top exploded view of Design B.}
+        \label{fig:design_b_explode_1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.495\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.95\textwidth, trim={4cm 1cm 4cm 0cm}, clip]{cad_files/Final Injector Assembly EXPLODE2.png} % second figure itself
+        \caption{Bottom exploded view of Design B.}
+        \label{fig:design_b_explode_2}
+    \end{minipage}
+\end{figure} 
 
-Both designs share a design for the component responsible for the separation of the fuel and oxidizer manifolds. Though Design A is more modular and contains smaller parts, Design B was ultimately chosen since it required less manufacturing turn-around and unlike Design A, does not unnecessarily widen the engine cross-section.
+Both designs share a design for the component responsible for the separation of the fuel and oxidizer manifolds. Though Design A is more modular and contains smaller parts, Design B was ultimately chosen since it required less manufacturing turn-around, contains only two parts, and unlike Design A, does not unnecessarily widen the engine cross-section.
 
-[Show Design B with detailed labels]
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, width=0.95\textwidth, clip]{Injector Assembly DWG001.pdf} % Trim order is left, bottom, right, top
+\caption{Injector assembly technical drawing orthogonal views.}
+\label{fig:injector_orthogonal}
+\end{figure}
 
-The final step in the design of the injector assembly was to verify its pressure drops and flow rates, and to ensure these characteristics match those in the design specifications. As previously mentioned, the Michigan Aeronautical Science Association (MASA) and NASA SP-8089 (pp. 35) both recommend a pressure drop across the injector of between around 5\% and 25\% of the designated chamber pressure to ensure a steady chamber pressure and prevent feed-coupled instabilities. Since the use of explicit fluid flow equations to predict flow characteristics is impractical considering the complex geometries and flow paths involved, a numerical approach through computational fluid dynamics (CFD) was used. 
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, width=0.95\textwidth, clip]{Injector Assembly DWG002.pdf} % Trim order is left, bottom, right, top
+\caption{Injector assembly technical drawing cross section views.}
+\label{fig:injector_cross_section}
+\end{figure}
 
-The CFD software used was ANSYS Fluent, which includes a streamlined workflow by providing an integrated geometry editor (SpaceClaim), mesher (ANSYS Mesher), solver (Fluent), and post-processor (CFD-Post). This allowed for a quick verification cycle and even parameterized CFD runs. The injector geometry and fluid domain were created in Fusion 360 and imported into SpaceClaim, where parts and boundaries were labeled for the mesher. The mesh was tetrahedron-based and was discretized to around 120,000 elements. In Fluent, the injector material was set to aluminium and the fluid properties were set to that of ethanol and nitrous oxide at room temperature densities. A steady-state, pressure-based, k-epsilon viscosity model was used for the solver and ran for 1000 iterations. The results were exported into CFD-Post, where volume and cross-section renderings could be made to analyze the results. Accurate numerical data was also obtained by setting the pressure inlet and outlet (which correspond to the injector inlet and outlet) as parameters and exporting these parameters after the run was complete. Report and data files were also generated. Although other many flow characteristics such as turbulence kinetic energy, temperature, and Reynolds Number could be extracted from the results, static pressure and velocity were the most important parameters and are shown in the post-processing rendering.
+\begin{figure}
+\centering
+\includegraphics[scale=0.5, width=0.95\textwidth, clip]{Injector Assembly DWG003.pdf} % Trim order is left, bottom, right, top
+\caption{Injector assembly technical drawing detailed description.}
+\label{fig:injector_detailed}
+\end{figure}
 
-[Insert post-processing renderings]
+Orthogonal and cross-sectional views of Design B (which will henceforth be referred to as simply the ``injector assembly") can be seen in Figures \ref{fig:injector_orthogonal} and \ref{fig:injector_cross_section}. A detailed breakdown of the design is shown in Figure \ref{fig:injector_detailed} and will be elaborated upon here: the injector assembly comprises of two parts. The manifold plate (1) primarily houses the connection between the main propellant lines and the injector plate. The entirety of the assembly rests within the aluminium walls of the chamber, with the outer face of the manifold plate housing two o-rings that from a seal between the combustion chamber and ambient pressure (OR-2 and OR-3). 14 radial bolts fasten the injector assembly to the chamber wall and also provide the compression necessary for OR-2 and OR-3 to effectively seal. The main oxidizer inlet is located in the center of the manifold plate and allows the oxidizer to transition into the oxidizer manifold (seen as the central scaffolding). The fuel inlet serves a similar purpose but required a lofted entry due to the narrow fuel manifold. Both inlets have an entrance diameter of 1/4". The fuel and oxidizer manifolds are divided by a separation ring and are sealed by the separator o-rings (OR-4 and OR-5). PT-9 and PT-10, as the name suggests, are 1/8" ports that allow pressure transducers to access to both manifolds. The injector plate (2) houses the propellant orifices and is in direct contact with the combustion chamber. It was designed deliberately to be as simple as possible so that if the relative difficulty in machining the angled orifices causes a manufacturing error, only the plate itself would need to be discarded and re-machined. Although direct contact with the combustion gases may cause significant heating, the high mass flux of propellant in the propellant manifolds effectively cools the injector plate. Eight axial bolts (with bolt heads perturbing into the combustion chamber) fasten the injector plate to the manifold plate. An interface o-ring (OR-1) seals the connection between the fuel manifold and the combustion chamber. A small groove in the bottom left (or right) of the injector plate is to assist in securing the ablative in place.
 
-[FIGURE X] and its corresponding output files show that the expected $\Delta p$ across the injector is around [X Pa], which is approximately [X \%] of chamber pressure, satisfying the $\Delta p$ constraint. This $\Delta p$ value can also be used as the basis for characterizing the upstream plumbing system, which will be discussed in the following section. Injection velocities and other extraneous measurements were also found and recorded for further use. 
+The next step in the design of the injector assembly was to verify its flow characteristics, such as flow rates, pressures at certain points, and injection velocities. More accurate estimations for such characteristics would allow for comparisons between expected values and those measured during cold flow tests, and therefore test the integrity of our models. Since the use of explicit fluid flow equations to predict flow characteristics heavily impacted by complex geometries is impractical, a numerical approach through computational fluid dynamics (CFD) was used. 
 
-[Table of ANSYS output]
+The CFD software used was ANSYS Fluent, which includes a streamlined workflow by providing an integrated geometry editor (SpaceClaim), mesher (ANSYS Mesher), solver (Fluent), and post-processor (CFD-Post). This allowed for a quick verification cycle and even parameterized CFD runs. The injector geometry and fluid domain were created in Fusion 360 and imported into SpaceClaim, where parts and boundaries were labeled for the mesher. The mesh was tetrahedron-based and was discretized to around 197,000 elements. In Fluent, the injector material was set to aluminium and the fluid properties were set to that of ethanol and nitrous oxide at room temperature densities. For the simulation environment, NASA SP-8089 (pp. 35) recommends a pressure drop across the injector between around 15\% and 25\% of the designated chamber pressure to ensure a steady chamber pressure and prevent feed-coupled instabilities. A liberal $\Delta p$ of 25\% (of $P_{c}$) was chosen for this simulation run, i.e. an injector inlet pressure of $1.875 \times 10^{6}$ Pa and outlet pressure ($P_{c}$) of $1.50 \times 10^{6}$ Pa was chosen. A more detailed reasoning and explanation for system $\Delta p$'s is provided in a later section. A steady-state, pressure-based, k-epsilon viscosity model was used for the solver and ran for 1000 iterations. The results were exported into CFD-Post, where volume and cross-section renderings could be made to analyze the results. Report and data files were also generated. Although other many flow characteristics such as turbulence kinetic energy, temperature, and Reynolds Number could be extracted from the results, static pressure and velocity were the most important parameters and are shown in the post-processing rendering.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/mesh_ss.png} % left, bottom, right, top
+        \caption{The generated mesh in ANSYS Mesher with $\approx$197,000 tetrahedron elements.}
+        \label{fig:mesh}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/pres_xsect1.png} % second figure itself
+        \caption{Pressure cross-section contour of the injector assembly and fluid domain.}
+        \label{fig:pressure_contour}
+    \end{minipage}
+\end{figure}
+
+Figure \ref{fig:pressure_contour} and its corresponding output files show that the expected $\Delta p$ from the propellant piping to the manifold is around 75 kPA (around 20\% of the total $\Delta p$), while majority of the $\Delta p$ takes place through the orifices, which is expected. It is also notable that the fuel manifold exhibits a significantly shallower $\Delta p$ than the oxidizer manifold. This is also expected since the fuel manifold has a significantly smaller volume than the oxidizer manifold. Figure \ref{fig:pressure_contour} displays a cross section that only shows the impingement of the oxidizer elements. Since the pressure profile for the fuel elements is nearly identical but on a different axis, its contour is not shown here.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/vel_streamline1.png} % left, bottom, right, top
+        \caption{Contoured velocity streamlines ($\approx$2500 streamlines). Note the difference in color between the fuel inlet and PT-9, indicating a reduction in pressure.}
+        \label{fig:velocity_streamline_1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/vel_streamline2.png} % second figure itself
+        \caption{Another view of the contoured velocity streamlines. Note the post-impingement mixing of the outer fuel elements with the inner oxidizer elements.}
+        \label{fig:velocity_streamline_2}
+    \end{minipage}
+\end{figure} 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/vel_xsect4.png} % left, bottom, right, top
+        \caption{Velocity cross-section contour of the propellant inlets and the oxidizer orifices.}
+        \label{fig:velocity_contour_1}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{sim_files/vel_xsect3.png} % second figure itself
+        \caption{Velocity cross-section contour of fuel orifices. Note the smaller impingement distance.}
+        \label{fig:velocity_contour_2}
+    \end{minipage}
+\end{figure} 
+
+Figures \ref{fig:velocity_streamline_1} and \ref{fig:velocity_streamline_2} show streamlines (contoured to velocity) of the flow through the injector, with a wireframe of the injector geometry superimposed. Some streamlines were removed in the interest of visibility and to reduce clutter. Figures \ref{fig:velocity_contour_1} and\ref{fig:velocity_contour_2} show two velocity contours, one of the oxidizer orifices and one of the fuel orifices. Note how the velocity is greatly increased for the oxidizer orifices near the oxidizer inlet in Figure \ref{fig:velocity_contour_1}. This is to an advantage in terms of mixing efficiency since it would result in a momentum ratio skewed towards towards the chamber walls, which is where the fuel elements reside, thereby mixing the atomized oxidizer droplets with fuel droplets almost immediately. The velocity traces from fuel impingement can also be seen immediately to the left and right of the oxidizer jets. In Figure \ref{fig:velocity_contour_2}, the velocity contour for a single fuel element is shown. Both figures indicate that an injection velocity of around 15 m/s can be expected.
 
 \subsection{Material Selection, Manufacturing, Load and Thermal Analysis}
 
-The final step in the design of the injector, thrust chamber, and nozzle is the selection of materials necessary to fabricate these devices, its means of manufacturing, and how these methods are justified through load and thermal analyses.
+\hspace{\parindent} The final step in the design of the injector, thrust chamber, and nozzle is the selection of materials necessary to fabricate these devices, its means of manufacturing, and how these methods are justified through load and thermal analyses.
 
 \subsubsection{Material Selection}
 
-\hspace{\parindent} Three metals were considered as the primary material for the engine system: aluminium, mild steel, and 316 stainless steel. Mild steel could not be used in areas of combustion or areas in contact with nitrous due to its tendency to react with oxidizers. Stainless steel is more expensive, more difficult to machine, and has a lower specific heat capacity and strength-to-weight ratio than aluminium. For these reasons, aluminium was chosen as the primary material for the injector assembly, the outermost (structural) wall of the combustion chamber, and the nozzle extension. However, one implication of using aluminium is its incompatibility with threads due to its soft nature. Therefore, as seen in [FIGURE DISPLAYING DESIGN B], female NPT thread ports will need to be welded onto the top face of the manifold to connect the upstream propellant lines to the injector, and threaded inserts will need to be used to accommodate the radial bolt holes that fasten the combustion chamber wall to the injector assembly.
+\hspace{\parindent} Three metals were considered as the primary material for the engine system: aluminium, mild steel, and stainless steel. Mild steel could not be used in areas of combustion or areas in contact with nitrous due to its tendency to react with oxidizers. Stainless steel is more expensive, more difficult to machine, and has a lower specific heat capacity and strength-to-weight ratio than aluminium. For these reasons, aluminium (more specifically, 6061 Aluminium) was chosen as the primary material for the injector assembly, the outermost (structural) wall of the combustion chamber, and the nozzle extension. However, one implication of using aluminium is its incompatibility with threads due to its soft nature. Therefore, as seen in Figure \ref{fig:design_b}, female NPT thread ports will need to be welded onto the top face of the manifold to connect the upstream propellant lines to the injector, and threaded inserts will need to be used to accommodate the radial bolt holes that fasten the combustion chamber wall to the injector assembly.
 
-As mentioned in previous sections, the combustion chamber will rely on an ablative layer, held in place by an outer aluminium structural wall, to dissipate heat generated during combustion. There are many candidates for this ablative material, however, under the recommendation of MASA and in the interest of costs and simplicity, a phenolic resin ablative, which is a mix of epoxy and wood/fibrous products, became a prime candidate. PVC has also been shown to be an effective and cheap ablative. However, at this time, the material of the chamber ablative has not been finalized. Interestingly, Copenhagen Suborbitals, an extremely successful amateur rocketry organization based in Denmark, has published their findings in mixing tetraethoxysilane (TEOS) with their ethanol solution as an alternative to fixed ablatives. During combustion, TOES decomposes and leaves a thin layer of silicone dioxide ($SiO_{2}$) within the chamber walls, acting as a make-shift ablative. All options will be explored and finalized at a later date.
+As mentioned in previous sections, the combustion chamber will rely on an ablative layer, held in place by an outer aluminium structural wall, to dissipate heat generated during combustion. There are many candidates for this ablative material, however, under the recommendation of MASA and in the interest of costs and simplicity, a phenolic resin ablative, which is a mix of epoxy and wood/fibrous products, became a prime candidate. PVC has also been shown to be an effective and cheap ablative. However, at this time, the material of the chamber ablative has not been finalized. Interestingly, Copenhagen Suborbitals, an extremely successful amateur rocketry organization based in Denmark, has published their findings in mixing tetraethoxysilane (TEOS) with their ethanol solution as an alternative to fixed ablatives. During combustion, TOES decomposes and leaves a thin layer of silicone dioxide ($SiO_{2}$) within the chamber walls, acting as a make-shift ablative. All options will be finalized at a later date.
 
 The converging nozzle and especially the throat, which is the site of highest heat flux in the nozzle and combustion chamber, will be shaped out of graphite. Graphite is one of the best and cheapest ablative materials for heat dissipation due to its molecular structure, and has even been used on large-scale launch vehicles. The primary disadvantage of graphite is that large stocks of the material become exponentially more expensive; this is why graphite was not used as the chamber ablative. Since it is expected that the throat ablative will erode most rapidly, perhaps only being useful for one or two engine burns, the entire engine assembly has been made modular as to easily remove and replace the throat when needed. The diverging nozzle section has a significant impact on performance through its geometry and experiences the least heat flux. Therefore, this nozzle section will be fabricated using aluminum.
 
-[TALK ABOUT O-RINGS AND SEALS]
+Another selection process involved choosing an o-ring material. Briefly, o-rings are seals that prevent fluid flow between two (usually) metallic plates. They work by absorbing heat and responding to the released pressure by expanding to fill the groove. Through several references, primarily Parker’s O-Ring Handbook, it was found that the material Perfluoroelastomer (FFKM) is well-suited for the injector assembly based on its high heat tolerance ($\SI{320}{\celsius}$, or 593 K) and compatibility with ethanol and nitrous oxide. A specific type of FFKM, FF352, was chosen due to its improved compatibility with nitrous oxide. It was also decided to use a face seal gland since softer edges are required to prevent o-ring damage, and face seal glands are often utilized when a straight groove is drilled into a flat piece of metal. However, since face seal glands are usually only used at lower temperatures, it is recommended to increase the groove width by some amount to allow for proper expansion of the o-ring in the event that it is exposed to combustion gases. 
+
+ Parker's O-Ring Handbook also provided guidelines for handling and assembling o-rings. It was mentioned that when assembling the o-ring, stretching it more than 20\% of its original length and pinching/twisting the o-ring in any way should be avoided. It is also recommended to lubricate the o-ring with silicone grease or other o-ring greases to prevent a spiral failure (when the o-ring is twisted).
 
 \subsubsection{Manufacturing Capabilities and Methods}
 
-\hspace{\parindent} Due to our budget and circumstances, we do not have direct access to any machine shops or manufacturing facilities. We expect the bulk of our manufacturing needs to be met by local services. This further reiterates the emphasis on simple and cost-effective designs since more complex designs will take more time, thus bringing costs up. The only resources we expect to require, however, are a 5-axis CNC mill (for the injector assembly), a laythe (for the combustion chamber and nozzle), and welding materials.
+\hspace{\parindent} Due to our budget and circumstances, we do not have direct access to any machine shops or manufacturing facilities. We expect the bulk of our manufacturing needs to be met by local services. This further reiterates the emphasis on simple and cost-effective designs since more complex designs will take more time to manufacture, thus bringing costs up. The only resources we expect to require, however, are a 5-axis CNC mill (for the injector assembly), a laythe (for the combustion chamber and nozzle), and welding materials.
 
 \subsubsection{Load and Thermal Analysis}
 
-\hspace{\parindent} Although thorough load and thermal analyses can be calculated and simulated, in the scope of Aphlex 1B, it is of secondary priority. Preliminary material stress and load simulations were done in ANSYS APDL and Fusion 360's built-in simulation protocol and verified structural integrity, but were not extensive. To remedy this, care was taken to ensure material thicknesses were adequate to withstand stresses, and fasteners are added liberally to ensure a robust assembly. The primary material thickness (such as on the chamber wall and nozzle wall) was 2.0 mm, which is more than adequate considering the tensile strength of aluminium. [CAN ADD INTRO TO ROCKET SCIENCE EQUATION HERE]. As for thermal loads, the short burn time of between 3 and 7 seconds prevented overheating, if not for the ablatives which further widened the safety margin.
+\hspace{\parindent} Although thorough load and thermal analyses can be calculated and simulated precisely, in the scope of Aphlex 1B, it is of secondary priority. Preliminary material stress and load simulations were done in ANSYS APDL and Fusion 360's built-in simulation protocol and verified the structural integrity of the injector assembly, but were not extensive. To remedy this, care was taken to ensure material thicknesses were adequate to withstand stresses, and fasteners are added liberally to ensure a robust assembly. The primary material thickness (such as on the chamber wall and nozzle wall) was 2.0 mm, which is more than adequate considering the tensile strength of aluminium. It can loosely be verified by the wall thickness equation provided by \cite{intro-rocket}:
+\begin{equation}
+t_{wall} = \frac{P_{c}r_{c}}{2\sigma_{c}}
+\end{equation}
+where $\sigma_{c}$ is the stress on the chamber walls. As for thermal loads, the short burn time of between 3 and 7 seconds is adequate enough to prevent significant overheating. The use of ablatives further widened the safety margin.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{  |p{8cm}||p{3cm}|p{1cm}|  }
+\hline
+\multicolumn{3}{|c|}{Extraneous Injector Parameters} \\
+\hline
+Name & Value & Unit \\ 
+\hline
+$\Delta p_{inj}$, Pressure drop across injector, relative to $P_{c}$ & 20 & \%  \\
+$(v_{inj})_{e}$, Injection velocity (expected) & 15 &  $m/s$ \\
+$t_{wall}$, Wall thickness & 2.0 & $mm$ \\
+Injector assembly material & Aluminium 6061 & N/A \\
+Combustion chamber structural wall material & Aluminium 6061 & N/A \\
+Ablative material & Not yet determined & N/A \\
+Diverging nozzle material & Aluminium 6061 & N/A \\
+Converging nozzle and throat material & Graphite & N/A \\
+O-ring material & FFKM (FF352) & N/A \\
+\hline
+\end{tabular}
+\caption{Extraneous injector parameters.}
+\label{table:injector_extraneous}
+\end{table}
 
 \section{Plumbing System Design}
+
+The design of the plumbing system, the system responsible for carrying the propellant from the propellant tanks to the engine, is a process that is heavily intertwined with ground operations, software design, safety procedures, and the engine design. Due to the complexity of the design process, this section will be partitioned into three sections: a general system design, such as how pressure drops affect tank requirements, hardware characteristics, such as piping sizes and selecting valve trades, and operational design, such as specific filling and pressurization procedures.
+
+\subsection{General System Design}
+
+\hspace{\parindent} The first step in designing a liquid rocket engine plumbing system involves finalizing the engine cycle. The engine cycle describes the method in which pressurization can be achieved such that the propellants flow follow a positive pressure gradient out of the tanks and into the engine. This may include the use of turbopumps (whether this be driven electrically or with a pre-burner), expander cycles (which use a heat exchanger at the combustion chamber and nozzle to further pressurize the propellant lines), combustion tap-offs, inert gases, or a myriad of other methods. Upholding the philosophy of cost-effectiveness and simplicity, the pressurization of the propellant tanks via an inert gas was chosen (also referred to as a pressure-fed cycle). It requires the least amount of parts and is by far the most simple option.
+
+There are two basic options with a pressure-fed cycle: regulated or unregulated. In a regulated design, there is a separate pressure vessel containing the pressurizing gas, which flows through a regulator and into the main propellant tanks. This regulator serves to maintain a constant pressure even as the propellant in the tanks are expended. In a unregulated design, also known as a blowdown design, the pressurant is stored inside the main propellant tank along with the liquid propellant. This has the obvious disadvantage of exhibiting a dynamic and decaying chamber pressure. A blowdown design was nevertheless selected for its simplicity. It should be noted that only the ethanol tank would require a pressurant and blowdown system, since the nitrous tank is self-pressurizing.
+
+The pressurant gas selection was a straightforward tradeoff. Typically, the pressurizing gas is an inert gas (one that does not react with the liquid propellant it is pressurizing), which leaves essentially two options for the designer: helium or nitrogen. Any gases further down the periodic table are deemed too heavy with no significant advantage. Though helium lighter and is often used with liquid oxygen (LOX) systems since nitrogen dissolves in LOX, it is significantly more expensive. For these reasons, nitrogen was chosen as the pressurant.
+
+Another design point for pressure-fed systems involves ullage fractions. The ullage in a propellant tank is simply the percentage of tank volume that is not occupied by the propellant itself, i.e. the space that the pressurant occupies. Though complex models may be developed to more accurately model the expansion of the pressurant as the tank drains, it is commonly excepted that either the ideal gas law ($P_{1}V_{1} = P_{2}V_{2}$) or an isentropic expansion model is adequate. It is apparent that due to the ideal gas law, a larger ullage is desirable since it would cause a more stable chamber pressure throughout engine operation to be observed. A literature review was conducted and showed that common practice involved a ullage fraction of around 2/3 (via Copenhagen Suborbitals and MASA). As for the nitrous tank, the process for determining a ullage fraction is nontrivial. Since the vaporization rate, along with many other dynamical aspects of nitrous behavior, is nonlinear and difficult to determine, either sufficiently complex models or reference data is required. A review of many cold-flow and hot-fire tests (especially those from participants in the Intercollegiate Rocket Engineering Competition, or IREC) was conducted, particularly examining the plots of pressure profiles for nitrous oxide. It was found, along with advisories from MASA, that the nitrous ullage should be around 5\%. This will be elaborated upon in a later section, but in essence, a reasonable ullage is still required for nitrous (although it is self-pressurizing) due to its vaporization rate. It takes a moderate amount of time for the nitrous to begin boiling and repressurizing once the engine begins to run, and during this time, the propellant tank is only being pressurized by the ullage space. If the ullage percentage is low, a slight expansion in the ullage volume would represent a disproportionately large relative increase in volume as compared to its increase if it were to occur mid-burn. Thus, this dramatic relative increase in volume causes a massive pressure drop in the opening seconds of an engine run if the initial ullage fraction is not sufficiently high.
+
+\subsection{System Pressure Drop $\Delta p$}
+
+\hspace{\parindent} With the ullage for both propellants determined, it is possible to begin to determine the required tank volumes and pressures. But to achieve this, it is necessary to first determine the pressure drops expected throughout the plumbing system in order to set a minimum final tank pressure. This is done as to prevent blowback from the combustion chamber near the end of an engine burn. Characterizing the expected pressures at different points within the system is also useful as expected values when comparing to empirical data. This total sum of pressure drops between the propellant tank and combustion chamber, $\Delta p_{sys}$, can be broken down into individual part loses (flow barriers such as valves), frictional loses through the raw length of the pipe (head loss and other effects), and the injector $\Delta p$. Mathematically:
+\begin{equation} \label{eq:system_pressure_drop}
+\Delta p_{sys} = \Delta p_{inj} + \Delta p_{val} + \Delta p_{ext}
+\end{equation}
+The previous section has already established that $\Delta p_{inj}$ obtains a value of 20\% $P_{c}$, which evaluates to $\Delta p_{inj} = 300 \; kPa$. The remaining two terms will be elaborated upon further in the following subsections.
+
+\subsubsection{Pipe Length and Extraneous Pressure Losses} \footnote{In the following subsection, some explanatory tools, such as derivations and figures, are heavily inspired from the work of \cite{fluid-mechanics}. Any figures extracted from \cite{fluid-mechanics} are strictly for the purpose of visualization, explanation, and education. We make no claims and have no intention in claiming ownership or rights to these graphics.}
+
+\hspace{\parindent} Modelling compressible viscous flow through a pipe is a nontrivial task. To avoid lengthy theoretical calculations that would otherwise be overshadowed by empirical data anyway, assumptions were made about the fluid flow to simplify the pipe sizing and pressure loss calculations. The two most important of these assumptions are that 1) there are no swirl, entrance, or heat-transfer effects, and 2) the pipe is completely circular. A short derivation for the necessary equations for calculating $\Delta p_{ext}$ starts simply with the classic case of Bernoulli's Equation:
+\begin{equation} \label{eq:bernoulli}
+p + \frac{1}{2} \rho V^{2} + \rho g_{0} z = constant
+\end{equation}
+It gives insight into the balance between pressure, velocity, and elevation by assuming that the two points in question lie on a streamline, the fluid is incompressible, the flow is steady and inviscid, and there is no friction. Although useful for some applications, it is not adequate for designing robust piping systems which will in actuality encounter such effects.
+
+The addition of a \textit{head loss} term, denoted as $h_{f}$, is important in introducing a viscous term in an otherwise inviscid equation. Head loss can simply be thought of as an additional pressure loss in the system due to viscous effects, a sudden expansion/contraction, and/or obstructions to its path such as pipe elbows, bends, valves, etc. To introduce the head loss term into a useful form for solving pipe flow problems, there is the famous \textit{Darcy-Weisbach equation}, which is a proposed correlation valid for duct flow of any cross section and any Reynolds Number:
+\begin{equation} \label{eq:darcy-weisbach}
+h_{f} = f{\frac{L}{d}}{\frac{V^{2}}{2{g}}}
+\end{equation}
+The dimensionless parameter $f$ is the \textit{Darcy friction factor}, which establishes a relationship between roughness and pipe resistance. $\epsilon$ is the wall roughness height, which is significant only in turbulent pipe flow. It has been shown that $\epsilon$ has orders of magnitude \textit{less of an effect} on laminar pipe flow. An alternative form of the friction factor is
+\begin{equation} \label{eq:darcy-friction}
+\frac{8 \tau_{w}}{\rho V^{2}} = f = F(Re_{d}, \frac{\epsilon}{d})
+\end{equation}
+where $F$ represents some relationship between the Reynolds Number $Re_{d}$ and the average pipe roughness to diameter ratio $\epsilon / d$ (also known as relative roughness).
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{4cm}||p{6cm}|p{2cm}|  }
+\hline
+\multicolumn{3}{|c|}{Piping Design Parameters} \\
+\hline
+Name & Value & Unit \\
+\hline
+Propellant  &  Ethyl alcohol ($95\%$)   &  N/A \\
+$\mu$, Dynamic viscosity  &  0.00196  &  $kg/m \cdot s$ \\
+$\rho$, Density  &  789  &  $kg/m^{3}$ \\
+$L$, Pipe length  &  5.0  &  $m$   \\
+$d$, Pipe diameter  &  12.7  &  $mm$ \\
+$\dot{m}$, Mass flow rate  &  0.694  &  $kg/s$ \\
+Pipe material  &  316 stainless steel or 6061 aluminium  &  N/A  \\
+$\epsilon$, Roughness  &  0.5 to 1.5  &  $\mu m$  \\
+\hline
+\end{tabular}
+\caption{Design parameters and fluid properties required for pipe calculations.}
+\label{table:piping_parameters}
+\end{table}
+
+Table \ref{table:piping_parameters} shows the piping parameters necessary for following calculations. The pipe length was estimated using a model of the test stand discussed in a later section. The pipe diameter was originally iterative determined on a trial-error basis and is the purpose of these calculations, but the final value of 12.7 mm (1/4 inch) is shown here for the purpose of demonstration. The roughness $\epsilon$ is based on the pipe material and was extracted from engineering databases.
+
+The behavior of turbulent and laminar flows are significantly different when considering flow characteristics of a viscous flow through a frictional pipe. Thus, it is important to determine which type of flow is expected. Using values from \ref{table:piping_parameters}, we quickly realize our flow is most likely turbulent
+\begin{equation}
+Q = \frac{\dot{m}}{\rho} = \frac{0.694\, kg/s}{789\, kg/m^{3}} = 8.80 \times 10^{-4}\, m^{3}/s
+\end{equation}
+\begin{equation}
+v = \frac{Q}{\pi R^{2}} = \frac{(8.80 \times 10^{-4}\, m^{3}/s)}{\pi [(0.0127\, m) / 2]^{2}} = 6.94\, m/s
+\end{equation}
+\begin{equation}
+\nu = \frac{\mu}{\rho} = \frac{0.00196\, kg/m \cdot s}{789\, kg/m^{3}} = 2.48 \times 10^{-6}\, m^{2}/s
+\end{equation}
+\begin{equation}
+Re_{d} = \frac{v d}{\nu} = \frac{(6.94\, m/s)(0.0127\, m)}{2.48 \times 10^{-6}\, m^{2}/s} = 35557
+\end{equation}
+since $Re_{d} >> 2300$ (a Reynolds Number above 2300 is the accepted threshold). Though many differences are present between turbulent and laminar flow in the context of fluid flow through a pipe, perhaps the most important is that the head loss and pressure drop in turbulent flows are heavily affected by pipe roughness. In fact, there are different sets of equations applied when solving for turbulent flows, depending on the relative roughness of the pipe it is travelling through. These categories are \cite{fluid-mechanics}
+
+\begin{align*}
+\frac{\epsilon u^{*}}{\nu} < 5 &= \text{ \textit{hydraulically smooth} walls, no effect of roughness on friction} \\
+5 \leq \frac{\epsilon u^{*}}{\nu} \leq 70 &= \text{ \textit{transitional} roughness, moderate Reynolds Number effect} \\
+\frac{\epsilon u^{*}}{\nu} > 70 &= \text{ \textit{fully rough} flow, sublayer broken up and friction independent of } Re
+\end{align*}
+
+For a smooth-walled pipe, the relation between friction factor and Reynolds Number for turbulent pipe flow is
+\begin{equation} \label{eq:prandtl_friction_reynolds}
+\frac{1}{f^{1/2}} = 2.0\, log({Re_{d}\, f^{1/2}}) - 1.8
+\end{equation}
+An alternate form of equation \ref{eq:prandtl_friction_reynolds} can be used to explicitly solve for $f$ from $Re_{d}$:
+\begin{equation} \label{eq:blasius_1}
+f = 
+\begin{cases}
+0.316 Re_{d}^{-1/4}\\%, & 4000 < Re_{d} < 10^{5}\\% & H. Blasius (1911) \\
+\left( 1.8\, log \frac{Re_{d}}{6.9} \right)^{-2}%, & h %& h \\
+\end{cases}
+\text{when } 4000 < Re_{d} < 10^{5}
+\end{equation}
+For correlating pipe friction to Reynolds Number, although for a limited range of low turbulent Reynolds Numbers, from Equation \ref{eq:blasius_1} it was was derived that
+\begin{equation} \label{eq:blasius_2}
+h_{f} = \frac{\Delta p}{\rho g} = f \frac{L}{d} \frac{V^{2}}{2g} \approx 0.316 \left( \frac{\mu}{\rho V d} \right)^{1/4} \frac{L}{d} \frac{V^{2}}{2g}
+\end{equation}
+or
+\begin{equation} \label{eq:blasius_3}
+\Delta p \approx 0.158 L \rho^{3/4} \mu^{1/4} d^{-5/4} V^{7/4}
+\end{equation}
+Substituting $Q = \frac{1}{4} \pi d^{2} V$ into Equation \ref{eq:blasius_3} gives
+\begin{equation} \label{eq:blasius_4}
+\Delta p \approx 0.241 L \rho^{3/4} \mu^{1/4} d^{-4.75} Q^{1.75}
+\end{equation}
+Equation \ref{eq:blasius_4} is critical to understanding pipe sizing. Analysing Equation \ref{eq:blasius_4} shows that for a fixed flow rate $Q$, the turbulent pressure drop decreases with diameter every sharply. Thus, the easiest way to reduce required pumping/upstream pressure is to increase the pipe diameter.
+
+For fully rough flows (independent of Reynolds Number):
+\begin{equation} \label{eq:rough_friction}
+\frac{1}{f^{1/2}} = -2.0\, log \frac{\epsilon/d}{3.7}
+\end{equation}
+
+To model the transitionally rough range, an general interpolation formula was created:
+\begin{equation} \label{eq:moody}
+\frac{1}{f^{1/2}} = -2.0\, log \left( \frac{\epsilon/d}{3.7} + \frac{2.51}{Re_{d}\, f^{1/2}} \right)
+\end{equation}
+
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.55]{moody_chart.PNG}
+\caption{The Moody Chart \cite{fluid_mechanics}.}
+\label{fig:moody_chart}
+\end{figure}
+
+Equation \ref{eq:moody} is the accepted formula for determining turbulent friction. Plotting this relation gives the \textit{Moody chart} for pipe friction (see Figure \ref{fig:moody_chart}). Equation \ref{eq:moody} is sometimes cumbersome to evaluate for $f$ if $Re_{d}$ is known, so an alternate explicit formula was developed and as
+\begin{equation} \label{eq:moody_explicit}
+\frac{1}{f^{1/2}} \approx -1.8\, log \Big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \Big]
+\end{equation}
+and varies less than 2 percent from Equation \ref{eq:moody} \cite{fluid-mechanics}.
+
+The head loss and $\Delta p$ values can now be computed using the Moody Chart (Figure \ref{fig:moody_chart}) and/or Equation \ref{eq:moody_explicit}. Once again recalling parameters given in Table \ref{table:piping_parameters} and the short velocity and Reynolds number calculations given below Table \ref{table:piping_parameters}, these values can directly be inserted into Equation \ref{eq:moody_explicit} to find the friction factor $f$:
+
+\begin{align*}
+\frac{1}{f^{1/2}} \approx -1.8\, log \Big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \Big]
+\end{align*}
+\begin{equation}
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{35557} + \left( \frac{(1.5 \times 10^{-6}\, m)/(1.27 \times 10^{-2}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 2.267 \times 10^{-2}
+\end{equation}
+
+Now using Equation \ref{eq:blasius_2} we can find the head loss $h_{f}$:
+\begin{align*}
+h_{f} = \frac{\Delta p}{\rho g_{0}} = f \frac{L}{d} \frac{V^{2}}{2g_{0}}
+\end{align*}
+\begin{equation}
+h_{f} = (2.267 \times 10^{-2}) \left( \frac{5.0\, m}{1.27 \times 10^{-2}\, m} \right) \left( \frac{(6.94\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 21.91 \, m
+\end{equation}
+The $\Delta p_{ext}$ is therefore simply
+\begin{equation}
+\Delta p = h_{f} \rho g_{0} = (21.91 \, m)(789 \, kg/m^{3})(9.81 \, m/s^{2}) = 169584 \, Pa \approx 170 \, kPa
+\end{equation}
+
+[TABLE OF SUMMARIZED STUFF]
+
+\subsection{Tank Sizing}
+
+The relation for isentropic expansion is
+\begin{equation} \label{eq:isentropic_expansion}
+\frac{p_{2}}{p_{1}} = \left( \frac{V_{1}}{V_{2}} \right) ^{\gamma}
+\end{equation}
+where a subscript of 1 represents initial conditions and subscript of 2 represents final conditions. Since a burn time $t_{b}$ was established in \ref{table:gas_parameters} to be around 5 seconds, a constant density $\rho$ of 789 $kg/m^{3}$ and mass flow rate $dot{m}_{f}$ of 0.139 $kg/s$ can be used to find that the initial volume occupied by ethanol is $[(0.139 \; kg/s)(5 \; sec)/(789 \; kg/m^{3})](1000 \; m^{3}/L) = 0.881 \; L$. The same procedure can be followed for nitrous and is found to be $3.59 \; L$. Using the premeditated ullage fraction of 2/3, it is apparent that the initial ullage volume for ethanol should be $V_{1} = (0.881 \; L)(3)(2/3) = 1.76 \; L$ and thus the total tank volume is $V_{total} = 0.881 \; L + 1.76 \; L = 2.64 \; L$. Then, using Equation \ref{eq:isentropic_expansion} and a $\gamma$ value for $N_{2}$ gas of 1.40,  an initial ethanol propellant tank pressure can be calculated:
+\begin{equation*}
+p_{1} = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right] = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right]
+\end{equation*}
+
+ADD TABLE OF SUMMARIZED PARAMS
+Engine cycle (pressure fed)
+Goals: measuring pressure and Cv values
+Divide into two sections
+a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories]
+
 The plumbing system was designed with key considerations in mind which would make the system as versatile and safe as possible in the event of errors or hardware problems. The most important of these was that all pressurization and post-pressurization actions must be done remotely. Furthermore, the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure \ref{fig:piping_and_instrumentation_diagram} displays the full piping and instrumentation diagram for the Aphlex 1B cold flow test. The following subsections will go into detail on the different aspects of the plumbing system. It is important to note that the ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware.
 
 \begin{figure}[!htb]
@@ -582,18 +882,189 @@ Scaled pressure, however, is making the pressure differential between the tank a
 
 To accomplish these goals, the plumbing detailed in section 4.1 must be fully constructed as a test stand, along with a separate injector and engine mechanism which could later be used to measure thrust in an actual static fire. The following subsections will detail these two major parts of the test stand for this test.
 \subsection{Tank Stand and Plumbing}
-\hspace{\parindent} The tank stand and plumbing had to contain the ethanol flight tank, nitrogen K-bottle for pressurization, and all the plumbing up until the engine. The design for this test stand included a frame of aluminum 80/20s which would hold the ethanol flight tank in place, as well as cinder blocks as a stand for the temporary nitrogen K-bottle. The plumbing will mostly be bolted to a 1/8" thick steel plate on the outside of the 80/20 steel frame for the ethanol tank. This will allow for all plumbing to be easily accessible for small changes or for turning manual valves, as well as for pressure gauges to be monitored via video camera live stream in the event of a pressure transducer failure. A rendering of the ethanol tower tank stand and plumbing section is shown in Figure \ref{fig:ethanol_tank_stand_render}.
+\hspace{\parindent} The tank stand and plumbing had to contain the ethanol flight tank, nitrogen K-bottle for pressurization, and all the plumbing up until the engine. The design for this test stand included a frame of aluminum 80/20s which would hold the ethanol flight tank in place, as well as cinder blocks as a stand for the temporary nitrogen K-bottle. The plumbing will mostly be bolted to a 1/8" thick steel plate on the outside of the 80/20 steel frame for the ethanol tank. The use of plate will allow for all plumbing to be visible and easily accessible for small changes or for turning manual valves, as well as for pressure gauges to be monitored via video camera live stream in the event of a pressure transducer failure. The plate will additionally serve as a support structure for the piping. A rendering of the ethanol tower tank stand and plumbing section is shown in Figure \ref{fig:ethanol_tank_stand_render}.
 
 \begin{figure}[!htb] 
     \centering
-    \includegraphics[scale=0.5, width=0.5\textwidth]{pid} %L, B, R, T
+    \includegraphics[scale=0.5]{ethanol_stand.png} %L, B, R, T
     \caption{Ethanol Propellant Tower Test Stand Render}
     \label{fig:ethanol_tank_stand_render}
+\end{figure}
+
+\hspace{\parindent} Both plates of plumbing were designed according to the designed piping and instrumentation diagram in Figure \ref{fig:piping_and_instrumentation_diagram}. When designed in 3D space, they were made to be as compact as possible to reduce total material needed. Pressure relief valves were also designed to point away from any other mounted instrumentation. All major components including valves, joints, gauges, sensors, and AN to NPT adaptors were included in the rendering. Renderings of the upper and lower plates of plumbing are shown in Figures \ref{fig:upper_plate_render} and \ref{fig:lower_plate_render} respectively.
+\begin{figure}[!htb]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{upper_plate.png} % left, bottom, right, top
+        \caption{Upper Plate Render}
+        \label{fig:upper_plate_render}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth]{lower_plate.png} % second figure itself
+        \caption{Lower Plate Render}
+        \label{fig:lower_plate_render}
+    \end{minipage}
+\end{figure} 
+
+\hspace{\parindent} Because the nitrogen K-bottle has to be connected to the plumbing from a tube located at the top of the upper plate, the cinder block arrangement was used to elevate the K-bottle, reducing the amount of tubing needed to reach that location. This method of reducing external tubing was determined to be easier and more efficient than other methods such as fulling mounting the K-bottle above the upper plumbing plate, which would have been difficult due to the extra support needed to handle that weight. Additionally, the availability, ease of construction, and flexibility of arrangement for the cinder blocks made them an appealing choice. A full system render of the ethanol stand, plumbing, and K-bottle is shown in Figure \ref{fig:ethanol_tank_stand_with_nitrogen_render}.
+
+\begin{figure}[!htb] 
+    \centering
+    \includegraphics[scale=2]{master_stand_overall_render_2.png} %L, B, R, T
+    \caption{Ethanol Propellant Tower Test Stand with Nitrogen K Bottle Render}
+    \label{fig:ethanol_tank_stand_with_nitrogen_render}
 \end{figure}
 
 \subsection{Engine and Injector}
 
 \section{Parts and Budget}
+
+\subsection{Valves}
+\begin{center}
+ \begin{tabular}{||c c c c c c c||} 
+ \hline
+ Valve Type & Max Pressure & Cv & Inlet & Outlet & Manufacturer & Other Information\\
+ \hline\hline
+ Solenoid & 1200 psi & 0.7 & 1/4" FNPT & 1/4" FNPT & Holley/NOS & N/A\\ 
+ \hline
+ Pressure Relief & 1000 psi & ??? & 1/4" & 1/4" & Generant/Rego & VRVH-250-B-B-600 Buna-N\\
+ \hline
+ Ball & 1000 psi & 16 & 1/4" FNPT & 1/4" FNPT & DiscoverValve & N/A\\
+ \hline
+ Needle & 5000 psi & 0-0.4 & 1/4" FNPT & 1/4" FNPT & Generant & 3000-4-B - 1/4" SS\\ [0.5ex]
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Sensors}
+\begin{center}
+ \begin{tabular}{||c c c c c c||} 
+ \hline
+ Sensor Type & Max Pressure & Temperature Rating & Outlet & Manufacturer & Other Information\\
+ \hline\hline
+ Pressure Gauge & 1000 psi & ??? & 1/4" MNPT & UPE Group & N/A\\ 
+ \hline
+ Pressure Transducer & 1000 psi & ??? & 1/8" MNPT & Ebay & N/A\\
+ \hline
+ Thermocouple & ??? & ??? & 1/4" MNPT & Omega & N/A\\
+ \hline
+ Load Cell & ??? & ??? & N/A & ??? & N/A\\ [0.5ex]
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Fittings}
+\begin{center}
+ \begin{tabular}{||c c c c c c||} 
+ \hline
+ Fitting Type & Max Pressure & Inlet & Outlet & Manufacturer & Other Information\\
+ \hline\hline
+ T-Joint & ??? & 1/4" AN M & 1/4" AN M & Jegs & N/A\\ 
+ \hline
+ Cross-Joint & ??? & ??? & ??? & Jegs & N/A\\
+ \hline
+ 1/4" AN to 1/2" NPT & ??? & 1/4" AN M & 1/2" MNPT & Jegs & N/A\\
+ \hline
+ 1/4" AN to 1/4" NPT & ??? & 1/4" AN M & 1/4" MNPT & Jegs & N/A\\ [0.5ex]
+ \hline
+ 1/4" AN to 1/8" NPT & ??? & 1/4" AN M & 1/8" MNPT & Jegs & N/A\\ [0.5ex]
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Tools}
+
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Tool & Function & Manufacturer & Other Information\\
+ \hline\hline
+ Tube Cutter & Cuts Tubing & Ridgid & N/A\\ 
+ \hline
+ Tube Deburrer & Deburrs Tubing & Ridgid & N/A\\
+ \hline
+ Tube Bender & Bends Tubing & Imperial & N/A\\
+ \hline
+ Tube Flarer & Flares Tubing & Ridgid & N/A\\
+ \hline
+ Tube Straightener & Straightens Tubing & ??? & N/A\\ [0.5ex]
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Other Parts}
+\begin{center}
+ \begin{tabular}{||c c c c c c||} 
+ \hline
+ Part & Max Pressure & Function & Specs & Manufacturer & Other Information\\
+ \hline\hline
+ Nitrogen & N/A & Pressurizes Ethanol Tank & Rental & ??? & N/A\\ 
+ \hline
+ Nitrogen Regulator & ??? & Regulates Nitro Pressure & ??? & ??? & N/A\\
+ \hline
+ Tubing & 1200 psi & Facilitates Flow & 6ft unit, 0.01" thick & McMaster & N/A\\
+ \hline
+ Stainless Steel Block & 42000 psi & Injector Material & ??? & ??? & N/A\\ [0.5ex]
+ \hline
+\end{tabular}
+\end{center}
+
+\subsection{Budget}
+\begin{center}
+ \begin{tabular}{||c c c c||} 
+ \hline
+ Part & Quantity & Unit Cost & Total Cost\\
+ \hline\hline
+ Solenoid Valve & 4 & $271.95$ & $1087.80$\\ 
+ \hline
+ Pressure Relief Valve & 1 & $34.30$ & $34.30$\\ 
+ \hline
+ Ball Valve & 1 & $11.40$ & $11.40$\\ 
+ \hline
+ Needle Valve & 2 & $22.50$ & $45.00$\\ 
+ \hline
+ Pressure Gauge & 3 & $14.50$ & $43.50$\\ 
+ \hline
+ Pressure Transducer & 4 & $20.00$ & $80.00$\\ 
+ \hline
+ Thermocouple & 1 & $00.00$ & $00.00$\\ 
+ \hline
+ Load Cell & 1 & $00.00$ & $00.00$\\
+ \hline
+ T-Joint & 7 & $11.60$ & $81.20$\\
+ \hline
+ Cross-Joint & ??? & N/A & $00.00$\\
+ \hline
+ 1/4" AN to 1/2" NPT & 5 & $10.49$ & $52.45$\\
+ \hline
+ 1/4" AN to 1/4" NPT & 9 & $3.60$ & $32.40$\\
+ \hline
+ 1/4" AN to 1/8" NPT & 0 & $3.60$ & $00.00$\\
+ \hline
+ Tube Cutter & 1 & $37.73$ & $37.73$\\
+ \hline
+ Tube Deburrer & 1 & $37.95$ & $37.95$\\
+ \hline
+ Tube Bender & 1 & $45.00$ & $45.00$\\
+ \hline
+ Tube Flarer & 1 & $145.00$ & $145.00$\\
+ \hline
+ Tube Straightener & 1 & $128.00$ & $128.00$\\
+ \hline
+ Nitrogen & 1 & $20.00$ & $20.00$\\
+ \hline
+ Nitrogen Regulator & 1 & $100.00$ & $100.00$\\
+ \hline
+ Tubing & 5 & $38.25$ & $191.25$\\
+ \hline
+ Stainless Steel Block & 1 & $25.00$ & $25.00$\\
+ \hline\hline
+ Total & N/A & N/A & $2,172.98$\\
+ \hline
+\end{tabular}
+\end{center}
 
 % \section{Nitrous Oxide Cold Flow Test Stand Design}
 % \section{Full Test Stand Design}

@@ -2002,6 +2002,14 @@
     <bcf:citekey order="5">rpe</bcf:citekey>
     <bcf:citekey order="6">rpe</bcf:citekey>
     <bcf:citekey order="7">rao</bcf:citekey>
+    <bcf:citekey order="8">rpe</bcf:citekey>
+    <bcf:citekey order="9">intro-rocket</bcf:citekey>
+    <bcf:citekey order="10">fluid-mechanics</bcf:citekey>
+    <bcf:citekey order="11">fluid-mechanics</bcf:citekey>
+    <bcf:citekey order="12">fluid-mechanics</bcf:citekey>
+    <bcf:citekey order="13">fluid_mechanics</bcf:citekey>
+    <bcf:citekey order="14">fluid_mechanics</bcf:citekey>
+    <bcf:citekey order="15">fluid-mechanics</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">

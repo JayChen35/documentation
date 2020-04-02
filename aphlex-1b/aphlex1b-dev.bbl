@@ -97,7 +97,59 @@
       \field{title}{Rocket Propulsion Elements, 9th Edition}
       \field{year}{2016}
     \endentry
+    \entry{intro-rocket}{book}{}
+      \name{author}{1}{}{%
+        {{hash=93dc9c11a36931a2ecf851443c32e096}{%
+           family={Taylor},
+           familyi={T\bibinitperiod},
+           given={Travis\bibnamedelima S.},
+           giveni={T\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {CRC Press}%
+      }
+      \strng{namehash}{93dc9c11a36931a2ecf851443c32e096}
+      \strng{fullhash}{93dc9c11a36931a2ecf851443c32e096}
+      \strng{bibnamehash}{93dc9c11a36931a2ecf851443c32e096}
+      \strng{authorbibnamehash}{93dc9c11a36931a2ecf851443c32e096}
+      \strng{authornamehash}{93dc9c11a36931a2ecf851443c32e096}
+      \strng{authorfullhash}{93dc9c11a36931a2ecf851443c32e096}
+      \field{sortinit}{T}
+      \field{sortinithash}{6f7aff9db9dcfeb7f95fd5bbd2f78df9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{{Introduction to Rocket Science and Engineering}}
+      \field{year}{2009}
+    \endentry
+    \entry{fluid-mechanics}{book}{}
+      \name{author}{1}{}{%
+        {{hash=1e681d94d9c783f7ceb9dd9e89c5c572}{%
+           family={White},
+           familyi={W\bibinitperiod},
+           given={Frank\bibnamedelima M.},
+           giveni={F\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {McGraw-Hill}%
+      }
+      \strng{namehash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \strng{fullhash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \strng{bibnamehash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \strng{authorbibnamehash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \strng{authornamehash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \strng{authorfullhash}{1e681d94d9c783f7ceb9dd9e89c5c572}
+      \field{sortinit}{W}
+      \field{sortinithash}{ecb89ff85896a47dc313960773ac311d}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Fourth}
+      \field{month}{12}
+      \field{series}{McGraw-Hill Series in Mechanical Engineering}
+      \field{title}{{Fluid Mechanics}}
+      \field{year}{1998}
+    \endentry
   \enddatalist
+  \missing{fluid_mechanics}
 \endrefsection
 \endinput
 

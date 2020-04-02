@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  26 MAR 2020 02:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7140 64-bit) (preloaded format=pdflatex 2019.8.5)  2 APR 2020 03:13
 entering extended mode
 **./aphlex1b-dev.tex
 (aphlex1b-dev.tex
@@ -928,6 +928,21 @@ LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
 (Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
 )
+("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/yafoot\dblfnote.st
+y"
+Package: dblfnote 2018/09/03 v1.1 
+\c@DFNsloppiness=\count446
+\DFNcolumnsep=\dimen198
+\DFNcolumnwidth=\dimen199
+\dfn@fnht=\dimen256
+\dfn@fnmaxdp=\dimen257
+\dfn@dima=\dimen258
+\dfn@dimb=\dimen259
+\dfn@ins=\box83
+\dfn@boxa=\box84
+\dfn@boxb=\box85
+\dfn@output=\toks27
+)
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
 
@@ -935,9 +950,12 @@ Package biblatex Info: ... file 'english.lbx' found.
 sh.lbx"
 File: english.lbx 2018/11/02 v3.12 biblatex localization (PK/MW)
 )
-\@quotelevel=\count446
-\@quotereset=\count447
 
+Package biblatex Warning: Patching footnotes failed.
+(biblatex)                Footnote detection will not work.
+
+\@quotelevel=\count447
+\@quotereset=\count448
 
 LaTeX Warning: Unused global option(s):
     [9pt].
@@ -945,19 +963,20 @@ LaTeX Warning: Unused global option(s):
 (aphlex1b-dev.aux)
 \openout1 = `aphlex1b-dev.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
-LaTeX Font Info:    ... okay on input line 82.
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 82.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 101.
+LaTeX Font Info:    ... okay on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 101.
+
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
@@ -965,17 +984,17 @@ File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-p
 df.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count448
-\scratchdimen=\dimen198
-\scratchbox=\box83
-\nofMPsegments=\count449
-\nofMParguments=\count450
-\everyMPshowfont=\toks27
-\MPscratchCnt=\count451
-\MPscratchDim=\dimen199
-\MPnumerator=\count452
-\makeMPintoPDFobject=\count453
-\everyMPtoPDFconversion=\toks28
+\scratchcounter=\count449
+\scratchdimen=\dimen260
+\scratchbox=\box86
+\nofMPsegments=\count450
+\nofMParguments=\count451
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count452
+\MPscratchDim=\dimen261
+\MPnumerator=\count453
+\makeMPintoPDFobject=\count454
+\everyMPtoPDFconversion=\toks29
 )
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-
 base.sty"
@@ -1003,9 +1022,17 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'aphlex1b-dev.bbl' found.
- (aphlex1b-dev.bbl)
-Package biblatex Info: Reference section=0 on input line 82.
-Package biblatex Info: Reference segment=0 on input line 82.
+ (aphlex1b-dev.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                fluid_mechanics
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
+Package biblatex Info: Reference section=0 on input line 101.
+Package biblatex Info: Reference segment=0 on input line 101.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1127,150 +1154,362 @@ File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 82.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 101.
+
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 82.
-
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 101
+.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 82.
-
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 101
+.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 82.
+(Font)              <10> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 82.
+(Font)              <7> on input line 101.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 82.
-LaTeX Font Info:    Try loading font information for OT1+lmss on input line 82.
-
+(Font)              <5> on input line 101.
+LaTeX Font Info:    Try loading font information for OT1+lmss on input line 101
+.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmss.fd"
 File: ot1lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 82.
-
+LaTeX Font Info:    Try loading font information for OT1+lmtt on input line 101
+.
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\ot1lmtt.fd"
 File: ot1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 83.
+(Font)              <12> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 83.
+(Font)              <8> on input line 102.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 83.
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 83.
+(Font)              <6> on input line 102.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 102.
+
 
 ("C:\Users\jaych\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lm\omslmr.fd"
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <8> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 83.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 102.
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <6> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 83.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 102.
+<caelus_logo.png, id=1, 537.28pt x 538.01pt>
+File: caelus_logo.png Graphic file (type png)
+<use caelus_logo.png>
+Package pdftex.def Info: caelus_logo.png  used on input line 106.
+(pdftex.def)             Requested size: 268.63934pt x 269.00433pt.
 
-Overfull \hbox (6.89687pt too wide) in paragraph at lines 98--133
+Overfull \hbox (6.89687pt too wide) in paragraph at lines 122--157
 [] []
  []
 
 [1
 
-{C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-<cp_cstar_mix_labeled.png, id=18, 421.575pt x 316.3017pt>
+{C:/Users/jaych/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./caelus_lo
+go.png>]
+<cp_cstar_mix_labeled.png, id=21, 421.575pt x 316.3017pt>
 File: cp_cstar_mix_labeled.png Graphic file (type png)
 <use cp_cstar_mix_labeled.png>
-Package pdftex.def Info: cp_cstar_mix_labeled.png  used on input line 152.
+Package pdftex.def Info: cp_cstar_mix_labeled.png  used on input line 177.
 (pdftex.def)             Requested size: 210.78697pt x 158.15045pt.
-<cp_temp_mix_labeled.png, id=19, 421.575pt x 316.3017pt>
+<cp_temp_mix_labeled.png, id=22, 421.575pt x 316.3017pt>
 File: cp_temp_mix_labeled.png Graphic file (type png)
 <use cp_temp_mix_labeled.png>
-Package pdftex.def Info: cp_temp_mix_labeled.png  used on input line 158.
+Package pdftex.def Info: cp_temp_mix_labeled.png  used on input line 183.
 (pdftex.def)             Requested size: 210.78697pt x 158.15045pt.
-<cp_molar_mix_labeled.png, id=20, 421.575pt x 316.3017pt>
+<cp_molar_mix_labeled.png, id=23, 421.575pt x 316.3017pt>
 File: cp_molar_mix_labeled.png Graphic file (type png)
 <use cp_molar_mix_labeled.png>
-Package pdftex.def Info: cp_molar_mix_labeled.png  used on input line 167.
+Package pdftex.def Info: cp_molar_mix_labeled.png  used on input line 192.
 (pdftex.def)             Requested size: 210.78697pt x 158.15045pt.
-<cp_gamma_mix_labeled.png, id=21, 421.575pt x 316.3017pt>
+<cp_gamma_mix_labeled.png, id=24, 421.575pt x 316.3017pt>
 File: cp_gamma_mix_labeled.png Graphic file (type png)
 <use cp_gamma_mix_labeled.png>
-Package pdftex.def Info: cp_gamma_mix_labeled.png  used on input line 173.
+Package pdftex.def Info: cp_gamma_mix_labeled.png  used on input line 198.
 (pdftex.def)             Requested size: 210.78697pt x 158.15045pt.
  [2 <./cp_cstar_mix_labeled.png (PNG copy)> <./cp_temp_mix_labeled.png (PNG cop
-y)> <./cp_molar_mix_labeled.png (PNG copy)> <./cp_gamma_mix_labeled.png (PNG co
-py)>]
-Overfull \hbox (4.00452pt too wide) in paragraph at lines 205--205
-[]|$\OML/lmm/m/it/10 kg=mol$| 
- []
-
-[3] [4]
+y)>] [3 <./cp_molar_mix_labeled.png (PNG copy)> <./cp_gamma_mix_labeled.png (PN
+G copy)>] [4]
 
 pdfTeX warning: miktex-pdftex.exe (file ./aphlex1b-drawing.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<aphlex1b-drawing.pdf, id=34, 1195.46625pt x 845.1575pt>
+<aphlex1b-drawing.pdf, id=37, 1195.46625pt x 845.1575pt>
 File: aphlex1b-drawing.pdf Graphic file (type pdf)
 <use aphlex1b-drawing.pdf>
-Package pdftex.def Info: aphlex1b-drawing.pdf  used on input line 331.
+Package pdftex.def Info: aphlex1b-drawing.pdf  used on input line 356.
 (pdftex.def)             Requested size: 427.01558pt x 116.71135pt.
+<moc.png, id=39, 421.575pt x 316.3017pt>
+File: moc.png Graphic file (type png)
+<use moc.png>
+Package pdftex.def Info: moc.png  used on input line 367.
+(pdftex.def)             Requested size: 196.56065pt x 76.349pt.
 [5]
+Overfull \hbox (3.86475pt too wide) in paragraph at lines 372--373
+\OT1/lmr/m/n/10 repos-i-tory at $\OT1/lmtt/m/n/10 https : / / github . com / Pr
+ojectCaelus / propulsion / blob / master / nozzle-[]calculations /
+ []
+
+
 
 pdfTeX warning: miktex-pdftex.exe (file ./aphlex1b-drawing-2.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<aphlex1b-drawing-2.pdf, id=39, 1195.46625pt x 845.1575pt>
+<aphlex1b-drawing-2.pdf, id=44, 1195.46625pt x 845.1575pt>
 File: aphlex1b-drawing-2.pdf Graphic file (type pdf)
 <use aphlex1b-drawing-2.pdf>
-Package pdftex.def Info: aphlex1b-drawing-2.pdf  used on input line 340.
+Package pdftex.def Info: aphlex1b-drawing-2.pdf  used on input line 376.
 (pdftex.def)             Requested size: 416.34581pt x 116.71135pt.
-[6 <./aphlex1b-drawing.pdf> <./aphlex1b-drawing-2.pdf>] [7] [8] [9] [10]
-(aphlex1b-dev.aux)
+[6 <./aphlex1b-drawing.pdf> <./moc.png (PNG copy)>] [7 <./aphlex1b-drawing-2.pd
+f>] [8]
+
+LaTeX Warning: File `cad_files/Daniel Injector CAD.png' not found on input line
+ 489.
+
+<cad_files/Daniel Injector CAD.png, id=83, 1927.2pt x 1084.05pt>
+File: cad_files/Daniel Injector CAD.png Graphic file (type png)
+<use cad_files/Daniel Injector CAD.png>
+Package pdftex.def Info: cad_files/Daniel Injector CAD.png  used on input line 
+489.
+(pdftex.def)             Requested size: 849.78693pt x 513.571pt.
+
+LaTeX Warning: File `cad_files/Final Injector Assembly ISO1.png' not found on i
+nput line 495.
+
+<cad_files/Final Injector Assembly ISO1.png, id=85, 1927.2pt x 1084.05pt>
+File: cad_files/Final Injector Assembly ISO1.png Graphic file (type png)
+<use cad_files/Final Injector Assembly ISO1.png>
+Package pdftex.def Info: cad_files/Final Injector Assembly ISO1.png  used on in
+put line 495.
+(pdftex.def)             Requested size: 849.78693pt x 513.571pt.
+
+LaTeX Warning: File `cad_files/Final Injector Assembly EXPLODE1.png' not found 
+on input line 504.
+
+<cad_files/Final Injector Assembly EXPLODE1.png, id=87, 1927.2pt x 1084.05pt>
+File: cad_files/Final Injector Assembly EXPLODE1.png Graphic file (type png)
+<use cad_files/Final Injector Assembly EXPLODE1.png>
+Package pdftex.def Info: cad_files/Final Injector Assembly EXPLODE1.png  used o
+n input line 504.
+(pdftex.def)             Requested size: 849.78693pt x 527.79735pt.
+
+LaTeX Warning: File `cad_files/Final Injector Assembly EXPLODE2.png' not found 
+on input line 510.
+
+<cad_files/Final Injector Assembly EXPLODE2.png, id=89, 1927.2pt x 1084.05pt>
+File: cad_files/Final Injector Assembly EXPLODE2.png Graphic file (type png)
+<use cad_files/Final Injector Assembly EXPLODE2.png>
+Package pdftex.def Info: cad_files/Final Injector Assembly EXPLODE2.png  used o
+n input line 510.
+(pdftex.def)             Requested size: 849.78693pt x 527.79735pt.
+[9]
+
+LaTeX Warning: File `Injector Assembly DWG001.pdf' not found on input line 520.
+
+
+
+
+pdfTeX warning: miktex-pdftex.exe (file ./Injector Assembly DWG001.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Injector Assembly DWG001.pdf, id=94, 1195.46625pt x 845.1575pt>
+File: Injector Assembly DWG001.pdf Graphic file (type pdf)
+<use Injector Assembly DWG001.pdf>
+Package pdftex.def Info: Injector Assembly DWG001.pdf  used on input line 520.
+(pdftex.def)             Requested size: 597.73166pt x 422.57771pt.
+
+LaTeX Warning: File `Injector Assembly DWG002.pdf' not found on input line 527.
+
+
+
+
+pdfTeX warning: miktex-pdftex.exe (file ./Injector Assembly DWG002.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Injector Assembly DWG002.pdf, id=96, 1195.46625pt x 845.1575pt>
+File: Injector Assembly DWG002.pdf Graphic file (type pdf)
+<use Injector Assembly DWG002.pdf>
+Package pdftex.def Info: Injector Assembly DWG002.pdf  used on input line 527.
+(pdftex.def)             Requested size: 597.73166pt x 422.57771pt.
+
+LaTeX Warning: File `Injector Assembly DWG003.pdf' not found on input line 534.
+
+
+
+
+pdfTeX warning: miktex-pdftex.exe (file ./Injector Assembly DWG003.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<Injector Assembly DWG003.pdf, id=98, 1195.46625pt x 845.1575pt>
+File: Injector Assembly DWG003.pdf Graphic file (type pdf)
+<use Injector Assembly DWG003.pdf>
+Package pdftex.def Info: Injector Assembly DWG003.pdf  used on input line 534.
+(pdftex.def)             Requested size: 597.73166pt x 422.57771pt.
+[10 <./cad_files/Daniel Injector CAD.png> <./cad_files/Final Injector Assembly 
+ISO1.png> <./cad_files/Final Injector Assembly EXPLODE1.png> <./cad_files/Final
+ Injector Assembly EXPLODE2.png>] [11 <./Injector Assembly DWG001.pdf> <./Injec
+tor Assembly DWG002.pdf> <./Injector Assembly DWG003.pdf>]
+<sim_files/mesh_ss.png, id=163, 2326.6925pt x 1258.7025pt>
+File: sim_files/mesh_ss.png Graphic file (type png)
+<use sim_files/mesh_ss.png>
+Package pdftex.def Info: sim_files/mesh_ss.png  used on input line 549.
+(pdftex.def)             Requested size: 1163.34343pt x 629.34972pt.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 550.
+<sim_files/pres_xsect1.png, id=164, 1927.2pt x 1084.05pt>
+File: sim_files/pres_xsect1.png Graphic file (type png)
+<use sim_files/pres_xsect1.png>
+Package pdftex.def Info: sim_files/pres_xsect1.png  used on input line 555.
+(pdftex.def)             Requested size: 963.59766pt x 542.02368pt.
+<sim_files/vel_streamline1.png, id=165, 1927.2pt x 1084.05pt>
+File: sim_files/vel_streamline1.png Graphic file (type png)
+<use sim_files/vel_streamline1.png>
+Package pdftex.def Info: sim_files/vel_streamline1.png  used on input line 567.
+
+(pdftex.def)             Requested size: 963.59766pt x 542.02368pt.
+<sim_files/vel_streamline2.png, id=166, 1927.2pt x 1084.05pt>
+File: sim_files/vel_streamline2.png Graphic file (type png)
+<use sim_files/vel_streamline2.png>
+Package pdftex.def Info: sim_files/vel_streamline2.png  used on input line 573.
+
+(pdftex.def)             Requested size: 963.59766pt x 542.02368pt.
+<sim_files/vel_xsect4.png, id=167, 1927.2pt x 1084.05pt>
+File: sim_files/vel_xsect4.png Graphic file (type png)
+<use sim_files/vel_xsect4.png>
+Package pdftex.def Info: sim_files/vel_xsect4.png  used on input line 582.
+(pdftex.def)             Requested size: 963.59766pt x 542.02368pt.
+<sim_files/vel_xsect3.png, id=168, 1927.2pt x 1084.05pt>
+File: sim_files/vel_xsect3.png Graphic file (type png)
+<use sim_files/vel_xsect3.png>
+Package pdftex.def Info: sim_files/vel_xsect3.png  used on input line 588.
+(pdftex.def)             Requested size: 963.59766pt x 542.02368pt.
+ [12 <./sim_files/mesh_ss.png> <./sim_files/pres_xsect1.png (PNG copy)> <./sim_
+files/vel_streamline1.png (PNG copy)> <./sim_files/vel_streamline2.png (PNG cop
+y)>] [13 <./sim_files/vel_xsect4.png (PNG copy)> <./sim_files/vel_xsect3.png (P
+NG copy)>] [14]
+[15] [16]
+<moody_chart.PNG, id=189, 790.75426pt x 545.6385pt>
+File: moody_chart.PNG Graphic file (type png)
+<use moody_chart.PNG>
+Package pdftex.def Info: moody_chart.PNG  used on input line 771.
+(pdftex.def)             Requested size: 434.91618pt x 300.1021pt.
+ [17] [18 <./moody_chart.PNG>]
+<pid.png, id=199, 1331.97626pt x 891.33pt>
+File: pid.png Graphic file (type png)
+<use pid.png>
+Package pdftex.def Info: pid.png  used on input line 826.
+(pdftex.def)             Requested size: 665.9865pt x 374.5322pt.
+ [19 <./pid.png>]
+File: pid.png Graphic file (type png)
+<use pid.png>
+Package pdftex.def Info: pid.png  used on input line 843.
+(pdftex.def)             Requested size: 181.57947pt x 104.23169pt.
+File: pid.png Graphic file (type png)
+<use pid.png>
+Package pdftex.def Info: pid.png  used on input line 853.
+(pdftex.def)             Requested size: 192.24922pt x 118.45802pt.
+ [20]
+File: pid.png Graphic file (type png)
+<use pid.png>
+Package pdftex.def Info: pid.png  used on input line 863.
+(pdftex.def)             Requested size: 168.0645pt x 72.93378pt.
+ [21]
+<ethanol_stand.png, id=219, 356.33125pt x 586.19pt>
+File: ethanol_stand.png Graphic file (type png)
+<use ethanol_stand.png>
+Package pdftex.def Info: ethanol_stand.png  used on input line 889.
+(pdftex.def)             Requested size: 178.16518pt x 293.09428pt.
+<upper_plate.png, id=220, 401.5pt x 481.8pt>
+File: upper_plate.png Graphic file (type png)
+<use upper_plate.png>
+Package pdftex.def Info: upper_plate.png  used on input line 899.
+(pdftex.def)             Requested size: 200.7495pt x 240.8994pt.
+<lower_plate.png, id=221, 401.5pt x 481.8pt>
+File: lower_plate.png Graphic file (type png)
+<use lower_plate.png>
+Package pdftex.def Info: lower_plate.png  used on input line 905.
+(pdftex.def)             Requested size: 200.7495pt x 240.8994pt.
+<master_stand_overall_render_2.png, id=222, 92.5056pt x 126.7134pt>
+File: master_stand_overall_render_2.png Graphic file (type png)
+<use master_stand_overall_render_2.png>
+Package pdftex.def Info: master_stand_overall_render_2.png  used on input line 
+915.
+(pdftex.def)             Requested size: 185.01074pt x 253.42615pt.
+
+Overfull \hbox (75.66837pt too wide) in paragraph at lines 926--939
+ [] 
+ []
+
+[22 <./ethanol_stand.png>]
+Overfull \hbox (56.07457pt too wide) in paragraph at lines 943--956
+ [] 
+ []
+
+[23 <./upper_plate.png> <./lower_plate.png> <./master_stand_overall_render_2.pn
+g>]
+Overfull \hbox (26.70753pt too wide) in paragraph at lines 960--975
+ [] 
+ []
+
+
+Overfull \hbox (112.74223pt too wide) in paragraph at lines 999--1012
+ [] 
+ []
+
+[24] [25] (aphlex1b-dev.aux)
 Package logreq Info: Writing requests to 'aphlex1b-dev.run.xml'.
 \openout1 = `aphlex1b-dev.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 24727 strings out of 492895
- 485596 string characters out of 3123736
- 967102 words of memory out of 3000000
- 28402 multiletter control sequences out of 15000+200000
- 609367 words of font info for 67 fonts, out of 3000000 for 9000
+ 24947 strings out of 492895
+ 490542 string characters out of 3123736
+ 970422 words of memory out of 3000000
+ 28592 multiletter control sequences out of 15000+200000
+ 620529 words of font info for 74 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 41i,16n,61p,2155b,1114s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 41i,16n,61p,2316b,1420s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rm.en
-c}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-rmtt.
-enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mat
-hex.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm
--mathsy.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/l
-m/lm-mathit.enc}<C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
+c}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathi
+t.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/lm-m
+athsy.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/lm/
+lm-rmtt.enc}{C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/l
+m/lm-mathex.enc}<C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/p
 ublic/lm/lmbx10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/typ
-e1/public/lm/lmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts
-/type1/public/lm/lmmi10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/lm/lmmi7.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/lm/lmr10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX
- 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/jaych/AppData/Local/Programs/MiK
-TeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/jaych/AppData/Local/Programs/
-MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/jaych/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/jaych/AppData/Local/Progr
-ams/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Users/jaych/AppData/Local/Pro
-grams/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/jaych/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/jaych/AppData/L
-ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users/jaych/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/jaych/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C:/Users/jayc
-h/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb><C:/Users/j
-aych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb><C:/User
-s/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmtt10.pfb>
-Output written on aphlex1b-dev.pdf (10 pages, 1240785 bytes).
+e1/public/lm/lmbx9.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/lm/lmex10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fo
+nts/type1/public/lm/lmmi10.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/lm/lmmi12.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/lm/lmmi5.pfb><C:/Users/jaych/AppData/Local/Programs/Mi
+KTeX 2.9/fonts/type1/public/lm/lmmi7.pfb><C:/Users/jaych/AppData/Local/Programs
+/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Users/jaych/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/lm/lmr12.pfb><C:/Users/jaych/AppData/Local/Pr
+ograms/MiKTeX 2.9/fonts/type1/public/lm/lmr17.pfb><C:/Users/jaych/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr6.pfb><C:/Users/jaych/AppData/Loc
+al/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Users/jaych/AppData/L
+ocal/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr8.pfb><C:/Users/jaych/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmr9.pfb><C:/Users/jaych/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmri10.pfb><C:/Users/jaych/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Users/jay
+ch/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmss12.pfb><C:/Users
+/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/U
+sers/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy6.pfb><C
+:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy7.pfb
+><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.
+pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/lms
+y9.pfb><C:/Users/jaych/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/lm/
+lmtt10.pfb>
+Output written on aphlex1b-dev.pdf (25 pages, 5514160 bytes).
 PDF statistics:
- 144 PDF objects out of 1000 (max. 8388607)
+ 316 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 43 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 220 words of extra memory for PDF output out of 10000 (max. 10000000)
 
