@@ -460,7 +460,7 @@ $\dot{m}$, Mass flow rate & $0.5552 \; kg/s$ &  $0.1388 \; kg/s$ \\
 $C_{d}$, Discharge coefficient & 0.90 & 0.88 \\
 $n$, Number of orifices & 16 & 8 \\
 $d$, Orifice diameter & $1.43 \; mm$ & $1.02 \; mm$ \\
-$A$, Individual orifice area & $1.61 \times 10^{-6} \; m$ & $3.27 \times 10^{-6} \; m$ \\
+$A$, Individual orifice area & $1.606 \times 10^{-6} \; m^{2}$ & $8.171 \times 10^{-7} \; m^{2}$ \\
 Mass flow rate per orifice & $0.0347 \; kg/s$ & $0.01735 \; kg/s$ \\
 $\lambda$, Angle of impingement & $\ang{60}$ & $\ang{60}$ \\
 $L_{jet}$, Free-stream jet length & $8.57 \; mm$ & $6.10 \; mm$ \\
@@ -591,7 +591,7 @@ Figure \ref{fig:pressure_contour} and its corresponding output files show that t
     \end{minipage}
 \end{figure} 
 
-Figures \ref{fig:velocity_streamline_1} and \ref{fig:velocity_streamline_2} show streamlines (contoured to velocity) of the flow through the injector, with a wireframe of the injector geometry superimposed. Some streamlines were removed in the interest of visibility and to reduce clutter. Figures \ref{fig:velocity_contour_1} and\ref{fig:velocity_contour_2} show two velocity contours, one of the oxidizer orifices and one of the fuel orifices. Note how the velocity is greatly increased for the oxidizer orifices near the oxidizer inlet in Figure \ref{fig:velocity_contour_1}. This is to an advantage in terms of mixing efficiency since it would result in a momentum ratio skewed towards towards the chamber walls, which is where the fuel elements reside, thereby mixing the atomized oxidizer droplets with fuel droplets almost immediately. The velocity traces from fuel impingement can also be seen immediately to the left and right of the oxidizer jets. In Figure \ref{fig:velocity_contour_2}, the velocity contour for a single fuel element is shown. Both figures indicate that an injection velocity of around 15 m/s can be expected.
+Figures \ref{fig:velocity_streamline_1} and \ref{fig:velocity_streamline_2} show streamlines (contoured to velocity) of the flow through the injector, with a wireframe of the injector geometry superimposed. Some streamlines were removed in the interest of visibility and to reduce clutter. Figures \ref{fig:velocity_contour_1} and \ref{fig:velocity_contour_2} show two velocity contours, one of the oxidizer orifices and one of the fuel orifices. Note how the velocity is greatly increased for the oxidizer orifices near the oxidizer inlet in Figure \ref{fig:velocity_contour_1}. This is to an advantage in terms of mixing efficiency since it would result in a momentum ratio skewed towards towards the chamber walls, which is where the fuel elements reside, thereby mixing the atomized oxidizer droplets with fuel droplets almost immediately. The velocity traces from fuel impingement can also be seen immediately to the left and right of the oxidizer jets. In Figure \ref{fig:velocity_contour_2}, the velocity contour for a single fuel element is shown. Both figures indicate that an injection velocity of around 15 m/s can be expected.
 
 \subsection{Material Selection, Manufacturing, Load and Thermal Analysis}
 
@@ -629,7 +629,7 @@ where $\sigma_{c}$ is the stress on the chamber walls. As for thermal loads, the
 \hline
 Name & Value & Unit \\ 
 \hline
-$\Delta p_{inj}$, Pressure drop across injector, relative to $P_{c}$ & 20 & \%  \\
+$\Delta p_{inj}$, Pressure drop across injector, relative to $P_{c}$ & 25 & \%  \\
 $(v_{inj})_{e}$, Injection velocity (expected) & 15 &  $m/s$ \\
 $t_{wall}$, Wall thickness & 2.0 & $mm$ \\
 Injector assembly material & Aluminium 6061 & N/A \\
@@ -675,7 +675,7 @@ With a P\&ID drafted, the next step becomes to determine the physical characteri
 \begin{equation} \label{eq:system_pressure_drop}
 \Delta p_{sys} = \Delta p_{inj} + \Delta p_{val} + \Delta p_{ext}
 \end{equation}
-The previous section has already established that $\Delta p_{inj}$ obtains a value of 20\% $P_{c}$, which evaluates to $\Delta p_{inj} = 300 \; kPa$. The remaining two terms will be elaborated upon further in the following subsections.
+The previous section has already established that $\Delta p_{inj}$ obtains a value of 25\% $P_{c}$, which evaluates to $\Delta p_{inj} = 375 \; kPa$. The remaining two terms will be elaborated upon further in the following subsections.
 
 \subsubsection{Pipe Length and Extraneous Pressure Losses $\Delta p_{ext}$} \footnote{In the following subsection, some explanatory tools, such as derivations and figures, are heavily inspired from the work of \cite{fluid-mechanics}. Any figures extracted from \cite{fluid-mechanics} are strictly for the purpose of visualization, explanation, and education. We make no claims and have no intention in claiming ownership or rights to these graphics.}
 
@@ -697,19 +697,23 @@ where $F$ represents some relationship between the Reynolds Number $Re_{d}$ and 
 
 \begin{table}[!htb]
 \centering
-\begin{tabular}{ |p{4cm}||p{6cm}|p{2cm}|  }
+\begin{tabular}{ |p{5cm}||p{4.5cm}|p{1.75cm}|  }
 \hline
 \multicolumn{3}{|c|}{Piping Design Parameters} \\
 \hline
 Name & Value & Unit \\
 \hline
-Propellant  &  Ethyl alcohol ($95\%$)   &  N/A \\
-$\mu$, Dynamic viscosity  &  0.001232  &  $kg/m \cdot s$ \\
-$\rho$, Density  &  789  &  $kg/m^{3}$ \\
-$L$, Pipe length  &  1.0  &  $m$   \\
+Oxidizer &  Nitrous oxide (at 298 K) & N/A \\
+Fuel  &  Ethyl alcohol ($95\%$)   &  N/A \\
+$\mu_{o}$, Dynamic viscosity (oxidizer) &  0.00147  &  $kg/m \cdot s$ \\
+$\mu_{f}$, Dynamic viscosity (fuel) &  0.001232  &  $kg/m \cdot s$ \\
+$\rho_{o}$, Density (oxidizer) &  772.25  &  $kg/m^{3}$ \\
+$\rho_{f}$, Density (fuel) &  789  &  $kg/m^{3}$ \\
+$L$, Pipe length  &  2.0  &  $m$   \\
 $d$, Pipe diameter  &  6.35  &  $mm$ \\
-$\dot{m}$, Mass flow rate  &  0.694  &  $kg/s$ \\
-Pipe material  &  316 stainless steel or 6061 aluminium  &  N/A  \\
+$\dot{m}_{o}$, Oxidizer mass flow rate  &  0.555  &  $kg/s$ \\
+$\dot{m}_{f}$, Fuel mass flow rate  &  0.139  &  $kg/s$ \\
+Pipe material  &  316 stainless steel &  N/A  \\
 $\epsilon$, Roughness  &  0.5 to 1.5  &  $\mu m$  \\
 \hline
 \end{tabular}
@@ -717,20 +721,20 @@ $\epsilon$, Roughness  &  0.5 to 1.5  &  $\mu m$  \\
 \label{table:piping_parameters}
 \end{table}
 
-Table \ref{table:piping_parameters} shows the piping parameters necessary for following calculations. The pipe length was estimated using a model of the test stand discussed in a later section, but is a very conservative estimate. The pipe diameter is constrained to a value of 6.35 mm (1/4 inch) due to budget constraints on the MPV, which houses a 1/4 inch port. The roughness $\epsilon$ is based on the pipe material and was extracted from engineering databases.
+Table \ref{table:piping_parameters} shows the piping parameters necessary for following calculations. For the purposes of demonstration, the calculation involving ethanol will be done first. The pipe length was estimated using a model of the test stand discussed in a later section, but is a very conservative estimate. The pipe diameter is constrained to a value of 6.35 mm (1/4 inch) due to budget constraints on the MPV, which houses a 1/4 inch port. The roughness $\epsilon$ is based on the pipe material and was extracted from engineering databases.
 
 The behavior of turbulent and laminar flows are significantly different when considering flow characteristics of a viscous flow through a frictional pipe. Thus, it is important to determine which type of flow is expected. Using values from \ref{table:piping_parameters}, we quickly realize our flow is most likely turbulent
-\begin{equation}
-Q = \frac{\dot{m}}{\rho} = \frac{0.694\, kg/s}{789\, kg/m^{3}} = 8.80 \times 10^{-4}\, m^{3}/s
+\begin{equation} \label{eq:pipe_fluid_volumetric_flow_rate}
+Q = \frac{\dot{m}_{f}}{\rho} = \frac{0.139\, kg/s}{789\, kg/m^{3}} = 1.762 \times 10^{-4}\, m^{3}/s
 \end{equation}
 \begin{equation} \label{eq:pipe_fluid_velocity}
-v = \frac{Q}{\pi R^{2}} = \frac{(8.80 \times 10^{-4}\, m^{3}/s)}{\pi [(0.00635\, m) / 2]^{2}} = 27.79\, m/s
+v = \frac{Q}{\pi R^{2}} = \frac{(1.762 \times 10^{-4}\, m^{3}/s)}{\pi [(0.00635\, m) / 2]^{2}} = 5.563\, m/s
 \end{equation}
-\begin{equation}
+\begin{equation} \label{eq:pipe_fluid_kinematic_viscosity}
 \nu = \frac{\mu}{\rho} = \frac{0.001232\, kg/m \cdot s}{789\, kg/m^{3}} = 1.56 \times 10^{-6}\, m^{2}/s
 \end{equation}
 \begin{equation} \label{eq:pipe_fluid_reynolds}
-Re_{d} = \frac{v d}{\nu} = \frac{(27.79\, m/s)(0.00635\, m)}{1.56 \times 10^{-6}\, m^{2}/s} = 113013
+Re_{d} = \frac{v d}{\nu} = \frac{(5.563\, m/s)(0.00635\, m)}{1.56 \times 10^{-6}\, m^{2}/s} = 22644
 \end{equation}
 since $Re_{d} >> 2300$ (a Reynolds Number above 2300 is the accepted threshold). Though many differences are present between turbulent and laminar flow in the context of fluid flow through a pipe, perhaps the most important is that the head loss and pressure drop in turbulent flows are heavily affected by pipe roughness. In fact, there are different sets of equations applied when solving for turbulent flows, depending on the relative roughness of the pipe it is travelling through. These categories are \cite{fluid-mechanics}
 
@@ -780,7 +784,7 @@ To model the transitionally rough range, an general interpolation formula was cr
 \begin{figure}[!htb]
 \centering
 \includegraphics[scale=0.55]{moody_chart.PNG}
-\caption{The Moody Chart \cite{fluid-mechanics}}
+\caption{The Moody Chart \cite{fluid-mechanics}.}
 \label{fig:moody_chart}
 \end{figure}
 
@@ -796,7 +800,7 @@ The head loss and $\Delta p$ values can now be computed using the Moody Chart (F
 \frac{1}{f^{1/2}} \approx -1.8\, log \Big[ \frac{6.9}{Re_{d}} + \left( \frac{\epsilon / d}{3.7} \right)^{1.11} \Big]
 \end{align*}
 \begin{equation*}
-f = \left( -1.8\, log \Bigg[ \frac{6.9}{113013} + \left( \frac{(1.5 \times 10^{-6}\, m)/(6.35 \times 10^{-3}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 1.854 \times 10^{-2}
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{22644} + \left( \frac{(1.5 \times 10^{-6}\, m)/(6.35 \times 10^{-3}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 2.540 \times 10^{-2}
 \end{equation*}
 
 Now using Equation \ref{eq:blasius_2} we can find the head loss $h_{f}$:
@@ -804,14 +808,14 @@ Now using Equation \ref{eq:blasius_2} we can find the head loss $h_{f}$:
 h_{f} = \frac{\Delta p}{\rho g_{0}} = f \frac{L}{d} \frac{V^{2}}{2g_{0}}
 \end{align*}
 \begin{equation*}
-h_{f} = (1.854 \times 10^{-2}) \left( \frac{2.0\, m}{6.35 \times 10^{-3}\, m} \right) \left( \frac{(27.79\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 229.85 \, m
+h_{f} = (2.540 \times 10^{-2}) \left( \frac{2.0\, m}{6.35 \times 10^{-3}\, m} \right) \left( \frac{(5.563\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 12.62 \, m
 \end{equation*}
 The $\Delta p_{ext}$ is therefore simply
 \begin{equation*}
-\Delta p = h_{f} \rho g_{0} = (229.85 \, m)(789 \, kg/m^{3})(9.81 \, m/s^{2}) = 1779058 \, Pa \approx 1.78 \, MPa
+\Delta p = h_{f} \rho g_{0} = (12.62 \, m)(789 \, kg/m^{3})(9.81 \, m/s^{2}) = 97669 \, Pa \approx 97.7 \, kPa
 \end{equation*}
 
-This pressure drop is unacceptable. With a pressure drop purely due to head loss higher than that of chamber pressure, it is unreasonable to continue design. Typically, pressure losses due to pipe length are negligible since the higher flow rates and wider pipe diameters reduce the head loss term and flow velocity significantly. However, as mentioned previously, this design is constrained to a pipe diameter of 6.35 mm (1/4 inch) due to the MPV. Thus, since the only solution to reducing head loss is either widening or reducing the length of the pipe, the best course of action is to increase the system pipe diameter to 1/2 inch (12.7 mm) and to use a reducing adapter to accommodate the MPV. Although the reducer will produce head loss and a pressure drop of its own, it is insignificant compared to the 1.78 MPa pressure drop as expected from a universal 1/4 inch pipe system.
+This pressure drop of around 100 kPa is reasonable, especially for a 1/4 inch pipe. The flow velocity $v$ of 5.563 m/s is moderately fast, but still reasonable. A literature review showed that it is recommended to maintain a fluid velocity of no more than 6 m/s [Zucrow Laboratories] to avoid significant water hammer effects in case of a valve shutoff, as well as to decrease the Reynolds Number. A fluid velocity of $v = 5.563 \, m/s$ just barely satisfies this recommendation, and so care should be taken to not initiate abrupt valve shutoffs if possible. 
 
 \begin{figure}[!htb]
 \centering
@@ -820,49 +824,193 @@ This pressure drop is unacceptable. With a pressure drop purely due to head loss
 \label{fig:pipe_pressure_graphs}
 \end{figure}
 
-Figure \ref{fig:pipe_pressure_graphs} shows the effect of varying pipe diameters and pipe roughness on the expected pressure drop from head loss. It is apparent that by the exponential nature of the relationship between diameter and $\Delta p$ that the best method of reducing $\Delta p$ is by widening the diameter; a two-fold increase in diameter yields around a four-fold decrease in pressure drop. Although previously it was discussed that pipe roughness has a larger impact on the $\Delta p$ of turbulent flow than laminar flow, it is clear from Figure \ref{fig:pipe_pressure_graphs} that this effect is still relatively small.
+Figure \ref{fig:pipe_pressure_graphs} shows the effect of varying pipe diameters and pipe roughness on the expected pressure drop from head loss. The source code can be found at \url{https://github.com/ProjectCaelus/propulsion/blob/master/fluid-flow-calculations/pipePressureLossCalc.m}. It is apparent that by the exponential nature of the relationship between diameter and $\Delta p$ that the best method of reducing $\Delta p$ is by widening the diameter; a two-fold increase in diameter yields around a four-fold decrease in pressure drop. Although previously it was discussed that pipe roughness has a larger impact on the $\Delta p$ of turbulent flow than laminar flow, it is clear from Figure \ref{fig:pipe_pressure_graphs} that this effect is still relatively small.
 
-Using a pipe diameter $d$ of 12.7 mm, Equations \ref{eq:moody_explicit} and \ref{eq:blasius_2}, and updating the fluid velocity and Reynolds Number from Equations \ref{eq:pipe_fluid_velocity} and \ref{eq:pipe_fluid_reynolds}, $\Delta p_{ext}$ is recalculated:
+This process can be repeated for the nitrous tower. Using a mass flow rate $\dot{m}_{o}$ of 0.555 kg/s, dynamic viscosity $\mu_{o}$ of $0.00147 \, kg/m \cdot s$, Equations \ref{eq:moody_explicit} and \ref{eq:blasius_2}, and updating the fluid velocity, kinematic viscosity, and Reynolds Number from Equations \ref{eq:pipe_fluid_volumetric_flow_rate}, \ref{eq:pipe_fluid_velocity}, \ref{eq:pipe_fluid_kinematic_viscosity}, and \ref{eq:pipe_fluid_reynolds}, $\Delta p_{ext}$ is recalculated:
 
 \begin{equation*}
-v = \frac{Q}{\pi R^{2}} = \frac{(8.80 \times 10^{-4}\, m^{3}/s)}{\pi [(0.0127\, m) / 2]^{2}} = 6.947\, m/s
+Q = \frac{\dot{m}_{o}}{\rho} = \frac{0.555\, kg/s}{772.25\, kg/m^{3}} = 7.187 \times 10^{-4}\, m^{3}/s
 \end{equation*}
 \begin{equation*}
-Re_{d} = \frac{v d}{\nu} = \frac{(6.947\, m/s)(0.0127\, m)}{1.56 \times 10^{-6}\, m^{2}/s} = 56554
+v = \frac{Q}{\pi R^{2}} = \frac{(7.187 \times 10^{-4}\, m^{3}/s)}{\pi [(0.00635\, m) / 2]^{2}} = 22.69\, m/s
 \end{equation*}
 \begin{equation*}
-f = \left( -1.8\, log \Bigg[ \frac{6.9}{56554} + \left( \frac{(1.5 \times 10^{-6}\, m)/(1.27 \times 10^{-2}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 2.052 \times 10^{-2}
+\nu = \frac{\mu}{\rho} = \frac{0.00147\, kg/m \cdot s}{772.25\, kg/m^{3}} = 1.904 \times 10^{-6}\, m^{2}/s
 \end{equation*}
 \begin{equation*}
-h_{f} = (2.052 \times 10^{-2}) \left( \frac{2.0\, m}{1.27 \times 10^{-2}\, m} \right) \left( \frac{(6.947\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 7.949 \, m
+Re_{d} = \frac{v d}{\nu} = \frac{(22.69\, m/s)(0.00635\, m)}{1.904 \times 10^{-6}\, m^{2}/s} = 75673
 \end{equation*}
 \begin{equation*}
-\Delta p = h_{f} \rho g_{0} = (7.949 \, m)(789 \, kg/m^{3})(9.81 \, m/s^{2}) = 61524 \, Pa \approx 61.52 \, kPa
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{75673} + \left( \frac{(1.5 \times 10^{-6}\, m)/(6.35 \times 10^{-3}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 1.982 \times 10^{-2}
+\end{equation*}
+\begin{equation*}
+h_{f} = (1.982 \times 10^{-2}) \left( \frac{2.0\, m}{6.35 \times 10^{-3}\, m} \right) \left( \frac{(22.69\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 163.8 \, m
+\end{equation*}
+\begin{equation*}
+\Delta p = h_{f} \rho g_{0} = (163.8 \, m)(772.25 \, kg/m^{3})(9.81 \, m/s^{2}) = 1240957 \, Pa \approx 1.24 \, MPa
 \end{equation*}
 
-Thus, $\Delta p_{ext} = 61.52 \, kPa$ for a 1/2 inch pipe system, which is more than one order of magnitude lesser than that of a 1/4 inch pipe system.
+This pressure drop is unacceptable. With a pressure drop purely due to head loss almost as high as the chamber pressure, it is unreasonable to continue design with 1/4 inch piping. Typically, pressure losses due to pipe length are negligible since the higher flow rates and wider pipe diameters reduce the head loss term and flow velocity significantly. However, as mentioned previously, this design is constrained to a pipe diameter of 6.35 mm (1/4 inch) due to the MPV. Thus, since the only solution to reducing head loss is either widening or reducing the length of the pipe, the best course of action is to increase the system pipe diameter to 1/2 inch (12.7 mm) and to use a reducing adapter to accommodate the MPV. Although the reducer will produce head loss and a pressure drop of its own, it is insignificant compared to the 1.24 MPa pressure drop as expected from a universal 1/4 inch pipe system. It was decided to implement a 1/2 inch system for the ethanol tower as well in the interest of consistency.
 
-[TABLE OF SUMMARIZED STUFF]
+Using a pipe diameter $d$ of 12.7 mm for both propellants, $\Delta p_{ext}$ is recalculated. First, for ethanol:
+
+\begin{equation*}
+v = \frac{Q}{\pi R^{2}} = \frac{(1.762 \times 10^{-4}\, m^{3}/s)}{\pi [(0.0127\, m) / 2]^{2}} = 1.391\, m/s
+\end{equation*}
+\begin{equation*}
+Re_{d} = \frac{v d}{\nu} = \frac{(1.391\, m/s)(0.0127\, m)}{1.56 \times 10^{-6}\, m^{2}/s} = 11324
+\end{equation*}
+\begin{equation*}
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{11324} + \left( \frac{(1.5 \times 10^{-6}\, m)/(1.27 \times 10^{-2}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 3.000 \times 10^{-2}
+\end{equation*}
+\begin{equation*}
+h_{f} = (3.000 \times 10^{-2}) \left( \frac{2.0\, m}{1.27 \times 10^{-2}\, m} \right) \left( \frac{(1.391\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 0.466 \, m
+\end{equation*}
+\begin{equation*}
+\Delta p = h_{f} \rho g_{0} = (0.466 \, m)(789 \, kg/m^{3})(9.81 \, m/s^{2}) = 3606.2 \, Pa \approx 3.61 \, kPa
+\end{equation*}
+
+Thus, $\Delta p_{ext} = 3.61 \, kPa$ for a 1/2 inch pipe system (ethanol tower), which is more than one order of magnitude less than that of a 1/4 inch pipe system. A fluid velocity $v = 1.391 \, m/s$ is also comfortable given the $v < 6 \, m/s$ guideline as mentioned before. For nitrous:
+
+\begin{equation*}
+v = \frac{Q}{\pi R^{2}} = \frac{(7.187 \times 10^{-4}\, m^{3}/s)}{\pi [(0.0127\, m) / 2]^{2}} = 5.673\, m/s
+\end{equation*}
+\begin{equation*}
+Re_{d} = \frac{v d}{\nu} = \frac{(5.673\, m/s)(0.0127\, m)}{1.904 \times 10^{-6}\, m^{2}/s} = 37840
+\end{equation*}
+\begin{equation*}
+f = \left( -1.8\, log \Bigg[ \frac{6.9}{37840} + \left( \frac{(1.5 \times 10^{-6}\, m)/(1.27 \times 10^{-2}\, m)}{3.7} \right) ^{1.11} \Bigg] \right)^{-2} = 2.236 \times 10^{-2}
+\end{equation*}
+\begin{equation*}
+h_{f} = (2.236 \times 10^{-2}) \left( \frac{2.0\, m}{1.27 \times 10^{-2}\, m} \right) \left( \frac{(5.673\, m/s)^{2}}{2 (9.81\, m/s)} \right) = 5.776 \, m
+\end{equation*}
+\begin{equation*}
+\Delta p = h_{f} \rho g_{0} = (5.776 \, m)(772.25 \, kg/m^{3})(9.81 \, m/s^{2}) = 43758 \, Pa \approx 43.8 \, kPa
+\end{equation*}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{6cm}||p{3cm}|p{3cm}| }
+\hline
+\multicolumn{3}{|c|}{Piping System Calculated Parameters ($\Delta p_{ext}$)} \\
+\hline
+Name & Oxidizer $(N_{2}O)$ & Fuel $(C_{2}H_{5}OH)$ \\ 
+\hline
+$Q$, Volumetric flow rate & $7.187 \times 10^{-4} \; m^{3}/s$ & $1.762 \times 10^{-4} \; m^{3}/s$ \\
+$v$, Flow velocity & $5.673 \; m/s$ & $1.391 \; m/s$ \\
+$\nu$, Kinematic viscosity & $1.90 \times 10^{-6} \; m^{2}/s$ & $1.56 \times 10^{-6} \; m^{2}/s$ \\
+$Re_{d}$, Reynolds Number & 37840 & 11324 \\
+$f$, Darcy friction factor & $2.236 \times 10^{-2}$ & $3.000 \times 10^{-2}$ \\
+$h_{f}$, Head loss & $5.776 \; m$ & $0.466 \; m$ \\
+$\Delta p_{ext}$, Pressure drop & $43.8 \; kPa$ & $3.61 \; kPa$ \\
+\hline
+$d$, Pipe diameter & \multicolumn{2}{|c|}{$12.7 \; mm$}  \\
+\hline
+$L$, Pipe length & \multicolumn{2}{|c|}{$2 \; m$}  \\
+\hline
+\end{tabular}
+\caption{Summary of calculated piping system parameters.}
+\label{table:piping_system_calculated_parameters}
+\end{table}
+
+\subsubsection{Valve $C_{v}$ Pressure Drop ($\Delta p_{val}$)}
+
+\hspace{\parindent} The second term in determining system pressure drop arises from losses due to geometric obstructions to the propellant flow path. This may include any object, such as valves, pipe elbows, adapters, or other obstructions. To describe the relationship between pressure drop and volumetric flow rate for any object in the flow path, a valve flow coefficient, or $C_{v}$ is used. $C_{v}$ is an experimentally-determined coefficient and is defined as
+\begin{equation} \label{eq:cv}
+C_{v} = Q \sqrt{\frac{S_{G}}{\Delta p}}
+\end{equation}
+where $S_{G}$ is the specific gravity of the fluid, defined as the ratio of its density to the density of water ($\rho_{x}/\rho_{H2O}$). The $C_{v}$ equation is typically used with imperial units (gal/min and psi), and this convention will be followed here. Revisiting the P\&ID (Figure \ref{fig:pid_1}) reveals that the only significant obstruction in flow for both propellant towers is the MPV. The specific MPV model (18070NOS from Holley/NOS) was chosen due to its low price and compatibility with nitrous oxide. As mentioned previously, it has a 1/4 inch diameter and will require two reducing adapters for compatibility with the main 1/2 inch propellant lines. Since the MPV is a solenoid, a relatively low $C_{v}$ value (and therefore, higher pressure drop) is expected. With the assistance of MASA's previous cold flow tests, a $C_{v}$ value of 0.7 is expected for the MPV. Thus, the $\Delta p$ for both propellants can be calculated. Rearranging Equation \ref{eq:cv} to solve for $\Delta p$ gives
+\begin{equation}
+\Delta p = \frac{S_{G} Q^{2}}{(C_{v})^{2}}
+\end{equation}
+Calculating for both propellants:
+\begin{equation*}
+\Delta p_{o} = \frac{S_{G} Q^{2}}{(C_{v})^{2}} = \frac{(0.772)(11.392 \; gal/min)^{2}}{(0.7)^{2}} = 204.47 \; psi (\approx 1.410 \; MPa)
+\end{equation*}
+\begin{equation*}
+\Delta p_{f} = \frac{S_{G} Q^{2}}{(C_{v})^{2}} = \frac{(0.789)(2.793 \; gal/min)^{2}}{(0.7)^{2}} = 12.56 psi (\approx 86.60 \; kPa)
+\end{equation*}
+
+Though the expected $\Delta p$ for the nitrous MPV is painfully high, it is unavoidable. An arbitrarily chosen additional 50 kPa pressure drop was added to both $\Delta p$ estimates to accommodate for additional losses due to pipe bends and adapters. Thus, the final $\Delta p_{val}$ for each propellant are:
+\begin{align*}
+(\Delta p_{val})_{o} = 1.460 \; MPa
+\end{align*}
+\begin{align*}
+(\Delta p_{val})_{f} = 130.60 \; kPa
+\end{align*}
+
+\subsubsection{System Pressure Drop ($\Delta p_{sys}$)}
+
+\hspace{\parindent} Finally, using Equation \ref{eq:system_pressure_drop}, the system pressure drops for both propellants can be determined:
+
+\begin{equation} \label{eq:system_pressure_drop_solved_o}
+(\Delta p_{sys})_{o} = \Delta p_{inj} + \Delta p_{val} + \Delta p_{ext} = 375 \; kPa + 1.460 \; MPa + 43.8 \; kPa = 1.879 \; MPa
+\end{equation}
+\begin{equation} \label{eq:system_pressure_drop_solved_f}
+(\Delta p_{sys})_{f} = \Delta p_{inj} + \Delta p_{val} + \Delta p_{ext} = 375 \; kPa + 130.60 \; kPa + 3.61 \; kPa = 509.2 \; kPa
+\end{equation}
 
 \subsection{Tank Sizing}
 
-\hspace{\parindent} Another design point for pressure-fed systems involves ullage fractions. The ullage in a propellant tank is simply the percentage of tank volume that is not occupied by the propellant itself, i.e. the space that the pressurant occupies. Though complex models may be developed to more accurately model the expansion of the pressurant as the tank drains, it is commonly excepted that either the ideal gas law ($P_{1}V_{1} = P_{2}V_{2}$) or an isentropic expansion model is adequate. It is apparent that due to the ideal gas law, a larger ullage is desirable since it would cause a more stable chamber pressure throughout engine operation to be observed. A literature review was conducted and showed that common practice involved a ullage fraction of around 2/3 (via Copenhagen Suborbitals and MASA). As for the nitrous tank, the process for determining a ullage fraction is nontrivial. Since the vaporization rate, along with many other dynamical aspects of nitrous behavior, is nonlinear and difficult to determine, either sufficiently complex models or reference data is required. A review of many cold-flow and hot-fire tests (especially those from participants in the Intercollegiate Rocket Engineering Competition, or IREC) was conducted, particularly examining the plots of pressure profiles for nitrous oxide. It was found, along with advisories from MASA, that the nitrous ullage should be around 5\%. This will be elaborated upon in a later section, but in essence, a reasonable ullage is still required for nitrous (although it is self-pressurizing) due to its vaporization rate. It takes a moderate amount of time for the nitrous to begin boiling and repressurizing once the engine begins to run, and during this time, the propellant tank is only being pressurized by the ullage space. If the ullage percentage is low, a slight expansion in the ullage volume would represent a disproportionately large relative increase in volume as compared to its increase if it were to occur mid-burn. Thus, this dramatic relative increase in volume causes a massive pressure drop in the opening seconds of an engine run if the initial ullage fraction is not sufficiently high.
+\hspace{\parindent} With the system pressure drop determined, the next step in the design of the plumbing system is to determine the initial tank pressure and tank volume. To find the tank volume requirement, the tank \textit{ullage} must be first determined. The ullage in a propellant tank is simply the percentage of tank volume that is not occupied by the propellant itself, i.e. the space that the pressurant occupies. Though complex models may be developed to more accurately model the expansion of the pressurant as the tank drains, it is commonly excepted that either the ideal gas law ($P_{1}V_{1} = P_{2}V_{2}$) or an isentropic expansion model is adequate. It is apparent that due to the ideal gas law, a larger ullage is desirable since it would cause a more stable chamber pressure throughout engine operation to be observed. A literature review was conducted and showed that common practice involved a ullage fraction of around 2/3 (via Copenhagen Suborbitals and MASA). As for the nitrous tank, the process for determining a ullage fraction is nontrivial. Since the vaporization rate, along with many other dynamical aspects of nitrous behavior, is nonlinear and difficult to determine, either sufficiently complex models or reference data is required. A review of many cold-flow and hot-fire tests (especially those from participants in the Intercollegiate Rocket Engineering Competition, or IREC) was conducted, particularly examining the plots of pressure profiles for nitrous oxide. It was found, along with advisories from MASA, that the nitrous ullage should be around 5\%. This will be elaborated upon in a later section, but in essence, a reasonable ullage is still required for nitrous (although it is self-pressurizing) due to its vaporization rate. It takes a moderate amount of time for the nitrous to begin boiling and repressurizing once the engine begins to run, and during this time, the propellant tank is only being pressurized by the ullage space. If the ullage percentage is low, a slight expansion in the ullage volume would represent a disproportionately large relative increase in volume as compared to its increase if it were to occur mid-burn. Thus, this dramatic relative increase in volume causes a massive pressure drop in the opening seconds of an engine run if the initial ullage fraction is not sufficiently high.
 
 The relation for isentropic expansion is
 \begin{equation} \label{eq:isentropic_expansion}
 \frac{p_{2}}{p_{1}} = \left( \frac{V_{1}}{V_{2}} \right) ^{\gamma}
 \end{equation}
-where a subscript of 1 represents initial conditions and subscript of 2 represents final conditions. Since a burn time $t_{b}$ was established in \ref{table:gas_parameters} to be around 5 seconds, a constant density $\rho$ of 789 $kg/m^{3}$ and mass flow rate $dot{m}_{f}$ of 0.139 $kg/s$ can be used to find that the initial volume occupied by ethanol is $[(0.139 \; kg/s)(5 \; sec)/(789 \; kg/m^{3})](1000 \; m^{3}/L) = 0.881 \; L$. The same procedure can be followed for nitrous and is found to be $3.59 \; L$. Using the premeditated ullage fraction of 2/3, it is apparent that the initial ullage volume for ethanol should be $V_{1} = (0.881 \; L)(3)(2/3) = 1.76 \; L$ and thus the total tank volume is $V_{total} = 0.881 \; L + 1.76 \; L = 2.64 \; L$. Then, using Equation \ref{eq:isentropic_expansion} and a $\gamma$ value for $N_{2}$ gas of 1.40,  an initial ethanol propellant tank pressure can be calculated:
+where a subscript of 1 represents initial conditions and subscript of 2 represents final conditions. Since a burn time $t_{b}$ was established in \ref{table:gas_parameters} to be around 5 seconds, a constant density $\rho$ of 789 $kg/m^{3}$ and mass flow rate $dot{m}_{f}$ of 0.139 $kg/s$ can be used to find that the initial volume occupied by ethanol is $[(0.139 \; kg/s)(5 \; sec)/(789 \; kg/m^{3})](1000 \; m^{3}/L) = 0.881 \; L$. The same procedure can be followed for nitrous and is found to be $3.59 \; L$. Using the established ullage fraction of 2/3, it is apparent that the initial ullage volume for ethanol should be $V_{1} = (0.881 \; L)(3)(2/3) = 1.762 \; L$ and thus the total tank volume is $V_{total} = V_{2} = 0.881 \; L + 1.762 \; L = 2.643 \; L$. Then, using Equation \ref{eq:isentropic_expansion} and a $\gamma$ value for $N_{2}$ gas of 1.40,  an initial ethanol propellant tank pressure can be calculated, assuming the final ethanol tank pressure $p_{2}$ to be simply the chamber pressure $P_{c}$ plus the system pressure drop $\Delta p_{sys}$:
 \begin{equation*}
-p_{1} = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right] = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right]
+(p_{1})_{f} = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right] = \left[ \frac{1.5 \; MPa + 509.2 \; kPa}{(1.76 \; L/2.643 \; L)^{1.40}} \right] = 3544467 \; Pa = 3.550 \; MPa \approx 515 \; psi
 \end{equation*}
+\hspace{\parindent} For nitrous, having a ullage of 5\% and an initial liquid volume of $3.59 \; L$, the ullage volume is $V_{1} = [(0.05)(3.59 \; L)]/(1-0.05) = 0.1889 \; L$. The total tank volume is $V_{total} = V_{2} = 3.59 \; L + 0.1889 \; L = 3.779 \; L$. The initial volume is once again the chamber pressure plus the system pressure drop $p_{2} = P_{c} + \Delta p_{sys} = 1.5 \; MPa + 1.879 \; MPa = 3.379 \; MPa \approx 490 \; psi$. However, the initial oxidizer tank pressure is not determined by Equation \ref{eq:isentropic_expansion} since it is driven by the self-pressurization properties of nitrous oxide. Review of the behavior of nitrous oxide from a literature review (including \cite{nitrous-paper}) concluded that the stable nitrous vapor pressure at 298 K is around 750 psi. This is a reasonable fit for the system since, as mentioned previously, the required final pressure is around 490 psi.
 
-ADD TABLE OF SUMMARIZED PARAMS
-Engine cycle (pressure fed)
-Goals: measuring pressure and Cv values
-Divide into two sections
-a fluid flow velocity of less than 6 m/s to avoid water hammer effects [Zucrow Laboratories]
+\begin{figure}[!htb]
+\centering
+\includegraphics[scale=0.55, width=0.95\textwidth]{masa_pressure_profile.png}
+\caption{Empirical pressure profile of multiple components from a static engine test of MASA's Laika launch vehicle. Note the yellow line which begins at around 750 psi at 0 seconds, which represents the pressure readings from the oxidizer (nitrous) tank.}
+\label{fig:masa_pressure_profile}
+\end{figure}
 
+It can be seen from Figure \ref{fig:masa_pressure_profile} that the nitrous tank dropped from 750 psi to around 490 psi in around 3 seconds, albeit for completely different flow parameters. The steep drop in nitrous tank pressure, as mentioned before, can also be observed in the first few milliseconds in Figure \ref{fig:masa_pressure_profile}.
+
+However, with these broad ullage estimates and highly custom tank sizes, the previous tank calculations fail to account for manufacturing concerns and budget constraints. Fabricating custom tanks is not only out of the manufacturing scope of Project Caelus, but is also more expensive and more dangerous than if a commercial off-the-shelf (COTS) model was used instead. A scuba tank, the Metal Impact Aluminium 80 Cylinder from Dive Gear Express, was purchased due to its high safety factor (SF) pressure rating for 3000 psi, prerequisite hydrostatic safety tests, and compatibility with nitrous oxide. The actual volume of the cylinder is around 11.564 L. Using this cylinder for both propellants, the final volume $p_{2}$ becomes 11.564 L and the ullage volume $p_{1}$ is simply $p_{2}$ subtracted by the liquid volume. Using Equation \ref{eq:isentropic_expansion} once again for ethanol gives
+\begin{equation*}
+(p_{1})_{f} = \left[ \frac{p_{2}}{(V_{1}/V_{2})^{\gamma}} \right] = \left[ \frac{1.5 \; MPa + 509.2 \; kPa}{[(11.564 \; L - 0.881 \; L)/11.564 \; L]^{1.40}} \right] = 2244936 \; Pa = 2.245 \; MPa \approx 326 \; psi
+\end{equation*}
+The ullage volume for ethanol is simply $11.564 \; L - 0.881 \; L = 10.683 \; L$, and the ullage percentage for ethanol is therefore $(11.564 \; L - 0.881 \; L)/(11.564 \; L) =  92.4 \%$.
+
+For nitrous, although the inital and final pressures remain the same, the ullage volume is $V_{1} = 11.564 \; L - 3.59 \; L = 7.974 \; L$ and the ullage percentage is $7.974 \; L/11.564 \; L = 69.0 \%$.
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{6cm}||p{3.25cm}|p{3.25cm}| }
+\hline
+\multicolumn{3}{|c|}{Piping System Main Parameters} \\
+\hline
+Name & Oxidizer $(N_{2}O)$ & Fuel $(C_{2}H_{5}OH)$ \\ 
+\hline
+Engine cycle & \multicolumn{2}{|c|}{Pressure blowdown}  \\
+\hline
+Pressurant gas species & Nitrous oxide & Nitrogen ($N_{2}$) \\
+$V_{2}$, Final (total) tank volume & $11.564 \; L $ & $11.564 \; L$ \\
+$V_{1}$, Initial (ullage) tank volume & $7.974 \; L $ & $10.683 \; L$ \\
+$V_{prop}$, Initial liquid propellant volume & $3.59 \; L$ & $0.881 \; L$ \\ 
+Ullage percentage & 69.0\% & 92.4\% \\
+$p_{2}$, Final tank pressure & $3.379 \; MPa \; (490 \; psi)$ & $2.009 \; MPa \; (291 \; psi)$ \\
+$p_{1}$, Initial tank pressure & $5.171 \; MPa \; (750 \; psi)$ & $2.245 \; MPa \; (326 \; psi)$ \\
+$\Delta p_{sys}$, System pressure drop & $1.879 \; MPa$ & $509.2 \; kPa$ \\
+$\Delta p_{inj}$, Injector pressure drop & $375 \; kPa$ & $375 \; kPa$ \\
+$\Delta p_{val}$, Valve pressure drop & $1.460 \; MPa$ & $130.6 \; kPa$ \\
+$\Delta p_{ext}$, Head/extraneous pressure drop & $43.8 \; kPa$ & $3.61 \; kPa$ \\
+\hline
+$d$, Pipe diameter & \multicolumn{2}{|c|}{$12.7 \; mm$}  \\
+\hline
+\end{tabular}
+\caption{Summary of final piping system parameters.}
+\label{table:piping_system_final_parameters}
+\end{table}
+
+\subsection{Plumbing System Procedural Design}
 The plumbing system was designed with key considerations in mind which would make the system as versatile and safe as possible in the event of errors or hardware problems. The most important of these was that all pressurization and post-pressurization actions must be done remotely. Furthermore, the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure \ref{fig:piping_and_instrumentation_diagram} displays the full piping and instrumentation diagram for the Aphlex 1B cold flow test. The following subsections will go into detail on the different aspects of the plumbing system. It is important to note that the ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware.
 
 \begin{figure}[!htb]
@@ -1046,7 +1194,7 @@ To accomplish these goals, the plumbing detailed in section 4.1 must be fully co
  \hline
  Regulator & ??? & Pressure Regulation & ??? & ??? & N/A\\
  \hline
- Tubing & 1200 psi & N/A & McMaster & 6ft unit, 0.01" thick & N/A\\
+ Tubing & 1200 psi & N/A & McMaster & 6', 0.01" thick & N/A\\
  \hline
  Stainless Steel & 42000 psi & Injector Material & ??? & ??? & N/A\\ [0.5ex]
  \hline
