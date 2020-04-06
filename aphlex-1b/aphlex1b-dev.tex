@@ -33,7 +33,7 @@
 %   read geometry.pdf for detailed page layout information
 
 \usepackage{graphicx} % support the \includegraphics command and options
-\graphicspath{ {./sim_files/}{./cad_files/} }
+\graphicspath{ {./sim_files/}{./cad_files/}{./system_sim_files} }
 
 % \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
@@ -677,7 +677,7 @@ With a P\&ID drafted, the next step becomes to determine the physical characteri
 \end{equation}
 The previous section has already established that $\Delta p_{inj}$ obtains a value of 25\% $P_{c}$, which evaluates to $\Delta p_{inj} = 375 \; kPa$. The remaining two terms will be elaborated upon further in the following subsections.
 
-\subsubsection{Pipe Length and Extraneous Pressure Losses $\Delta p_{ext}$} \footnote{In the following subsection, some explanatory tools, such as derivations and figures, are heavily inspired from the work of \cite{fluid-mechanics}. Any figures extracted from \cite{fluid-mechanics} are strictly for the purpose of visualization, explanation, and education. We make no claims and have no intention in claiming ownership or rights to these graphics.}
+\subsubsection[]{Pipe Length and Extraneous Pressure Losses $\Delta p_{ext}$ \protect\footnotemark} \footnotetext{In the following subsection, some explanatory tools, such as derivations and figures, are heavily inspired from the work of \cite{fluid-mechanics}. Any figures extracted from \cite{fluid-mechanics} are strictly for the purpose of visualization, explanation, and education. We make no claims and have no intention in claiming ownership or rights to these graphics.}
 
 \hspace{\parindent} Modelling compressible viscous flow through a pipe is a nontrivial task. To avoid lengthy theoretical calculations that would otherwise be overshadowed by empirical data anyway, assumptions were made about the fluid flow to simplify the pipe sizing and pressure loss calculations. The two most important of these assumptions are that 1) there are no swirl, entrance, or heat-transfer effects, and 2) the pipe is completely circular. A short derivation for the necessary equations for calculating $\Delta p_{ext}$ starts simply with the classic case of Bernoulli's Equation:
 \begin{equation} \label{eq:bernoulli}
@@ -1006,62 +1006,81 @@ $\Delta p_{ext}$, Head/extraneous pressure drop & $43.8 \; kPa$ & $3.61 \; kPa$ 
 $d$, Pipe diameter & \multicolumn{2}{|c|}{$12.7 \; mm$}  \\
 \hline
 \end{tabular}
-\caption{Summary of final piping system parameters.}
+\caption[]{Summary of main piping system parameters.\protect\footnotemark}
 \label{table:piping_system_final_parameters}
+\end{table}
+\footnotetext{These parameters are not final and are slightly adjusted later during system validation (see Section \ref{sec: system_validation}).}
+
+\begin{table}[!htb]
+\centering
+\begin{tabular}{ |p{5.5cm}||p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}| }
+\hline
+\multicolumn{6}{|c|}{Expected Pressures at Varying System Locations} \\
+\hline
+Time & \multicolumn{2}{|c|}{Initial State} & \multicolumn{2}{|c|}{Final State} & Unit \\ 
+\hline
+Location & Oxidizer & Fuel & Oxidizer & Fuel & ----- \\
+\hline
+$p_{tank}$, Propellant tank & 5.171 & 3.379 & 2.245 & 2.009 & MPa \\
+$(p_{MPV})_{1}$, Pre-MPV & & & & & \\
+$(p_{MPV})_{2}$, Post-MPV & & & & & \\
+$(p_{inj})_{1}$, Pre-injector (pre-manifold) & & & & & \\
+$p_{man}$, Injector manifold & & & & & \\
+$(p_{inj})_{2}$, Post-injector (plate) & & & & & \\
+\hline
+\end{tabular}
+\caption{Expected pressures at varying locations throughout the plumbing system. Assumptions: 1) The $\Delta p$ through just the injector manifold is around 20\% of $\Delta p_{inj}$ (pressure drop across the entire injector), see Figure \ref{fig:pressure_contour}. 2) The pipe length, and therefore $\Delta p_{ext}$, is divided evenly before and after the MPV.}
+\label{table:piping_system_expected_pressures}
 \end{table}
 
 \subsection{Plumbing System Procedural Design}
-The plumbing system was designed with key considerations in mind which would make the system as versatile and safe as possible in the event of errors or hardware problems. The most important of these was that all pressurization and post-pressurization actions must be done remotely. Furthermore, the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure \ref{fig:piping_and_instrumentation_diagram} displays the full piping and instrumentation diagram for the Aphlex 1B cold flow test. The following subsections will go into detail on the different aspects of the plumbing system. It is important to note that the ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware.
+\hspace{\parindent} Finally, with the plumbing system fully parameterized, the last step is determining the procedures in operating the system, more specific design subtleties in the P\&ID, and safety precautions. There were several overarching design considerations, but perhaps the most important outlined that all pressurization and post-pressurization actions must be done remotely. This is so that no ground operators would need to approach a pressurized system, which would almost certainly be a safety hazard. Practically, this means that a ground electronics system would be required to operate during engine tests. Another consideration was that the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure \ref{fig:pid_1} displays the full P\&ID, and it is displayed again below for the convenience of the reader. The following subsections will go into detail on different aspects of the plumbing system. It is important to note that the ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware.
 
 \begin{figure}[!htb]
     \centering
-    \includegraphics[scale=0.5, width=0.4\textwidth, trim={0cm 0cm 0cm 5cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
+    \includegraphics[scale=0.5, width=0.95\textwidth, trim={0.5cm 0cm 0.5cm 3.9cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
     \caption{Full system piping and instrumentation diagram (P\&ID).}
-    \label{fig:pid_2}
 \end{figure}
 
-\subsection{Ethanol Propellant Tower Plumbing}
-
 \subsubsection{Ethanol Fill System}
-\hspace{\parindent} Gravity fill was chosen for ethanol as it avoids the use of expensive or complicated pumps, making it a simple and cost-effective solution. First, ethanol will be poured manually into the tank since it is safe and not toxic, cryogenic, or at a high pressure where it might pose danger to someone manually handling it. During this time both MBV-1 and NCSV-1 will be open. Once this is complete, MBV-1 and NCSV-1 will be closed and the nitrogen K-bottle will be attached at this port to the rest of the piping system. This system is displayed in Figure \ref{fig:ethanol_fill_and_pressurization_system}.
+\hspace{\parindent} A gravity fill, a method in which all work is done by gravity (not pressure) to transfer the propellant from the fill tank to the flight tank, was chosen for ethanol as it avoids the use of expensive pumps or additional pressurization equipment. First, ethanol will be poured manually into the propellant tank since it is nontoxic and non-cryogenic. During this time, both MBV-1 and NCSV-1 will be open to allow to ethanol to begin to fill the flight tank. Once this is complete, MBV-1 and NCSV-1 will be closed and the nitrogen K-bottle (pressurant storage tank) will be attached at this port to the rest of the piping system. This is done to minimize the number of possible failure points while ground team members are still in the vicinity of the system. This section of the system is displayed in Figure \ref{fig:ethanol_fill_and_pressurization_system}.
 
 \subsubsection{Ethanol Nitrogen Blowdown Pressurization System}
-\hspace{\parindent} Pressure blowdown was chosen as the method of pressurization due to its simplicity along with a few other benefits. For example, in a rocket launch the utilization of pressure blowdown would allow the pressurant tank to remain on the ground (disconnection via quick disconnects and pneumatic actuators), which would significantly lower the GLOW of the rocket. Additionally, the large ullage percentage of the propellant run tank and short engine burn time would decrease the potential benefits of a pressure-regulated system. The nitrogen for the pressure blowdown will be a K-bottle with 2,000 PSI nitrogen.
+\hspace{\parindent} Pressure blowdown, as mentioned previously, was chosen as the method of pressurization due to its simplicity, along with a few other benefits that will be discussed here. One such benefit is that during launch, the utilization of pressure blowdown would negate the need for a completely seperate pressurant tank (the pressurant tank technically remains on the ground, which detaches from the vehicle via quick disconnects and pneumatic actuators) and therefore significantly lower the dry mass of the rocket. Additionally, the large ullage percentage of the propellant run tank and short engine burn time dismisses the potential benefits of a pressure-regulated system, as a steady chamber pressure and thrust is not of concern. The nitrogen gas used for the pressure blowdown will initially be stored in a K-bottle at around 2,000 psi.
 
-To describe procedures, NCSV-1 will be remote-operated for control of pressurant flow, while MBV-1 is the isolation valve to ensure that pressurant is not unintentionally released when engineers are near the test stand. PT-1 and PG-1 will provide data on the pressurant tank pressure. Once ethanol has been filled, the nitrogen K-bottle has been properly connected, and all other checks are completed, the nitrogen K-bottle valve will be opened and PT-1 and PG-1 will start reading pressurant pressure data. Finally, MBV-1 will be opened at this time and all personnel will leave the test stand area and return to the team's safety bunker. NCSV-1 will then be opened remotely, allowing nitrogen from the K-bottle to flow into the tank until the tank is pressurized to the proper pressure. This system is displayed in Figure \ref{fig:ethanol_fill_and_pressurization_system}.
+NCSV-1 (normally-closed solenoid valve) will be remote-operated for control of pressurant flow, while MBV-1 is the isolation valve to ensure that pressurant is not unintentionally released while ground operators are near the test stand. The solenoid valve was chosen to be normally-closed so that in the event of power loss to the test stand, the flight tank and K-bottle will be isolated to prevent further cross-feed or pressurization. PT-1 and PG-1 will provide data on the pressure of the pressurant tank during pressurization. PG-1, along with other pressure gauges, are routed to a common panel where it is captured through a camera so that operators can confirm pressure transducer readings in real-time without approaching the test stand. Once ethanol has been filled, the nitrogen K-bottle has been properly connected, and all other checks are completed, the nitrogen K-bottle valve will be opened and PT-1 and PG-1 will start reading pressure data. Finally, MBV-1 will be opened and all personnel will evacuate the test stand area and return to (most likely) a safety bunker. NCSV-1 will then be opened remotely, allowing nitrogen from the K-bottle to flow into the tank until the tank is pressurized to the proper pressure. This is once again illustrated in Figure \ref{fig:ethanol_fill_and_pressurization_system}.
 
 \begin{figure}[!htb] 
     \centering
-    \includegraphics[scale=0.5, width=0.5\textwidth, trim={0cm 19cm 34.05cm 5cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
-    \caption{Ethanol Fill and Nitrogen Blowdown Pressurization System}
+    \includegraphics[scale=0.5, width=0.5\textwidth, trim={0cm 9.85cm 23.5cm 4.5cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
+    \caption{The ethanol fill and nitrogen blowdown pressurization system.}
     \label{fig:ethanol_fill_and_pressurization_system}
 \end{figure}
 
 \subsubsection{Ethanol Pressure Vent System}
-\hspace{\parindent} The ethanol pressure vent system consists of 3 main valves. The first of these, RV-1, a pressure relief valve, will be automatically set to open if tank pressure increases to above 600 PSI, which is about 50\% greater than would be nominally expected. The second valve, NCSV-2, a solenoid valve, will be remotely opened for small pressure vents, in the case of a failure with RV-1, or a full system abort. Finally, NV-1, a needle valve, will be used for any manual draining purposes as a last and to slowly ease tank pressure once the solenoids and pressure relief valves have dumped pressure adequately enough that engineers can safely approach the test stand. This system implements redundancy (RV-1 and NCSV-2) to ensure that there is always a back-up to relieve tank pressure when it is necessary even if a valve fails. This system is displayed in Figure \ref{fig:ethanol_vent_system}.
+\hspace{\parindent} The ethanol pressure vent system is the fail-safe system responsible for reacting to undesirable or dangerous changes to the system state. Its main function is to relieve pressure from the ethanol tank, whether that be manually, remotely, or automatically. The two most prevalent cases are: 1) in the event of an overpressurization of the flight tank or overall system that exceeds safety margins, or 2) in the event of a catastrophic engine or MPV failure that requires a decrease in ethanol flow rate. The system consists of three main valves. The first of these is RV-1, a pressure relief valve, which will be set to automatically open if tank pressure exceeds 600 psi, which is almost 100\% greater than would be nominally expected (although the tank is rated for 3000 psi). The second valve is NCSV-2, a solenoid valve, which can be remotely opened and closed at the content of the operator. The flight software team has developed two separate actions available to NCSV-2 in order to refine the control of the pressure inside the ethanol tank: 1) a "pulse", which is a pre-programmed opening, time delay, then closing of NCSV-2 for small and incremental pressure vents, and 2) a "toggle", which simply switches the solenoid state to either closed or open. NCSV-2 is used generally when fine pressure adjustments are required, or in the case of a failure with RV-1, a full system abort. NCSV-2 would logically be best suited as a normally-open solenoid so that it can vent pressure even in the case of power loss, but was chosen to be normally-closed purely for financial reasons. Finally, NV-1, a needle valve, will be used for any manual draining or venting purposes as a last resort or when the system is only barely pressurized. It can also be used to slowly ease tank pressure once the solenoids and pressure relief valves have already adequately dumped pressure for engineers to safely approach the test stand. Lastly, PT-2 and PG-2 both serve the purpose of monitoring and recording the ethanol pressure during operation and flight. TC-1, a thermocouple, is not mission-critical but serves to confirm data from simulated tank models. This system implements redundancy (RV-1 and NCSV-2) by ensuring that there is always a back-up to relieve tank pressure when it is necessary, even if a valve fails. This system is displayed in Figure \ref{fig:ethanol_vent_system}.
 
 \begin{figure}[!htb] 
     \centering
-    \includegraphics[scale=0.5, width=0.5\textwidth, trim={15cm 18cm 18.3cm 5cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
-    \caption{Ethanol Vent System}
+    \includegraphics[scale=0.5, width=0.5\textwidth, trim={7.6cm 9.85cm 14.1cm 4cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
+    \caption{The ethanol vent system.}
     \label{fig:ethanol_vent_system}
 \end{figure}
 
-\subsubsection{Ethanol Drain System}
-\hspace{\parindent} The ethanol system consists of two valves for drainage. The first is NCSV-3, a remotely-operated solenoid, which wil be used for most draining purposes, particularly in the case of a system abort. The second valve is NV-2, a manually-operated needle valve, which will serve as a way of draining propellant manually when the tank's pressure has adequately relieved. This system is displayed in Figure \ref{fig:ethanol_drain_system}.
+\subsubsection{Ethanol Main Propellant Line and Drain System}
+\hspace{\parindent} The main propellant line is the flow path of the propellant between the flight tank and the injector assembly. Immediately downstream of the flight tank, the propellant first encounters the two pressure sensors. PT-4 and PG-4 monitor the pressure of liquid ethanol exiting the propellant tank. Since the distance between the exit of the ethanol tank and the MPV is small, the readings from PT-4 and PG-4 can be regarded as simply the inlet pressure to the MPV and can be used during post-processing to calculate the flow coefficient ($C_{v}$) of the MPV. Next, the fluid encounters the drain system, which comprises of two valves, NCSV-3 and NV-2. The drainage of liquid propellant is necessary to clear the propellant lines of residual propellant after an engine run, or when redirecting propellant out of the system is necessary during an emergency. The first valve is NCSV-3, a remotely-operated solenoid, which will be used for the majority of drainage cases (particularly in the case of a system abort). The second valve is NV-2, a manually-operated needle valve, which will serve as a secondary method of draining propellant when the propellant pressure has been adequately relieved or when manual operation is necessary. Downstream of the drain system is NCSV-4, which is the main propellant valve. The MPV's primary purpose is to either prevent or allow flow between the fuel tank and the engine. This is to prevent further propellant for combustion from reaching the engine in the event of a catastrophic engine failure. The MPV can be remotely actuated from either the ground station or from the on-board flight computer. Since the MPV is the only major obstruction of flow in both propellant towers, care is taken to accurately measure its flow coefficient. This is the primary purpose of PT-4, as it measures both the pressure immediately following the MPV and gives an accurate estimate of the pressure preceding the injector assembly. Lastly, PT-9 measures the pressure inside the injector manifold, just before it is injected through the injector plate and into the combustion chamber. This system is displayed in Figure \ref{fig:ethanol_drain_system}.
 
 \begin{figure}[!htb] 
     \centering
-    \includegraphics[scale=0.5, width=0.5\textwidth, trim={7cm 7cm 28cm 19.2cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
-    \caption{Ethanol Drain System}
+    \includegraphics[scale=0.5, width=0.6\textwidth, trim={5cm 0cm 14cm 14cm}, clip]{Aphlex1B_04-02-2020_P&ID.pdf} %L, B, R, T
+    \caption{The ethanol main propellant line and drain system.}
     \label{fig:ethanol_drain_system}
 \end{figure}
 
-\subsection{Nitrous Oxide Propellant Tower}
-\subsubsection{Nitrous Oxide Fill System}
-\subsubsection{Nitrous Oxide Self-Pressurization System}
-\subsubsection{Nitrous Oxide Vent System}
-\subsubsection{Nitrous Oxide Drain System}
+\subsubsection{Nitrous Oxide System}
+\hspace{\parindent} Although the properties of nitrous vastly differ from that of ethanol, the design of its plumbing system is largely the same, as seen from Figure \ref{fig:pid_1}. In this section, only the significant differences from the ethanol tower will be discussed. Similarities in the two systems can be inferred to be chosen for the same reason.
+
+The most obvious difference between the two propellant towers involves their fill and pressurization systems. Since nitrous is self-pressurizing and ethanol is pressurized prior to any nitrous entering the system, the procedure for loading nitrous is completely remote. When the nitrous storage tank is first connected to the system, NCSV-6 is closed to prevent any pressurization. Once ground operators have cleared the area and the ethanol tower has completed its pressurization procedure, NCSV-6 is opened to allow liquid nitrous oxide to gravity fill into the propellant tank. As the nitrous fills, RV-3 (a relief valve) may open at any time as a redundancy against overpressurization. The nitrous storage tank is placed physically higher than the nitrous flight tank to achieve this. All other valves in the nitrous tower are closed at this time. Once a predetermined amount of liquid nitrous has been expelled from the storage tank, NCSV-6 is closed and time is allowed to elapse until the vapor pressure inside the flight tank has reached equilibrium. In addition to using PT-5 and PG-4 to monitoring nitrous pressure, TC-2 is critical to determining the state of the nitrous due to $N_{2}O$'s behavioral sensitivity to temperature. Note how additional thermocouples are also placed along the nitrous main propellant line for this reason. Once the operator is satisfied with the liquid volume and nitrous pressure, NCSV-8 (the nitrous MPV) can be opened along with NCSV-4 (the ethanol MPV) to begin engine operation.
 
 \section{Ethanol Cold Flow Test Stand Design}
 \hspace{\parindent} The ethanol cold flow test will entail running water through the full ethanol propellant tower, as well as through the injector and into the engine. The main reasons for this test include empirically verifying theoretical calculations and pressure drops, verifying system integrity, and ensuring that all programming procedures function nominally. Most importantly, this will be the first major hardware test and will test procedures for assembly, leak-checking, filling, pressurization, draining, data-collection, valve control, and aborting.
@@ -1083,7 +1102,7 @@ To accomplish these goals, the plumbing detailed in section 4.1 must be fully co
     \label{fig:ethanol_tank_stand_render}
 \end{figure}
 
-\hspace{\parindent} Both plates of plumbing were designed according to the designed piping and instrumentation diagram in Figure \ref{fig:piping_and_instrumentation_diagram}. When designed in 3D space, they were made to be as compact as possible to reduce total material needed. Pressure relief valves were also designed to point away from any other mounted instrumentation. All major components including valves, joints, gauges, sensors, and AN to NPT adaptors were included in the rendering. Renderings of the upper and lower plates of plumbing are shown in Figures \ref{fig:upper_plate_render} and \ref{fig:lower_plate_render} respectively.
+\hspace{\parindent} Both plates of plumbing were designed according to the designed piping and instrumentation diagram in Figure \ref{fig:pid_1}. When designed in 3D space, they were made to be as compact as possible to reduce total material needed. Pressure relief valves were also designed to point away from any other mounted instrumentation. All major components including valves, joints, gauges, sensors, and AN to NPT adaptors were included in the rendering. Renderings of the upper and lower plates of plumbing are shown in Figures \ref{fig:upper_plate_render} and \ref{fig:lower_plate_render} respectively.
 \begin{figure}[!htb]
     \centering
     \begin{minipage}{0.49\textwidth}
@@ -1110,6 +1129,8 @@ To accomplish these goals, the plumbing detailed in section 4.1 must be fully co
 \end{figure}
 
 \subsection{Engine and Injector}
+
+\section{System Validation and Simulation} \label{sec: system_validation}
 
 \section{Parts and Budget}
 
