@@ -1,21 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
-[0] Config.pm:307> INFO - Logfile is 'aphlex1b-dev.blg'
-[58] biber-MSWIN64:315> INFO - === 
-[118] Biber.pm:371> INFO - Reading 'aphlex1b-dev.bcf'
-[313] Biber.pm:889> INFO - Found 6 citekeys in bib section 0
-[340] Biber.pm:4093> INFO - Processing section 0
-[366] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
-[388] bibtex.pm:1523> INFO - LaTeX decoding ...
-[430] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
-[443] Utils.pm:193> WARN - month field 'December' in entry 'rpe' is not an integer - this will probably not sort properly.
-[449] Utils.pm:193> WARN - month field 'July' in entry 'nitrous-paper' is not an integer - this will probably not sort properly.
-[455] Utils.pm:193> WARN - month field 'June' in entry 'rao' is not an integer - this will probably not sort properly.
-[466] Utils.pm:193> WARN - month field 'December' in entry 'fluid-mechanics' is not an integer - this will probably not sort properly.
-[484] Utils.pm:193> WARN - I didn't find a database entry for 'fluid_mechanics' (section 0)
-[515] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[515] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[515] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[515] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
-[524] bbl.pm:636> INFO - Writing 'aphlex1b-dev.bbl' with encoding 'UTF-8'
-[528] bbl.pm:739> INFO - Output to aphlex1b-dev.bbl
-[540] Biber.pm:110> INFO - WARNINGS: 5
+[1] Config.pm:307> INFO - Logfile is 'aphlex1b-dev.blg'
+[57] biber-MSWIN64:315> INFO - === 
+[143] Biber.pm:371> INFO - Reading 'aphlex1b-dev.bcf'
+[247] Biber.pm:889> INFO - Found 6 citekeys in bib section 0
+[266] Biber.pm:4093> INFO - Processing section 0
+[307] Biber.pm:4254> INFO - Looking for bibtex format file 'references.bib' for section 0
+[325] bibtex.pm:1523> INFO - LaTeX decoding ...
+[351] bibtex.pm:1340> INFO - Found BibTeX data source 'references.bib'
+[356] Utils.pm:193> WARN - month field 'December' in entry 'rpe' is not an integer - this will probably not sort properly.
+[359] Utils.pm:193> WARN - month field 'July' in entry 'nitrous-paper' is not an integer - this will probably not sort properly.
+[367] Utils.pm:193> WARN - month field 'December' in entry 'fluid-mechanics' is not an integer - this will probably not sort properly.
+[373] Utils.pm:193> WARN - month field 'August' in entry 'stanford' is not an integer - this will probably not sort properly.
+[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[395] Biber.pm:3921> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[395] Biber.pm:3927> INFO - No sort tailoring available for locale 'en-US'
+[399] bbl.pm:636> INFO - Writing 'aphlex1b-dev.bbl' with encoding 'UTF-8'
+[401] bbl.pm:739> INFO - Output to aphlex1b-dev.bbl
+[408] Biber.pm:110> INFO - WARNINGS: 4

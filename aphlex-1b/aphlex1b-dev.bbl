@@ -61,7 +61,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Jet Propulsion Archive}
-      \field{month}{6}
       \field{number}{6}
       \field{title}{Exhaust Nozzle Contour for Optimum Thrust}
       \field{volume}{28}
@@ -148,8 +147,45 @@
       \field{title}{{Fluid Mechanics}}
       \field{year}{1998}
     \endentry
+    \entry{stanford}{article}{}
+      \name{author}{4}{}{%
+        {{hash=fc8dddd437c87bda6b163abe448c381a}{%
+           family={Zimmerman},
+           familyi={Z\bibinitperiod},
+           given={Jonah\bibnamedelima E.},
+           giveni={J\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+        {{hash=f5e4a17501eca48d0e674daa4cda484e}{%
+           family={Waxman},
+           familyi={W\bibinitperiod},
+           given={Benjamin\bibnamedelima S.},
+           giveni={B\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=354c74dd5406617174004d1145efb675}{%
+           family={Cantwell},
+           familyi={C\bibinitperiod},
+           given={Brian\bibnamedelima J.},
+           giveni={B\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=3db1f2deabe415c8c45cb1def919356d}{%
+           family={Zilliac},
+           familyi={Z\bibinitperiod},
+           given={Gregory\bibnamedelima G.},
+           giveni={G\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{cc138cfb473c8c954ee620429fd14788}
+      \strng{fullhash}{4990258ebb60796d0e3fe85de1f1c6d5}
+      \strng{bibnamehash}{cc138cfb473c8c954ee620429fd14788}
+      \strng{authorbibnamehash}{cc138cfb473c8c954ee620429fd14788}
+      \strng{authornamehash}{cc138cfb473c8c954ee620429fd14788}
+      \strng{authorfullhash}{4990258ebb60796d0e3fe85de1f1c6d5}
+      \field{sortinit}{Z}
+      \field{sortinithash}{156173bd08b075d7295bc3e0f4735a04}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{49th AIAA/ASME/SAE/ASEE Joint Propulsion Conference}
+      \field{month}{8}
+      \field{title}{Review and Evaluation of Models forSelf-Pressurizing Propellant Tank Dynamics}
+      \field{year}{2013}
+    \endentry
   \enddatalist
-  \missing{fluid_mechanics}
 \endrefsection
 \endinput
 

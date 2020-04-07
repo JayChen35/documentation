@@ -1,4 +1,4 @@
-% Initial System Characterization
+% TO EDIT THE OVERLEAF VERSION: https://www.overleaf.com/6523213312sftmvvjjrfhy
 
 \documentclass[9pt]{article} % use larger type; default would be 10pt
 
@@ -33,7 +33,7 @@
 %   read geometry.pdf for detailed page layout information
 
 \usepackage{graphicx} % support the \includegraphics command and options
-\graphicspath{ {./sim_files/}{./cad_files/}{./system_sim_files} }
+\graphicspath{ {./sim_files/}{./cad_files/}{./system_sim_files/}{./misc_plots/}{./system_cad_files/} }
 
 % \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
 
@@ -77,6 +77,8 @@
 \renewcommand\AB@affilsepx{, \protect\Affilfont}
 \makeatother
 
+\usepackage{listings} % For code blocks
+\usepackage{float} % To use \figure[H]
 \usepackage{dblfnote} % multicolumn footnotes
 
 %%% END Article customizations
@@ -107,16 +109,16 @@
 
 Project Caelus, 501(c)(3)
 
-(Initial revision 06 August, 2019; received 26 March, 2020)
+(Initial revision 06 August, 2019; final revision 06 April, 2020)
 \end{center}
 
 %%% ABSTRACT
-\begin{adjustwidth}{40pt}{40pt}
-\hspace{\parindent} This is an example of the abstract. Mit der CNN.com Europe Edition verfügt der TV-Sender CNN über eine umfassende Webseite, die im Minutentakt rund um die Uhr aktualisierte Weltnachrichten aus einer europäischen Perspektive auf den Bildschirm bringt. Wichtige, globale Ereignisse, geordnet in den Rubriken breaking news, current news headlines oder in depth, werden mit Hilfe von Video- und Audioclips, Bildern, Karten, Profilen, Zeitachsen und Tatsachenberichten fundiert dargestellt. Die Nachrichten stützen sich auf die Expertenanalysen der CNN Korrespondenten. Die Berichte verweisen auf andere relevante CNN Reportagen und zu Meldungen anderer Websites. Zusätzlich besteht die Möglichkeit, Videos anzufordern und mittels einer Suchfunktion Zugriff auf bereits gesendete Berichte und gesonderte Themenbereiche, die seit 1995 bearbeitet wurden, zu erhalten.
+\begin{adjustwidth}{30pt}{30pt}
+\hspace{\parindent} The design of the propulsion system for a liquid-propellant sounding rocket, named Callisto 1, is presented. This propulsion system, named Aphlex 1B, has a nominal thrust of 1500 N and a total impulse of 6140 Ns. Aphlex 1B is designed to propel Callisto 1 to 1500 m altitude (5000 ft) on a payload mass of around 2 kg (4.4 lbm). Aphlex 1B is designed to be as simple and cost-effective as possible, due to financial constraints. It is expected that Aphlex 1B will be extensively tested through a series of cold flow and static fire tests before evaluation for flight-worthiness. During engine tests and test flights, the rocket will remain in constant communication with a ground station to relay telemetry and respond to commands, although the majority of flight events will be automatically controlled by an on-board commercial flight computer. The rocket's primary objective is to reach the target altitude and be recovered safely, and therefore, the payload has not yet been determined. The first cold flow test is due before 01 June, 2020 and the first static fire test is projected for 01 December, 2020. The inaugural flight of Callisto 1 is set for 01 June, 2021.
 
 \end{adjustwidth}
 \vspace{0.4cm}
-\section{Nomenclature} \label{sec: nomenclature}
+\section*{Nomenclature}
 \vspace{0.1cm}
 %\begin{center}
 \begin{tabular}{lll}
@@ -144,25 +146,27 @@ $DAQ $ & = \quad Data acquisition \& control \\
 $FOD $ & = \quad Foreign object debris \\
 $GLOW $ & = \quad Gross lift-off weight \\
 $MECO$ & = \quad Main engine cut-off \\
+$MPV$ & = \quad Main propellant valve \\
 $P\&ID $ & = \quad Piping and \\
 $ $ & \qquad \enskip instrumentation diagram\\
 $PT $ & = \quad Pressure transducer \\
 $TC $ & = \quad Thermocouple \\
 $SF $ & = \quad Safety factor \\
-$VDC $ & = \quad Direct current voltage \\
 \end{tabular} 
 \vspace{0.2cm} \newline
 %\end{center}
 Note: Subscripts follow the convention outlined in \cite{rpe}. Unless otherwise specified, subscript $0$ indicates at stagnation or impact conditions, $1$ indicates conditions at the nozzle inlet or combustion chamber, $t$ indicates the nozzle throat, $2$ is at the nozzle exit, and $3$ is at ambient conditions.
 
-%\begin{multicols}{2}
+\section{Introduction}
+\hspace{\parindent} Project Caelus is a 501(c)(3) non-profit organization consisting entirely of high school students from the northern Virginia area with a mission to design, build, and fly a liquid-propellant rocket to the Karman line by 2025. \textit{Callisto 1}, the first of three experimental sounding rockets projected for completion by Project Caelus, has a target altitude of 1.5 km and is a technology and mission demonstrator for the organization. Project Caelus intends to enter the 2021 Intercollegiate Rocket Engineering Competition (IREC) with its Callisto 1 vehicle, and will be one of the first high school organizations to ever attempt a liquid-propellant rocket launch. The organization was founded in November 2018 and has since accumulated a membership of 22 freshmen, sophomore, and junior students. The team is organized into three subsystems: propulsion, software, and outreach. The propulsion team manages all engineering aspects of the rocket, including the design, production, and testing of the propulsion system, airframe, payload, and ground infrastructure. The software team manages avionics, startup and abort sequences, data acquisition, and communication systems. The outreach team manages finances and outreach campaigns for aerospace and STEM in the local community. Currently, Project Caelus is almost completely crowdfunded, with some assistance from cooperate sponsors. More information, including further mission details and a buisness plan, can be found at \url{projectcaelus.org}.
+
 \section{Initial System Characterization}
-\hspace{\parindent}  Project Caelus's unique position as a 501(c)(3) non-profit organization consisting entirely of high school students has laid the foundation for a design approach fully committed to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for our overall system and reflects our emphasis on the aforementioned ideals.
+\hspace{\parindent} Project Caelus's unique circumstance as an organization consisting entirely of high school students has laid the foundation for a design approach fully committed to cost-effectiveness, simplicity, and reliability. The following section outlines the initial design choices made for the overall propulsion system and reflects the organization's emphasis on the aforementioned ideals.
 \subsection{Objectives}
 The Callisto 1 system is set to the following constraints and objectives:
 \begin{enumerate}
 \item Reach an altitude of 1500 m ($\approx$ 5000 ft).
-\item A $GLOW$ of no more than 30 kg ($\approx$ 70 lbsm).
+\item A $GLOW$ of no more than 35 kg ($\approx$ 77 lbsm).
 \item A nominal main engine thrust of 1.5 kN ($\approx$ 350 lbsf).
 \item A chamber pressure in the range of around 15 Bar to 20 Bar ($\approx$ 218 psi to 300 psi)
 \item A nominal burn time of around 5 seconds.
@@ -170,7 +174,7 @@ The Callisto 1 system is set to the following constraints and objectives:
 \item Utilize $95\%$ ethyl alcohol and nitrous oxide as the propellant combination.
 \end{enumerate}
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.475\textwidth}
         \centering
@@ -185,7 +189,7 @@ The Callisto 1 system is set to the following constraints and objectives:
         \label{fig:cp_temp}
     \end{minipage}
 \end{figure} 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.475\textwidth}
         \centering
@@ -207,10 +211,10 @@ Using CEA, an open-source thermodynamics library provided by NASA's Glenn Resear
 
 A mixture ratio of 4.0 was chosen for Aphlex 1B mainly in the interest of a conservative combustion temperature of around 3026 K and a middle-of-the-line theoretical $C^{*}$ of around 1570 m/s, given a chamber pressure of 15 bar. This chamber pressure was chosen primarily in the interest of saving costs. A lower chamber pressure minimizes upstream fluid pressures and thus tank weight requirements, as well as requiring less expensive equipment that may otherwise be required. Although engine efficiency is sacrificed, this was not of primary concern. Preliminary literature reviews additionally showed that 15 bar ($\approx$218 psi) was around the minimal operable chamber pressure, since a further decrease in chamber pressure would not allow critical pressure, a requirement for choked flow at the nozzle throat, to occur.
 
-\section{Propulsion System Design}
-\hspace{\parindent} The following section outlines the design process for Aphlex 1B, our second-generation bi-propellant liquid rocket engine, set to fly on our 30 kg launch vehicle, Callisto 1, given the objectives and data obtained in the previous section.
+\section{Engine System Design}
+\hspace{\parindent} The following section outlines the design process for Aphlex 1B, a second-generation bi-propellant liquid rocket engine, set to fly Callisto 1 given the objectives and data obtained in the previous section.
 
-\subsection{Nozzle Design}
+\subsection{Nozzle Design} \label{sec:nozzle_design}
 
 \begin{table}[!htb]
 \centering
@@ -237,14 +241,14 @@ $\gamma$, Specific heat ratio  &  1.1537  &  $N/A$ \\
 \label{table:gas_parameters}
 \end{table}
 
+The nozzle design process followed standard procedures outlined in Rocket Propulsion Elements \cite{rpe} and open-source NASA documents. The thermodynamic properties of the exhaust gas and other important parameters are summarized and compiled in Table \ref{table:gas_parameters}. The ambient pressure was calculated using NASA Glenn Research Center's Earth Atmosphere Model for an altitude within the troposphere (less than 11000 meters), as shown in Equations \ref{eq:ambient_temperature} and \ref{eq:ambient_pressure}, where $T_{3}$ represents the ambient temperature in Kelvin, $h$ is the altitude in meters, $P_{3}$ is the ambient pressure in Pascals.
+
 \begin{equation} \label{eq:ambient_temperature}
 T_{3} = 15.04 - 0.00649 h 
 \end{equation}
 \begin{equation} \label{eq:ambient_pressure}
 P_{3} = \left[101.29 \times \left( \frac{T + 273.1}{288.08} \right) ^ {5.256} \right] \times 1000
 \end{equation}
-
-The nozzle design process followed standard procedures outlined in Rocket Propulsion Elements \cite{rpe} and open-source NASA documents. The thermodynamic properties of the exhaust gas and other important parameters are summarized and compiled in Table \ref{table:gas_parameters}. The ambient pressure was calculated using NASA Glenn Research Center's Earth Atmosphere Model for an altitude within the troposphere (less than 11000 meters), as shown in Equations \ref{eq:ambient_temperature} and \ref{eq:ambient_pressure}, where $T_{3}$ represents the ambient temperature in Kelvin, $h$ is the altitude in meters, $P_{3}$ is the ambient pressure in Pascals.
 
 Assuming fully isentropic flow (by definition both adiabatic and reversible) in the supersonic nozzle with choked flow conditions at the throat, an ideal converging-diverging (de Laval) nozzle can be characterized. The first parameter to calculate is the controlling area ratio
 \begin{equation} \label{eq:area_ratio}
@@ -482,7 +486,7 @@ $L_{inj}$, Injector plate thickness & \multicolumn{2}{|c|}{$8.608 \; mm$}  \\
 
 For the injector assembly, two designs were considered: Design A and Design B. Design A features two external common bolts that fasten all injector components together (including the chamber wall), making the assembly modular and consisting of smaller parts. Design B requires more material and has a larger vertical profile than Design A, but is also more streamlined, less complex, contains fewer parts, and requires less machining. Design B was heavily inspired from Michigan Aeronautical Science Association (MASA)'s previous injector designs and is therefore also more proven.
 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.495\textwidth}
         \centering
@@ -497,7 +501,7 @@ For the injector assembly, two designs were considered: Design A and Design B. D
         \label{fig:design_b}
     \end{minipage}
 \end{figure} 
-\begin{figure}
+\begin{figure}[H]
     \centering
     \begin{minipage}{0.495\textwidth}
         \centering
@@ -1011,27 +1015,27 @@ $d$, Pipe diameter & \multicolumn{2}{|c|}{$12.7 \; mm$}  \\
 \end{table}
 \footnotetext{These parameters are not final and are slightly adjusted later during system validation (see Section \ref{sec: system_validation}).}
 
-\begin{table}[!htb]
-\centering
-\begin{tabular}{ |p{5.5cm}||p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}| }
-\hline
-\multicolumn{6}{|c|}{Expected Pressures at Varying System Locations} \\
-\hline
-Time & \multicolumn{2}{|c|}{Initial State} & \multicolumn{2}{|c|}{Final State} & Unit \\ 
-\hline
-Location & Oxidizer & Fuel & Oxidizer & Fuel & ----- \\
-\hline
-$p_{tank}$, Propellant tank & 5.171 & 3.379 & 2.245 & 2.009 & MPa \\
-$(p_{MPV})_{1}$, Pre-MPV & & & & & \\
-$(p_{MPV})_{2}$, Post-MPV & & & & & \\
-$(p_{inj})_{1}$, Pre-injector (pre-manifold) & & & & & \\
-$p_{man}$, Injector manifold & & & & & \\
-$(p_{inj})_{2}$, Post-injector (plate) & & & & & \\
-\hline
-\end{tabular}
-\caption{Expected pressures at varying locations throughout the plumbing system. Assumptions: 1) The $\Delta p$ through just the injector manifold is around 20\% of $\Delta p_{inj}$ (pressure drop across the entire injector), see Figure \ref{fig:pressure_contour}. 2) The pipe length, and therefore $\Delta p_{ext}$, is divided evenly before and after the MPV.}
-\label{table:piping_system_expected_pressures}
-\end{table}
+% \begin{table}[!htb]
+% \centering
+% \begin{tabular}{ |p{5.5cm}||p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1cm}| }
+% \hline
+% \multicolumn{6}{|c|}{Expected Pressures at Varying System Locations} \\
+% \hline
+% Time & \multicolumn{2}{|c|}{Initial State} & \multicolumn{2}{|c|}{Final State} & Unit \\ 
+% \hline
+% Location & Oxidizer & Fuel & Oxidizer & Fuel & ----- \\
+% \hline
+% $p_{tank}$, Propellant tank & 5.171 & 3.379 & 2.245 & 2.009 & MPa \\
+% $(p_{MPV})_{1}$, Pre-MPV & & & & & \\
+% $(p_{MPV})_{2}$, Post-MPV & & & & & \\
+% $(p_{inj})_{1}$, Pre-injector (pre-manifold) & & & & & \\
+% $p_{man}$, Injector manifold & & & & & \\
+% $(p_{inj})_{2}$, Post-injector (plate) & & & & & \\
+% \hline
+% \end{tabular}
+% \caption{Expected pressures at varying locations throughout the plumbing system. Assumptions: 1) The $\Delta p$ through just the injector manifold is around 20\% of $\Delta p_{inj}$ (pressure drop across the entire injector), see Figure \ref{fig:pressure_contour}. 2) The pipe length, and therefore $\Delta p_{ext}$, is divided evenly before and after the MPV.}
+% \label{table:piping_system_expected_pressures}
+% \end{table}
 
 \subsection{Plumbing System Procedural Design}
 \hspace{\parindent} Finally, with the plumbing system fully parameterized, the last step is determining the procedures in operating the system, more specific design subtleties in the P\&ID, and safety precautions. There were several overarching design considerations, but perhaps the most important outlined that all pressurization and post-pressurization actions must be done remotely. This is so that no ground operators would need to approach a pressurized system, which would almost certainly be a safety hazard. Practically, this means that a ground electronics system would be required to operate during engine tests. Another consideration was that the system must be able to vent pressure and drain propellant both remotely and manually. Finally, the system must have adequate redundancy where it is necessary to ensure safety. Figure \ref{fig:pid_1} displays the full P\&ID, and it is displayed again below for the convenience of the reader. The following subsections will go into detail on different aspects of the plumbing system. It is important to note that the ethanol fill and pressurization use the same inlet in order to save costs and avoid purchasing unnecessary hardware.
@@ -1082,55 +1086,242 @@ NCSV-1 (normally-closed solenoid valve) will be remote-operated for control of p
 
 The most obvious difference between the two propellant towers involves their fill and pressurization systems. Since nitrous is self-pressurizing and ethanol is pressurized prior to any nitrous entering the system, the procedure for loading nitrous is completely remote. When the nitrous storage tank is first connected to the system, NCSV-6 is closed to prevent any pressurization. Once ground operators have cleared the area and the ethanol tower has completed its pressurization procedure, NCSV-6 is opened to allow liquid nitrous oxide to gravity fill into the propellant tank. As the nitrous fills, RV-3 (a relief valve) may open at any time as a redundancy against overpressurization. The nitrous storage tank is placed physically higher than the nitrous flight tank to achieve this. All other valves in the nitrous tower are closed at this time. Once a predetermined amount of liquid nitrous has been expelled from the storage tank, NCSV-6 is closed and time is allowed to elapse until the vapor pressure inside the flight tank has reached equilibrium. In addition to using PT-5 and PG-4 to monitoring nitrous pressure, TC-2 is critical to determining the state of the nitrous due to $N_{2}O$'s behavioral sensitivity to temperature. Note how additional thermocouples are also placed along the nitrous main propellant line for this reason. Once the operator is satisfied with the liquid volume and nitrous pressure, NCSV-8 (the nitrous MPV) can be opened along with NCSV-4 (the ethanol MPV) to begin engine operation.
 
-\section{Ethanol Cold Flow Test Stand Design}
-\hspace{\parindent} The ethanol cold flow test will entail running water through the full ethanol propellant tower, as well as through the injector and into the engine. The main reasons for this test include empirically verifying theoretical calculations and pressure drops, verifying system integrity, and ensuring that all programming procedures function nominally. Most importantly, this will be the first major hardware test and will test procedures for assembly, leak-checking, filling, pressurization, draining, data-collection, valve control, and aborting.
+\section{Test Stand Design}
+\hspace{\parindent} In the development of rocket propulsion systems, it is often necessary to test individual systems on the ground before attempting a flight. These tests are typically classified in two categories: a cold flow test, where the plumbing and instrumentation systems are the focus of the test (no ignition for combustion occurs), and a static hot fire test, where the full system can be tested in flight conditions except for the forces on the vehicle. For the purposes of safety and an iterative approach to testing, the cold flow test is further broken into three separate tests. First, a hydrostatic test, where the system is simply filled and pressurized with water, is conducted to test the structural integrity and pressure rating of the system without involving any controlling software. Secondly, an ethanol cold flow will we conducted to test the ethanol propellant tower in isolation from the nitrous tower. Since water has properties that are very similar to ethanol, it will be substituted for ethanol on the first cold flow test to save costs and eliminate a fire hazard. In addition, since nitrous is significantly more hazardous than ethanol, it is expected that most software and procedural tests will be conducted on the ethanol cold flow test. More specifically, the ethanol cold flow test contains objectives that include: empirically verifying theoretical predictions for system behavior (such as pressure drops, $C_{v}$ values, injector spray pattern), testing software functionality (such as abort sequences, pre-stage, remote valve operations, and data acquisition), and most importantly, executing procedural tests, such as procedures for system assembly, part-cleaning, leak-checking, filling, pressurization, draining, manual overrides, and all abort cases. Finally, the last cold flow involves testing the nitrous tower. Since nitrous is a strong oxidizer, additional safety precautions will be taken. In addition, due to its properties, different fill and pressurization procedures will be tested and finalized. However, it is expected that this test will exhibit minimal risks and failures since the bulk of system functionality would have already been tested through the ethanol cold flow test.
 
-This test will be run in two different ways: at full pressure and at scaled pressure, each of which will provide different valuable information and procedural practice to progress towards a static hot fire of the engine.
+The following section discusses the design for the test stand in which all cold flow tests are expected to take place. Due to a limited budget, efforts were made to increase the adaptability for this cold flow test stand to eventually be used for a static engine hot fire test. This design is presented in the context of an ethanol cold flow test.
 
-A full pressure cold flow test involves pressurizing the tank to the pressure it will be at during an actual fire, and this is to test the pressure rating of all parts of the system such as valves and sensors, and stress testing the system to verify performance levels. Furthermore this can be used to ensure that this system can safely operate at it's normal working pressure, including whether pressure can be properly relieved in the case of an abort.
+\subsection{Ethanol Cold Flow}
+\hspace{\parindent} The ethanol cold flow will be executed at two different states: at full pressure or at scaled pressure. This is due to the fact that the overall system pressure drop will be greater than that expected during actual engine operation, since there is no back-pressure from the combustion chamber. Both of these methods will provide different but nonetheless valuable information about the system and provide procedural practice to progress towards a static hot fire of the engine.
 
-Scaled pressure, however, is making the pressure differential between the tank and chamber equal to the actual differential we will be expecting in the static fire. Since there will be no combustion in the chamber, it's pressure will be at 1 atm. This is much lower than the actual combustion chamber temperature and would therefore result in a higher mass flow rate if our tank pressure remained the same. By properly scaling down our tank pressure, it would be possible to accurately measure the system Cv, as well as to determine mass flow rate and tank pressure depletion profile over time.
+A full pressure cold flow test involves pressurizing the tank its nominal pressure during a hot fire (full pressure). This is to test the pressure rating of all parts of the system, including valves, tubing connections, and sensors, and to verify that these parts operate as expected whilst under this pressure. Furthermore, a full pressure cold flow is best for testing abort sequences since the pressure gradient with ambient pressure is unchanged for the venting and draining system. The disadvantage of a full pressure test is that since the system pressure differential to the combustion chamber is higher than nominal, the flow behavior throughout the system is not accurate of a hot fire (flow rates and pressure drops are higher). To remedy this, a scaled pressure test can be conducted.
 
-To accomplish these goals, the plumbing detailed in section 4.1 must be fully constructed as a test stand, along with a separate injector and engine mechanism which could later be used to measure thrust in an actual static fire. The following subsections will detail these two major parts of the test stand for this test.
-\subsection{Tank Stand and Plumbing}
-\hspace{\parindent} The tank stand and plumbing had to contain the ethanol flight tank, nitrogen K-bottle for pressurization, and all the plumbing up until the engine. The design for this test stand included a frame of aluminum 80/20s which would hold the ethanol flight tank in place, as well as cinder blocks as a stand for the temporary nitrogen K-bottle. The plumbing will mostly be bolted to a 1/8" thick steel plate on the outside of the 80/20 steel frame for the ethanol tank. The use of plate will allow for all plumbing to be visible and easily accessible for small changes or for turning manual valves, as well as for pressure gauges to be monitored via video camera live stream in the event of a pressure transducer failure. The plate will additionally serve as a support structure for the piping. A rendering of the ethanol tower tank stand and plumbing section is shown in Figure \ref{fig:ethanol_tank_stand_render}.
+A scaled pressure cold flow models the flow behavior throughout the system most accurately by setting the pressure differential between the tank and chamber equal to the actual differential expected in the static fire. This is done by lowering the initial pressure inside the ethanol flight tank to counteract the ambient pressure present in the combustion chamber.  This allows accurate measurements of system and part $C_{v}$ values, as well as mass flow rates and tank depletion profiles over time.
 
-\begin{figure}[!htb] 
-    \centering
-    \includegraphics[scale=0.5]{ethanol_stand.png} %L, B, R, T
-    \caption{Ethanol Propellant Tower Test Stand Render}
-    \label{fig:ethanol_tank_stand_render}
-\end{figure}
+To accomplish these testing tasks, the plumbing system detailed in the system P\&ID (Figure \ref{fig:pid_1}) must be fully constructed as a functional and modular test stand, along with a separate injector and engine housing mechanism to withstand the structural load and measure thrust in a static hot fire. The following subsections will detail these two major components of the test stand.
 
-\hspace{\parindent} Both plates of plumbing were designed according to the designed piping and instrumentation diagram in Figure \ref{fig:pid_1}. When designed in 3D space, they were made to be as compact as possible to reduce total material needed. Pressure relief valves were also designed to point away from any other mounted instrumentation. All major components including valves, joints, gauges, sensors, and AN to NPT adaptors were included in the rendering. Renderings of the upper and lower plates of plumbing are shown in Figures \ref{fig:upper_plate_render} and \ref{fig:lower_plate_render} respectively.
-\begin{figure}[!htb]
+\subsection{Tank Stand and Plumbing Circuit}
+
+\begin{figure}
     \centering
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[scale=0.5, width=0.9\textwidth]{upper_plate.png} % left, bottom, right, top
-        \caption{Upper Plate Render}
-        \label{fig:upper_plate_render}
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{system_cad_files/master_stand_no_engine.png} % left, bottom, right, top
+        \caption{The ethanol propellant tower test stand. The cinder block assembly and K-bottle are also shown.}
+        \label{fig:master_stand_no_engine}
     \end{minipage}\hfill
     \begin{minipage}{0.49\textwidth}
         \centering
-        \includegraphics[scale=0.5, width=0.9\textwidth]{lower_plate.png} % second figure itself
-        \caption{Lower Plate Render}
-        \label{fig:lower_plate_render}
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{system_cad_files/master_stand_v42.png} % second figure itself
+        \caption{The full ethanol propellant tower test stand, with a linear rail system for housing the engine.}
+        \label{fig:master_stand}
     \end{minipage}
 \end{figure} 
 
-\hspace{\parindent} Because the nitrogen K-bottle has to be connected to the plumbing from a tube located at the top of the upper plate, the cinder block arrangement was used to elevate the K-bottle, reducing the amount of tubing needed to reach that location. This method of reducing external tubing was determined to be easier and more efficient than other methods such as fulling mounting the K-bottle above the upper plumbing plate, which would have been difficult due to the extra support needed to handle that weight. Additionally, the availability, ease of construction, and flexibility of arrangement for the cinder blocks made them an appealing choice. A full system render of the ethanol stand, plumbing, and K-bottle is shown in Figure \ref{fig:ethanol_tank_stand_with_nitrogen_render}.
+\hspace{\parindent} The tank stand accommodated the ethanol flight tank, nitrogen K-bottle for pressurization, and all its corresponding plumbing circuits, including the pressurization system and all plumbing components downstream of the flight tank (up to the injector assembly). It is displayed in Figures \ref{fig:master_stand_no_engine} and \ref{fig:master_stand}. The design for this test stand included a frame of aluminium 80/20 extrusions that acted as the primary structural component for holding the ethanol flight tank. Aluminium 80/20 extrusions were chosen due to their availability and since they could easily be rearranged and fastened without the need for welding. A cinder block assembly was created to act as an elevated stand for the temporary nitrogen K-bottle. The plumbing system was separated and organized into two plates, the upper plate and lower plate. The upper plate housed the plumbing for the vent and pressurization systems (upstream of the flight tank), while the lower plate housed the drain system and MPV (downstream of the flight tank). These plates were 1/8" thick steel or aluminium plates in which the plumbing system was bolted to. The plates themselves could be bolted on the exterior of the 80/20 aluminium frame, which houses the ethanol tank. The use of plates will allow for all plumbing to be visible and easily accessible for manual operations, such as reading pressure gauge data and turning manual valves. The plate will additionally serve as a support structure for the piping. These plates are shown in detail in Figures \ref{fig:upper_plate}, \ref{fig:upper_plate_detailed}, \ref{fig:lower_plate}, and \ref{fig:lower_plate_detailed}.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{system_cad_files/master_upper_plate.png} % left, bottom, right, top
+        \caption{The upper plate (upstream of flight tank).}
+        \label{fig:upper_plate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={6cm 0cm 4cm 0cm}, clip]{system_cad_files/master_board_v40.png} % second figure itself
+        \caption{Detailed view of the upper plate.}
+        \label{fig:upper_plate_detailed}
+    \end{minipage}
+\end{figure} 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{system_cad_files/master_lower_plate.png} % left, bottom, right, top
+        \caption{The lower plate (downstream of flight tank).}
+        \label{fig:lower_plate}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{system_cad_files/master_post_tank_board_v6.png} % second figure itself
+        \caption{Detailed view of the lower plate.}
+        \label{fig:lower_plate_detailed}
+    \end{minipage}
+\end{figure} 
+
+Additional considerations were made when designing these plates in 3D space. Perhaps most importantly, they were made to be as compact as possible to reduce the total material needed. Pressure relief valves were also designed to point away from any other mounted instrumentation. Care was taken to ensure these plates were secured properly and at strong points on the frame so that if the pressure relief valves produced significant thrust due to rapid depressurization, the damage would be minimal. All major components including valves, joints, gauges, sensors, and AN to NPT adaptors are included and shown in Figures \ref{fig:upper_plate_detailed} and \ref{fig:lower_plate_detailed}.
+
+Because the nitrogen K-bottle connects to the plumbing from a tube located at the top of the upper plate, the cinder block arrangement was used to elevate the K-bottle to reducing the amount of tubing needed to reach that location. This method of reducing external tubing was determined to be easier and more efficient than other methods, such as fully mounting the K-bottle above the upper plumbing plate, which would have required more materials and support to accommodate the additional weight. Additionally, the availability, ease of construction, and flexibility of the cinder block arrangement made it an appealing choice. The system test stand (excluding the engine mount) can be seen in Figure \ref{fig:master_stand_no_engine}.
+
+\subsection{Engine and Injector}
+\hspace{\parindent} A linear rail system was developed to secure the engine to the test stand and facilitate thrust measurements of the engine during a hot fire. This was done to minimize friction and to restrict the thrust vector of the engine along a single axis so that load cell measurements could be easily obtained. Although firing the engine horizontally introduces some potential hazards in the engine startup transients, such as propellant pooling, it was determined that these drawbacks are outweighed by the simple and cost-effective nature of a horizontal test stand. The forces produced by the engine can simply be counteracted by placing a heavy object ahead of the engine (as opposed to a vertical stand, which would require more complex structures) and fuel pooling can be addressed by adequately testing the ignitor system. The load cell is mounted horizontally onto the main blast shield plate, which is the large square plate that separates the engine from the plumbing system. There are three connection holes in the blast shield: one for the fuel line, one for the oxidizer line, and one to allow electrical connections to pass through the plate. During a cold flow, only the injector assembly would be mounted to the linear slide.
+
+The design of the linear rail system considered many variables. Ideally, linear bearings would have been utilized to create this system, as their precise manufacturing prevents any horizontal motion. However, due to budgetary restrictions, a linear bearings system was infeasible. Due to this, an alternative design was pursued, which was inspired by Colin Furze. Bolt holes were drilled at regular intervals down a 500mm piece of rectangular steel tubing, allowing for standard ball bearings to be bolted into the tubing. Then, small steel plates with bolt holes on the edges were welded to the rectangular tubing, allowing for ball bearings to be placed perpendicularly to the rectangular tubing. This construction is shown in Figure \ref{fig:rail_assembly}.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{cad_files/Rail Assembly v25.png} % left, bottom, right, top
+        \caption{The rail assembly.}
+        \label{fig:rail_assembly}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{cad_files/Linear Slide v14 FRONT.png} % second figure itself
+        \caption{Cross section of the linear slide system.}
+        \label{fig:linear_slide_cross_section}
+    \end{minipage}
+\end{figure} 
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{cad_files/Linear Slide v14.png} % left, bottom, right, top
+        \caption{The full linear slide assembly.}
+        \label{fig:linear_slide_assembly}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={5cm 0cm 5cm 0cm}, clip]{cad_files/Rail System Test Stand.png} % second figure itself
+        \caption{The linear slide assembly on the test stand.}
+        \label{fig:linear_slide_test_stand}
+    \end{minipage}
+\end{figure} 
+
+Steel c-channels slide into the gap created by the ball bearings, allowing for motion purely along one axis. Two of these rails were created and placed 150mm apart. A piece of plywood was then bolted into the rails, completing the linear slide. A cross section of this slide system is shown in Figure \ref{fig:linear_slide_cross_section}. The final construction is shown in Figure \ref{fig:linear_slide_assembly}, and its placement on the full test stand is shown in Figure \ref{fig:linear_slide_test_stand}.
+
+\section{System Validation and Simulation} \label{sec: system_validation}
+\hspace{\parindent} The final step in the design of the Aphlex 1B system was to generate the expected engine profiles (thrust, chamber pressure, mass flow rates, O/F ratio) during static hot fires through a numerical simulation and therefore validate the system with the generated data. Due to the complex and dynamic nature of both nitrous oxide and pressure blowdown systems, a MATLAB script utilizing time-step-based integration to model incremental changes in the system state was used. The bulk of the MATLAB script was based off Nick Gloria's (Stanford Space Initiative) propulsion simulation code, which can be found here \url{https://github.com/ngloria1/PropSim}. This branch was forked so that slight modifications to the code could be made (discussed below), which can be found here \url{https://github.com/JayChen35/PropSim}.
+
+PropSim works, on a basic level, by modelling and storing all state variables (such as the mass and volume inside each tank, pressures at critical points, temperatures, etc.) in a state vector. A small time differential $dt$ is chosen to calculate a slight change in the system state given a small change in time. For each time step calculation, the mass flow rates of the oxidizer and fuel tank (given the temperatures and pressures of the previous state vector) are first computed, given a system $C_{d}A$ (a pressure drop term and flow rate term similar to $C_{v}$). In Nick Gloria's code, the $C_{d}A$ value is only driven by the discharge coefficient the total orifice area of the injector (see Table \ref{table:injector_parameters}). The modified version of the code accounts for other losses in pressure, such as through an MPV, by summing additional $C_{d}A$ terms. $C_{d}A$ is defined as
+\begin{equation} \label{eq:cda_def}
+C_{d}A = \frac{\dot{m}}{\sqrt{2\rho\Delta p}}
+\end{equation}
+where the term $sqrt{2\rho\Delta p}$ is also known as \textit{mass flux}, denoted as $G$. It is seen here that $C_{d}A$ is simply the product of the discharge coefficient $C_{d}$ and the cross-sectional area $A$ of the flow. $C_{v}$ is defined in Equation \ref{eq:cv}. To relate $CdA$ to $C_{v}$, some algebra is required by setting $Q$ to $\dot{m} \times \rho$. The result is
+\begin{equation} 
+C_{d}A = C_{v} \left( \frac{1}{\sqrt{2/\rho_{H2O}}} \right) 
+\end{equation}
+However, since the unit for $C_{v}$ is imperial ($gal/\sqrt{psi}$), a conversion factor is required. Using this conversion factor, Equation \ref{eq:cda} relates $C_{d}A$ to $C_{v}$, with $C_{d}A$ in $m/s$:
+\begin{equation} \label{eq:cda}
+C_{d}A = 7.598 \times 10^{-7} \left( \frac{C_{v}}{\sqrt{2/\rho_{H2O}}} \right) 
+\end{equation}
+To incorporate multiple $C_{d}A$ values of components in series (such as the MPV and injector plate), a summation law similar to that of summing resistors in a parallel circuit, is used:
+\begin{equation} \label{eq:sum_cda}
+C_{d}A_{eff} = \left( \sqrt{\frac{1}{(C_{d}A_{1})^{2}}+\frac{1}{(C_{d}A_{2})^{2}}} \right)^{-1}
+\end{equation}
+where $C_{d}A_{eff}$ is the effective system $C_{d}A$. Equations \ref{eq:cda} and \ref{eq:sum_cda} were implemented in the modified code to account for the injector and MPV pressure drops. Using $C_{d}A_{eff}$, mass flux, and Equation \ref{eq:cda_def}, new mass flow rates for both propellants are computed. This mass flow rate is retained in a system state differential vector, the state dot vector, where it is later integrated using \textit{ode15s} (Euler integration method) to determine the new system state vector.
+
+Following this mass flow rate calculation, a function modeling nitrous is executed to determine the new equilibrium state for the nitrous propellant tank. This function assumes two-phase nitrous flow and models its behavior using the Homogeneous Equilibrium Model (HEM), which is outlined in \cite{stanford}. Propellant tank dynamics follow the van der Waal's equation for gases, and assume thermal equilibrium between the gas and liquid inside the tank. Finally, combustion and expansion through the nozzle is modelled via quasi-1D isentropic flow, as outlined in Section \ref{sec:nozzle_design}. The state vectors at each $dt$ are recorded and plotted once the simulation is terminated.
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_valve_oldmass_thrust.png} % left, bottom, right, top
+        \caption{Thrust output of the simulation code with both MPVs modelled.}
+        \label{fig:stanford_valve_old_thrust}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_valve_oldmass_fuel.png} % second figure itself
+        \caption{Propellant mass flow rate plots of the simulation code with both MPVs modelled.}
+        \label{fig:stanford_valve_old_fuel}
+    \end{minipage}
+\end{figure} 
+
+Figure \ref{fig:stanford_valve_old_thrust} shows the thrust profile of the simulated engine burn with both MPVs modelled. It is clear that the engine is severely short of its design thrust, and Figure \ref{fig:stanford_valve_old_fuel} reveals the cause: the oxidizer MPV severely restricts the $\dot{m}_{o}$ to the engine, causing a skewed O/F ratio, thus lowering combustion pressure and temperature. 
+
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_novalve_oldmass_thrust.png} % left, bottom, right, top
+        \caption{Thrust output of the simulation code with the $N_{2}O$ MPV removed.}
+        \label{fig:stanford_novalve_old_thrust}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_novalve_oldmass_fuel.png} % second figure itself
+        \caption{Propellant mass flow rate plots of the simulation code with the $N_{2}O$ MPV removed.}
+        \label{fig:stanford_novalve_old_fuel}
+    \end{minipage}
+\end{figure} 
+
+Removing the oxidizer MPV shows a promising engine profile, as shown in Figures \ref{fig:stanford_novalve_old_thrust} and \ref{fig:stanford_novalve_old_fuel}. Although removing the nitrous MPV can be seen as a safety hazard, the practice is not uncommon and system adjustments can be made to counteract its drawbacks. Many hybrid propulsion systems utilize burst disks instead of an MPV to allow flow to begin through the propellant lines once a threshold pressure has been reached. In addition, since combustion requires both propellants to be present, the ethanol MPV can alone be used to halt combustion. The nitrous drain and vent systems can also assist in preventing $N_{2}O$ from entering the chamber. 
+
+Apart from removing the nitrous MPV as a method of increasing $\dot{m}_{o}$, there are three alternatives, although none are particularly desirable. First, a larger and higher $C_{v}$ solenoid can be purchased. This is the obvious choice but will inevitably drive up costs. Second, another type of valve can be purchased or made, such as a ball valve. This is not desirable since designing and testing a reliable actuation system for a ball valve can be meticulous and prone to error. The general philosophy is to rely on COTS components, but COTS actuated ball valves cost significantly more than the current MPV. Finally, increasing upstream pressure could also increase $\dot{m}_{o}$. However, this is brute-force method that not only causes the system to be less safe, but also unnecessarily increases the propellant tank (and vehicle) dry mass. At this time, no decision has been made to determine the best course of action, although it is expected that any changes made to the design should come easily, due to the modularity of the system.
+
+It can also be noted that the system burn duration (as seen in Figures \ref{fig:stanford_novalve_old_thrust} and \ref{fig:stanford_novalve_old_fuel}) is shorter than expected. Upon closer inspection, it can be deduced that this is due to a higher fuel mass flow rate, caused by a sub-optimal O/F ratio (and thus, sub-optimal chamber pressure). To compensate for this, parameters in Table \ref{table:piping_system_final_parameters} are adjusted according to the updated mass flow rate from Figure \ref{fig:stanford_novalve_old_fuel}. It is estimated that $\dot{m}_{f} = 0.2 \; kg/s$ and $\dot{m}_{f} = 0.6 \; kg/s$. Thus, the new fuel mass and volume are $(m_{f})_{0} = (0.2 \; kg/s)(5 \; s) = 1.0 \; kg $ and $(V_{f})_{0} = (1.0 \; kg/s)/(789 \; kg/m^{3})(1000 \; L/m^{3}) = 1.267 \; L$. For nitrous: $(m_{o})_{0} = (0.6 \; kg/s)(5 \; s) = 3.0 \; kg $ and $(V_{f})_{0} = (3.0 \; kg/s)/(772.25 \; kg/m^{3})(1000 \; L/m^{3}) = 3.885 \; L$.
 
 \begin{figure}[!htb] 
     \centering
-    \includegraphics[scale=2]{master_stand_overall_render_2.png} %L, B, R, T
-    \caption{Ethanol Propellant Tower Test Stand with Nitrogen K Bottle Render}
-    \label{fig:ethanol_tank_stand_with_nitrogen_render}
+    \includegraphics[scale=0.5, width=0.55\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_thrust.png} %L, B, R, T
+    \caption{Thrust output of the simulation code without an $N_{2}O$ MPV and with the updated initial masses.}
+    \label{fig:stanford_final_thrust}
 \end{figure}
 
-\subsection{Engine and Injector}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_fuel.png} %L, B, R, T
+        \caption{Mass flow rate plots without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_thrust}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_pressures.png} %L, B, R, T
+        \caption{Chamber and tank pressure profiles without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_pressures}
+    \end{minipage}
+\end{figure} 
 
-\section{System Validation and Simulation} \label{sec: system_validation}
+\begin{figure}
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_dp.png} % left, bottom, right, top
+        \caption{Fuel and oxidizer injector $\Delta p$ profiles without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_dp}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_temperatures.png} % second figure itself
+        \caption{Chamber and tank temperature plots without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_temperatures}
+    \end{minipage}
+\end{figure} 
+
+Figures \ref{fig:stanford_final_thrust} through \ref{fig:stanford_final_performace} how the detailed system profiles with the updated propellant masses. Some additional information is provided here:
+\begin{lstlisting}
+% >> SimulateLiquidMod.m
+% Initial oxidizer mass: 4.46 kg
+% Pressurant Mass: 0.267 kg
+% Impulse: 6.14 kN*s		
+% Oxidizer Mass Spent: 3.29 kg		Oxidizer Mass Remaining: 1.18 kg
+% Fuel Mass Spent: 1.00 kg		Fuel Mass Remaining: 0.00 kg
+% OF ratio: 3.29 
+% Isp: 146.0 s		C*: 1149 m/s		C_f: 1.25
+\end{lstlisting}
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_nozzle.png} % left, bottom, right, top
+        \caption{Nozzle characteristic profiles without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_nozzle}
+    \end{minipage}\hfill
+    \begin{minipage}{0.49\textwidth}
+        \centering
+        \includegraphics[scale=0.5, width=0.9\textwidth, trim={0cm 0cm 0cm 0cm}, clip]{system_sim_files/stanford_final_performance.png} % second figure itself
+        \caption{System performance profiles without an $N_{2}O$ MPV and with the updated initial masses.}
+        \label{fig:stanford_final_performace}
+    \end{minipage}
+\end{figure} 
 
 \section{Parts and Budget}
 
